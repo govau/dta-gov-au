@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_theme_suggestions_block_alter().
+ *
+ * As per https://www.drupal.org/docs/8/theming-drupal-8/creating-a-drupal-8-sub-theme-or-sub-theme-of-sub-theme
+ * to ensure that sub themes inherit block templates.
+ */
+function dta_uikit_base_theme_suggestions_block_alter(&$suggestions, $variables) {
+  foreach ($suggestions as &$suggestion) {
+    $suggestion = str_replace('stable_', 'dta_uikit_base_', $suggestion);
+  }
+}
