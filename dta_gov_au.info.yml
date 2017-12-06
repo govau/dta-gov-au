@@ -1,0 +1,7 @@
+name: dta.gov.au theme
+type: theme
+description: This is a sub theme of the DTA UI Kit Base Theme. It provides styles and functionality specific to dta.gov.au.
+core: 8.x
+base theme: dta_uikit_base
+libraries:
+  - dta_gov_au/global-styling
