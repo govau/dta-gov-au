@@ -5,3 +5,7 @@ global-styling:
       css/styles.css: {}
   js:
     js/scripts.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
