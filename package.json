@@ -1,0 +1,68 @@
+{
+  "name": "govcms8-ui",
+  "version": "1.0.0",
+  "description": "Base theme for govCMS8",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "autoprefixer": "^7.2.3",
+    "node-sass": "^4.7.2",
+    "postcss-cli": "^4.1.1",
+    "@gov.au/body": "next",
+    "@gov.au/breadcrumbs": "next",
+    "@gov.au/core": "next",
+    "@gov.au/grid-12": "next",
+    "@gov.au/header": "next",
+    "@gov.au/inpage-nav": "next",
+    "@gov.au/link-list": "next",
+    "@gov.au/page-alerts": "next",
+    "@gov.au/skip-link": "next"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "npm-run-all": "^4.1.2",
+    "onchange": "^3.3.0"
+  },
+  "scripts": {
+    "build": "node-sass src/sass/dta-gov-au.styles.scss css/dta-gov-au.styles.css --source-map true",
+    "watch:sass": "npm run build && onchange \"src/sass/*.scss\" -- npm run build",
+    "serve": "browser-sync start --proxy 'au.gov.dta.test:8888' --files=\"css/*.css\" \"js/*.js\" \"templates/**/*.twig\"",
+    "watch": "npm-run-all --parallel serve watch:*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/govcms/govCMS8-ui.git"
+  },
+  "author": "govCMS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/govcms/govCMS8-ui/issues"
+  },
+  "homepage": "https://github.com/govcms/govCMS8-ui#readme",
+  "pancake": {
+    "auto-save": true,
+    "plugins": true,
+    "ignore": [],
+    "css": {
+      "minified": true,
+      "modules": false,
+      "browsers": [
+        "last 2 versions",
+        "ie 8",
+        "ie 9",
+        "ie 10"
+      ],
+      "location": "pancake/css/",
+      "name": "pancake.min.css"
+    },
+    "sass": {
+      "modules": false,
+      "location": "pancake/sass/",
+      "name": "pancake.scss"
+    },
+    "react": {
+      "location": "pancake/react/"
+    },
+    "json": {}
+  }
+}
