@@ -1,0 +1,37 @@
+{% extends "block.html.twig" %}
+{#
+/**
+* @file
+* Theme override for a branding block.
+*
+* Each branding element variable (logo, name, slogan) is only available if
+* enabled in the block configuration.
+*
+* Available variables:
+* - site_logo: Logo for site as defined in Appearance or theme settings.
+* - site_name: Name for site as defined in Site information settings.
+* - site_slogan: Slogan for site as defined in Site information settings.
+*/
+#}
+{% block content %}
+<div class="row">
+  <div class="col-xs-12 col-sm-6">
+    <div class="row">
+      <div class="col-sm-12 col-md-8">
+        <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+          <img class="au-responsive-media-img site-logo" src="/themes/custom/dta-gov-au/logo.png" alt="{{ 'Home'|t }}" />
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="au-header-heading visually-hidden">Digital Transformation Agency</h1>
+        <h2><span class="au-header-subline">Simpler, clearer and faster public services</span></h2>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-offset-2 col-md-4">
+    <p>This will be the "Most popular topics".</p>
+  </div>
+</div>
+{% endblock %}

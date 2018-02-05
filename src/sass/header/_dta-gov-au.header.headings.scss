@@ -1,0 +1,8 @@
+// Heading styles for the header.
+
+h2 {
+  span.au-header-subline {
+    @include AU-fontgrid( xxxl, nospace);
+    color: $AU-colordark-Action;
+  }
+}

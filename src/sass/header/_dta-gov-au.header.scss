@@ -1,0 +1,9 @@
+// Main header styles.
+
+header {
+  &.au-header.au-header--hero {
+    @include AU-space( padding-top, 5unit );
+  }
+  @import "dta-gov-au.header.images";
+  @import "dta-gov-au.header.headings";
+}
