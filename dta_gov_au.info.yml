@@ -5,6 +5,8 @@ core: 8.x
 base theme: dta_uikit_base
 libraries:
   - dta_gov_au/global-styling
+libraries-override:
+  dta_uikit_base/global-styling: dta_gov_au/global-styling
 regions:
   top-bar: Top bar
   header: Header
@@ -13,3 +15,4 @@ regions:
   content: Main Content
   footer: Footer
   sub-footer: Sub-footer
+features: []
