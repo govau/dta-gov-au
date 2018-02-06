@@ -3,3 +3,11 @@
 body {
   margin: 0;
 }
+
+.au-body {
+  &.au-body--dark {
+    &.au-body--alt {
+      background-color: $DTAgrey_VizIdentityCols;
+    }
+  }
+}

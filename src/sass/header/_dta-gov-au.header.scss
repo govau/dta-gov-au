@@ -1,8 +1,12 @@
 // Main header styles.
 
 header {
+  border-bottom: 2px solid $Main_BG_Darkest;
   &.au-header.au-header--hero {
-    @include AU-space( padding-top, 5unit );
+    @include AU-space( padding, 5unit 0 0 0 );
+    &.au-header--alt.au-header--dark {
+      background-color: $DTAgrey_VizIdentityCols;
+    }
   }
   @import "dta-gov-au.header.images";
   @import "dta-gov-au.header.headings";
