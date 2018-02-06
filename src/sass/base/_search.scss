@@ -1,0 +1,70 @@
+// Search block.
+.search-api-page-block-form {
+  @include AU-space( margin-bottom, 5unit );
+
+  form {
+    display: table;
+    width: 100%;
+    @supports(display: flex) {
+      display: flex;
+      width: auto;
+    }
+    // TODO: Need a better way of referencing these elements. The form needs to be
+    // updated via theme hooks and so on.
+
+    // This is the text input wrapper.
+    .form-item-keys {
+      display: table-cell;
+      width: auto;
+      @supports(display: flex) {
+        display: block;
+        width: auto;
+        flex: 1;
+      }
+    }
+
+    // This is the button wrapper.
+    .form-wrapper {
+      display: table-cell;
+      width:1em;
+      @supports(display: flex) {
+        display: block;
+        width: auto;
+        flex: 0;
+      }
+    }
+    .form-text,
+    .button {
+      @include AU-fontgrid( sm, nospace);
+      display:block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .form-text {
+      @include AU-space( padding, 0.8unit 4unit 0.8unit 1.5unit );
+      @include AU-space( border-top-left-radius, 10unit);
+      @include AU-space( border-bottom-left-radius, 10unit);
+      border: none;
+      background-color: $AU-color-Background-light;
+      box-sizing: border-box;
+      &::placeholder {
+        color: $AU-color-Muted;
+      }
+    }
+    .button {
+      @include AU-space( width, 4unit);
+      @include AU-space( height, 2.7unit);
+      @include AU-space( border-top-right-radius, 3.125unit);
+      @include AU-space( border-bottom-right-radius, 3.125unit);
+      cursor: pointer;
+      border: none;
+      border-left: 1px solid $AU-color-Border-suggestion;
+      text-indent: -99em;
+      background-color: $AU-color-Background-suggestion !important;
+      background-image: url("data:image/svg+xml,%3Csvg fill='%23000000' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E") !important;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+}
