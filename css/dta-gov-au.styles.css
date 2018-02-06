@@ -1639,5 +1639,33 @@ header {
     margin-bottom: 5rem; }
     header .au-body .au-link-list > li:first-child {
       margin-top: 0; }
+    header .au-body .au-link-list.au-link-list--inline > li {
+      display: block; }
+      @media (min-width: 992px) {
+        header .au-body .au-link-list.au-link-list--inline > li {
+          display: inline-block; } }
+  header #block-mainnavigation-2.au-body.au-body--dark .au-link-list {
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem; }
+    header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li {
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 1;
+      margin: 0 0 24px 0;
+      margin: 0 0 1.5rem 0;
+      font-weight: bold; }
+      @media (min-width: 992px) {
+        header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li {
+          margin: 0 100px 0 0;
+          margin: 0 6.25rem 0 0; } }
+      header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a {
+        padding-bottom: 8px;
+        padding-bottom: 0.5rem;
+        color: #ffffff;
+        text-decoration: none;
+        border-bottom: 4px solid transparent; }
+        header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a:hover {
+          color: #61DAFF;
+          border-bottom: 4px solid #61DAFF; }
 
 /*# sourceMappingURL=dta-gov-au.styles.css.map */

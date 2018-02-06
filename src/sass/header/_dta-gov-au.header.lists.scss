@@ -5,4 +5,11 @@
   > li:first-child {
     @include AU-space( margin-top, 0 );
   }
+  &.au-link-list--inline > li {
+    // Make the inline menu stack on smaller screens.
+    display: block;
+    @include AU-media( md ) {
+      display: inline-block;
+    }
+  }
 }
