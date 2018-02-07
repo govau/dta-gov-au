@@ -8,6 +8,9 @@
         @include AU-fontgrid( md, nospace );
         @include AU-space( margin, 0 0 1.5unit 0);
         @include AU-media( md ) {
+          @include AU-space( margin, 0 4unit 0 0 );
+        }
+        @include AU-media( lg ) {
           @include AU-space( margin, 0 6.25unit 0 0 );
         }
         font-weight: bold;

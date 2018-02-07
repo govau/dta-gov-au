@@ -1,7 +1,8 @@
 {#
 /**
  * @file
- * Theme override to display a single page.
+ * Theme include to display the header. Inherits all available variables from the
+ * template context.
  *
  * The doctype, html, head and body tags are not in this template. Instead they
  * can be found in the html.html.twig template in this directory.
@@ -43,53 +44,29 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container">
-
-  {% include '@dta_gov_au/includes/header.html.twig' %}
-
+<footer role="contentinfo" class="au-body au-body--dark au-body--alt au-footer au-footer--dark au-footer--alt">
   <div class="container-fluid">
-
     <div class="container">
-      <div class="row">
-        {{ page.breadcrumb }}
+      <div class="row col-xs-12">
+        <div class="col-sm-2">
+          <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+            <img class="au-responsive-media-img site-logo" src="/themes/custom/dta-gov-au/images/dta-wordmark-white.png" alt="{{ 'Home'|t }}" />
+          </a>
+        </div>
+        <div class="col-sm-8">
+          <div class="row col-xs-12 au-footer__navigation">
+            <h2>Digital Transformation Agency</h2>
+            {{ drupal_block('dta_gov_au_footer') }}
+          </div>
+          <div class="row col-xs-12 au-footer__end">
+            <hr />
+            <p>Copyright</p>
+          </div>
+        </div>
+        <div class="row col-sm-2">
+          <h2>Social media</h2>
+        </div>
       </div>
     </div>
-
-    <div class="row">
-      {{ page.highlighted }}
-    </div>
-
-    <div class="row">
-      {{ page.help }}
-    </div>
   </div>
-
-  <main class="container-fluid" role="main">
-      <a id="content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-        {% if is_front %}
-          {% include '@dta_gov_au/includes/home.html.twig' %}
-        {% else %}
-          {{ page.content }}
-        {% endif %}
-
-      {% if page.sidebar_first %}
-        <aside class="layout-sidebar-first" role="complementary">
-          {{ page.sidebar_first }}
-        </aside>
-      {% endif %}
-
-      {% if page.sidebar_second %}
-        <aside class="layout-sidebar-second" role="complementary">
-          {{ page.sidebar_second }}
-        </aside>
-      {% endif %}
-  </main>
-
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {% include '@dta_gov_au/includes/footer.html.twig' %}
-    </footer>
-  {% endif %}
-
-</div>{# /.layout-container #}
+</footer>

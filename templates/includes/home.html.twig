@@ -43,53 +43,49 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container">
-
-  {% include '@dta_gov_au/includes/header.html.twig' %}
-
-  <div class="container-fluid">
-
+<div class="row">
+  <div id="highlight" class="au-body au-body--alt au-body--dark">
     <div class="container">
-      <div class="row">
-        {{ page.breadcrumb }}
+      <div class="col-sm-6 highlight-block">
+        {{ drupal_block('visionforgovernment') }}
+      </div>
+      <div class="col-sm-6 highlight-block">
+        {{ drupal_block('ourpriorities') }}
       </div>
     </div>
-
-    <div class="row">
-      {{ page.highlighted }}
-    </div>
-
-    <div class="row">
-      {{ page.help }}
+  </div>
+</div>
+<div class="row">
+  <div id="top-content" class="au-body">
+    <div class="container">
+      <h2>Get help and support</h2>
+      {{ drupal_view('help_and_advice', 'block_1') }}
     </div>
   </div>
-
-  <main class="container-fluid" role="main">
-      <a id="content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-        {% if is_front %}
-          {% include '@dta_gov_au/includes/home.html.twig' %}
-        {% else %}
-          {{ page.content }}
-        {% endif %}
-
-      {% if page.sidebar_first %}
-        <aside class="layout-sidebar-first" role="complementary">
-          {{ page.sidebar_first }}
-        </aside>
-      {% endif %}
-
-      {% if page.sidebar_second %}
-        <aside class="layout-sidebar-second" role="complementary">
-          {{ page.sidebar_second }}
-        </aside>
-      {% endif %}
-  </main>
-
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {% include '@dta_gov_au/includes/footer.html.twig' %}
-    </footer>
-  {% endif %}
-
-</div>{# /.layout-container #}
+</div>
+<div class="row">
+  <div id="mid-top-content" class="au-body">
+    <div class="container">
+      <h2>Our projects</h2>
+      {{ drupal_view('programs_and_platforms', 'block_1') }}
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div id="mid-bottom-content" class="au-body au-body--alt au-body--dark">
+    <div class="container">
+      <div class="col-xs-12 col-sm-6">
+        {{ drupal_block('jointhedta') }}
+      </div>
+    </div>
+    <div class="image-placeholder col-sm-6"></div>
+  </div>
+</div>
+<div class="row">
+  <div id="bottom-content" class="au-body">
+    <div class="container">
+      <h2>Our latest updates</h2>
+      {{ drupal_view('latest_updates', 'block_1') }}
+    </div>
+  </div>
+</div>

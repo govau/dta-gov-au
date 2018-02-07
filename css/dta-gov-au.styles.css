@@ -1656,6 +1656,10 @@ header {
       font-weight: bold; }
       @media (min-width: 992px) {
         header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li {
+          margin: 0 64px 0 0;
+          margin: 0 4rem 0 0; } }
+      @media (min-width: 1200px) {
+        header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li {
           margin: 0 100px 0 0;
           margin: 0 6.25rem 0 0; } }
       header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a {
