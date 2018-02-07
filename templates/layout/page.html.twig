@@ -43,6 +43,13 @@
  * @see html.html.twig
  */
 #}
+
+{% set main_classes = [
+    'container-fluid',
+    is_front ? 'page-front',
+  ]
+%}
+
 <div class="layout-container">
 
   {% include '@dta_gov_au/includes/header.html.twig' %}
@@ -64,7 +71,7 @@
     </div>
   </div>
 
-  <main class="container-fluid" role="main">
+  <main{{ attributes.addClass(main_classes) }} role="main">
       <a id="content" tabindex="-1"></a>{# link is in html.html.twig #}
 
         {% if is_front %}
