@@ -1,0 +1,42 @@
+// Styles for the mid-top-content element on the home page.
+
+#mid-top-content {
+  @include AU-card-cta-link($AU-color-Border-suggestion);
+  .container {
+    @include AU-space( margin-bottom, 2unit );
+  }
+  @include AU-space( padding-bottom, 5unit );
+  @include AU-space( padding-top, 5unit );
+  background-color: $OurProjectsBG;
+  .au-body {
+    background-color: transparent;
+  }
+  .au-card {
+    @include AU-space( padding, 2unit );
+    * {
+      font-weight: normal;
+    }
+    .au-card__text {
+      @include AU-space( margin-bottom, auto );
+      @include AU-space( margin-top, 0 );
+    }
+  }
+  h2 {
+    font-weight: normal;
+    @include AU-space( margin-bottom, 5unit  );
+  }
+  h3 {
+    font-weight: normal;
+    @include AU-space( margin-top, 1.5unit );
+    @include AU-space( margin-bottom, 1.5unit );
+  }
+  .au-card__image {
+    @include AU-space( max-height, 13unit );
+    overflow: hidden;
+    img {
+      @extend .au-responsive-media-img;
+      height: 100%;
+    }
+
+  }
+}

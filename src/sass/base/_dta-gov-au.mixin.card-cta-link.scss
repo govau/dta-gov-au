@@ -1,0 +1,16 @@
+@mixin AU-card-cta-link($color: $AU-color-Border-suggestion) {
+  .au-cta-link {
+    @include AU-space( margin-top, 0 );
+    @include AU-space( margin-bottom, 1.5unit );
+    &:after {
+      background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
+          '<path fill="#{ $color }" d="M128 64l-64 64-16-16 64-64"/>' +
+          '<path fill="#{ $color }" d="M128 64l-16 16-64-64L64 0"/>' +
+        '</svg>');
+      @include AU-space( margin, 2unit 0 0 auto );
+    }
+    &:hover:after {
+      margin-right: -0.5rem;
+    }
+  }
+}

@@ -8,6 +8,10 @@
 
 @import "../../pancake/sass/pancake.scss";
 
+// Mixins
+
+@import "base/mixins";
+
 // Individual element imports.
 
 @import "base/search";
