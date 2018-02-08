@@ -6,6 +6,7 @@
   "dependencies": {
     "@gov.au/body": "next",
     "@gov.au/breadcrumbs": "next",
+    "@gov.au/buttons": "next",
     "@gov.au/core": "next",
     "@gov.au/grid-12": "next",
     "@gov.au/header": "next",
