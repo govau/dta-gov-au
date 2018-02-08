@@ -1791,7 +1791,9 @@ body {
     display: flex;
     flex-direction: column;
     margin-bottom: 48px;
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    padding-left: 24px;
+    padding-left: 1.5rem; }
     @media (min-width: 768px) {
       .page-front #highlight .highlight-block {
         margin-bottom: 0; } }

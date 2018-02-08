@@ -32,6 +32,7 @@
     display: flex;
     flex-direction: column;
     @include AU-space( margin-bottom, 3unit );
+    @include AU-space( padding-left, 1.5unit );
     @include AU-media( sm ) {
       @include AU-space( margin-bottom, 0 );
     }
