@@ -1,0 +1,57 @@
+// Styles for the 'top-content' block.
+
+$blocks: (
+  (#005d80, $Main_Action),
+  (#1f7039, $CardGreen),
+  (#903086, $DTApurple_VizIdentityCols),
+);
+
+#top-content {
+  .au-card-list {
+    > li {
+      @include AU-space( margin-top, 0 );
+    }
+  }
+  h2 {
+    font-weight: normal;
+    @include AU-space( margin-bottom, 5unit );
+  }
+  @include AU-space( margin-top, 5unit );
+  @include AU-space( margin-bottom, 5unit );
+  .au-card {
+    @include AU-space( padding, 2unit 4unit 2unit 2unit );
+    &.au-card--item-1 {
+      background: linear-gradient(#005d80, $Main_Action);
+    }
+    &.au-card--item-2 {
+      background: linear-gradient(#1f7039, $CardGreen);
+    }
+    &.au-card--item-3 {
+      background: linear-gradient(#903086, $DTApurple_VizIdentityCols);
+    }
+    * {
+      font-weight: normal;
+      color: $AU-colordark-Text;
+    }
+    .au-card__text {
+      @include AU-space( margin-bottom, 1.5unit );
+    }
+    .au-card__title {
+      @include AU-space( margin-bottom, 1.5unit );
+    }
+  }
+  .au-cta-link {
+    @include AU-space( margin-top, 0 );
+    @include AU-space( margin-bottom, 1.5unit );
+    &:after {
+      background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
+  				'<path fill="#{ $AU-colordark-Text }" d="M128 64l-64 64-16-16 64-64"/>' +
+  				'<path fill="#{ $AU-colordark-Text }" d="M128 64l-16 16-64-64L64 0"/>' +
+  			'</svg>');
+      @include AU-space( margin, 2unit 0 1unit auto );
+    }
+    &:hover:after {
+      margin-right: -0.5rem;
+    }
+  }
+}
