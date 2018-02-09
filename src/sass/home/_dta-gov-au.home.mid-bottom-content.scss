@@ -1,0 +1,46 @@
+// Styles for the mid-bottom block on the home page.
+#mid-bottom-content {
+  background-image: url('../images/home-join-the-dta.jpg');
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 50% auto;
+  #block-jointhedta {
+    @include AU-space( padding-bottom, 5unit );
+    @include AU-space( padding-top, 5unit );
+  }
+  .container-fluid .row {
+    display: flex;
+  }
+  .left-wrapper {
+    float: left;
+    margin-left: auto;
+    margin-right: 0;
+    box-sizing: border-box;
+    @include AU-space( padding-right, 2unit );
+    @include AU-space( padding-left, 0.75unit );
+    @include AU-media( lg ){
+      @include AU-space( width, 36.75unit );
+    }
+  }
+  .right-wrapper {
+    float: right;
+    margin-right: auto;
+    margin-left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    @include AU-space( padding, 0 );
+  }
+  h2 {
+    font-weight: normal;
+    @include AU-space( margin-bottom, 1.5unit );
+  }
+  p:last-child {
+    @include AU-space( margin-top, 0 );
+  }
+  .au-btn {
+    @include AU-space( margin-top, 4unit );
+  }
+  .image-placeholder {
+
+  }
+}

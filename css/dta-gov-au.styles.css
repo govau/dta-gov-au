@@ -2038,6 +2038,48 @@ body {
     .page-front #mid-top-content .au-card__image img {
       height: 100%; }
 
+.page-front #mid-bottom-content {
+  background-image: url("../images/home-join-the-dta.jpg");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 50% auto; }
+  .page-front #mid-bottom-content #block-jointhedta {
+    padding-bottom: 80px;
+    padding-bottom: 5rem;
+    padding-top: 80px;
+    padding-top: 5rem; }
+  .page-front #mid-bottom-content .container-fluid .row {
+    display: flex; }
+  .page-front #mid-bottom-content .left-wrapper {
+    float: left;
+    margin-left: auto;
+    margin-right: 0;
+    box-sizing: border-box;
+    padding-right: 32px;
+    padding-right: 2rem;
+    padding-left: 12px;
+    padding-left: 0.75rem; }
+    @media (min-width: 1200px) {
+      .page-front #mid-bottom-content .left-wrapper {
+        width: 588px;
+        width: 36.75rem; } }
+  .page-front #mid-bottom-content .right-wrapper {
+    float: right;
+    margin-right: auto;
+    margin-left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0; }
+  .page-front #mid-bottom-content h2 {
+    font-weight: normal;
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem; }
+  .page-front #mid-bottom-content p:last-child {
+    margin-top: 0; }
+  .page-front #mid-bottom-content .au-btn {
+    margin-top: 64px;
+    margin-top: 4rem; }
+
 header {
   border-bottom: 2px solid #e0e0e0; }
   header.au-header.au-header--hero {
