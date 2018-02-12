@@ -3,4 +3,11 @@
 #back-to-top {
   @include AU-space( margin-bottom, 5unit );
   text-align: center;
+  a {
+    color: $Main_Action;
+    &:after {
+      content: '\02191';
+      background-image: none;
+    }
+  }
 }

@@ -2177,6 +2177,11 @@ body {
   margin-bottom: 80px;
   margin-bottom: 5rem;
   text-align: center; }
+  .page-front #back-to-top a {
+    color: #00698f; }
+    .page-front #back-to-top a:after {
+      content: '\02191';
+      background-image: none; }
 
 header {
   border-bottom: 2px solid #e0e0e0; }
