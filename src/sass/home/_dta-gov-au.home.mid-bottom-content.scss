@@ -1,15 +1,15 @@
 // Styles for the mid-bottom block on the home page.
 #mid-bottom-content {
   background-image: url('../images/home-join-the-dta.jpg');
-  background-position: right top;
+  background-position: right center;
   background-repeat: no-repeat;
-  background-size: 50% auto;
+  background-size: contain;
+  .row {
+    background-color: $DTAgrey_VizIdentityCols;
+  }
   #block-jointhedta {
     @include AU-space( padding-bottom, 5unit );
     @include AU-space( padding-top, 5unit );
-  }
-  .container-fluid .row {
-    display: flex;
   }
   .left-wrapper {
     float: left;

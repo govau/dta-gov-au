@@ -2040,16 +2040,16 @@ body {
 
 .page-front #mid-bottom-content {
   background-image: url("../images/home-join-the-dta.jpg");
-  background-position: right top;
+  background-position: right center;
   background-repeat: no-repeat;
-  background-size: 50% auto; }
+  background-size: contain; }
+  .page-front #mid-bottom-content .row {
+    background-color: #414141; }
   .page-front #mid-bottom-content #block-jointhedta {
     padding-bottom: 80px;
     padding-bottom: 5rem;
     padding-top: 80px;
     padding-top: 5rem; }
-  .page-front #mid-bottom-content .container-fluid .row {
-    display: flex; }
   .page-front #mid-bottom-content .left-wrapper {
     float: left;
     margin-left: auto;
@@ -2079,6 +2079,15 @@ body {
   .page-front #mid-bottom-content .au-btn {
     margin-top: 64px;
     margin-top: 4rem; }
+
+.page-front #bottom-content {
+  padding: 80px 0;
+  padding: 5rem 0; }
+  .page-front #bottom-content * {
+    font-weight: normal; }
+  .page-front #bottom-content h2 {
+    margin-bottom: 80px;
+    margin-bottom: 5rem; }
 
 header {
   border-bottom: 2px solid #e0e0e0; }
