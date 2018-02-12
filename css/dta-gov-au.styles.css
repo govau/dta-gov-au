@@ -2164,6 +2164,11 @@ body {
       margin: 0;
       color: #636363; }
 
+.page-front #back-to-top {
+  margin-bottom: 80px;
+  margin-bottom: 5rem;
+  text-align: center; }
+
 header {
   border-bottom: 2px solid #e0e0e0; }
   header.au-header.au-header--hero {
