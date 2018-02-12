@@ -25,10 +25,11 @@
     font-weight: normal;
     @include AU-space( margin-bottom, 5unit  );
   }
-  h3 {
+  .au-card__title {
     font-weight: normal;
     @include AU-space( margin-top, 1.5unit );
     @include AU-space( margin-bottom, 1.5unit );
+    text-decoration: underline;
   }
   .au-card__image {
     @include AU-space( max-height, 13unit );
@@ -37,6 +38,10 @@
       @extend .au-responsive-media-img;
       height: 100%;
     }
-
+  }
+  .au-cta-link:hover {
+    .au-card__title {
+      text-decoration: none;
+    }
   }
 }

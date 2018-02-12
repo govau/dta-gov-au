@@ -59,6 +59,10 @@
       @include AU-space( margin, 0 0 2unit 0 );
       a {
         color: $Main_Action;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
     p {

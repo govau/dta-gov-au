@@ -33,7 +33,12 @@
     }
     .au-card__title {
       @include AU-space( margin-bottom, 1.5unit );
-
+      text-decoration: underline;
+    }
+  }
+  .au-cta-link:hover {
+    .au-card__title {
+      text-decoration: none;
     }
   }
 }

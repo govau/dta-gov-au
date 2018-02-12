@@ -1990,7 +1990,10 @@ body {
       margin-bottom: auto; }
     .page-front #top-content .au-card .au-card__title {
       margin-bottom: 24px;
-      margin-bottom: 1.5rem; }
+      margin-bottom: 1.5rem;
+      text-decoration: underline; }
+  .page-front #top-content .au-cta-link:hover .au-card__title {
+    text-decoration: none; }
 
 .page-front #mid-top-content {
   padding-bottom: 80px;
@@ -2025,18 +2028,21 @@ body {
     font-weight: normal;
     margin-bottom: 80px;
     margin-bottom: 5rem; }
-  .page-front #mid-top-content h3 {
+  .page-front #mid-top-content .au-card__title {
     font-weight: normal;
     margin-top: 24px;
     margin-top: 1.5rem;
     margin-bottom: 24px;
-    margin-bottom: 1.5rem; }
+    margin-bottom: 1.5rem;
+    text-decoration: underline; }
   .page-front #mid-top-content .au-card__image {
     max-height: 208px;
     max-height: 13rem;
     overflow: hidden; }
     .page-front #mid-top-content .au-card__image img {
       height: 100%; }
+  .page-front #mid-top-content .au-cta-link:hover .au-card__title {
+    text-decoration: none; }
 
 .page-front #mid-bottom-content {
   background-image: url("../images/home-join-the-dta.jpg");
@@ -2148,7 +2154,10 @@ body {
       margin: 0 0 32px 0;
       margin: 0 0 2rem 0; }
       .page-front #bottom-content .au-card .au-card__title a {
-        color: #00698f; }
+        color: #00698f;
+        text-decoration: underline; }
+        .page-front #bottom-content .au-card .au-card__title a:hover {
+          text-decoration: none; }
     .page-front #bottom-content .au-card p {
       font-size: 14px;
       font-size: 0.875rem;
