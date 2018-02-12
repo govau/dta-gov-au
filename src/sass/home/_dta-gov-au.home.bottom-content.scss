@@ -1,0 +1,78 @@
+// Styles for the 'bottom content' block on the home page.
+
+#bottom-content {
+  @include AU-card-cta-link($AU-color-Text);
+  @include AU-space( padding, 5unit 0 );
+  * {
+    font-weight: normal;
+  }
+  h2 {
+    @include AU-space( margin-bottom, 5unit );
+  }
+  .au-card-list > li {
+    @include AU-space( margin, 0 0 1unit 0 );
+  }
+  .au-card {
+    @include AU-space( padding, 2unit );
+    &.au-cta-link {
+      @include AU-space( margin, 0 );
+      &:after {
+        @include AU-space( margin-top, -1unit );
+      }
+    }
+    .au-card__image {
+      @include AU-space( margin-bottom, 0.5unit );
+      position: relative;
+    }
+    .au-card__fullwidth:first-child {
+      @include AU-space( margin, -2unit -2unit 1.5unit -2unit );
+    }
+    .au-card--content_type {
+      font-weight: bold;
+      @include AU-space( margin-bottom, 1.5unit );
+      a {
+        color: $AU-color-Text;
+        font-weight: bold;
+      }
+    }
+    .au-card--author_name {
+      @include AU-space( margin-bottom, 1.5unit );
+      a {
+        color: $AU-color-Muted-suggestion;
+      }
+    }
+    .au-card--author_image {
+      position: absolute;
+      @include AU-space (right, 2unit );
+      @include AU-space (bottom, -4.25unit );
+      img {
+        @include AU-space( width, 6.25unit );
+        @include AU-space( height, 6.25unit );
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid $AU-color-Background-light;
+        background-color: $Main_BG_Darkest;
+        box-sizing: border-box;
+      }
+    }
+    .au-card__title {
+      @include AU-space( margin, 0 0 2unit 0 );
+      a {
+        color: $Main_Action;
+      }
+    }
+    p {
+      @include AU-fontgrid( xs );
+      @include AU-space( margin, 0 0 1.5unit 0 );
+    }
+    .au-card--line {
+      border-top: 1px solid $Main_BG_Darkest;
+      width: 100%;
+      @include AU-space( margin, 0 0 1unit 0);
+    }
+    .au-card--date {
+      @include AU-space( margin, 0 );
+      color: $AU-color-Muted-suggestion;
+    }
+  }
+}
