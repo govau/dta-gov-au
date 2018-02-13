@@ -1,0 +1,6 @@
+// Footer navigation styles.
+
+.au-footer__navigation {
+  @include AU-space( margin-top, 5unit );
+  @include AU-space( margin-bottom, 9.5unit );
+}

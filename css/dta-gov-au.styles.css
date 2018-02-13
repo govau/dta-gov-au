@@ -2241,4 +2241,14 @@ header {
           color: #61DAFF;
           border-bottom: 4px solid #61DAFF; }
 
+footer .au-site-logo_link {
+  margin-top: 64px;
+  margin-top: 4rem; }
+
+footer .au-footer__navigation {
+  margin-top: 80px;
+  margin-top: 5rem;
+  margin-bottom: 152px;
+  margin-bottom: 9.5rem; }
+
 /*# sourceMappingURL=dta-gov-au.styles.css.map */

@@ -49,13 +49,14 @@
     <div class="container">
       <div class="row col-xs-12">
         <div class="col-sm-2">
-          <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
-            <img class="au-responsive-media-img site-logo" src="/themes/custom/dta-gov-au/images/dta-wordmark-white.png" alt="{{ 'Home'|t }}" />
-          </a>
+          <div  class="au-site-logo_link">
+            <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+              <img class="au-site-logo au-responsive-media-img" src="/themes/custom/dta-gov-au/images/dta-wordmark-white.png" alt="{{ 'Home'|t }}" />
+            </a>
+          </div>
         </div>
         <div class="col-sm-8">
           <div class="row col-xs-12 au-footer__navigation">
-            <h2>Digital Transformation Agency</h2>
             {{ drupal_block('dta_gov_au_footer') }}
           </div>
           <div class="row col-xs-12 au-footer__end">
