@@ -2250,5 +2250,26 @@ footer .au-footer__navigation {
   margin-top: 5rem;
   margin-bottom: 152px;
   margin-bottom: 9.5rem; }
+  footer .au-footer__navigation .au-link-list li {
+    margin-right: 32px;
+    margin-right: 2rem;
+    display: block; }
+    @media (min-width: 768px) {
+      footer .au-footer__navigation .au-link-list li {
+        display: inline-block; } }
+  footer .au-footer__navigation .au-link-list a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none; }
+    footer .au-footer__navigation .au-link-list a:hover {
+      text-decoration: underline; }
+
+footer #social-media {
+  margin-top: 90px;
+  margin-top: 5.625rem; }
+  footer #social-media h2 {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1; }
 
 /*# sourceMappingURL=dta-gov-au.styles.css.map */
