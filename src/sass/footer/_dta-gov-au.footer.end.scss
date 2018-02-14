@@ -1,5 +1,9 @@
 // Footer end (copyright)
 
 .au-footer__end {
-  
+  @include AU-space( margin-bottom, 5unit );
+  p {
+    border-top: 1px solid $Main_Background;
+    @include AU-space( padding-top, 1.5unit );
+  }
 }

@@ -1,16 +1,20 @@
 // Styles for the 'bottom content' block on the home page.
 
 #bottom-content {
-  @include AU-card-cta-link($AU-color-Text);
+  @include more-link();
   @include AU-space( padding, 5unit 0 );
-  * {
-    font-weight: normal;
-  }
   h2 {
     @include AU-space( margin-bottom, 5unit );
+    font-weight: normal;
   }
-  .au-card-list > li {
-    @include AU-space( margin, 0 0 1unit 0 );
+  .au-card-list {
+    @include AU-card-cta-link($AU-color-Text);
+    * {
+      font-weight: normal;
+    }
+    > li {
+      @include AU-space( margin, 0 0 1unit 0 );
+    }
   }
   .au-card {
     @include AU-space( padding, 2unit );

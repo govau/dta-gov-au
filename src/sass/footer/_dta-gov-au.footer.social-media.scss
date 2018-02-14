@@ -4,5 +4,22 @@
   @include AU-space( margin-top, 5.625unit );
   h2 {
     @include AU-fontgrid( md, nospace );
+    @include AU-space( margin-bottom, 1.5unit );
+  }
+  .au-link-list {
+    li {
+      @include AU-space( margin-bottom, 1.5unit );
+    }
+    a {
+      @include AU-space( padding-left, 2.5unit );
+      color: $AU-color-Background-light;
+      text-decoration: none;
+      background-position: left center;
+      background-repeat: no-repeat;
+      &:hover {
+        color: $AU-colordark-Action;
+        text-decoration: underline;
+      }
+    }
   }
 }

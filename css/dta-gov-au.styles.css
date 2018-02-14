@@ -298,7 +298,7 @@
 	 * Horizontal rule, used for paragraph-level thematic breaks.
 	 */ }
   .au-body a {
-    color: #815D00;
+    color: #00698f;
     text-decoration: underline;
     text-decoration-skip: ink; }
     .au-body a[rel~='external']:after {
@@ -307,13 +307,13 @@
       width: 0.7em;
       height: 0.85em;
       margin: 0 0.1em -0.02em 0.25em;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E   %3Cpath fill='%23815D00' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E   %3Cpath fill='%23815D00' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E   %3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E   %3Cpath fill='%2300698f' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E   %3Cpath fill='%2300698f' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E   %3C/svg%3E");
       background-repeat: no-repeat;
       background-position-y: 0.12em; }
       .ie8 .au-body a[rel~='external']:after,
       .lt-ie8 .au-body a[rel~='external']:after {
         content: '⇗';
-        color: #815D00; }
+        color: #00698f; }
     .au-body a:hover {
       color: #313131;
       text-decoration: none; }
@@ -332,7 +332,7 @@
     outline: 3px solid #ea4200; }
   .au-body mark {
     color: #ffffff;
-    background-color: #815D00; }
+    background-color: #00698f; }
   .au-body ::selection {
     background-color: #fce0b3; }
   .au-body p {
@@ -595,8 +595,8 @@ a.au-btn {
   color: #ffffff;
   text-decoration: none;
   border-radius: 4px;
-  background-color: #815D00;
-  border: 3px solid #815D00;
+  background-color: #00698f;
+  border: 3px solid #00698f;
   cursor: pointer;
   vertical-align: middle;
   transition: background 0.1s ease, border 0.1s ease, color 0.1s ease;
@@ -670,8 +670,8 @@ a.au-btn {
   .au-btn.au-btn--secondary,
   a.au-btn.au-btn--secondary {
     background-color: transparent;
-    border-color: #815D00;
-    color: #815D00; }
+    border-color: #00698f;
+    color: #00698f; }
     .au-btn.au-btn--secondary:hover:not(:disabled),
     a.au-btn.au-btn--secondary:hover:not(:disabled) {
       background-color: transparent;
@@ -688,7 +688,7 @@ a.au-btn {
   .au-btn.au-btn--tertiary,
   a.au-btn.au-btn--tertiary {
     background-color: transparent;
-    color: #815D00;
+    color: #00698f;
     border-color: transparent;
     text-decoration: underline; }
     .au-btn.au-btn--tertiary:hover:not(:disabled),
@@ -728,7 +728,7 @@ a.au-btn {
   margin-top: 1rem;
   font-weight: bold;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  color: #815D00;
+  color: #00698f;
   appearance: none;
   background: transparent;
   border: none;
@@ -750,7 +750,7 @@ a.au-btn {
     margin: 0 0.25rem 0 0.2rem;
     transition: margin 0.2s ease;
     display: inline-block;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23815D00' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%23815D00' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E"); }
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%2300698f' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%2300698f' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E"); }
     .ie8 .au-cta-link:after,
     .lt-ie8 .au-cta-link:after {
       content: ' > '; }
@@ -1497,7 +1497,7 @@ a.au-btn {
   padding-left: 1.5rem;
   margin-bottom: 48px;
   margin-bottom: 3rem;
-  border-left: 4px solid #815D00; }
+  border-left: 4px solid #00698f; }
   * + .au-inpage-nav-links {
     margin-top: 48px;
     margin-top: 3rem; }
@@ -1747,7 +1747,7 @@ a.au-btn {
     position: absolute;
     width: auto;
     color: #ffffff;
-    background-color: #815D00;
+    background-color: #00698f;
     text-decoration: underline;
     text-decoration-skip: ink;
     z-index: 600; }
@@ -1881,7 +1881,7 @@ a.au-card {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
   a.au-card .au-card__link,
   a.au-card .au-card__cta {
-    color: #815D00;
+    color: #00698f;
     text-decoration: underline;
     text-decoration-skip: ink; }
   a.au-card:hover .au-card__link {
@@ -1958,15 +1958,23 @@ body {
   margin-top: 5rem;
   margin-bottom: 80px;
   margin-bottom: 5rem; }
-  .page-front #top-content .au-cta-link {
+  .page-front #top-content .more-link {
+    padding-right: 32px;
+    padding-right: 2rem;
+    text-align: right; }
+    .page-front #top-content .more-link a {
+      color: #00698f; }
+      .page-front #top-content .more-link a:after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%2300698f' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%2300698f' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E"); }
+  .page-front #top-content .au-card-list .au-cta-link {
     margin-top: 0;
     margin-bottom: 24px;
     margin-bottom: 1.5rem; }
-    .page-front #top-content .au-cta-link:after {
+    .page-front #top-content .au-card-list .au-cta-link:after {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23ffffff' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%23ffffff' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
       margin: 32px 0 0 auto;
       margin: 2rem 0 0 auto; }
-    .page-front #top-content .au-cta-link:hover:after {
+    .page-front #top-content .au-card-list .au-cta-link:hover:after {
       margin-right: -0.5rem; }
   .page-front #top-content .au-card-list > li {
     margin-top: 0; }
@@ -2001,19 +2009,27 @@ body {
   padding-top: 80px;
   padding-top: 5rem;
   background-color: #F0F3F5; }
-  .page-front #mid-top-content .au-cta-link {
-    margin-top: 0;
-    margin-bottom: 24px;
-    margin-bottom: 1.5rem; }
-    .page-front #mid-top-content .au-cta-link:after {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%237F7F7F' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%237F7F7F' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
-      margin: 32px 0 0 auto;
-      margin: 2rem 0 0 auto; }
-    .page-front #mid-top-content .au-cta-link:hover:after {
-      margin-right: -0.5rem; }
+  .page-front #mid-top-content .more-link {
+    padding-right: 32px;
+    padding-right: 2rem;
+    text-align: right; }
+    .page-front #mid-top-content .more-link a {
+      color: #00698f; }
+      .page-front #mid-top-content .more-link a:after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%2300698f' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%2300698f' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E"); }
   .page-front #mid-top-content .container {
     margin-bottom: 32px;
     margin-bottom: 2rem; }
+  .page-front #mid-top-content .au-card-list .au-cta-link {
+    margin-top: 0;
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem; }
+    .page-front #mid-top-content .au-card-list .au-cta-link:after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%237F7F7F' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%237F7F7F' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
+      margin: 32px 0 0 auto;
+      margin: 2rem 0 0 auto; }
+    .page-front #mid-top-content .au-card-list .au-cta-link:hover:after {
+      margin-right: -0.5rem; }
   .page-front #mid-top-content .au-body {
     background-color: transparent; }
   .page-front #mid-top-content .au-card {
@@ -2089,21 +2105,30 @@ body {
 .page-front #bottom-content {
   padding: 80px 0;
   padding: 5rem 0; }
-  .page-front #bottom-content .au-cta-link {
+  .page-front #bottom-content .more-link {
+    padding-right: 32px;
+    padding-right: 2rem;
+    text-align: right; }
+    .page-front #bottom-content .more-link a {
+      color: #00698f; }
+      .page-front #bottom-content .more-link a:after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%2300698f' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%2300698f' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E"); }
+  .page-front #bottom-content h2 {
+    margin-bottom: 80px;
+    margin-bottom: 5rem;
+    font-weight: normal; }
+  .page-front #bottom-content .au-card-list .au-cta-link {
     margin-top: 0;
     margin-bottom: 24px;
     margin-bottom: 1.5rem; }
-    .page-front #bottom-content .au-cta-link:after {
+    .page-front #bottom-content .au-card-list .au-cta-link:after {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23313131' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%23313131' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
       margin: 32px 0 0 auto;
       margin: 2rem 0 0 auto; }
-    .page-front #bottom-content .au-cta-link:hover:after {
+    .page-front #bottom-content .au-card-list .au-cta-link:hover:after {
       margin-right: -0.5rem; }
-  .page-front #bottom-content * {
+  .page-front #bottom-content .au-card-list * {
     font-weight: normal; }
-  .page-front #bottom-content h2 {
-    margin-bottom: 80px;
-    margin-bottom: 5rem; }
   .page-front #bottom-content .au-card-list > li {
     margin: 0 0 16px 0;
     margin: 0 0 1rem 0; }
@@ -2270,6 +2295,29 @@ footer #social-media {
   footer #social-media h2 {
     font-size: 20px;
     font-size: 1.25rem;
-    line-height: 1; }
+    line-height: 1;
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem; }
+  footer #social-media .au-link-list li {
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem; }
+  footer #social-media .au-link-list a {
+    padding-left: 40px;
+    padding-left: 2.5rem;
+    color: #ffffff;
+    text-decoration: none;
+    background-position: left center;
+    background-repeat: no-repeat; }
+    footer #social-media .au-link-list a:hover {
+      color: #61DAFF;
+      text-decoration: underline; }
+
+footer .au-footer__end {
+  margin-bottom: 80px;
+  margin-bottom: 5rem; }
+  footer .au-footer__end p {
+    border-top: 1px solid #f5f5f5;
+    padding-top: 24px;
+    padding-top: 1.5rem; }
 
 /*# sourceMappingURL=dta-gov-au.styles.css.map */
