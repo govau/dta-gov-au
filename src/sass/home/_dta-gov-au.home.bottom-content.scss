@@ -79,7 +79,7 @@
       @include AU-space( margin, 0 0 1unit 0);
     }
     .au-card--date {
-      @include AU-space( margin, 0 );
+      @include AU-space( margin, auto 0 0 0 );
       color: $AU-color-Muted-suggestion;
     }
   }
