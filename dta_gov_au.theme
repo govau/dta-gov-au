@@ -7,18 +7,24 @@
  * to ensure that sub themes inherit block templates.
  */
 function dta_gov_au_theme_suggestions_block_alter(&$suggestions, $variables) {
+/**
+ * Adds theme hook suggestions to blocks
+ */
+  $block_id = $variables['elements']['#id'];
   foreach ($suggestions as &$suggestion) {
     $suggestion = str_replace('dta_uikit_base_', 'dta_gov_au_', $suggestion);
   }
 }
 
 /**
- * Implements hook_theme_suggestions_HOOK_alter() for block templates.
+ * Implements hook_form_FORM_ID_alter().
  *
- * Adds theme hook suggestions to blocks
- */
-function dta_gov_au_theme_suggestions_block_alter(array &$suggestions, array $variables) {
-  $block_id = $variables['elements']['#id'];
+ * Adds placeholder text to the search bar.
+ *
+ **/
+
+function dta_gov_au_form_search_api_page_block_form_alter(&$form, &$form_state, $form_id) {
+  $form['keys']['#attributes']['placeholder'] = t('Search dta.gov.au');
 }
 
 /**
@@ -28,13 +34,6 @@ function dta_gov_au_theme_suggestions_block_alter(array &$suggestions, array $va
  * This adds theme hooks to various elements.
  *
  **/
-
- /* Adds the 'au' classes to search forms. */
-  function dta_gov_au_theme_suggestions_form_element_alter(&$suggestions, $variables) {
-    if($variables['element']['#type'] == 'checkbox') {
-      $suggestions[] = 'form_element__wrapped';
-    }
-  }
 
 /* Adds the 'form_element__wrapped' suggestion to checkboxes. */
  function dta_gov_au_theme_suggestions_form_element_alter(&$suggestions, $variables) {

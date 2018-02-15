@@ -1787,6 +1787,10 @@ a.au-btn {
       width: 100%;
       margin: 0;
       padding: 0; }
+      .search-api-page-block-form form .form-text:focus,
+      .search-api-page-block-form form .button:focus {
+        border-radius: 0;
+        outline: solid 3px #ff8629; }
     .search-api-page-block-form form .form-text {
       padding: 13px 64px 13px 24px;
       padding: 0.8rem 4rem 0.8rem 1.5rem;
@@ -1800,22 +1804,24 @@ a.au-btn {
       .search-api-page-block-form form .form-text::placeholder {
         color: #636363; }
     .search-api-page-block-form form .button {
-      width: 64px;
-      width: 4rem;
+      width: 104px;
+      width: 6.5rem;
       height: 43px;
       height: 2.7rem;
       border-top-right-radius: 50px;
       border-top-right-radius: 3.125rem;
       border-bottom-right-radius: 50px;
       border-bottom-right-radius: 3.125rem;
+      padding: 0 16px;
+      padding: 0 1rem;
       cursor: pointer;
       border: none;
       border-left: 1px solid #7F7F7F;
-      text-indent: -99em;
       background-color: #f5f5f5 !important;
       background-image: url("data:image/svg+xml,%3Csvg fill='%23000000' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E") !important;
       background-repeat: no-repeat;
-      background-position: center center; }
+      background-position: 0.5rem center;
+      text-align: right; }
 
 .au-card {
   display: block;
@@ -2130,8 +2136,9 @@ body {
   .page-front #bottom-content .au-card-list * {
     font-weight: normal; }
   .page-front #bottom-content .au-card-list > li {
-    margin: 0 0 16px 0;
-    margin: 0 0 1rem 0; }
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+    margin-top: 0; }
   .page-front #bottom-content .au-card {
     padding: 32px;
     padding: 2rem; }
@@ -2144,6 +2151,8 @@ body {
       margin-bottom: 8px;
       margin-bottom: 0.5rem;
       position: relative; }
+      .page-front #bottom-content .au-card .au-card__image img {
+        height: auto; }
     .page-front #bottom-content .au-card .au-card__fullwidth:first-child {
       margin: -32px -32px 24px -32px;
       margin: -2rem -2rem 1.5rem -2rem; }

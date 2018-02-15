@@ -13,7 +13,8 @@
       font-weight: normal;
     }
     > li {
-      @include AU-space( margin, 0 0 1unit 0 );
+      @include AU-space( margin-bottom, 1unit );
+      @include AU-space( margin-top, 0 );
     }
   }
   .au-card {
@@ -27,6 +28,9 @@
     .au-card__image {
       @include AU-space( margin-bottom, 0.5unit );
       position: relative;
+      img {
+        height: auto;
+      }
     }
     .au-card__fullwidth:first-child {
       @include AU-space( margin, -2unit -2unit 1.5unit -2unit );
