@@ -1,4 +1,4 @@
-@mixin more-link( $color:$Main_Action, $align:right ) {
+@mixin more-link( $color:$AU-color-foreground-action, $align:right ) {
   .more-link {
     @include AU-space( padding-right, 2unit );
     text-align: $align;

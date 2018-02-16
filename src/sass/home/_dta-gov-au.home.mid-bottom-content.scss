@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   .row {
-    background-color: $DTAgrey_VizIdentityCols;
+    background-color: $AU-colordark-background;
   }
   #block-jointhedta {
     @include AU-space( padding-bottom, 5unit );
