@@ -7,7 +7,7 @@
   }
   @include AU-space( padding-bottom, 5unit );
   @include AU-space( padding-top, 5unit );
-  background-color: $OurProjectsBG;
+  background-color: $AU-color-background-alt-suggestion;
   .au-card-list {
     @include AU-card-cta-link($AU-color-Border-suggestion);
   }

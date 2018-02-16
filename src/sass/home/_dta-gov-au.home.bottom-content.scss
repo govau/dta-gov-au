@@ -59,14 +59,14 @@
         border-radius: 50%;
         object-fit: cover;
         border: 4px solid $AU-color-Background-light;
-        background-color: $Main_BG_Darkest;
+        background-color: $AU-color-background-alt-shade-suggestion;
         box-sizing: border-box;
       }
     }
     .au-card__title {
       @include AU-space( margin, 0 0 2unit 0 );
       a {
-        color: $Main_Action;
+        color: $AU-color-foreground-action;
         text-decoration: underline;
         &:hover {
           text-decoration: none;
@@ -78,7 +78,7 @@
       @include AU-space( margin, 0 0 1.5unit 0 );
     }
     .au-card--line {
-      border-top: 1px solid $Main_BG_Darkest;
+      border-top: 1px solid $AU-color-background-alt-shade-suggestion;
       width: 100%;
       @include AU-space( margin, 0 0 1unit 0);
     }

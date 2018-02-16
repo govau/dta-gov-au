@@ -28,7 +28,7 @@
     @include AU-space( padding-bottom, 15unit );
   }
   .highlight-block {
-    border-left: 1px solid $Main_Background;
+    border-left: 1px solid $AU-color-background-shade-suggestion;
     display: flex;
     flex-direction: column;
     @include AU-space( margin-bottom, 3unit );

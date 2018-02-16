@@ -4,7 +4,7 @@
   @include AU-space( margin-bottom, 5unit );
   text-align: center;
   a {
-    color: $Main_Action;
+    color: $AU-color-foreground-action;
     &:after {
       content: '\02191';
       background-image: none;
