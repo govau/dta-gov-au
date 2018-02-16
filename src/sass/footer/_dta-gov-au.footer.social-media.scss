@@ -16,6 +16,19 @@
       text-decoration: none;
       background-position: left center;
       background-repeat: no-repeat;
+      background-size: contain;
+      &.twitter {
+        background-image: url('../images/twitter.svg');
+      }
+      &.facebook {
+        background-image: url('../images/facebook.svg');
+      }
+      &.linkedin {
+        background-image: url('../images/linkedin.svg');
+      }
+      &.youtube {
+        background-image: url('../images/youtube.svg');
+      }
       &:hover {
         color: $AU-colordark-Action;
         text-decoration: underline;
