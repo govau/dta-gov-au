@@ -53,14 +53,6 @@ function dta_gov_au_form_search_api_page_block_form_alter(&$form, &$form_state, 
    }
  }
 
- /* Adds the 'form_element__label_' suggestion to form labels. */
- function dta_gov_au_theme_suggestions_form_element_label_alter(&$suggestions, &$vars) {
-   $request['type'] = $vars['element']['type']['type'];
-   if(!empty($request)) {
-     $suggestions[] = 'form_element_label__' . $request['type'];
-   }
- }
-
  /**
   *
   * Implements hook_preprocess_HOOK()
