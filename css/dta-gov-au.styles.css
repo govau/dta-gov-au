@@ -2357,6 +2357,9 @@ header {
         header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a:hover {
           color: #61daff;
           border-bottom: 4px solid #61daff; }
+  header.au-header--content #site-search {
+    margin-top: 20px;
+    margin-top: 1.25rem; }
 
 footer .au-site-logo_link {
   margin-top: 64px;

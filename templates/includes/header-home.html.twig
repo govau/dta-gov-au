@@ -1,7 +1,8 @@
 {#
 /**
  * @file
- * Theme override to display a single page.
+ * Theme include to display the header. Inherits all available variables from the
+ * template context.
  *
  * The doctype, html, head and body tags are not in this template. Instead they
  * can be found in the html.html.twig template in this directory.
@@ -44,61 +45,32 @@
  */
 #}
 
-{% set main_classes = [
-    'container-fluid',
-    is_front ? 'page-front',
-  ]
-%}
-
-<div class="layout-container">
-  {% if is_front %}
-    {% include '@dta_gov_au/includes/header-home.html.twig' %}
-  {% else %}
-    {% include '@dta_gov_au/includes/header.html.twig' %}
-  {% endif %}
+<header role="banner" class="au-header au-header--hero au-header--dark au-header--alt grids">
   <div class="container-fluid">
-
     <div class="container">
-      <div class="row">
-        {{ page.breadcrumb }}
+      <div class="row col-xs-12">
+        <div class="row col-xs-12 col-sm-6">
+          <div class="row col-sm-12 col-md-8">
+            <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+              <img class="au-responsive-media-img site-logo" src="/themes/custom/dta-gov-au/logo.png" alt="{{ 'Home'|t }}" />
+            </a>
+          </div>
+          <div class="row col-sm-12">
+            <h1 class="au-header-heading visually-hidden">Digital Transformation Agency</h1>
+            <h2>Simpler, clearer and faster public services</h2>
+          </div>
+        </div>
+        <div class="row col-xs-12 col-sm-offset-3 col-sm-3">
+          <h3>Most popular topics</h3>
+          {{ drupal_view('most_popular_topics', 'most_popular_topics_block') }}
+        </div>
+      </div>
+      <div class="row col-xs-12 col-md-offset-3 col-md-6">
+        {{ drupal_block('searchapipagesearchblockform') }}
+      </div>
+      <div class="row col-xs-12">
+        {{ page.menu }}
       </div>
     </div>
-
-    <div class="row">
-      {{ page.highlighted }}
-    </div>
-
-    <div class="row">
-      {{ page.help }}
-    </div>
   </div>
-
-  <main{{ attributes.addClass(main_classes) }} role="main">
-      <a id="content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-        {% if is_front %}
-          {% include '@dta_gov_au/includes/home.html.twig' %}
-        {% else %}
-          {{ page.content }}
-        {% endif %}
-
-      {% if page.sidebar_first %}
-        <aside class="layout-sidebar-first" role="complementary">
-          {{ page.sidebar_first }}
-        </aside>
-      {% endif %}
-
-      {% if page.sidebar_second %}
-        <aside class="layout-sidebar-second" role="complementary">
-          {{ page.sidebar_second }}
-        </aside>
-      {% endif %}
-  </main>
-
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {% include '@dta_gov_au/includes/footer.html.twig' %}
-    </footer>
-  {% endif %}
-
-</div>{# /.layout-container #}
+</header>

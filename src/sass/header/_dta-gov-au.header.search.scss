@@ -1,0 +1,7 @@
+// Search styles for the header. Please also see /base/_dta-gov-au.base.search.scss for the 'interior' search style.
+
+&.au-header--content {
+  #site-search {
+    @include AU-space( margin-top, 1.25unit );
+  }
+}
