@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a one-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+
+ /**
+  * Removed extra stuff around the edges for the card view.
+  */
+#}
+
+{% if content %}
+  {{ content.content }}
+{% endif %}
