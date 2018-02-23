@@ -19,7 +19,7 @@
 
 // Element overrides
 
-@import "body/dta-gov-au.body";
+@import "base/dta-gov-au.base.body";
 
 // Home page specific
 
@@ -27,6 +27,9 @@
 
 // Header
 @import "header/dta-gov-au.header";
+
+// Content
+@import "content/dta-gov-au.content";
 
 // Footer
 @import "footer/dta-gov-au.footer";

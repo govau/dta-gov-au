@@ -51,48 +51,42 @@
 %}
 
 <div class="layout-container">
+
   {% if is_front %}
     {% include '@dta_gov_au/includes/header-home.html.twig' %}
   {% else %}
     {% include '@dta_gov_au/includes/header.html.twig' %}
   {% endif %}
-  <div class="container-fluid">
-
-    <div class="container">
-      <div class="row">
-        {{ page.breadcrumb }}
-      </div>
-    </div>
-
-    <div class="row">
-      {{ page.highlighted }}
-    </div>
-
-    <div class="row">
-      {{ page.help }}
-    </div>
-  </div>
 
   <main{{ attributes.addClass(main_classes) }} role="main">
-      <a id="content" tabindex="-1"></a>{# link is in html.html.twig #}
+  <a id="content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-        {% if is_front %}
-          {% include '@dta_gov_au/includes/home.html.twig' %}
+  {% if is_front %}
+    {% include '@dta_gov_au/includes/home.html.twig' %}
+  {% else %}
+    <div class="container">
+      <div class="cols-xs-12">
+        {{ drupal_block('breadcrumbs_2') }}
+      </div>
+      <div class="row">
+        {# If there is a sidebar, put it into the grid and adjust the main content area accordingly. #}
+        {% if page.sidebar_first %}
+          <div class="col-xs-12 col-sm-3">
+            <aside class="layout-sidebar-first" role="complementary">
+              {{ page.sidebar_first }}
+            </aside>
+          </div>
+          <div class="col-xs-12 col-sm-8 col-sm-offset-1">
+            {{ page.content }}
+          </div>
         {% else %}
-          {{ page.content }}
+          <div class="col-xs-12">
+            {{ page.content }}
+          </div>
         {% endif %}
-
-      {% if page.sidebar_first %}
-        <aside class="layout-sidebar-first" role="complementary">
-          {{ page.sidebar_first }}
-        </aside>
-      {% endif %}
-
-      {% if page.sidebar_second %}
-        <aside class="layout-sidebar-second" role="complementary">
-          {{ page.sidebar_second }}
-        </aside>
-      {% endif %}
+      </div>
+    </div>
+  {% endif %}
   </main>
 
   {% if page.footer %}
