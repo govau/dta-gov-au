@@ -1,0 +1,6 @@
+// Styles for the body content area.
+
+main[role="main"] {
+  @import "dta-gov-au.content.breadcrumbs";
+  @import "dta-gov-au.content.main";
+}

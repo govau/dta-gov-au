@@ -2361,6 +2361,18 @@ header {
     margin-top: 20px;
     margin-top: 1.25rem; }
 
+main[role="main"] .au-breadcrumbs {
+  margin-bottom: 48px;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid #e0e0e0; }
+  main[role="main"] .au-breadcrumbs ol {
+    padding-left: 0; }
+
+main[role="main"] h1 {
+  font-size: 40px;
+  font-size: 2.5rem;
+  line-height: 1.5; }
+
 footer .au-site-logo_link {
   margin-top: 64px;
   margin-top: 4rem; }

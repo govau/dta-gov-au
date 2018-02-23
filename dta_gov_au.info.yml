@@ -14,5 +14,5 @@ regions:
   sidebar: Sidebar
   content: Main Content
   footer: Footer
-  sub-footer: Sub-footer
+  disabled: Disabled
 features: []
