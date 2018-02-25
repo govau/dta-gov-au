@@ -16,12 +16,12 @@
         font-weight: bold;
         a {
           @include AU-space( padding-bottom, 0.5unit )
-          color: $AU-colordark-Text;
+          color: $AU-colordark-foreground-text;
           text-decoration: none;
           border-bottom: 4px solid transparent;
           &:hover {
-            color: $AU-colordark-Action;
-            border-bottom: 4px solid $AU-colordark-Action;
+            color: $AU-colordark-foreground-action;
+            border-bottom: 4px solid $AU-colordark-foreground-action;
           }
         }
       }

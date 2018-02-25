@@ -9,7 +9,7 @@
   @include AU-space( padding-top, 5unit );
   background-color: $AU-color-background-alt-suggestion;
   .au-card-list {
-    @include AU-card-cta-link($AU-color-Border-suggestion);
+    @include AU-card-cta-link($AU-color-foreground-border-suggestion);
   }
   .au-body {
     background-color: transparent;

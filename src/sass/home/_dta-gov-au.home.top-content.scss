@@ -3,7 +3,7 @@
 #top-content {
   @include more-link();
   .au-card-list {
-    @include AU-card-cta-link($AU-colordark-Text);
+    @include AU-card-cta-link($AU-colordark-foreground-text);
     > li {
       @include AU-space( margin-top, 0 );
     }
@@ -27,7 +27,7 @@
     }
     * {
       font-weight: normal;
-      color: $AU-colordark-Text;
+      color: $AU-colordark-foreground-text;
     }
     .au-card__text {
       @include AU-space( margin-bottom, auto );

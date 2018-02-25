@@ -12,7 +12,7 @@
     }
     a {
       @include AU-space( padding-left, 2.5unit );
-      color: $AU-color-Background-light;
+      color: $AU-color-foreground-background;
       text-decoration: none;
       background-position: left center;
       background-repeat: no-repeat;
@@ -30,7 +30,7 @@
         background-image: url('../images/youtube.svg');
       }
       &:hover {
-        color: $AU-colordark-Action;
+        color: $AU-colordark-foreground-action;
         text-decoration: underline;
       }
     }

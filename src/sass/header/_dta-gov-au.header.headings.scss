@@ -3,7 +3,7 @@
 h2 {
   @include AU-space( margin, 0 0 5unit 0 );
   @include AU-fontgrid( xxxl, nospace);
-  color: $AU-colordark-Action;
+  color: $AU-colordark-foreground-action;
 }
 
 h3 {
