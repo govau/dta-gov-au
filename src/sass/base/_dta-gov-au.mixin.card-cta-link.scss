@@ -1,4 +1,4 @@
-@mixin AU-card-cta-link($color: $AU-color-Border-suggestion) {
+@mixin AU-card-cta-link($color: $AU-color-foreground-border-suggestion) {
   .au-cta-link {
     @include AU-space( margin-top, 0 );
     @include AU-space( margin-bottom, 1.5unit );
