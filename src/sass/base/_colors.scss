@@ -25,8 +25,8 @@ $AU-colordark-foreground-focus:                 #ff8629;
 $AU-colordark-background-shade-suggestion:      #323232;
 $AU-colordark-background-alt-suggestion:        #282828;
 $AU-colordark-background-alt-shade-suggestion:  #1D1D1D;
-$AU-colordark-foreground-muted-suggestion:      #a6a6a6;
-$AU-colordark-foreground-border-suggestion:     #868686;
+$AU-colordark-foreground-muted-suggestion:      #adadad; // Originally #a6a6a6; These two colours kept being changed by the AU-color-a11y function.
+$AU-colordark-foreground-border-suggestion:     #8c8c8c; // Originally #868686;
 
 // Extra colours
 $card-green:                                    #248041;
