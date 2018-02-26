@@ -1,6 +1,8 @@
 // Styles for the body content area.
 
 main[role="main"] {
+  @include AU-space( padding-bottom, 5unit );
   @import "dta-gov-au.content.breadcrumbs";
   @import "dta-gov-au.content.main";
+  @import "dta-gov-au.content.back-to-top";
 }

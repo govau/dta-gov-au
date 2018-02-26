@@ -2436,17 +2436,37 @@ header {
     margin-top: 20px;
     margin-top: 1.25rem; }
 
-main[role="main"] .au-breadcrumbs {
-  margin-bottom: 48px;
-  margin-bottom: 3rem;
-  border-bottom: 2px solid #e0e0e0; }
-  main[role="main"] .au-breadcrumbs ol {
-    padding-left: 0; }
-
-main[role="main"] h1 {
-  font-size: 40px;
-  font-size: 2.5rem;
-  line-height: 1.5; }
+main[role="main"] {
+  padding-bottom: 80px;
+  padding-bottom: 5rem; }
+  main[role="main"] .au-breadcrumbs {
+    margin-bottom: 48px;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid #e0e0e0; }
+    main[role="main"] .au-breadcrumbs ol {
+      padding-left: 0; }
+  main[role="main"] h1 {
+    font-size: 40px;
+    font-size: 2.5rem;
+    line-height: 1.5; }
+  main[role="main"] h2, main[role="main"] h3 {
+    font-weight: normal; }
+  main[role="main"] nav.au-inpage-nav-links {
+    margin: 48px 0;
+    margin: 3rem 0; }
+    main[role="main"] nav.au-inpage-nav-links .au-inpage-nav-links__heading {
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 1.6; }
+    main[role="main"] nav.au-inpage-nav-links .au-link-list > li {
+      margin-top: 24px;
+      margin-top: 1.5rem; }
+  main[role="main"] .back-to-top {
+    margin-top: 24px;
+    margin-top: 1.5rem;
+    float: none;
+    display: block;
+    text-align: right; }
 
 footer .au-site-logo_link {
   margin-top: 64px;

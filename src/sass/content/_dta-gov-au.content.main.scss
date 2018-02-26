@@ -3,3 +3,11 @@
 h1 {
   @include AU-fontgrid( xxl );
 }
+
+h2, h3 {
+  font-weight: normal;
+}
+
+
+// In page nav links.
+@import "dta-gov-au.content.inpage-nav";
