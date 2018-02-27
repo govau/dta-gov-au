@@ -2,35 +2,54 @@
 
 nav[role="navigation"] {
   .au-link-list {
-    > li {
+    // Outer <ul> containers.
+    @include AU-space( padding, 0 );
+    li {
+      // Turn every item off first.
       display: none;
-      &.menu-item--active-trail {
-        border: none;
-        > a {
-          @include AU-fontgrid( md );
-          font-weight: bold;
-          display: block;
-          color: $AU-color-foreground-text;
-          text-decoration: none;
-          @include AU-space( margin-left, 1unit );
-          @include AU-space( padding, 1unit 0 1unit 0 );
-          border-bottom: 1px solid $AU-color-foreground-border-suggestion;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
+    }
+    &.menu-level-0 {
+      // Menu level 0 (root)
+      > .menu-item--active-trail > a {
+        // The root 'title' of the menu.
+        @include AU-fontgrid( md );
+        @include AU-space( margin-left, 1unit );
+        @include AU-space( padding, 1unit 0 1unit 0 );
+        font-weight: bold;
         display: block;
-        li {
-          display: block;
+        color: $AU-color-foreground-text;
+        text-decoration: none;
+        border-bottom: 1px solid $AU-color-foreground-border-suggestion;
+        &:hover {
+          text-decoration: underline;
         }
       }
+    }
+    &.menu-level-1 {
+      // Menu level 1
+    }
+    .menu-item--active-trail {
+      // The active trail - the current page and any parents.
+      border: none;
+      display: block;
       li {
+        // <li> within the active trail.
+        display: block;
         border-left: 8px solid $AU-color-background-shade-suggestion;
         @include AU-space( margin, 0 );
+        transition: border-color 0.1s linear;
         &:hover {
           border-left: 8px solid $AU-color-foreground-action;
         }
+        &.menu-item--expanded {
+          // If a menu item has children, we don't want double borders.
+          border: none;
+          &:hover {
+            border: none;
+          }
+        }
         > a {
+          // Links within the active trail.
           border-bottom: 1px solid $AU-color-foreground-border-suggestion;
           text-decoration: none;
           display: block;
@@ -40,18 +59,25 @@ nav[role="navigation"] {
             text-decoration: underline;
           }
           &.is-active {
+            // The currently active link.
             background-color: $AU-color-foreground-action;
             color: $AU-color-foreground-background;
             border: none;
+            @include AU-space( margin-left, 0 );
+            margin-top: -1px; // Removes the extra border for the item above it.
+            @include AU-space( padding-left, 2unit );
             &:hover {
               border: none;
             }
           }
         }
       }
-    }
-    .au-link-list {
-      @include AU-space( padding, 0 );
+      .menu-level-2 {
+        // Menu level 2
+        > li > a {
+          @include AU-space( padding-left, 2.5unit );
+        }
+      }
     }
   }
 }
