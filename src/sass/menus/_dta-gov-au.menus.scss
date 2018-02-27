@@ -1,0 +1,5 @@
+// Styles for menus which don't live in another element (ie side bars).
+
+aside.layout-sidebar-first {
+  @import "dta-gov-au.menus.sidebar-main";
+}

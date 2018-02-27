@@ -73,3 +73,28 @@ function dta_gov_au_preprocess_form_element__wrapped(&$variables) {
   unset($variables['label']);
   $variables['title'] = $variables['element']['#title'];
 }
+
+// Theme functions to add block IDs to menu blocks.
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function dta_gov_au_preprocess_block(&$variables) {
+  $variables['content']['#attributes']['block'] = $variables['elements']['#id'];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function dta_gov_au_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
+  // Remove the block and replace dashes with underscores in the block ID to
+  // use for the hook name.
+  if (isset($variables['attributes']['block'])) {
+    $hook = str_replace(array('block-', '-'), array('', '_'), $variables['attributes']['block']);
+    $block = \Drupal\block\Entity\Block::load($hook);
+    $region = $block->getRegion();
+    $suggestions[] = $variables['theme_hook_original'] . '__' . $region;
+    $suggestions[] = $variables['theme_hook_original'] . '__' . $hook;
+    $suggestions[] = $variables['theme_hook_original'] . '__' . $region . '__' . $hook;
+  }
+}

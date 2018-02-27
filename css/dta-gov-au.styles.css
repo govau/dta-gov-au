@@ -2468,6 +2468,53 @@ main[role="main"] {
     display: block;
     text-align: right; }
 
+aside.layout-sidebar-first nav[role="navigation"] .au-link-list > li {
+  display: none; }
+  aside.layout-sidebar-first nav[role="navigation"] .au-link-list > li.menu-item--active-trail {
+    border: none;
+    display: block; }
+    aside.layout-sidebar-first nav[role="navigation"] .au-link-list > li.menu-item--active-trail > a {
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 1.6;
+      font-weight: bold;
+      display: block;
+      color: #313131;
+      text-decoration: none;
+      margin-left: 16px;
+      margin-left: 1rem;
+      padding: 16px 0 16px 0;
+      padding: 1rem 0 1rem 0;
+      border-bottom: 1px solid #7F7F7F; }
+      aside.layout-sidebar-first nav[role="navigation"] .au-link-list > li.menu-item--active-trail > a:hover {
+        text-decoration: underline; }
+    aside.layout-sidebar-first nav[role="navigation"] .au-link-list > li.menu-item--active-trail li {
+      display: block; }
+  aside.layout-sidebar-first nav[role="navigation"] .au-link-list > li li {
+    border-left: 8px solid #f5f5f5;
+    margin: 0; }
+    aside.layout-sidebar-first nav[role="navigation"] .au-link-list > li li:hover {
+      border-left: 8px solid #00698f; }
+    aside.layout-sidebar-first nav[role="navigation"] .au-link-list > li li > a {
+      border-bottom: 1px solid #7F7F7F;
+      text-decoration: none;
+      display: block;
+      padding: 16px 0 16px 16px;
+      padding: 1rem 0 1rem 1rem;
+      margin-left: 8px;
+      margin-left: 0.5rem; }
+      aside.layout-sidebar-first nav[role="navigation"] .au-link-list > li li > a:hover {
+        text-decoration: underline; }
+      aside.layout-sidebar-first nav[role="navigation"] .au-link-list > li li > a.is-active {
+        background-color: #00698f;
+        color: #ffffff;
+        border: none; }
+        aside.layout-sidebar-first nav[role="navigation"] .au-link-list > li li > a.is-active:hover {
+          border: none; }
+
+aside.layout-sidebar-first nav[role="navigation"] .au-link-list .au-link-list {
+  padding: 0; }
+
 footer .au-site-logo_link {
   margin-top: 64px;
   margin-top: 4rem; }
