@@ -30,14 +30,15 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul class="au-link-list"{{ attributes }}>
+      <ul class="au-link-list menu-level-{{ menu_level }}"{{ attributes }}>
     {% else %}
-      <ul class="au-link-list">
+      <ul class="au-link-list menu-level-{{ menu_level }}">
     {% endif %}
     {% for item in items %}
       {%
         set classes = [
           item.in_active_trail ? 'menu-item--active-trail',
+          item.is_expanded ? 'menu-item--expanded',
         ]
       %}
       <li{{ item.attributes.addClass(classes) }}>
