@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a one-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+ **/
+ * Removed wrapper material to just output the content.
+#}
+
+{% if content %}
+  {{ content.content }}
+{% endif %}
