@@ -10,23 +10,6 @@
       display: flex;
     }
   }
-  h2 {
-    @include AU-fontgrid( xl, nospace );
-    font-weight: normal;
-  }
-  p {
-    &:last-of-type {
-      @include AU-space( margin-top, 3unit );
-    }
-    &:nth-last-child(2) {
-      @include AU-space( margin-bottom, auto );
-    }
-  }
-  @include AU-space( padding-top, 3unit );
-  @include AU-media( sm ) {
-    @include AU-space( padding-top, 15unit );
-    @include AU-space( padding-bottom, 15unit );
-  }
   .highlight-block {
     border-left: 1px solid $AU-color-background-shade-suggestion;
     display: flex;
@@ -36,5 +19,17 @@
     @include AU-media( sm ) {
       @include AU-space( margin-bottom, 0 );
     }
+  }
+  h2 {
+    @include AU-fontgrid( xl, nospace );
+    font-weight: normal;
+  }
+  .link-wrapper {
+    @include AU-space( margin-top, auto );
+  }
+  @include AU-space( padding-top, 3unit );
+  @include AU-media( sm ) {
+    @include AU-space( padding-top, 15unit );
+    @include AU-space( padding-bottom, 15unit );
   }
 }

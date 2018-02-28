@@ -26,13 +26,11 @@
  */
 
  /**
-  * Updated to remove wrapper stuff provided by home.html.twig.
+  * Updated to remove wrapper stuff which is provided by home.html.twig.
+  * Removed title, title_prefix and title_suffix. This will remove contextual links
+  * which mess with the display for authors.
 #}
-{{ title_prefix }}
-{% if label %}
-  <h2{{ title_attributes }}>{{ label }}</h2>
-{% endif %}
-{{ title_suffix }}
+
 {% block content %}
   {{ content }}
 {% endblock %}
