@@ -1,16 +1,17 @@
-// Styles for cards in content.
-
+// Styles for cards in content. The styles also flow 'up' to the home page.
+//
+// @TODO: Write a better SASS function to apply the borders - this is stupid.
 .au-card-list {
   @include AU-card-cta-link($AU-color-foreground-text, $AU-color-foreground-background);
   li {
-    a {
+    a.au-cta-link {
       border-top-width: 3px;
       border-top-style: solid;
       transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     }
     // Top borders for cards.
     &:nth-of-type(5n+1) {
-      a {
+      a.au-cta-link {
         border-top-color: $top-border-purple;
         &:hover {
           background-color: $top-border-purple;
@@ -20,7 +21,7 @@
     }
 
     &:nth-of-type(5n+2) {
-      a {
+      a.au-cta-link {
         border-top-color: $top-border-green;
         &:hover {
           background-color: $top-border-green;
@@ -30,7 +31,7 @@
     }
 
     &:nth-of-type(5n+3) {
-      a {
+      a.au-cta-link {
         border-top-color: $top-border-dark-purple;
         &:hover {
           background-color: $top-border-dark-purple;
@@ -40,7 +41,7 @@
     }
 
     &:nth-of-type(5n+4) {
-      a {
+      a.au-cta-link {
         border-top-color: $top-border-orange;
         &:hover {
           background-color: $top-border-orange;
@@ -50,7 +51,7 @@
     }
 
     &:nth-of-type(5n+5) {
-      a {
+      a.au-cta-link {
         border-top-color: $top-border-pink;
         &:hover {
           background-color: $top-border-pink;
