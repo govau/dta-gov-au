@@ -2105,6 +2105,9 @@ body {
     font-size: 2rem;
     line-height: 1;
     font-weight: normal; }
+  .page-front #highlight p:last-of-type {
+    margin-bottom: 32px;
+    margin-bottom: 2rem; }
   .page-front #highlight .link-wrapper {
     margin-top: auto; }
   @media (min-width: 768px) {
@@ -2223,45 +2226,27 @@ body {
 
 .page-front #mid-bottom-content {
   background-image: url("../images/home-join-the-dta.jpg");
-  background-position: right center;
+  background-position: right 20%;
   background-repeat: no-repeat;
-  background-size: contain; }
+  background-size: 88%; }
   .page-front #mid-bottom-content .row {
     background-color: #414141; }
-  .page-front #mid-bottom-content #block-jointhedta {
-    padding-bottom: 80px;
-    padding-bottom: 5rem;
-    padding-top: 80px;
-    padding-top: 5rem; }
-  .page-front #mid-bottom-content .left-wrapper {
-    float: left;
-    margin-left: auto;
-    margin-right: 0;
-    box-sizing: border-box;
-    padding-right: 32px;
-    padding-right: 2rem;
-    padding-left: 12px;
-    padding-left: 0.75rem; }
-    @media (min-width: 1200px) {
-      .page-front #mid-bottom-content .left-wrapper {
-        width: 588px;
-        width: 36.75rem; } }
-  .page-front #mid-bottom-content .right-wrapper {
-    float: right;
-    margin-right: auto;
-    margin-left: 0;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0; }
   .page-front #mid-bottom-content h2 {
     font-weight: normal;
     margin-bottom: 24px;
-    margin-bottom: 1.5rem; }
-  .page-front #mid-bottom-content p:last-child {
-    margin-top: 0; }
+    margin-bottom: 1.5rem;
+    margin-top: 80px;
+    margin-top: 5rem; }
+  .page-front #mid-bottom-content p {
+    margin-right: 32px;
+    margin-right: 2rem; }
+    .page-front #mid-bottom-content p:last-child {
+      margin-top: 0; }
   .page-front #mid-bottom-content .au-btn {
     margin-top: 64px;
-    margin-top: 4rem; }
+    margin-top: 4rem;
+    margin-bottom: 80px;
+    margin-bottom: 5rem; }
 
 .page-front #bottom-content {
   padding: 80px 0;

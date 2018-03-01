@@ -60,6 +60,9 @@
 {% else %}
   {{ label }}
   {% for item in items %}
-    {{ item.content }}
+    <div class="link-wrapper">
+      {# This div is just to make sure that the link doesn't take up the whole width of the column due to flex. #}
+      <a href="{{ item.content['#url'] }}"{{ item.attributes.addClass(classes) }}>{{ item.content['#title'] }}</a>
+    </div>
   {% endfor %}
 {% endif %}
