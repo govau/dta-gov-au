@@ -1,0 +1,71 @@
+// Styles for cards in content.
+
+.au-card-list {
+  @include AU-card-cta-link($AU-color-foreground-text, $AU-color-foreground-background);
+  li {
+    a {
+      border-top-width: 3px;
+      border-top-style: solid;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+    // Top borders for cards.
+    &:nth-of-type(5n+1) {
+      a {
+        border-top-color: $top-border-purple;
+        &:hover {
+          background-color: $top-border-purple;
+          color: $AU-color-foreground-background;
+        }
+      }
+    }
+
+    &:nth-of-type(5n+2) {
+      a {
+        border-top-color: $top-border-green;
+        &:hover {
+          background-color: $top-border-green;
+          color: $AU-color-foreground-background;
+        }
+      }
+    }
+
+    &:nth-of-type(5n+3) {
+      a {
+        border-top-color: $top-border-dark-purple;
+        &:hover {
+          background-color: $top-border-dark-purple;
+          color: $AU-color-foreground-background;
+        }
+      }
+    }
+
+    &:nth-of-type(5n+4) {
+      a {
+        border-top-color: $top-border-orange;
+        &:hover {
+          background-color: $top-border-orange;
+          color: $AU-color-foreground-background;
+        }
+      }
+    }
+
+    &:nth-of-type(5n+5) {
+      a {
+        border-top-color: $top-border-pink;
+        &:hover {
+          background-color: $top-border-pink;
+          color: $AU-color-foreground-background;
+        }
+      }
+    }
+  }
+}
+
+.au-card {
+  @include AU-space( padding, 2unit );
+  font-weight: normal;
+}
+
+.au-card__title {
+  @include AU-space( margin-bottom, 1.5unit );
+}
