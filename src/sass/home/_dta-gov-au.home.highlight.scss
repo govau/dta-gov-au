@@ -24,6 +24,9 @@
     @include AU-fontgrid( xl, nospace );
     font-weight: normal;
   }
+  p:last-of-type {
+    @include AU-space( margin-bottom, 2unit );
+  }
   .link-wrapper {
     @include AU-space( margin-top, auto );
   }
