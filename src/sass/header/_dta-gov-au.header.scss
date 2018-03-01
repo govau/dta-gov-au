@@ -1,9 +1,9 @@
 // Main header styles.
 
 header {
-  border-bottom: 2px solid $AU-color-background-alt-shade-suggestion;
+  border-bottom: 8px solid $AU-colordark-foreground-action;
   &.au-header.au-header--hero {
-    @include AU-space( padding, 5unit 0 0 0 );
+    @include AU-space( padding, 1.5unit 0 0 0 );
     &.au-header--alt.au-header--dark {
       background-color: $AU-colordark-background;
     }
