@@ -1,4 +1,18 @@
 <?php
+/**
+ * Implements hook_preprocess_menu().
+ *
+ * Adds 'is_front' variable to html.html.twig.
+ *
+ **/
+function dta_gov_au_preprocess_menu(&$variables) {
+  try {
+    $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+  }
+  catch (Exception $e) {
+    $variables['is_front'] = FALSE;
+  }
+}
 
 /**
  * Implements hook_theme_suggestions_block_alter().

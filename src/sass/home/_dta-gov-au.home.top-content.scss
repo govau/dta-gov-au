@@ -17,13 +17,13 @@
   .au-card {
     @include AU-space( padding, 2unit 4unit 2unit 2unit );
     &.au-card--item-1 {
-      background: linear-gradient(#005d80, $AU-color-foreground-action);
+      background-color: $top-border-dark-purple;
     }
     &.au-card--item-2 {
-      background: linear-gradient(#1f7039, $card-green);
+      background-color: $top-border-green;
     }
     &.au-card--item-3 {
-      background: linear-gradient(#903086, $card-purple);
+      background-color: $top-border-purple;
     }
     * {
       font-weight: normal;
