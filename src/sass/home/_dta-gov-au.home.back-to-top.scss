@@ -1,10 +1,11 @@
 // Styles for back to top link on the home page.
 
 #back-to-top {
-  @include AU-space( margin-bottom, 5unit );
+  @include AU-space( margin-bottom, 0unit );
   text-align: center;
   a {
     color: $AU-color-foreground-action;
+    font-weight: bold;
     &:after {
       content: '\02191';
       background-image: none;

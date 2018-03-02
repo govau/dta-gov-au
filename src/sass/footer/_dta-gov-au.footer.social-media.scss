@@ -5,6 +5,7 @@
   h2 {
     @include AU-fontgrid( md, nospace );
     @include AU-space( margin-bottom, 1.5unit );
+    font-weight: normal;
   }
   .au-link-list {
     li {

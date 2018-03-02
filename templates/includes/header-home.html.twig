@@ -50,22 +50,18 @@
     <div class="container">
       <div class="row col-xs-12">
         <div class="row col-xs-12 col-sm-6">
-          <div class="row col-sm-12 col-md-8">
+          <div class="row col-xs-12 col-sm-8">
             <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
               <img class="au-responsive-media-img site-logo" src="/themes/custom/dta-gov-au/logo.png" alt="{{ 'Home'|t }}" />
             </a>
           </div>
-          <div class="row col-sm-12">
+          <div class="row col-xs-12">
             <h1 class="au-header-heading visually-hidden">Digital Transformation Agency</h1>
             <h2>Simpler, clearer and faster public services</h2>
           </div>
         </div>
-        <div class="row col-xs-12 col-sm-offset-3 col-sm-3">
-          <h3>Most popular topics</h3>
-          {{ drupal_view('most_popular_topics', 'most_popular_topics_block') }}
-        </div>
       </div>
-      <div class="row col-xs-12 col-md-offset-3 col-md-6">
+      <div class="row col-xs-12 col-sm-6">
         {{ drupal_block('searchapipagesearchblockform') }}
       </div>
       <div class="row col-xs-12">

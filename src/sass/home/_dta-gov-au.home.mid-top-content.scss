@@ -32,7 +32,7 @@
     font-weight: normal;
     @include AU-space( margin-top, 1.5unit );
     @include AU-space( margin-bottom, 1.5unit );
-    text-decoration: underline;
+    text-decoration: none;
   }
   .au-card__image {
     @include AU-space( max-height, 13unit );
@@ -44,7 +44,7 @@
   }
   .au-cta-link:hover {
     .au-card__title {
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
 }

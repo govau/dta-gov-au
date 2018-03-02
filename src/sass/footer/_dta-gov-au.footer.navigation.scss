@@ -2,18 +2,17 @@
 
 .au-footer__navigation {
   @include AU-space( margin-top, 5unit );
-  @include AU-space( margin-bottom, 9.5unit );
+  @include AU-space( margin-bottom, 2unit );
   .au-link-list {
     li {
-      @include AU-space( margin-right, 2unit );
+      @include AU-space( margin-right, 1unit );
+      display: block;
       @include AU-media( sm ) {
         display: inline-block;
       }
-      display: block;
     }
     a {
       color: $AU-color-foreground-background;
-      font-weight: bold;
       text-decoration: none;
       &:hover {
         text-decoration: underline;
