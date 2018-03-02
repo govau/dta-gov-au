@@ -23,6 +23,12 @@
  * @see template_preprocess_html()
  */
 #}
+
+{% set classes = [
+  'au-grid',
+  ]
+%}
+
 <!DOCTYPE html>
 <html{{ html_attributes }}>
   <head>
@@ -31,7 +37,7 @@
     <css-placeholder token="{{ placeholder_token|raw }}">
     <js-placeholder token="{{ placeholder_token|raw }}">
   </head>
-  <body {{ attributes.addClass('au-grid') }}>
+  <body {{ attributes.addClass(classes) }}>
     {#
       Keyboard navigation/accessibility link to main content section in
       page.html.twig.
