@@ -1,9 +1,20 @@
 // Styles for the mid-bottom block on the home page.
 #mid-bottom-content {
-  background-image: url('../images/home-join-the-dta.jpg');
-  background-position: right 20%;
+  background-image: url('../images/mid-bottom-bg.png');
+  background-position: 300% center;
   background-repeat: no-repeat;
-  background-size: 88%;
+  @include AU-media ( sm ) {
+    background-size: 89%;
+    background-position: right center;
+  }
+  @include AU-media ( md ) {
+    background-size: 66%;
+  }
+  @include AU-media ( lg ) {
+    background-size: 54%;
+    background-position: right 25%;
+
+  }
   .row {
     background-color: $AU-colordark-background;
   }

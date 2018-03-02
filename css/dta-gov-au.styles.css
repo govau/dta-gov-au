@@ -2079,7 +2079,7 @@ body {
   background-color: #414141; }
 
 .page-front #highlight {
-  background-image: url("../images/home-vision-priority.png");
+  background-image: url("../images/highlight-bg.png");
   background-position: center top;
   background-size: cover;
   padding-top: 48px;
@@ -2216,7 +2216,7 @@ body {
     margin-top: 1.5rem;
     margin-bottom: 24px;
     margin-bottom: 1.5rem;
-    text-decoration: underline; }
+    text-decoration: none; }
   .page-front #mid-top-content .au-card__image {
     max-height: 208px;
     max-height: 13rem;
@@ -2224,13 +2224,23 @@ body {
     .page-front #mid-top-content .au-card__image img {
       height: 100%; }
   .page-front #mid-top-content .au-cta-link:hover .au-card__title {
-    text-decoration: none; }
+    text-decoration: underline; }
 
 .page-front #mid-bottom-content {
-  background-image: url("../images/home-join-the-dta.jpg");
-  background-position: right 20%;
-  background-repeat: no-repeat;
-  background-size: 88%; }
+  background-image: url("../images/mid-bottom-bg.png");
+  background-position: 300% center;
+  background-repeat: no-repeat; }
+  @media (min-width: 768px) {
+    .page-front #mid-bottom-content {
+      background-size: 89%;
+      background-position: right center; } }
+  @media (min-width: 992px) {
+    .page-front #mid-bottom-content {
+      background-size: 66%; } }
+  @media (min-width: 1200px) {
+    .page-front #mid-bottom-content {
+      background-size: 54%;
+      background-position: right 25%; } }
   .page-front #mid-bottom-content .row {
     background-color: #414141; }
   .page-front #mid-bottom-content h2 {
@@ -2300,15 +2310,21 @@ body {
       margin: -32px -32px 24px -32px;
       margin: -2rem -2rem 1.5rem -2rem; }
     .page-front #bottom-content .au-card .au-card--content_type {
-      font-weight: bold;
-      margin-bottom: 24px;
-      margin-bottom: 1.5rem; }
+      margin-bottom: 0;
+      font-weight: bold; }
+      .page-front #bottom-content .au-card .au-card--content_type + .au-card--author_name {
+        margin-top: 0; }
+      .page-front #bottom-content .au-card .au-card--content_type + .au-card__title {
+        margin-top: 32px;
+        margin-top: 2rem; }
       .page-front #bottom-content .au-card .au-card--content_type a {
         color: #313131;
         font-weight: bold; }
     .page-front #bottom-content .au-card .au-card--author_name {
       margin-bottom: 24px;
-      margin-bottom: 1.5rem; }
+      margin-bottom: 1.5rem;
+      margin-top: 0px;
+      margin-top: 0rem; }
       .page-front #bottom-content .au-card .au-card--author_name a {
         color: #636363; }
     .page-front #bottom-content .au-card .au-card--author_image {
@@ -2351,11 +2367,12 @@ body {
       color: #636363; }
 
 .page-front #back-to-top {
-  margin-bottom: 80px;
-  margin-bottom: 5rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
   text-align: center; }
   .page-front #back-to-top a {
-    color: #00698f; }
+    color: #00698f;
+    font-weight: bold; }
     .page-front #back-to-top a:after {
       content: '\02191';
       background-image: none; }
@@ -2391,12 +2408,13 @@ header {
         header .au-body .au-link-list.au-link-list--inline > li {
           display: inline-block; } }
   header #block-mainnavigation-2.au-body.au-body--dark .au-link-list {
-    margin-bottom: 16px;
-    margin-bottom: 1rem;
+    margin-bottom: 17px;
+    margin-bottom: 1.0625rem;
     padding-bottom: 0px;
     padding-bottom: 0rem;
     padding-top: 0px;
-    padding-top: 0rem; }
+    padding-top: 0rem;
+    display: flex; }
     header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li {
       font-size: 16px;
       font-size: 1rem;
@@ -2407,13 +2425,11 @@ header {
         header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li {
           margin: 0 48px 0 0;
           margin: 0 3rem 0 0; } }
-      @media (min-width: 1200px) {
-        header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li {
-          margin: 0 100px 0 0;
-          margin: 0 6.25rem 0 0; } }
+      header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li:last-of-type {
+        margin-left: auto; }
       header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a {
-        padding-bottom: 19px;
-        padding-bottom: 1.1875rem;
+        padding-bottom: 16px;
+        padding-bottom: 1rem;
         color: #ffffff;
         text-decoration: none;
         border-bottom: 8px solid transparent; }
@@ -2421,7 +2437,7 @@ header {
           color: #61DAFF;
           border-bottom: 8px solid #61DAFF;
           text-decoration: underline; }
-        header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a:active {
+        header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a:active, header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a.is-active {
           text-decoration: none;
           border-color: #ffffff; }
   header.au-header--content #site-search {
@@ -2576,18 +2592,17 @@ footer .au-site-logo_link {
 footer .au-footer__navigation {
   margin-top: 80px;
   margin-top: 5rem;
-  margin-bottom: 152px;
-  margin-bottom: 9.5rem; }
+  margin-bottom: 32px;
+  margin-bottom: 2rem; }
   footer .au-footer__navigation .au-link-list li {
-    margin-right: 32px;
-    margin-right: 2rem;
+    margin-right: 16px;
+    margin-right: 1rem;
     display: block; }
     @media (min-width: 768px) {
       footer .au-footer__navigation .au-link-list li {
         display: inline-block; } }
   footer .au-footer__navigation .au-link-list a {
     color: #ffffff;
-    font-weight: bold;
     text-decoration: none; }
     footer .au-footer__navigation .au-link-list a:hover {
       text-decoration: underline; }
@@ -2600,7 +2615,8 @@ footer #social-media {
     font-size: 1.25rem;
     line-height: 1;
     margin-bottom: 24px;
-    margin-bottom: 1.5rem; }
+    margin-bottom: 1.5rem;
+    font-weight: normal; }
   footer #social-media .au-link-list li {
     margin-bottom: 24px;
     margin-bottom: 1.5rem; }
@@ -2629,7 +2645,7 @@ footer .au-footer__end {
   margin-bottom: 5rem; }
   footer .au-footer__end p {
     border-top: 1px solid #f5f5f5;
-    padding-top: 24px;
-    padding-top: 1.5rem; }
+    padding-top: 32px;
+    padding-top: 2rem; }
 
 /*# sourceMappingURL=dta-gov-au.styles.css.map */

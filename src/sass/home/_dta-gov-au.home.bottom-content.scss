@@ -36,8 +36,14 @@
       @include AU-space( margin, -2unit -2unit 1.5unit -2unit );
     }
     .au-card--content_type {
+      @include AU-space( margin-bottom, 0 );
       font-weight: bold;
-      @include AU-space( margin-bottom, 1.5unit );
+      + .au-card--author_name {
+        @include AU-space( margin-top, 0 );
+      }
+      + .au-card__title {
+        @include AU-space( margin-top, 2unit );
+      }
       a {
         color: $AU-color-foreground-text;
         font-weight: bold;
@@ -45,6 +51,7 @@
     }
     .au-card--author_name {
       @include AU-space( margin-bottom, 1.5unit );
+      @include AU-space( margin-top, 0unit );
       a {
         color: $AU-color-foreground-muted-suggestion;
       }

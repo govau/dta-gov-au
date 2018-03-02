@@ -4,6 +4,6 @@
   @include AU-space( margin-bottom, 5unit );
   p {
     border-top: 1px solid $AU-color-background-shade-suggestion;
-    @include AU-space( padding-top, 1.5unit );
+    @include AU-space( padding-top, 2unit );
   }
 }
