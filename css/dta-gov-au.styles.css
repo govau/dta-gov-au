@@ -1910,6 +1910,12 @@ a.au-btn {
     text-decoration-skip: ink;
     z-index: 600; }
 
+body {
+  margin: 0; }
+
+.au-body.au-body--dark.au-body--alt {
+  background-color: #414141; }
+
 .search-api-page-block-form {
   margin-bottom: 144px;
   margin-bottom: 9rem; }
@@ -2071,6 +2077,9 @@ a.au-card {
       flex-direction: column; }
     .au-card-list.au-card-list--matchheight .au-card__stretch {
       flex: 1 0 auto; }
+
+.au-pagination {
+  text-align: center; }
 
 body {
   margin: 0; }
