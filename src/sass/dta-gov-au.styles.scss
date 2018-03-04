@@ -1,8 +1,8 @@
 /* Site specific styles for dta.gov.au */
 
-// Overrides
+// Variables
 
-@import "base/colors";
+@import "base/dta-gov-au.variables";
 
 // Import UI Kit stuff.
 
@@ -10,12 +10,10 @@
 
 // Mixins
 
-@import "base/mixins";
+@import "base/dta-gov-au.mixins";
 
 // Individual element imports.
-
-@import "base/dta-gov-au.base.search";
-@import "base/card";
+@import "base/dta-gov-au.base";
 
 // Element overrides
 
