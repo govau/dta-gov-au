@@ -1,0 +1,5 @@
+// Styles for the blogs and news items page.
+
+.au-cards--blogs-news {
+  @include cards-blogs-news;
+}
