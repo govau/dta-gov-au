@@ -507,28 +507,28 @@
 /**
  * Block of links.
  */
-.au-link-list {
+.au-link-list, .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
   display: block;
   list-style-type: none; }
-  .au-body .au-link-list {
+  .au-body .au-link-list, .au-body .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results, .chosen-container.chosen-container-multi.au-select .chosen-drop .au-body .chosen-results {
     margin: 0;
     padding: 4px 0;
     padding: 0.25rem 0; }
-  .au-link-list > li {
+  .au-link-list > li, .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results > li {
     display: block;
     margin: 4px;
     margin: 0.25rem; }
-  .au-link-list.au-link-list--inline {
+  .au-link-list.au-link-list--inline, .chosen-container.chosen-container-multi.au-select .chosen-drop .au-link-list--inline.chosen-results {
     display: inline-block; }
-    .au-link-list.au-link-list--inline > li {
+    .au-link-list.au-link-list--inline > li, .chosen-container.chosen-container-multi.au-select .chosen-drop .au-link-list--inline.chosen-results > li {
       display: inline-block; }
 
 /*! @gov.au/breadcrumbs v1.0.0-next.5 */
 @media print {
-  .au-breadcrumbs > .au-link-list > li:after {
+  .au-breadcrumbs > .au-link-list > li:after, .chosen-container.chosen-container-multi.au-select .chosen-drop .au-breadcrumbs > .chosen-results > li:after {
     content: ">" !important;
     background-image: none !important; } }
 
@@ -546,9 +546,9 @@
   @media (min-width: 768px) {
     .au-breadcrumbs {
       display: inline-block; } }
-  .au-breadcrumbs > .au-link-list > li {
+  .au-breadcrumbs > .au-link-list > li, .chosen-container.chosen-container-multi.au-select .chosen-drop .au-breadcrumbs > .chosen-results > li {
     margin: 0; }
-    .au-breadcrumbs > .au-link-list > li:after {
+    .au-breadcrumbs > .au-link-list > li:after, .chosen-container.chosen-container-multi.au-select .chosen-drop .au-breadcrumbs > .chosen-results > li:after {
       content: ' ';
       display: inline-block;
       width: 8px;
@@ -560,33 +560,36 @@
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 128 128'%3E    %3Cpath fill='%237F7F7F' d='M128 64l-64 64-16-16 64-64'/%3E    %3Cpath fill='%237F7F7F' d='M128 64l-16 16-64-64L64 0'/%3E   %3C/svg%3E");
       background-size: 100%;
       background-repeat: no-repeat; }
-    .au-breadcrumbs > .au-link-list > li:last-child:after {
+    .au-breadcrumbs > .au-link-list > li:last-child:after, .chosen-container.chosen-container-multi.au-select .chosen-drop .au-breadcrumbs > .chosen-results > li:last-child:after {
       display: none; }
-    .ie8 .au-breadcrumbs > .au-link-list > li:after,
-    .lt-ie8 .au-breadcrumbs > .au-link-list > li:after {
+    .ie8 .au-breadcrumbs > .au-link-list > li:after, .ie8 .chosen-container.chosen-container-multi.au-select .chosen-drop .au-breadcrumbs > .chosen-results > li:after, .chosen-container.chosen-container-multi.au-select .chosen-drop .ie8 .au-breadcrumbs > .chosen-results > li:after,
+    .lt-ie8 .au-breadcrumbs > .au-link-list > li:after,
+    .lt-ie8 .chosen-container.chosen-container-multi.au-select .chosen-drop .au-breadcrumbs > .chosen-results > li:after, .chosen-container.chosen-container-multi.au-select .chosen-drop
+    .lt-ie8 .au-breadcrumbs > .chosen-results > li:after {
       content: ' > ';
       display: inline-block; }
   .au-breadcrumbs.au-breadcrumbs--dark {
     color: #ffffff; }
-    .au-breadcrumbs.au-breadcrumbs--dark > .au-link-list > li:not(:last-child):after {
+    .au-breadcrumbs.au-breadcrumbs--dark > .au-link-list > li:not(:last-child):after, .chosen-container.chosen-container-multi.au-select .chosen-drop .au-breadcrumbs.au-breadcrumbs--dark > .chosen-results > li:not(:last-child):after {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 128 128'%3E    %3Cpath fill='%238c8c8c' d='M128 64l-64 64-16-16 64-64'/%3E    %3Cpath fill='%238c8c8c' d='M128 64l-16 16-64-64L64 0'/%3E   %3C/svg%3E"); }
 
 /*! @gov.au/buttons v1.0.0-next.7 */
 @media print {
-  .au-btn {
+  .au-btn, .chosen-container.chosen-container-multi.au-select li.search-choice, .au-text-input[value="Reset"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[value="Reset"][type="text"] {
     background-color: #fff !important;
     border: 2px solid #000 !important;
     color: #000 !important;
     text-decoration: none !important; }
-    .au-btn[disabled] {
+    .au-btn[disabled], .chosen-container.chosen-container-multi.au-select li[disabled].search-choice, [disabled].au-text-input[value="Reset"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[disabled][value="Reset"][type="text"] {
       background-color: #ccc !important;
       border: 2px solid #ccc !important; }
-    .au-btn:disabled {
+    .au-btn:disabled, .chosen-container.chosen-container-multi.au-select li.search-choice:disabled, .au-text-input[value="Reset"]:disabled, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[value="Reset"][type="text"]:disabled {
       background-color: #ccc !important;
       border: 2px solid #ccc !important; } }
 
-.au-btn,
-a.au-btn {
+.au-btn, .chosen-container.chosen-container-multi.au-select li.search-choice, .au-text-input[value="Reset"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[value="Reset"][type="text"],
+a.au-btn,
+a.au-text-input[value="Reset"] {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -612,106 +615,135 @@ a.au-btn {
   /**
  	 * BLOCK
  	 */ }
-  .au-btn.au-btn--block + .au-btn.au-btn--block,
-  .au-btn.au-btn--block + a.au-btn.au-btn--block,
-  a.au-btn.au-btn--block + .au-btn.au-btn--block,
-  a.au-btn.au-btn--block + a.au-btn.au-btn--block {
+  .au-btn.au-btn--block + .au-btn.au-btn--block, .chosen-container.chosen-container-multi.au-select li.au-btn--block.search-choice + .au-btn.au-btn--block, .au-btn--block.au-text-input[value="Reset"] + .au-btn.au-btn--block, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--block[value="Reset"][type="text"] + .au-btn.au-btn--block, .chosen-container.chosen-container-multi.au-select .au-btn.au-btn--block + li.au-btn--block.search-choice, .chosen-container.chosen-container-multi.au-select li.au-btn--block.search-choice + li.au-btn--block.search-choice, .chosen-container.chosen-container-multi.au-select .au-btn--block.au-text-input[value="Reset"] + li.au-btn--block.search-choice, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--block[value="Reset"][type="text"] + li.au-btn--block.search-choice, .au-btn.au-btn--block + .au-btn--block.au-text-input[value="Reset"], .chosen-container.chosen-container-multi.au-select li.au-btn--block.search-choice + .au-btn--block.au-text-input[value="Reset"], .au-btn--block.au-text-input[value="Reset"] + .au-btn--block.au-text-input[value="Reset"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--block[value="Reset"][type="text"] + .au-btn--block.au-text-input[value="Reset"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field .au-btn.au-btn--block + input.au-btn--block[value="Reset"][type="text"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field li.au-btn--block.search-choice + input.au-btn--block[value="Reset"][type="text"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field .au-btn--block.au-text-input[value="Reset"] + input.au-btn--block[value="Reset"][type="text"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--block[value="Reset"][type="text"] + input.au-btn--block[value="Reset"][type="text"],
+  .au-btn.au-btn--block + a.au-btn.au-btn--block, .chosen-container.chosen-container-multi.au-select li.au-btn--block.search-choice + a.au-btn.au-btn--block, .au-btn--block.au-text-input[value="Reset"] + a.au-btn.au-btn--block, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--block[value="Reset"][type="text"] + a.au-btn.au-btn--block,
+  .au-btn.au-btn--block + a.au-btn--block.au-text-input[value="Reset"], .chosen-container.chosen-container-multi.au-select li.au-btn--block.search-choice + a.au-btn--block.au-text-input[value="Reset"], .au-btn--block.au-text-input[value="Reset"] + a.au-btn--block.au-text-input[value="Reset"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--block[value="Reset"][type="text"] + a.au-btn--block.au-text-input[value="Reset"],
+  a.au-btn.au-btn--block + .au-btn.au-btn--block, a.au-btn--block.au-text-input[value="Reset"] + .au-btn.au-btn--block, .chosen-container.chosen-container-multi.au-select
+  a.au-btn.au-btn--block + li.au-btn--block.search-choice, .chosen-container.chosen-container-multi.au-select a.au-btn--block.au-text-input[value="Reset"] + li.au-btn--block.search-choice,
+  a.au-btn.au-btn--block + .au-btn--block.au-text-input[value="Reset"], a.au-btn--block.au-text-input[value="Reset"] + .au-btn--block.au-text-input[value="Reset"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field
+  a.au-btn.au-btn--block + input.au-btn--block[value="Reset"][type="text"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field a.au-btn--block.au-text-input[value="Reset"] + input.au-btn--block[value="Reset"][type="text"],
+  a.au-btn.au-btn--block + a.au-btn.au-btn--block, a.au-btn--block.au-text-input[value="Reset"] + a.au-btn.au-btn--block,
+  a.au-btn.au-btn--block + a.au-btn--block.au-text-input[value="Reset"], a.au-btn--block.au-text-input[value="Reset"] + a.au-btn--block.au-text-input[value="Reset"] {
     margin-top: 8px;
     margin-top: 0.5rem; }
-  .au-btn:focus,
-  a.au-btn:focus {
+  .au-btn:focus, .chosen-container.chosen-container-multi.au-select li.search-choice:focus, .au-text-input[value="Reset"]:focus, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[value="Reset"][type="text"]:focus,
+  a.au-btn:focus,
+  a.au-text-input[value="Reset"]:focus {
     outline: 3px solid #ea4200; }
-  .au-btn::-moz-focus-inner,
-  a.au-btn::-moz-focus-inner {
+  .au-btn::-moz-focus-inner, .chosen-container.chosen-container-multi.au-select li.search-choice::-moz-focus-inner, .au-text-input[value="Reset"]::-moz-focus-inner, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[value="Reset"][type="text"]::-moz-focus-inner,
+  a.au-btn::-moz-focus-inner,
+  a.au-text-input[value="Reset"]::-moz-focus-inner {
     border: 0; }
-  .au-btn:focus,
-  a.au-btn:focus {
+  .au-btn:focus, .chosen-container.chosen-container-multi.au-select li.search-choice:focus, .au-text-input[value="Reset"]:focus, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[value="Reset"][type="text"]:focus,
+  a.au-btn:focus,
+  a.au-text-input[value="Reset"]:focus {
     border-radius: 0; }
-  .au-btn[disabled],
-  a.au-btn[disabled] {
+  .au-btn[disabled], .chosen-container.chosen-container-multi.au-select li[disabled].search-choice, [disabled].au-text-input[value="Reset"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[disabled][value="Reset"][type="text"],
+  a.au-btn[disabled],
+  a[disabled].au-text-input[value="Reset"] {
     cursor: not-allowed;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
     opacity: 0.3; }
-  .au-btn:disabled,
-  a.au-btn:disabled {
+  .au-btn:disabled, .chosen-container.chosen-container-multi.au-select li.search-choice:disabled, .au-text-input[value="Reset"]:disabled, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[value="Reset"][type="text"]:disabled,
+  a.au-btn:disabled,
+  a.au-text-input[value="Reset"]:disabled {
     cursor: not-allowed;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
     opacity: 0.3; }
-  .au-btn:hover:not(:disabled),
-  a.au-btn:hover:not(:disabled) {
+  .au-btn:hover:not(:disabled), .chosen-container.chosen-container-multi.au-select li.search-choice:hover:not(:disabled), .au-text-input[value="Reset"]:hover:not(:disabled), .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[value="Reset"][type="text"]:hover:not(:disabled),
+  a.au-btn:hover:not(:disabled),
+  a.au-text-input[value="Reset"]:hover:not(:disabled) {
     background-color: #313131;
     border-color: #313131;
     text-decoration: underline;
     color: #ffffff; }
-  .ie8 .au-btn:hover, .ie8
-  a.au-btn:hover {
+  .ie8 .au-btn:hover, .ie8 .chosen-container.chosen-container-multi.au-select li.search-choice:hover, .chosen-container.chosen-container-multi.au-select .ie8 li.search-choice:hover, .ie8 .au-text-input[value="Reset"]:hover, .ie8 .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[value="Reset"][type="text"]:hover, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field .ie8 input[value="Reset"][type="text"]:hover,
+  .ie8
+  a.au-btn:hover,
+  .ie8 a.au-text-input[value="Reset"]:hover {
     background-color: #313131;
     border-color: #313131;
     text-decoration: underline;
     color: #ffffff; }
-  .au-btn.au-btn--dark,
-  a.au-btn.au-btn--dark {
+  .au-btn.au-btn--dark, .chosen-container.chosen-container-multi.au-select li.au-btn--dark.search-choice, .au-btn--dark.au-text-input[value="Reset"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--dark[value="Reset"][type="text"],
+  a.au-btn.au-btn--dark,
+  a.au-btn--dark.au-text-input[value="Reset"] {
     color: #414141;
     background-color: #61DAFF;
     border-color: #61DAFF; }
-    .au-btn.au-btn--dark:hover:not(:disabled),
-    a.au-btn.au-btn--dark:hover:not(:disabled) {
+    .au-btn.au-btn--dark:hover:not(:disabled), .chosen-container.chosen-container-multi.au-select li.au-btn--dark.search-choice:hover:not(:disabled), .au-btn--dark.au-text-input[value="Reset"]:hover:not(:disabled), .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--dark[value="Reset"][type="text"]:hover:not(:disabled),
+    a.au-btn.au-btn--dark:hover:not(:disabled),
+    a.au-btn--dark.au-text-input[value="Reset"]:hover:not(:disabled) {
       color: #414141;
       border-color: #ffffff;
       background-color: #ffffff; }
-    .ie8 .au-btn.au-btn--dark:hover, .ie8
-    a.au-btn.au-btn--dark:hover {
+    .ie8 .au-btn.au-btn--dark:hover, .ie8 .chosen-container.chosen-container-multi.au-select li.au-btn--dark.search-choice:hover, .chosen-container.chosen-container-multi.au-select .ie8 li.au-btn--dark.search-choice:hover, .ie8 .au-btn--dark.au-text-input[value="Reset"]:hover, .ie8 .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--dark[value="Reset"][type="text"]:hover, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field .ie8 input.au-btn--dark[value="Reset"][type="text"]:hover,
+    .ie8
+    a.au-btn.au-btn--dark:hover,
+    .ie8 a.au-btn--dark.au-text-input[value="Reset"]:hover {
       color: #414141;
       border-color: #ffffff;
       background-color: #ffffff; }
-    .au-btn.au-btn--dark:focus,
-    a.au-btn.au-btn--dark:focus {
+    .au-btn.au-btn--dark:focus, .chosen-container.chosen-container-multi.au-select li.au-btn--dark.search-choice:focus, .au-btn--dark.au-text-input[value="Reset"]:focus, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--dark[value="Reset"][type="text"]:focus,
+    a.au-btn.au-btn--dark:focus,
+    a.au-btn--dark.au-text-input[value="Reset"]:focus {
       outline: 3px solid #ff8629; }
-    .au-btn.au-btn--dark::-moz-focus-inner,
-    a.au-btn.au-btn--dark::-moz-focus-inner {
+    .au-btn.au-btn--dark::-moz-focus-inner, .chosen-container.chosen-container-multi.au-select li.au-btn--dark.search-choice::-moz-focus-inner, .au-btn--dark.au-text-input[value="Reset"]::-moz-focus-inner, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--dark[value="Reset"][type="text"]::-moz-focus-inner,
+    a.au-btn.au-btn--dark::-moz-focus-inner,
+    a.au-btn--dark.au-text-input[value="Reset"]::-moz-focus-inner {
       border: 0; }
-  .au-btn.au-btn--secondary,
-  a.au-btn.au-btn--secondary {
+  .au-btn.au-btn--secondary, .chosen-container.chosen-container-multi.au-select li.search-choice, .au-btn--secondary.au-text-input[value="Reset"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--secondary[value="Reset"][type="text"],
+  a.au-btn.au-btn--secondary,
+  a.au-btn--secondary.au-text-input[value="Reset"] {
     background-color: transparent;
     border-color: #00698f;
     color: #00698f; }
-    .au-btn.au-btn--secondary:hover:not(:disabled),
-    a.au-btn.au-btn--secondary:hover:not(:disabled) {
+    .au-btn.au-btn--secondary:hover:not(:disabled), .chosen-container.chosen-container-multi.au-select li.search-choice:hover:not(:disabled), .au-btn--secondary.au-text-input[value="Reset"]:hover:not(:disabled), .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--secondary[value="Reset"][type="text"]:hover:not(:disabled),
+    a.au-btn.au-btn--secondary:hover:not(:disabled),
+    a.au-btn--secondary.au-text-input[value="Reset"]:hover:not(:disabled) {
       background-color: transparent;
       border-color: #313131;
       color: #313131; }
-    .au-btn.au-btn--secondary.au-btn--dark,
-    a.au-btn.au-btn--secondary.au-btn--dark {
+    .au-btn.au-btn--secondary.au-btn--dark, .chosen-container.chosen-container-multi.au-select li.au-btn--dark.search-choice, .au-btn--secondary.au-btn--dark.au-text-input[value="Reset"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--secondary.au-btn--dark[value="Reset"][type="text"],
+    a.au-btn.au-btn--secondary.au-btn--dark,
+    a.au-btn--secondary.au-btn--dark.au-text-input[value="Reset"] {
       border-color: #61DAFF;
       color: #61DAFF; }
-      .au-btn.au-btn--secondary.au-btn--dark:hover:not(:disabled),
-      a.au-btn.au-btn--secondary.au-btn--dark:hover:not(:disabled) {
+      .au-btn.au-btn--secondary.au-btn--dark:hover:not(:disabled), .chosen-container.chosen-container-multi.au-select li.au-btn--dark.search-choice:hover:not(:disabled), .au-btn--secondary.au-btn--dark.au-text-input[value="Reset"]:hover:not(:disabled), .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--secondary.au-btn--dark[value="Reset"][type="text"]:hover:not(:disabled),
+      a.au-btn.au-btn--secondary.au-btn--dark:hover:not(:disabled),
+      a.au-btn--secondary.au-btn--dark.au-text-input[value="Reset"]:hover:not(:disabled) {
         border-color: #ffffff;
         color: #ffffff; }
-  .au-btn.au-btn--tertiary,
-  a.au-btn.au-btn--tertiary {
+  .au-btn.au-btn--tertiary, .chosen-container.chosen-container-multi.au-select li.au-btn--tertiary.search-choice, .chosen-container.chosen-container-multi.au-select li.search-choice.au-text-input[value="Reset"], .au-text-input[value="Reset"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[value="Reset"][type="text"],
+  a.au-btn.au-btn--tertiary,
+  a.au-text-input[value="Reset"] {
     background-color: transparent;
     color: #00698f;
     border-color: transparent;
     text-decoration: underline; }
-    .au-btn.au-btn--tertiary:hover:not(:disabled),
-    a.au-btn.au-btn--tertiary:hover:not(:disabled) {
+    .au-btn.au-btn--tertiary:hover:not(:disabled), .chosen-container.chosen-container-multi.au-select li.au-btn--tertiary.search-choice:hover:not(:disabled), .chosen-container.chosen-container-multi.au-select li.search-choice.au-text-input[value="Reset"]:hover:not(:disabled), .au-text-input[value="Reset"]:hover:not(:disabled), .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[value="Reset"][type="text"]:hover:not(:disabled),
+    a.au-btn.au-btn--tertiary:hover:not(:disabled),
+    a.au-text-input[value="Reset"]:hover:not(:disabled) {
       background-color: transparent;
       color: #313131;
       border-color: transparent;
       text-decoration: none; }
-    .au-btn.au-btn--tertiary.au-btn--dark,
-    a.au-btn.au-btn--tertiary.au-btn--dark {
+    .au-btn.au-btn--tertiary.au-btn--dark, .chosen-container.chosen-container-multi.au-select li.au-btn--tertiary.au-btn--dark.search-choice, .chosen-container.chosen-container-multi.au-select li.au-btn--dark.search-choice.au-text-input[value="Reset"], .au-btn--dark.au-text-input[value="Reset"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--dark[value="Reset"][type="text"],
+    a.au-btn.au-btn--tertiary.au-btn--dark,
+    a.au-btn--dark.au-text-input[value="Reset"] {
       color: #61DAFF; }
-      .au-btn.au-btn--tertiary.au-btn--dark:hover:not(:disabled),
-      a.au-btn.au-btn--tertiary.au-btn--dark:hover:not(:disabled) {
+      .au-btn.au-btn--tertiary.au-btn--dark:hover:not(:disabled), .chosen-container.chosen-container-multi.au-select li.au-btn--tertiary.au-btn--dark.search-choice:hover:not(:disabled), .au-btn--dark.au-text-input[value="Reset"]:hover:not(:disabled), .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--dark[value="Reset"][type="text"]:hover:not(:disabled),
+      a.au-btn.au-btn--tertiary.au-btn--dark:hover:not(:disabled),
+      a.au-btn--dark.au-text-input[value="Reset"]:hover:not(:disabled) {
         color: #ffffff; }
-  .au-btn.au-btn--pride,
-  a.au-btn.au-btn--pride {
+  .au-btn.au-btn--pride, .chosen-container.chosen-container-multi.au-select li.au-btn--pride.search-choice, .au-btn--pride.au-text-input[value="Reset"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--pride[value="Reset"][type="text"],
+  a.au-btn.au-btn--pride,
+  a.au-btn--pride.au-text-input[value="Reset"] {
     background: linear-gradient(to bottom, rgba(255, 62, 24, 0.5) 16.66667%, rgba(252, 154, 0, 0.5) 16.66667%, rgba(252, 154, 0, 0.52) 33.33333%, rgba(255, 216, 0, 0.5) 33.33333%, rgba(255, 216, 0, 0.5) 33.33333%, rgba(255, 216, 0, 0.5) 50%, rgba(57, 234, 124, 0.5) 50%, rgba(57, 234, 124, 0.5) 66.66667%, rgba(11, 178, 255, 0.5) 66.66667%, rgba(11, 178, 255, 0.5) 83.33333%, rgba(152, 90, 255, 0.5) 83.33333%);
     color: #313131; }
-  .au-btn.au-btn--block,
-  a.au-btn.au-btn--block {
+  .au-btn.au-btn--block, .chosen-container.chosen-container-multi.au-select li.au-btn--block.search-choice, .au-btn--block.au-text-input[value="Reset"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--block[value="Reset"][type="text"],
+  a.au-btn.au-btn--block,
+  a.au-btn--block.au-text-input[value="Reset"] {
     display: block;
     width: 100%;
     box-sizing: border-box;
@@ -1910,6 +1942,109 @@ a.au-btn {
     text-decoration-skip: ink;
     z-index: 600; }
 
+/*! @gov.au/text-inputs v1.0.0-next.8 */
+@media print {
+  .au-text-input, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[type="text"] {
+    border-color: #000 !important; }
+    .au-text-input[disabled], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[disabled][type="text"] {
+      color: #636363 !important;
+      background-color: #ccc !important;
+      border: 2px solid #ccc !important; }
+    .au-text-input:disabled, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[type="text"]:disabled {
+      color: #636363 !important;
+      background-color: #ccc !important;
+      border: 2px solid #ccc !important; } }
+
+/**
+ * Generic text input styling.
+ *
+ * Also includes variants:
+ * - invalid
+ * - valid
+ * - :focus
+ * - :disabled/[disabled]
+ */
+.au-text-input, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[type="text"] {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 8px 16px;
+  padding: 0.5rem 1rem;
+  height: 46px;
+  height: 2.875rem;
+  border: 3px solid #7F7F7F;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #313131;
+  border-radius: 4px;
+  vertical-align: middle;
+  appearance: none;
+  /**
+	 * Block modifier
+	 */
+  /**
+	 * Number input styling.
+	 *
+	 * Numbers are easier to disambiguate from each other (and letters) when set in
+	 * monospace.
+	 */ }
+  .au-text-input.au-text-input--dark:invalid, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-text-input--dark[type="text"]:invalid, .au-text-input:invalid, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[type="text"]:invalid {
+    background-color: #fff7f7;
+    border-color: #ff635c; }
+  .au-text-input.au-text-input--dark.au-text-input--invalid, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-text-input--dark.au-text-input--invalid[type="text"], .au-text-input.au-text-input--invalid, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-text-input--invalid[type="text"] {
+    background-color: #fff7f7;
+    border-color: #ff635c; }
+  .au-text-input.au-text-input--dark.au-text-input--valid, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-text-input--dark.au-text-input--valid[type="text"], .au-text-input.au-text-input--valid, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-text-input--valid[type="text"] {
+    background-color: #f3fbf8;
+    border-color: #0cac78; }
+  .au-text-input[disabled], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[disabled][type="text"] {
+    cursor: not-allowed;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    opacity: 0.3; }
+  .au-text-input:disabled, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[type="text"]:disabled {
+    cursor: not-allowed;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    opacity: 0.3; }
+  .au-text-input:focus, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[type="text"]:focus {
+    outline: 3px solid #ea4200; }
+  .au-text-input::-moz-focus-inner, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[type="text"]::-moz-focus-inner {
+    border: 0; }
+  .au-text-input:focus, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[type="text"]:focus {
+    outline-offset: 0;
+    border-radius: 0;
+    background-color: #ffffff; }
+  .au-text-input.au-text-input--dark, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-text-input--dark[type="text"] {
+    border-color: #ffffff; }
+    .au-text-input.au-text-input--dark[disabled], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-text-input--dark[disabled][type="text"] {
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+      opacity: 0.3; }
+    .au-text-input.au-text-input--dark:disabled, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-text-input--dark[type="text"]:disabled {
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+      opacity: 0.3; }
+    .au-text-input.au-text-input--dark:focus, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-text-input--dark[type="text"]:focus {
+      outline: 3px solid #ff8629; }
+    .au-text-input.au-text-input--dark::-moz-focus-inner, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-text-input--dark[type="text"]::-moz-focus-inner {
+      border: 0; }
+  .au-text-input.au-text-input--block, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[type="text"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box; }
+  .au-text-input.au-text-input--number, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-text-input--number[type="text"] {
+    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+    letter-spacing: 2px; }
+
+/**
+ * Textarea styling. (Not nested because sass does odd stuff)
+ */
+textarea.au-text-input {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  height: auto;
+  max-width: 100%;
+  min-height: 6em; }
+
 body {
   margin: 0; }
 
@@ -1986,6 +2121,20 @@ body {
       background-repeat: no-repeat;
       background-position: 0.5rem center;
       text-align: right; }
+
+.chosen-container.chosen-container-multi.au-select {
+  width: 100% !important;
+  margin-bottom: 16px;
+  margin-bottom: 1rem; }
+  .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[type="text"] {
+    width: 100% !important; }
+  .chosen-container.chosen-container-multi.au-select li.search-choice {
+    background-image: none; }
+
+label {
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+  display: block; }
 
 .au-card {
   display: block;
@@ -2263,7 +2412,7 @@ body {
     margin-right: 2rem; }
     .page-front #mid-bottom-content p:last-child {
       margin-top: 0; }
-  .page-front #mid-bottom-content .au-btn {
+  .page-front #mid-bottom-content .au-btn, .page-front #mid-bottom-content .chosen-container.chosen-container-multi.au-select li.search-choice, .chosen-container.chosen-container-multi.au-select .page-front #mid-bottom-content li.search-choice, .page-front #mid-bottom-content .au-text-input[value="Reset"], .page-front #mid-bottom-content .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[value="Reset"][type="text"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field .page-front #mid-bottom-content input[value="Reset"][type="text"] {
     margin-top: 64px;
     margin-top: 4rem;
     margin-bottom: 80px;
@@ -2406,17 +2555,17 @@ header {
   header h3 {
     margin-bottom: 24px;
     margin-bottom: 1.5rem; }
-  header .au-body .au-link-list {
+  header .au-body .au-link-list, header .au-body .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results, .chosen-container.chosen-container-multi.au-select .chosen-drop header .au-body .chosen-results {
     margin-bottom: 80px;
     margin-bottom: 5rem; }
-    header .au-body .au-link-list > li:first-child {
+    header .au-body .au-link-list > li:first-child, header .au-body .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results > li:first-child, .chosen-container.chosen-container-multi.au-select .chosen-drop header .au-body .chosen-results > li:first-child {
       margin-top: 0; }
-    header .au-body .au-link-list.au-link-list--inline > li {
+    header .au-body .au-link-list.au-link-list--inline > li, header .au-body .chosen-container.chosen-container-multi.au-select .chosen-drop .au-link-list--inline.chosen-results > li, .chosen-container.chosen-container-multi.au-select .chosen-drop header .au-body .au-link-list--inline.chosen-results > li {
       display: block; }
       @media (min-width: 992px) {
-        header .au-body .au-link-list.au-link-list--inline > li {
+        header .au-body .au-link-list.au-link-list--inline > li, header .au-body .chosen-container.chosen-container-multi.au-select .chosen-drop .au-link-list--inline.chosen-results > li, .chosen-container.chosen-container-multi.au-select .chosen-drop header .au-body .au-link-list--inline.chosen-results > li {
           display: inline-block; } }
-  header #block-mainnavigation-2.au-body.au-body--dark .au-link-list {
+  header #block-mainnavigation-2.au-body.au-body--dark .au-link-list, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results {
     margin-bottom: 17px;
     margin-bottom: 1.0625rem;
     padding-bottom: 0px;
@@ -2424,29 +2573,29 @@ header {
     padding-top: 0px;
     padding-top: 0rem;
     display: flex; }
-    header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li {
+    header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results li {
       font-size: 16px;
       font-size: 1rem;
       line-height: 1;
       margin: 0 0 24px 0;
       margin: 0 0 1.5rem 0; }
       @media (min-width: 992px) {
-        header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li {
+        header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results li {
           margin: 0 48px 0 0;
           margin: 0 3rem 0 0; } }
-      header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li:last-of-type {
+      header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li:last-of-type, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li:last-of-type, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results li:last-of-type {
         margin-left: auto; }
-      header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a {
+      header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li a, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results li a {
         padding-bottom: 16px;
         padding-bottom: 1rem;
         color: #ffffff;
         text-decoration: none;
         border-bottom: 8px solid transparent; }
-        header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a:hover {
+        header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a:hover, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li a:hover, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results li a:hover {
           color: #61DAFF;
           border-bottom: 8px solid #61DAFF;
           text-decoration: underline; }
-        header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a:active, header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a.is-active {
+        header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a:active, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li a:active, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results li a:active, header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a.is-active, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li a.is-active, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results li a.is-active {
           text-decoration: none;
           border-color: #ffffff; }
   header.au-header--content #site-search {
@@ -2480,7 +2629,7 @@ main[role="main"].page-content {
       font-size: 20px;
       font-size: 1.25rem;
       line-height: 1.6; }
-    main[role="main"].page-content nav.au-inpage-nav-links .au-link-list > li {
+    main[role="main"].page-content nav.au-inpage-nav-links .au-link-list > li, main[role="main"].page-content nav.au-inpage-nav-links .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results > li, .chosen-container.chosen-container-multi.au-select .chosen-drop main[role="main"].page-content nav.au-inpage-nav-links .chosen-results > li {
       margin-top: 24px;
       margin-top: 1.5rem; }
   main[role="main"].page-content .back-to-top {
@@ -2634,11 +2783,11 @@ main[role="main"].page-content {
         margin: auto 0 0 0;
         color: #636363; }
 
-aside.layout-sidebar-first nav[role="navigation"] .au-link-list {
+aside.layout-sidebar-first nav[role="navigation"] .au-link-list, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results {
   padding: 0; }
-  aside.layout-sidebar-first nav[role="navigation"] .au-link-list li {
+  aside.layout-sidebar-first nav[role="navigation"] .au-link-list li, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results li {
     display: none; }
-  aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-0 > .menu-item--active-trail > a {
+  aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-0 > .menu-item--active-trail > a, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-0.chosen-results > .menu-item--active-trail > a, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-0.chosen-results > .menu-item--active-trail > a {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.6;
@@ -2651,23 +2800,23 @@ aside.layout-sidebar-first nav[role="navigation"] .au-link-list {
     color: #313131;
     text-decoration: none;
     border-bottom: 1px solid #7F7F7F; }
-    aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-0 > .menu-item--active-trail > a:hover {
+    aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-0 > .menu-item--active-trail > a:hover, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-0.chosen-results > .menu-item--active-trail > a:hover, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-0.chosen-results > .menu-item--active-trail > a:hover {
       text-decoration: underline; }
-  aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail {
+  aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results .menu-item--active-trail, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results .menu-item--active-trail {
     border: none;
     display: block; }
-    aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail li {
+    aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail li, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results .menu-item--active-trail li, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results .menu-item--active-trail li {
       display: block;
       border-left: 8px solid #f5f5f5;
       margin: 0;
       transition: border-color 0.1s linear; }
-      aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail li:hover {
+      aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail li:hover, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results .menu-item--active-trail li:hover, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results .menu-item--active-trail li:hover {
         border-left: 8px solid #00698f; }
-      aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail li.menu-item--expanded {
+      aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail li.menu-item--expanded, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results .menu-item--active-trail li.menu-item--expanded, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results .menu-item--active-trail li.menu-item--expanded {
         border: none; }
-        aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail li.menu-item--expanded:hover {
+        aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail li.menu-item--expanded:hover, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results .menu-item--active-trail li.menu-item--expanded:hover, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results .menu-item--active-trail li.menu-item--expanded:hover {
           border: none; }
-      aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail li > a {
+      aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail li > a, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results .menu-item--active-trail li > a, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results .menu-item--active-trail li > a {
         border-bottom: 1px solid #7F7F7F;
         text-decoration: none;
         display: block;
@@ -2675,9 +2824,9 @@ aside.layout-sidebar-first nav[role="navigation"] .au-link-list {
         padding: 1rem 0 1rem 1rem;
         margin-left: 8px;
         margin-left: 0.5rem; }
-        aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail li > a:hover {
+        aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail li > a:hover, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results .menu-item--active-trail li > a:hover, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results .menu-item--active-trail li > a:hover {
           text-decoration: underline; }
-        aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail li > a.is-active {
+        aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail li > a.is-active, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results .menu-item--active-trail li > a.is-active, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results .menu-item--active-trail li > a.is-active {
           background-color: #00698f;
           color: #ffffff;
           border: none;
@@ -2685,9 +2834,9 @@ aside.layout-sidebar-first nav[role="navigation"] .au-link-list {
           margin-top: -1px;
           padding-left: 32px;
           padding-left: 2rem; }
-          aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail li > a.is-active:hover {
+          aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail li > a.is-active:hover, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results .menu-item--active-trail li > a.is-active:hover, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results .menu-item--active-trail li > a.is-active:hover {
             border: none; }
-    aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail .menu-level-2 > li > a {
+    aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail .menu-level-2 > li > a, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results .menu-item--active-trail .menu-level-2 > li > a, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results .menu-item--active-trail .menu-level-2 > li > a {
       padding-left: 40px;
       padding-left: 2.5rem; }
 
@@ -2700,17 +2849,17 @@ footer .au-footer__navigation {
   margin-top: 5rem;
   margin-bottom: 32px;
   margin-bottom: 2rem; }
-  footer .au-footer__navigation .au-link-list li {
+  footer .au-footer__navigation .au-link-list li, footer .au-footer__navigation .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li, .chosen-container.chosen-container-multi.au-select .chosen-drop footer .au-footer__navigation .chosen-results li {
     margin-right: 16px;
     margin-right: 1rem;
     display: block; }
     @media (min-width: 768px) {
-      footer .au-footer__navigation .au-link-list li {
+      footer .au-footer__navigation .au-link-list li, footer .au-footer__navigation .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li, .chosen-container.chosen-container-multi.au-select .chosen-drop footer .au-footer__navigation .chosen-results li {
         display: inline-block; } }
-  footer .au-footer__navigation .au-link-list a {
+  footer .au-footer__navigation .au-link-list a, footer .au-footer__navigation .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results a, .chosen-container.chosen-container-multi.au-select .chosen-drop footer .au-footer__navigation .chosen-results a {
     color: #ffffff;
     text-decoration: none; }
-    footer .au-footer__navigation .au-link-list a:hover {
+    footer .au-footer__navigation .au-link-list a:hover, footer .au-footer__navigation .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results a:hover, .chosen-container.chosen-container-multi.au-select .chosen-drop footer .au-footer__navigation .chosen-results a:hover {
       text-decoration: underline; }
 
 footer #social-media {
@@ -2723,10 +2872,10 @@ footer #social-media {
     margin-bottom: 24px;
     margin-bottom: 1.5rem;
     font-weight: normal; }
-  footer #social-media .au-link-list li {
+  footer #social-media .au-link-list li, footer #social-media .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li, .chosen-container.chosen-container-multi.au-select .chosen-drop footer #social-media .chosen-results li {
     margin-bottom: 24px;
     margin-bottom: 1.5rem; }
-  footer #social-media .au-link-list a {
+  footer #social-media .au-link-list a, footer #social-media .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results a, .chosen-container.chosen-container-multi.au-select .chosen-drop footer #social-media .chosen-results a {
     padding-left: 40px;
     padding-left: 2.5rem;
     color: #ffffff;
@@ -2734,15 +2883,15 @@ footer #social-media {
     background-position: left center;
     background-repeat: no-repeat;
     background-size: contain; }
-    footer #social-media .au-link-list a.twitter {
+    footer #social-media .au-link-list a.twitter, footer #social-media .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results a.twitter, .chosen-container.chosen-container-multi.au-select .chosen-drop footer #social-media .chosen-results a.twitter {
       background-image: url("../images/twitter.svg"); }
-    footer #social-media .au-link-list a.facebook {
+    footer #social-media .au-link-list a.facebook, footer #social-media .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results a.facebook, .chosen-container.chosen-container-multi.au-select .chosen-drop footer #social-media .chosen-results a.facebook {
       background-image: url("../images/facebook.svg"); }
-    footer #social-media .au-link-list a.linkedin {
+    footer #social-media .au-link-list a.linkedin, footer #social-media .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results a.linkedin, .chosen-container.chosen-container-multi.au-select .chosen-drop footer #social-media .chosen-results a.linkedin {
       background-image: url("../images/linkedin.svg"); }
-    footer #social-media .au-link-list a.youtube {
+    footer #social-media .au-link-list a.youtube, footer #social-media .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results a.youtube, .chosen-container.chosen-container-multi.au-select .chosen-drop footer #social-media .chosen-results a.youtube {
       background-image: url("../images/youtube.svg"); }
-    footer #social-media .au-link-list a:hover {
+    footer #social-media .au-link-list a:hover, footer #social-media .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results a:hover, .chosen-container.chosen-container-multi.au-select .chosen-drop footer #social-media .chosen-results a:hover {
       color: #61DAFF;
       text-decoration: underline; }
 
