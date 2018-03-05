@@ -1,0 +1,8 @@
+// Styles for the contact module.
+
+#contact-module {
+  @include AU-space( margin-top, 2unit );
+  h2 {
+    @include AU-fontgrid( xl );
+  }
+}

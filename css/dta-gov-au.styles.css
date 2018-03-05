@@ -1901,6 +1901,90 @@ a.au-text-input[value="Reset"] {
   margin-top: 16px;
   margin-top: 1rem; }
 
+/*! @gov.au/select v1.0.0-next.6 */
+@media print {
+  .au-select {
+    border-color: #000 !important;
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23000' width='1.5em' height='auto' viewBox='0 0 28 12' xmlns='http://www.w3.org/2000/svg'%3E  %3Cpath d='M1.9 1.1L8 7.2l6.1-6.1L16 2.9l-8 8-8-8 1.9-1.8z'/%3E  %3Cpath fill='none' d='M2-5.8h24v24H2v-24z'/%3E  %3C/svg%3E") !important; } }
+
+.au-select {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 8px 36px 8px 12px;
+  padding: 0.5rem 2.25rem 0.5rem 0.75rem;
+  height: 46px;
+  height: 2.875rem;
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  appearance: none;
+  border: 3px solid #7F7F7F;
+  text-indent: 0.01px;
+  text-overflow: '';
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg fill='%2300698f' width='1.5em' height='auto' viewBox='0 0 28 12' xmlns='http://www.w3.org/2000/svg'%3E  %3Cpath d='M1.9 1.1L8 7.2l6.1-6.1L16 2.9l-8 8-8-8 1.9-1.8z'/%3E  %3Cpath fill='none' d='M2-5.8h24v24H2v-24z'/%3E  %3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 1.5em auto;
+  vertical-align: middle; }
+  .au-select:focus {
+    outline: 3px solid #ea4200; }
+  .au-select::-moz-focus-inner {
+    border: 0; }
+  .au-select:focus {
+    border-radius: 0; }
+  .au-select[disabled] {
+    cursor: not-allowed;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    opacity: 0.3; }
+  .au-select:disabled {
+    cursor: not-allowed;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    opacity: 0.3; }
+  .au-select.au-select--dark:invalid, .au-select:invalid {
+    background-color: #fff7f7;
+    border-color: #ff635c; }
+  .au-select.au-select--dark.au-select--invalid, .au-select.au-select--invalid {
+    background-color: #fff7f7;
+    border-color: #ff635c; }
+  .au-select.au-select--dark.au-select--valid, .au-select.au-select--valid {
+    background-color: #f3fbf8;
+    border-color: #0cac78; }
+  .ie8 .au-select:after,
+  .ie9 .au-select:after {
+    display: none; }
+  .au-select::-ms-expand {
+    display: none; }
+  .ie8 .au-select,
+  .ie9 .au-select {
+    padding-right: 4px;
+    padding-right: 0.25rem; }
+  .au-select.au-select--dark {
+    border-color: #ffffff; }
+    .au-select.au-select--dark:focus {
+      outline: 3px solid #ff8629; }
+    .au-select.au-select--dark::-moz-focus-inner {
+      border: 0; }
+  .au-select.au-select--block {
+    width: 100%; }
+
+.au-select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000; }
+
+html > body .au-select, x:-moz-any-link, x:default {
+  padding-right: 16px;
+  padding-right: 1rem; }
+
+@supports (-moz-osx-font-smoothing: auto) {
+  html body .au-select {
+    padding-right: 36px;
+    padding-right: 2.25rem; } }
+
 /*! @gov.au/skip-link v1.0.0-next.5 */
 @media print {
   .au-skip-link__link {
@@ -2782,6 +2866,13 @@ main[role="main"].page-content {
       main[role="main"].page-content .au-cards--blogs-news .au-card .au-card--date {
         margin: auto 0 0 0;
         color: #636363; }
+  main[role="main"].page-content #contact-module {
+    margin-top: 32px;
+    margin-top: 2rem; }
+    main[role="main"].page-content #contact-module h2 {
+      font-size: 32px;
+      font-size: 2rem;
+      line-height: 1.5; }
 
 aside.layout-sidebar-first nav[role="navigation"] .au-link-list, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results {
   padding: 0; }
