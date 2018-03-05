@@ -1,0 +1,46 @@
+// General overrides for forms.
+
+// Chosen.
+//  Chosen elements take an input field and convert it to an input. While the
+// <select> template places the correct class on the chosen wrapper <div, this
+// does not end up in a styled input field. Hence that awful selector!
+
+.chosen-container.chosen-container-multi.au-select {
+  width: 100% !important;
+  @include AU-space( margin-bottom, 1unit );
+  .chosen-choices li.search-field input[type="text"] {
+    width: 100% !important;
+    @extend .au-text-input;
+    @extend .au-text-input--block;
+  }
+  .chosen-drop .chosen-results {
+    @extend .au-link-list;
+  }
+  li.search-choice {
+    background-image: none;
+    @extend .au-btn;
+    @extend .au-btn--secondary;
+    // @TODO: Update the 'x' image here to make it white.
+    .search-choice-close {
+    }
+  }
+}
+
+// Style reset buttons to make them tertiary buttons.
+// @TODO: Fix up the theme template for these buttons to add the classes
+// properly.
+
+.au-text-input[value="Reset"] {
+  @extend .au-btn;
+  @extend .au-btn--tertiary;
+}
+
+// Style labels.
+// This is jsut an addition to the generic label style from .au-body.
+// @TODO: Adjust label templates to add the right classes based on what it is
+// the label for.
+
+label {
+  @include AU-space( margin-bottom, 0.5unit );
+  display: block;
+}
