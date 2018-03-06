@@ -44,3 +44,8 @@ label {
   @include AU-space( margin-bottom, 0.5unit );
   display: block;
 }
+
+.au-select {
+  // Not sure why this isn't getting added via Autoprefixer but w/e.
+  -webkit-appearance: none;
+}
