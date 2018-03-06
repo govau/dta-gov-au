@@ -3034,8 +3034,8 @@ aside.layout-sidebar-first nav[role="navigation"] .au-link-list, aside.layout-si
     line-height: 1.6;
     margin-left: 16px;
     margin-left: 1rem;
-    padding: 16px 0 16px 0;
-    padding: 1rem 0 1rem 0;
+    padding: 16px;
+    padding: 1rem;
     font-weight: bold;
     display: block;
     color: #313131;
@@ -3061,8 +3061,8 @@ aside.layout-sidebar-first nav[role="navigation"] .au-link-list, aside.layout-si
         border-bottom: 1px solid #7F7F7F;
         text-decoration: none;
         display: block;
-        padding: 16px 0 16px 16px;
-        padding: 1rem 0 1rem 1rem;
+        padding: 16px;
+        padding: 1rem;
         margin-left: 8px;
         margin-left: 0.5rem; }
         aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail li > a:hover, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results .menu-item--active-trail li > a:hover, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results .menu-item--active-trail li > a:hover {
@@ -3074,7 +3074,9 @@ aside.layout-sidebar-first nav[role="navigation"] .au-link-list, aside.layout-si
           margin-left: 0;
           margin-top: -1px;
           padding-left: 32px;
-          padding-left: 2rem; }
+          padding-left: 2rem;
+          padding-right: 32px;
+          padding-right: 2rem; }
           aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail li > a.is-active:hover, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results .menu-item--active-trail li > a.is-active:hover, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results .menu-item--active-trail li > a.is-active:hover {
             border: none; }
     aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-item--active-trail .menu-level-2 > li > a, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results .menu-item--active-trail .menu-level-2 > li > a, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results .menu-item--active-trail .menu-level-2 > li > a {

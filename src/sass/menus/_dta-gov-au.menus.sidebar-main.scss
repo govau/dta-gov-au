@@ -14,7 +14,7 @@ nav[role="navigation"] {
         // The root 'title' of the menu.
         @include AU-fontgrid( md );
         @include AU-space( margin-left, 1unit );
-        @include AU-space( padding, 1unit 0 1unit 0 );
+        @include AU-space( padding, 1unit );
         font-weight: bold;
         display: block;
         color: $AU-color-foreground-text;
@@ -53,7 +53,7 @@ nav[role="navigation"] {
           border-bottom: 1px solid $AU-color-foreground-border-suggestion;
           text-decoration: none;
           display: block;
-          @include AU-space( padding, 1unit 0 1unit 1unit );
+          @include AU-space( padding, 1unit );
           @include AU-space( margin-left, 0.5unit );
           &:hover {
             text-decoration: underline;
@@ -66,6 +66,7 @@ nav[role="navigation"] {
             @include AU-space( margin-left, 0 );
             margin-top: -1px; // Removes the extra border for the item above it.
             @include AU-space( padding-left, 2unit );
+            @include AU-space( padding-right, 2unit );
             &:hover {
               border: none;
             }
