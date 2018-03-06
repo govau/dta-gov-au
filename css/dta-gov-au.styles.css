@@ -2026,6 +2026,97 @@ html > body .au-select, x:-moz-any-link, x:default {
     text-decoration-skip: ink;
     z-index: 600; }
 
+/*! @gov.au/tags v1.0.0-next.6 */
+@media print {
+  .au-tags {
+    color: #000 !important; }
+  .au-tags__item {
+    border-color: #000 !important; }
+    .au-tags__item a {
+      color: #000 !important; } }
+
+.au-tags {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #313131; }
+  .au-tags > dt {
+    display: inline-block; }
+  .au-tags.au-tags--dark {
+    color: #ffffff; }
+
+.au-tags > li,
+.au-tags > dd {
+  margin: 8px 4px 0 0;
+  margin: 0.5rem 0.25rem 0 0;
+  padding: 0 8px;
+  padding: 0 0.5rem;
+  border: 1px solid #00698f;
+  border-radius: 4px;
+  display: inline-block; }
+  .au-tags > li > a,
+  .au-tags > li > button,
+  .au-tags > dd > a,
+  .au-tags > dd > button {
+    margin: 0 -8px;
+    margin: 0 -0.5rem;
+    padding: 0 8px;
+    padding: 0 0.5rem;
+    color: #00698f;
+    display: inline-block;
+    border-radius: 4px; }
+    .au-tags > li > a:hover,
+    .au-tags > li > button:hover,
+    .au-tags > dd > a:hover,
+    .au-tags > dd > button:hover {
+      color: #313131;
+      text-decoration: none;
+      background-color: #f5f5f5; }
+    .au-tags > li > a:focus,
+    .au-tags > li > button:focus,
+    .au-tags > dd > a:focus,
+    .au-tags > dd > button:focus {
+      outline: 3px solid #ea4200; }
+    .au-tags > li > a::-moz-focus-inner,
+    .au-tags > li > button::-moz-focus-inner,
+    .au-tags > dd > a::-moz-focus-inner,
+    .au-tags > dd > button::-moz-focus-inner {
+      border: 0; }
+    .au-tags > li > a:focus,
+    .au-tags > li > button:focus,
+    .au-tags > dd > a:focus,
+    .au-tags > dd > button:focus {
+      outline-offset: -1px; }
+
+.au-tags.au-tags--dark > li,
+.au-tags.au-tags--dark > dd {
+  border-color: #61DAFF; }
+  .au-tags.au-tags--dark > li > a,
+  .au-tags.au-tags--dark > li > button,
+  .au-tags.au-tags--dark > dd > a,
+  .au-tags.au-tags--dark > dd > button {
+    color: #61DAFF; }
+    .au-tags.au-tags--dark > li > a:hover,
+    .au-tags.au-tags--dark > li > button:hover,
+    .au-tags.au-tags--dark > dd > a:hover,
+    .au-tags.au-tags--dark > dd > button:hover {
+      color: #ffffff;
+      background-color: #323232; }
+    .au-tags.au-tags--dark > li > a:focus,
+    .au-tags.au-tags--dark > li > button:focus,
+    .au-tags.au-tags--dark > dd > a:focus,
+    .au-tags.au-tags--dark > dd > button:focus {
+      outline: 3px solid #ff8629; }
+    .au-tags.au-tags--dark > li > a::-moz-focus-inner,
+    .au-tags.au-tags--dark > li > button::-moz-focus-inner,
+    .au-tags.au-tags--dark > dd > a::-moz-focus-inner,
+    .au-tags.au-tags--dark > dd > button::-moz-focus-inner {
+      border: 0; }
+
 /*! @gov.au/text-inputs v1.0.0-next.8 */
 @media print {
   .au-text-input, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[type="text"] {
@@ -2313,6 +2404,36 @@ a.au-card {
 
 .au-pagination {
   text-align: center; }
+
+figure {
+  margin: 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse; }
+  table tbody > tr:hover {
+    background-color: #F0F3F5; }
+  table tbody > tr:nth-child(odd) {
+    background-color: #f5f5f5; }
+    table tbody > tr:nth-child(odd):hover {
+      background-color: #F0F3F5; }
+  table th {
+    font-weight: bold;
+    vertical-align: top;
+    text-align: left;
+    border-bottom: 1px solid #7F7F7F;
+    padding: 8px;
+    padding: 0.5rem; }
+  table td {
+    vertical-align: top;
+    text-align: left;
+    padding: 8px;
+    padding: 0.5rem; }
+  table caption {
+    text-align: left;
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.5; }
 
 body {
   margin: 0; }
@@ -2722,6 +2843,29 @@ main[role="main"].page-content {
     float: none;
     display: block;
     text-align: right; }
+  main[role="main"].page-content #block-dta-gov-au-tabs {
+    margin-bottom: 32px;
+    margin-bottom: 2rem; }
+  main[role="main"].page-content .au-author-date {
+    margin-bottom: 16px;
+    margin-bottom: 1rem; }
+  main[role="main"].page-content .au-tags {
+    margin-bottom: 16px;
+    margin-bottom: 1rem; }
+  main[role="main"].page-content .au-introduction {
+    margin-bottom: 32px;
+    margin-bottom: 2rem; }
+    main[role="main"].page-content .au-introduction p {
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      color: #636363; }
+  main[role="main"].page-content .au-hero figcaption {
+    font-style: italic;
+    margin-top: 8px;
+    margin-top: 0.5rem;
+    margin-bottom: 32px;
+    margin-bottom: 2rem; }
   main[role="main"].page-content .au-card-list .au-cta-link {
     margin-top: 0;
     margin-bottom: 24px;

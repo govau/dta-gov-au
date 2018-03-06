@@ -21,6 +21,7 @@
     "@gov.au/responsive-media": "^1.0.0-next.4",
     "@gov.au/select": "next",
     "@gov.au/skip-link": "^1.0.0-next.5",
+    "@gov.au/tags": "next",
     "autoprefixer": "^7.2.6",
     "node-sass": "^4.7.2",
     "postcss-cli": "^4.1.1"
