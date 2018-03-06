@@ -1,0 +1,5 @@
+// Styles for the <figure> and related elements.
+
+figure {
+  @include AU-space( margin, 0 );
+}

@@ -1,0 +1,5 @@
+// Styles for auhtor/date lines.
+
+.au-author-date {
+  @include AU-space( margin-bottom, 1unit );
+}

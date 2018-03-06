@@ -1,0 +1,9 @@
+// Style for the 'introduction' element.
+
+.au-introduction {
+  @include AU-space( margin-bottom, 2unit );
+  p {
+    @include AU-fontgrid( lg );
+    color: $AU-color-foreground-muted-suggestion;
+  }
+}
