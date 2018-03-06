@@ -2311,6 +2311,9 @@ label {
   margin-bottom: 0.5rem;
   display: block; }
 
+.au-select {
+  -webkit-appearance: none; }
+
 .au-card {
   display: block;
   max-width: 42em;
