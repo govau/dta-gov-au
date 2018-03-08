@@ -36,6 +36,7 @@
     .form-text,
     .button {
       @include AU-fontgrid( sm, nospace);
+      color: $AU-color-foreground-text;
       display:block;
       width: 100%;
       margin: 0;
