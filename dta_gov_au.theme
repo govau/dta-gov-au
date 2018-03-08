@@ -1,5 +1,17 @@
 <?php
 /**
+ * Implements HOOK_preprocess_maintenance_page()
+ *
+ * Adds required variables to the maintenance page.
+ **/
+
+function dta_gov_au_preprocess_maintenance_page(&$variables) {
+  $form = Drupal::formBuilder()->getForm(Drupal\user\Form\UserLoginForm::class) ;
+  $render = Drupal::service('renderer');
+  $variables['login_form'] = $render->renderPlain($form);
+}
+
+/**
  * Implements hook_preprocess_menu().
  *
  * Adds 'is_front' variable to html.html.twig.
