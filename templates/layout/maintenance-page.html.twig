@@ -1,0 +1,85 @@
+{#
+/**
+* @file
+* Theme override to display a single Drupal page while offline.
+*
+* All available variables are mirrored in page.html.twig.
+* Some may be blank but they are provided for consistency.
+*
+* @see template_preprocess_maintenance_page()
+*/
+#}
+<div class="layout-container">
+
+  <header role="banner" class="au-header au-header--hero au-header--dark au-header--alt grids">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row col-xs-12">
+          <div class="row col-xs-12 col-sm-6">
+            <div class="row col-xs-12 col-sm-8">
+              <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+                <img class="au-responsive-media-img site-logo" src="/themes/custom/dta-gov-au/logo.png" alt="{{ 'Home'|t }}" />
+              </a>
+            </div>
+            <div class="row col-xs-12">
+              <h1 class="au-header-heading visually-hidden">Digital Transformation Agency</h1>
+              <h2>Simpler, clearer and faster public services</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="au-body page-front" role="main">
+  <a id="content" tabindex="-1"></a>{# link is in html.html.twig #}
+    <div class="container">
+      <div class="row">
+        <div id="top-content" class="au-body">
+          <div class="container">
+            <div class="row col-xs-12">
+              <h1>{{ title }}</h1>
+              <p>{{ page.content }}</p>
+              <p>Please login below to access the site.</p>
+              <hr>
+              {{ login_form }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer role="contentinfo" class="au-body au-body--dark au-body--alt au-footer au-footer--dark au-footer--alt">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row col-xs-12">
+          <div class="col-sm-2">
+            <div  class="au-site-logo_link">
+              <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+                <img class="au-site-logo au-responsive-media-img" src="/themes/custom/dta-gov-au/images/dta-wordmark-white.png" alt="{{ 'Home'|t }}" />
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="row col-xs-12 au-footer__navigation">
+            </div>
+            <div class="row col-xs-12 au-footer__end">
+              <p>&copy; Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the CC BY 4.0 license.</p>
+            </div>
+          </div>
+          <div id="social-media" class="row col-sm-2">
+            <h2>Social media</h2>
+            <ul class="au-link-list">
+              <li><a class="social-media twitter" href="https://twitter.com/dta?lang=en">Twitter</a></li>
+              <li><a class="social-media facebook" href="https://www.facebook.com/DigitalTransformationAgency/">Facebook</a></li>
+              <li><a class="social-media linkedin" href="https://au.linkedin.com/company/digital-transformation-office">LinkedIn</a></li>
+              <li><a class="social-media youtube" href="https://www.youtube.com/channel/UCmDkFN3UlK2wSKDQQhd-Y-A">YouTube</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>{# /.layout-container #}
