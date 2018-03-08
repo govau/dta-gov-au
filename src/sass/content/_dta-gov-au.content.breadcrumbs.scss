@@ -6,4 +6,11 @@
   ol {
     @include AU-space( padding-left, 0 );
   }
+  a {
+    color: $AU-color-foreground-action;
+    &:hover {
+      color: $AU-color-foreground-text;
+      text-decoration: none;
+    }
+  }
 }
