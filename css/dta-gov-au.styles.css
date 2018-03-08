@@ -2820,6 +2820,11 @@ main[role="main"].page-content {
     border-bottom: 2px solid #e0e0e0; }
     main[role="main"].page-content .au-breadcrumbs ol {
       padding-left: 0; }
+    main[role="main"].page-content .au-breadcrumbs a {
+      color: #00698f; }
+      main[role="main"].page-content .au-breadcrumbs a:hover {
+        color: #313131;
+        text-decoration: none; }
   main[role="main"].page-content h1 {
     font-size: 40px;
     font-size: 2.5rem;
