@@ -37,17 +37,20 @@
     .button {
       @include AU-fontgrid( sm, nospace);
       color: $AU-color-foreground-text;
-      display:block;
+      display: block;
       width: 100%;
       margin: 0;
       padding: 0;
+      &.form-autocomplete {
+        background-position: right 1rem center;
+      }
       &:focus {
        border-radius: 0;
        outline: solid 3px $AU-color-foreground-focus;
      }
     }
     .form-text {
-      @include AU-space( padding, 0.8unit 4unit 0.8unit 1.5unit );
+      @include AU-space( padding, 0.8unit 3unit 0.8unit 1.5unit );
       @include AU-space( border-top-left-radius, 10unit);
       @include AU-space( border-bottom-left-radius, 10unit);
       border: none;
@@ -72,6 +75,10 @@
       background-repeat: no-repeat;
       background-position: 0.5rem center;
       text-align: right;
+      height: 100%;
+      &:hover {
+        color: $AU-color-foreground-text;
+      }
     }
   }
 }
