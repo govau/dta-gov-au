@@ -2745,7 +2745,8 @@ body {
       background-image: none; }
 
 header {
-  border-bottom: 8px solid #61DAFF; }
+  border-bottom: 8px solid #61DAFF;
+  box-shadow: 0 0 5px 0 #7F7F7F; }
   header.au-header.au-header--hero {
     padding: 24px 0 0 0;
     padding: 1.5rem 0 0 0; }
