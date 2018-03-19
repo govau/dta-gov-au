@@ -2626,8 +2626,14 @@ body {
     overflow: hidden; }
     .page-front #mid-top-content .au-card__image img {
       height: 100%; }
+  .page-front #mid-top-content .au-card__title {
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    transition: text-decoration-color 0.3s ease-in-out; }
   .page-front #mid-top-content .au-cta-link:hover .au-card__title {
-    text-decoration: none; }
+    text-decoration-color: transparent; }
 
 .page-front #mid-bottom-content {
   background-image: url("../images/mid-bottom-bg.png");

@@ -42,9 +42,16 @@
       height: 100%;
     }
   }
+  .au-card__title {
+    @include AU-space( margin-bottom, 1.5unit );
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    transition: text-decoration-color 0.3s ease-in-out;
+  }
+
   .au-cta-link:hover {
     .au-card__title {
-      text-decoration: none;
+      text-decoration-color: transparent;
     }
   }
 }
