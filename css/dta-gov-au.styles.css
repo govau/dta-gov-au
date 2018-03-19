@@ -3096,6 +3096,9 @@ aside.layout-sidebar-first nav[role="navigation"] .au-link-list, aside.layout-si
 footer .au-site-logo_link {
   margin-top: 64px;
   margin-top: 4rem; }
+  footer .au-site-logo_link .au-site-logo {
+    max-height: 48px;
+    max-height: 3rem; }
 
 footer .au-footer__navigation {
   margin-top: 80px;
