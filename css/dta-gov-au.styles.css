@@ -2696,10 +2696,10 @@ body {
         color: #636363; }
     .page-front #bottom-content .au-card .au-card--author_image {
       position: absolute;
-      right: 32px;
-      right: 2rem;
-      bottom: -68px;
-      bottom: -4.25rem; }
+      right: 16px;
+      right: 1rem;
+      bottom: -38px;
+      bottom: -2.4rem; }
       .page-front #bottom-content .au-card .au-card--author_image img {
         width: 100px;
         width: 6.25rem;
@@ -2981,10 +2981,10 @@ main[role="main"].page-content {
           color: #636363; }
       main[role="main"].page-content .au-cards--blogs-news .au-card .au-card--author_image {
         position: absolute;
-        right: 32px;
-        right: 2rem;
-        bottom: -68px;
-        bottom: -4.25rem; }
+        right: 16px;
+        right: 1rem;
+        bottom: -38px;
+        bottom: -2.4rem; }
         main[role="main"].page-content .au-cards--blogs-news .au-card .au-card--author_image img {
           width: 100px;
           width: 6.25rem;
