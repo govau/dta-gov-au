@@ -2518,14 +2518,36 @@ body {
     margin-bottom: 24px;
     margin-bottom: 1.5rem; }
     .page-front #top-content .au-card-list .au-cta-link:after {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23ffffff' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%23ffffff' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23313131' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%23313131' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
       margin: 32px 0 0 auto;
       margin: 2rem 0 0 auto; }
     .page-front #top-content .au-card-list .au-cta-link:hover:after {
       margin-right: -0.5rem;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23ffffff' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%23ffffff' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E"); }
-  .page-front #top-content .au-card-list > li {
-    margin-top: 0; }
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23313131' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%23313131' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E"); }
+  .page-front #top-content .au-card-list li a.au-cta-link {
+    border-top-width: 3px;
+    border-top-style: solid;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; }
+  .page-front #top-content .au-card-list li:nth-of-type(5n+1) a.au-cta-link {
+    border-top-color: #912B87; }
+    .page-front #top-content .au-card-list li:nth-of-type(5n+1) a.au-cta-link:hover {
+      background-color: #EDDDEC; }
+  .page-front #top-content .au-card-list li:nth-of-type(5n+2) a.au-cta-link {
+    border-top-color: #32A556; }
+    .page-front #top-content .au-card-list li:nth-of-type(5n+2) a.au-cta-link:hover {
+      background-color: #DEF0E4; }
+  .page-front #top-content .au-card-list li:nth-of-type(5n+3) a.au-cta-link {
+    border-top-color: #5F43AC; }
+    .page-front #top-content .au-card-list li:nth-of-type(5n+3) a.au-cta-link:hover {
+      background-color: #E8E4F3; }
+  .page-front #top-content .au-card-list li:nth-of-type(5n+4) a.au-cta-link {
+    border-top-color: #EE6523; }
+    .page-front #top-content .au-card-list li:nth-of-type(5n+4) a.au-cta-link:hover {
+      background-color: #FCE6DC; }
+  .page-front #top-content .au-card-list li:nth-of-type(5n+5) a.au-cta-link {
+    border-top-color: #C91978; }
+    .page-front #top-content .au-card-list li:nth-of-type(5n+5) a.au-cta-link:hover {
+      background-color: #F6DAE9; }
   .page-front #top-content h2 {
     font-weight: normal;
     margin-bottom: 80px;
@@ -2533,23 +2555,19 @@ body {
   .page-front #top-content .au-card {
     padding: 32px 64px 32px 32px;
     padding: 2rem 4rem 2rem 2rem; }
-    .page-front #top-content .au-card.au-card--item-1 {
-      background-color: #5F43AC; }
-    .page-front #top-content .au-card.au-card--item-2 {
-      background-color: #32A556; }
-    .page-front #top-content .au-card.au-card--item-3 {
-      background-color: #912B87; }
     .page-front #top-content .au-card * {
       font-weight: normal;
-      color: #ffffff; }
+      color: #313131; }
     .page-front #top-content .au-card .au-card__text {
       margin-bottom: auto; }
-    .page-front #top-content .au-card .au-card__title {
-      margin-bottom: 24px;
-      margin-bottom: 1.5rem;
-      text-decoration: underline; }
+  .page-front #top-content .au-card__title {
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    transition: text-decoration-color 0.3s ease-in-out; }
   .page-front #top-content .au-cta-link:hover .au-card__title {
-    text-decoration: none; }
+    text-decoration-color: transparent; }
 
 .page-front #mid-top-content {
   padding-bottom: 80px;
@@ -2937,7 +2955,12 @@ main[role="main"].page-content {
     font-weight: normal; }
   main[role="main"].page-content .au-card__title {
     margin-bottom: 24px;
-    margin-bottom: 1.5rem; }
+    margin-bottom: 1.5rem;
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    transition: text-decoration-color 0.3s ease-in-out; }
+  main[role="main"].page-content .au-cta-link:hover .au-card__title {
+    text-decoration-color: transparent; }
   main[role="main"].page-content .au-cards--blogs-news {
     padding: 80px 0;
     padding: 5rem 0; }

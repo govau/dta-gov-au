@@ -3,10 +3,8 @@
 #top-content {
   @include more-link();
   .au-card-list {
-    @include AU-card-cta-link($AU-colordark-foreground-text);
-    > li {
-      @include AU-space( margin-top, 0 );
-    }
+    @include AU-card-cta-link($AU-color-foreground-text);
+    @include AU-card-colours;
   }
   h2 {
     font-weight: normal;
@@ -16,30 +14,24 @@
   @include AU-space( margin-bottom, 5unit );
   .au-card {
     @include AU-space( padding, 2unit 4unit 2unit 2unit );
-    &.au-card--item-1 {
-      background-color: $top-border-dark-purple;
-    }
-    &.au-card--item-2 {
-      background-color: $top-border-green;
-    }
-    &.au-card--item-3 {
-      background-color: $top-border-purple;
-    }
     * {
       font-weight: normal;
-      color: $AU-colordark-foreground-text;
+      color: $AU-color-foreground-text;
     }
     .au-card__text {
       @include AU-space( margin-bottom, auto );
     }
-    .au-card__title {
-      @include AU-space( margin-bottom, 1.5unit );
-      text-decoration: underline;
-    }
   }
+  .au-card__title {
+    @include AU-space( margin-bottom, 1.5unit );
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    transition: text-decoration-color 0.3s ease-in-out;
+  }
+
   .au-cta-link:hover {
     .au-card__title {
-      text-decoration: none;
+      text-decoration-color: transparent;
     }
   }
 }
