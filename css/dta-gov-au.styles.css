@@ -2833,7 +2833,9 @@ main[role="main"].page-content {
     line-height: 1.5;
     margin-bottom: 32px;
     margin-bottom: 2rem; }
-  main[role="main"].page-content h1, main[role="main"].page-content h2, main[role="main"].page-content h3 {
+  main[role="main"].page-content h1, main[role="main"].page-content h4 {
+    font-weight: bold; }
+  main[role="main"].page-content h2, main[role="main"].page-content h3 {
     font-weight: normal; }
   main[role="main"].page-content .introduction {
     margin-bottom: 96px;
