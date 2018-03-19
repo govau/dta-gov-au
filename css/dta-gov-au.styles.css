@@ -2888,7 +2888,7 @@ main[role="main"].page-content {
       margin: 2rem 0 0 auto; }
     main[role="main"].page-content .au-card-list .au-cta-link:hover:after {
       margin-right: -0.5rem;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23ffffff' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%23ffffff' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E"); }
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23313131' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%23313131' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E"); }
   main[role="main"].page-content .au-card-list li a.au-cta-link {
     border-top-width: 3px;
     border-top-style: solid;
@@ -2896,28 +2896,23 @@ main[role="main"].page-content {
   main[role="main"].page-content .au-card-list li:nth-of-type(5n+1) a.au-cta-link {
     border-top-color: #912B87; }
     main[role="main"].page-content .au-card-list li:nth-of-type(5n+1) a.au-cta-link:hover {
-      background-color: #912B87;
-      color: #ffffff; }
+      background-color: #EDDDEC; }
   main[role="main"].page-content .au-card-list li:nth-of-type(5n+2) a.au-cta-link {
     border-top-color: #32A556; }
     main[role="main"].page-content .au-card-list li:nth-of-type(5n+2) a.au-cta-link:hover {
-      background-color: #32A556;
-      color: #ffffff; }
+      background-color: #DEF0E4; }
   main[role="main"].page-content .au-card-list li:nth-of-type(5n+3) a.au-cta-link {
     border-top-color: #5F43AC; }
     main[role="main"].page-content .au-card-list li:nth-of-type(5n+3) a.au-cta-link:hover {
-      background-color: #5F43AC;
-      color: #ffffff; }
+      background-color: #E8E4F3; }
   main[role="main"].page-content .au-card-list li:nth-of-type(5n+4) a.au-cta-link {
     border-top-color: #EE6523; }
     main[role="main"].page-content .au-card-list li:nth-of-type(5n+4) a.au-cta-link:hover {
-      background-color: #EE6523;
-      color: #ffffff; }
+      background-color: #FCE6DC; }
   main[role="main"].page-content .au-card-list li:nth-of-type(5n+5) a.au-cta-link {
     border-top-color: #C91978; }
     main[role="main"].page-content .au-card-list li:nth-of-type(5n+5) a.au-cta-link:hover {
-      background-color: #C91978;
-      color: #ffffff; }
+      background-color: #F6DAE9; }
   main[role="main"].page-content .au-card {
     padding: 32px;
     padding: 2rem;

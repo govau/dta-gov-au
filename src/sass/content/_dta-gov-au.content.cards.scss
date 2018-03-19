@@ -2,7 +2,7 @@
 //
 // @TODO: Write a better SASS function to apply the borders - this is stupid.
 .au-card-list {
-  @include AU-card-cta-link($AU-color-foreground-text, $AU-color-foreground-background);
+  @include AU-card-cta-link($AU-color-foreground-text, $AU-color-foreground-text);
   li {
     a.au-cta-link {
       border-top-width: 3px;
@@ -14,8 +14,7 @@
       a.au-cta-link {
         border-top-color: $top-border-purple;
         &:hover {
-          background-color: $top-border-purple;
-          color: $AU-color-foreground-background;
+          background-color: #EDDDEC;
         }
       }
     }
@@ -24,8 +23,7 @@
       a.au-cta-link {
         border-top-color: $top-border-green;
         &:hover {
-          background-color: $top-border-green;
-          color: $AU-color-foreground-background;
+          background-color: #DEF0E4;
         }
       }
     }
@@ -34,8 +32,7 @@
       a.au-cta-link {
         border-top-color: $top-border-dark-purple;
         &:hover {
-          background-color: $top-border-dark-purple;
-          color: $AU-color-foreground-background;
+          background-color: #E8E4F3;
         }
       }
     }
@@ -44,8 +41,7 @@
       a.au-cta-link {
         border-top-color: $top-border-orange;
         &:hover {
-          background-color: $top-border-orange;
-          color: $AU-color-foreground-background;
+          background-color: #FCE6DC;
         }
       }
     }
@@ -54,8 +50,7 @@
       a.au-cta-link {
         border-top-color: $top-border-pink;
         &:hover {
-          background-color: $top-border-pink;
-          color: $AU-color-foreground-background;
+          background-color: #F6DAE9;
         }
       }
     }
