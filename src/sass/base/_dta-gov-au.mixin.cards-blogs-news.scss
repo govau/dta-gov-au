@@ -56,8 +56,8 @@
     }
     .au-card--author_image {
       position: absolute;
-      @include AU-space (right, 2unit );
-      @include AU-space (bottom, -4.25unit );
+      @include AU-space (right, 1unit );
+      @include AU-space (bottom, -2.4unit );
       img {
         @include AU-space( width, 6.25unit );
         @include AU-space( height, 6.25unit );
