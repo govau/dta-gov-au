@@ -30,6 +30,7 @@
           &.is-active {
             text-decoration: none;
             border-color: $AU-color-foreground-background;
+            color: $AU-colordark-foreground-action;
           }
         }
       }
