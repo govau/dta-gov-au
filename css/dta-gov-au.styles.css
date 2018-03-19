@@ -2548,6 +2548,8 @@ body {
     border-top-color: #C91978; }
     .page-front #top-content .au-card-list li:nth-of-type(5n+5) a.au-cta-link:hover {
       background-color: #F6DAE9; }
+  .page-front #top-content .au-card-list > li {
+    margin: 0; }
   .page-front #top-content h2 {
     font-weight: normal;
     margin-bottom: 80px;
@@ -2949,6 +2951,8 @@ main[role="main"].page-content {
     border-top-color: #C91978; }
     main[role="main"].page-content .au-card-list li:nth-of-type(5n+5) a.au-cta-link:hover {
       background-color: #F6DAE9; }
+  main[role="main"].page-content .au-card-list > li {
+    margin: 0; }
   main[role="main"].page-content .au-card {
     padding: 32px;
     padding: 2rem;
