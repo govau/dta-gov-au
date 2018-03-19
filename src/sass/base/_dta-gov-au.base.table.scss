@@ -3,22 +3,20 @@
 table {
   width: 100%;
   border-collapse: collapse;
+  thead > tr {
+    background-color: $AU-color-background-alt-shade-suggestion;
+    border-bottom: none;
+  }
   tbody > tr {
+    border-bottom: 1px solid $AU-color-foreground-border-suggestion;
     &:hover {
       background-color: $AU-color-background-alt-suggestion;
-    }
-    &:nth-child(odd) {
-      background-color: $AU-color-background-shade-suggestion;
-      &:hover {
-        background-color: $AU-color-background-alt-suggestion;
-      }
     }
   }
   th {
     font-weight: bold;
     vertical-align: top;
     text-align: left;
-    border-bottom: 1px solid $AU-color-foreground-border-suggestion;
     @include AU-space( padding, 0.5unit);
   }
   td {

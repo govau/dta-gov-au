@@ -2415,17 +2415,17 @@ figure {
 table {
   width: 100%;
   border-collapse: collapse; }
-  table tbody > tr:hover {
-    background-color: #F0F3F5; }
-  table tbody > tr:nth-child(odd) {
-    background-color: #f5f5f5; }
-    table tbody > tr:nth-child(odd):hover {
+  table thead > tr {
+    background-color: #e0e0e0;
+    border-bottom: none; }
+  table tbody > tr {
+    border-bottom: 1px solid #7F7F7F; }
+    table tbody > tr:hover {
       background-color: #F0F3F5; }
   table th {
     font-weight: bold;
     vertical-align: top;
     text-align: left;
-    border-bottom: 1px solid #7F7F7F;
     padding: 8px;
     padding: 0.5rem; }
   table td {
