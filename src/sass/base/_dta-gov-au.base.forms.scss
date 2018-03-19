@@ -7,11 +7,16 @@
 
 .chosen-container.chosen-container-multi.au-select {
   width: 100% !important;
+  border: none;
+  background-image: none;
   @include AU-space( margin-bottom, 1unit );
-  .chosen-choices li.search-field input[type="text"] {
-    width: 100% !important;
-    @extend .au-text-input;
-    @extend .au-text-input--block;
+  .chosen-choices {
+    width: auto;
+    li.search-field input[type="text"] {
+      width: 100% !important;
+      @extend .au-text-input;
+      @extend .au-text-input--block;
+    }
   }
   .chosen-drop .chosen-results {
     @extend .au-link-list;
@@ -23,6 +28,15 @@
     // @TODO: Update the 'x' image here to make it white.
     .search-choice-close {
     }
+  }
+}
+
+// Views exposed forms have somewhat complicated behaviours.
+
+.views-exposed-form {
+  .form-actions {
+    @include AU-space( margin-top, 1unit );
+    @include AU-space( margin-left, 1unit );
   }
 }
 

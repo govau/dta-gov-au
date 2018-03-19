@@ -2306,12 +2306,22 @@ body {
 
 .chosen-container.chosen-container-multi.au-select {
   width: 100% !important;
+  border: none;
+  background-image: none;
   margin-bottom: 16px;
   margin-bottom: 1rem; }
-  .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[type="text"] {
-    width: 100% !important; }
+  .chosen-container.chosen-container-multi.au-select .chosen-choices {
+    width: auto; }
+    .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[type="text"] {
+      width: 100% !important; }
   .chosen-container.chosen-container-multi.au-select li.search-choice {
     background-image: none; }
+
+.views-exposed-form .form-actions {
+  margin-top: 16px;
+  margin-top: 1rem;
+  margin-left: 16px;
+  margin-left: 1rem; }
 
 label {
   margin-bottom: 8px;
