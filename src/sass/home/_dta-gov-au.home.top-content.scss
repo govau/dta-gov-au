@@ -5,6 +5,9 @@
   .au-card-list {
     @include AU-card-cta-link($AU-color-foreground-text);
     @include AU-card-colours;
+    > li {
+      @include AU-space( margin, 0 );
+    }
   }
   h2 {
     font-weight: normal;
