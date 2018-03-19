@@ -2262,13 +2262,16 @@ body {
       width: 100%;
       margin: 0;
       padding: 0; }
+      .search-api-page-block-form form .form-text.form-autocomplete,
+      .search-api-page-block-form form .button.form-autocomplete {
+        background-position: right 1rem center; }
       .search-api-page-block-form form .form-text:focus,
       .search-api-page-block-form form .button:focus {
         border-radius: 0;
         outline: solid 3px #ea4200; }
     .search-api-page-block-form form .form-text {
-      padding: 13px 64px 13px 24px;
-      padding: 0.8rem 4rem 0.8rem 1.5rem;
+      padding: 13px 48px 13px 24px;
+      padding: 0.8rem 3rem 0.8rem 1.5rem;
       border-top-left-radius: 160px;
       border-top-left-radius: 10rem;
       border-bottom-left-radius: 160px;
@@ -2296,7 +2299,10 @@ body {
       background-image: url("data:image/svg+xml,%3Csvg fill='%23000000' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E") !important;
       background-repeat: no-repeat;
       background-position: 0.5rem center;
-      text-align: right; }
+      text-align: right;
+      height: 100%; }
+      .search-api-page-block-form form .button:hover {
+        color: #313131; }
 
 .chosen-container.chosen-container-multi.au-select {
   width: 100% !important;
