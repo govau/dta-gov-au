@@ -2,6 +2,7 @@
 
 header {
   border-bottom: 8px solid $AU-colordark-foreground-action;
+  box-shadow: 0 0 5px 0 $AU-color-foreground-border-suggestion;
   &.au-header.au-header--hero {
     @include AU-space( padding, 1.5unit 0 0 0 );
     &.au-header--alt.au-header--dark {
