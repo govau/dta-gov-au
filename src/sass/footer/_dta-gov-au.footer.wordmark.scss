@@ -1,4 +1,7 @@
 // Style for the wordmark
 .au-site-logo_link {
   @include AU-space( margin-top, 4unit );
+  .au-site-logo {
+    @include AU-space( max-height, 3unit );
+  }
 }
