@@ -2819,7 +2819,7 @@ main[role="main"].page-content {
   main[role="main"].page-content .au-breadcrumbs {
     margin-bottom: 48px;
     margin-bottom: 3rem;
-    border-bottom: 2px solid #e0e0e0; }
+    border-bottom: 1px solid #e0e0e0; }
     main[role="main"].page-content .au-breadcrumbs ol {
       padding-left: 0; }
     main[role="main"].page-content .au-breadcrumbs a {
