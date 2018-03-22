@@ -3074,10 +3074,21 @@ main[role="main"].page-content {
     main[role="main"].page-content #contact-module h2 {
       font-size: 32px;
       font-size: 2rem;
-      line-height: 1.5; }
+      line-height: 1.5;
+      margin-bottom: 24px;
+      margin-bottom: 1.5rem; }
   main[role="main"].page-content .au-media-contact {
     margin-top: 32px;
     margin-top: 2rem; }
+  main[role="main"].page-content #block-views-block-recruiterbox-positions-block-1 {
+    margin-top: 32px;
+    margin-top: 2rem; }
+    main[role="main"].page-content #block-views-block-recruiterbox-positions-block-1 h2 {
+      font-size: 32px;
+      font-size: 2rem;
+      line-height: 1.5;
+      margin-bottom: 24px;
+      margin-bottom: 1.5rem; }
 
 aside.layout-sidebar-first nav[role="navigation"] .au-link-list, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results {
   padding: 0;
