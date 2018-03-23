@@ -45,23 +45,24 @@
  */
 
  /**
-  * This is the version of the header used off the home page. It does not include the branding elementand the search bar is in a different location.
+  * This is the version of the header used off the home page. It does not include the branding element and the search bar is in a different location.
 #}
 
 <header role="banner" class="au-header au-header--hero au-header--dark au-header--alt au-header--content">
   <div class="container-fluid">
     <div class="container">
       <div class="row col-xs-12">
-        <div class="row col-xs-4 col-sm-4">
+        <div class="row col-xs-12 col-sm-8 col-md-6 col-lg-4">
           <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
             <img class="au-responsive-media-img site-logo" src="/themes/custom/dta-gov-au/logo.png" alt="{{ 'Home'|t }}" />
           </a>
         </div>
-        <div id="site-search" class="row col-xs-5 col-sm-5 col-xs-offset-3">
+        <div id="site-search" class="row col-xs-12 col-md-5 col-md-offset-1 col-lg-5 col-lg-offset-3">
           {{ drupal_block('searchapipagesearchblockform') }}
         </div>
       </div>
       <div class="row col-xs-12">
+        {{ drupal_block('responsivemenumobileicon') }}
         {{ page.menu }}
       </div>
     </div>

@@ -1,0 +1,30 @@
+dta_gov_au.mobile:
+  label: Mobile
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+dta_gov_au.xs:
+  label: Extra small
+  mediaQuery: '(min-width: 576px)'
+  weight: 0
+  multipliers:
+    - 1x
+dta_gov_au.sm:
+  label: Small
+  mediaQuery: '(min-width: 768px)'
+  weight: 1
+  multipliers:
+    - 1x
+dta_gov_au.md:
+  label: Medium
+  mediaQuery: '(min-width: 992px)'
+  weight: 2
+  multipliers:
+    - 1x
+dta_gov_au.lg:
+  label: Large
+  mediaQuery: '(min-width: 1200px)'
+  weight: 2
+  multipliers:
+    - 1x
