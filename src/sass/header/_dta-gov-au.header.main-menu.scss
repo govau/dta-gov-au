@@ -1,6 +1,17 @@
 // Style for the main menu.
-
+@include AU-media( md ) {
+  .responsive-menu-toggle-wrapper {
+    display: none;
+    visibility: hidden;
+  }
+  #block-mainnavigation-2 {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
 #block-mainnavigation-2 {
+  display: none;
+  visibility: hidden;
   &.au-body.au-body--dark {
     .au-link-list {
       @include AU-space( margin-bottom, 1.0625unit );
