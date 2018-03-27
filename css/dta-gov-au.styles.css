@@ -2867,6 +2867,10 @@ header {
 main[role="main"].page-content {
   padding-bottom: 80px;
   padding-bottom: 5rem; }
+  main[role="main"].page-content .au-body {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.6; }
   main[role="main"].page-content .au-breadcrumbs {
     margin-bottom: 48px;
     margin-bottom: 3rem;
@@ -2895,12 +2899,15 @@ main[role="main"].page-content {
     margin: 48px 0;
     margin: 3rem 0; }
     main[role="main"].page-content nav.au-inpage-nav-links .au-inpage-nav-links__heading {
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 1.5; }
+    main[role="main"].page-content nav.au-inpage-nav-links .au-link-list > li, main[role="main"].page-content nav.au-inpage-nav-links .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results > li, .chosen-container.chosen-container-multi.au-select .chosen-drop main[role="main"].page-content nav.au-inpage-nav-links .chosen-results > li {
+      margin-top: 24px;
+      margin-top: 1.5rem;
       font-size: 20px;
       font-size: 1.25rem;
       line-height: 1.6; }
-    main[role="main"].page-content nav.au-inpage-nav-links .au-link-list > li, main[role="main"].page-content nav.au-inpage-nav-links .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results > li, .chosen-container.chosen-container-multi.au-select .chosen-drop main[role="main"].page-content nav.au-inpage-nav-links .chosen-results > li {
-      margin-top: 24px;
-      margin-top: 1.5rem; }
   main[role="main"].page-content .back-to-top {
     margin-top: 24px;
     margin-top: 1.5rem;
