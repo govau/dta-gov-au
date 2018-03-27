@@ -31,7 +31,7 @@
     </div>
   </header>
 
-  <main class="au-body page-front" role="main">
+  <main class="au-body page-front container-fluid" role="main">
   <a id="content" tabindex="-1"></a>{# link is in html.html.twig #}
     <div class="container">
       <div class="row">
@@ -40,9 +40,11 @@
             <div class="row col-xs-12">
               <h1>{{ title }}</h1>
               <p>{{ page.content }}</p>
-              <p>Please login below to access the site.</p>
-              <hr>
-              {{ login_form }}
+              {% if not logged_in %}
+                <p>Please login below to access the site.</p>
+                <hr>
+                {{ login_form }}
+              {% endif %}
             </div>
           </div>
         </div>
