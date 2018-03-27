@@ -2,39 +2,14 @@
 
 #top-content {
   @include more-link();
+  @include AU-space( margin-top, 5unit );
+  @include AU-space( margin-bottom, 5unit );
   .au-card-list {
     @include AU-card-cta-link($AU-color-foreground-text);
     @include AU-card-colours;
-    > li {
-      @include AU-space( margin, 0 );
-    }
   }
   h2 {
     font-weight: normal;
     @include AU-space( margin-bottom, 5unit );
-  }
-  @include AU-space( margin-top, 5unit );
-  @include AU-space( margin-bottom, 5unit );
-  .au-card {
-    @include AU-space( padding, 2unit 4unit 2unit 2unit );
-    * {
-      font-weight: normal;
-      color: $AU-color-foreground-text;
-    }
-    .au-card__text {
-      @include AU-space( margin-bottom, auto );
-    }
-  }
-  .au-card__title {
-    @include AU-space( margin-bottom, 1.5unit );
-    text-decoration: underline;
-    text-decoration-color: currentColor;
-    transition: text-decoration-color 0.3s ease-in-out;
-  }
-
-  .au-cta-link:hover {
-    .au-card__title {
-      text-decoration-color: transparent;
-    }
   }
 }

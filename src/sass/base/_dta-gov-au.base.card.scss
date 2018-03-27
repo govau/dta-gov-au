@@ -1,8 +1,9 @@
 .au-card {
+	@include AU-space( padding, 2unit );
+  font-weight: normal;
 	display:block;
 	max-width: $AU-maxwidth;
 	width: 100%;
-
 	img,
 	svg {
 		display: block;
@@ -14,6 +15,24 @@
 	* + .au-card__title,
 	* + .au-card__cta {
 		@include AU-space( margin-top, 1unit );
+		font-weight: normal;
+	}
+	.au-card__title {
+		@include AU-space( margin-bottom, 1.5unit );
+		text-decoration: underline;
+		text-decoration-color: currentColor;
+		transition: text-decoration-color 0.3s ease-in-out;
+		font-weight: normal;
+	}
+
+	&.au-cta-link:hover {
+		.au-card__title {
+			text-decoration-color: transparent;
+		}
+	}
+
+	.au-card__text {
+		@include AU-space( margin-bottom, 2unit );
 	}
 
 	hr {
@@ -26,7 +45,7 @@
 	}
 
 	&.au-card--shadow {
-		@include AU-space( padding, 1unit );
+		@include AU-space( padding, 2unit );
 		border-radius: 4px;
 		overflow:hidden;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -101,15 +120,17 @@ a.au-card {
 	}
 }
 
-
 // Card listing match height
 .au-card-list {
 	list-style: none;
 	padding: 0;
+	@include AU-card-cta-link($AU-color-foreground-text, $AU-color-foreground-text);
+  @include AU-card-colours;
 
 	li {
 		list-style: none;
-		padding: 0;
+		@include AU-space( padding, 0);
+		@include AU-space( margin, 0 );
 	}
 
 	.au-body & {
