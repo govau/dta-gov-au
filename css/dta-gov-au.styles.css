@@ -3089,15 +3089,25 @@ main[role="main"].page-content {
   main[role="main"].page-content .au-media-contact {
     margin-top: 32px;
     margin-top: 2rem; }
-  main[role="main"].page-content #block-views-block-recruiterbox-positions-block-1 {
+  main[role="main"].page-content .au-current-vacancies {
     margin-top: 32px;
-    margin-top: 2rem; }
-    main[role="main"].page-content #block-views-block-recruiterbox-positions-block-1 h2 {
+    margin-top: 2rem;
+    margin-bottom: 32px;
+    margin-bottom: 2rem; }
+    main[role="main"].page-content .au-current-vacancies h2 {
       font-size: 32px;
       font-size: 2rem;
       line-height: 1.5;
       margin-bottom: 24px;
       margin-bottom: 1.5rem; }
+    main[role="main"].page-content .au-current-vacancies .au-current-vacancies__item {
+      border-bottom: 1px solid #7F7F7F;
+      padding-bottom: 16px;
+      padding-bottom: 1rem;
+      margin-bottom: 16px;
+      margin-bottom: 1rem; }
+      main[role="main"].page-content .au-current-vacancies .au-current-vacancies__item:last-of-type {
+        border-bottom: none; }
 
 aside.layout-sidebar-first nav[role="navigation"] .au-link-list, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results {
   padding: 0;

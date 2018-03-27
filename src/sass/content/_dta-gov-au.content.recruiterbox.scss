@@ -1,9 +1,18 @@
 // Styles for the Recruiterbox view.
 
-#block-views-block-recruiterbox-positions-block-1 {
+.au-current-vacancies {
   @include AU-space( margin-top, 2unit );
+  @include AU-space( margin-bottom, 2unit );
   h2 {
     @include AU-fontgrid( xl );
     @include AU-space( margin-bottom, 1.5unit );
+  }
+  .au-current-vacancies__item {
+    border-bottom: 1px solid $AU-color-foreground-border-suggestion;
+    @include AU-space( padding-bottom, 1unit );
+    @include AU-space( margin-bottom, 1unit );
+    &:last-of-type {
+      border-bottom: none;
+    }
   }
 }
