@@ -3103,68 +3103,84 @@ main[role="main"].page-content {
       main[role="main"].page-content .au-current-vacancies .au-current-vacancies__item:last-of-type {
         border-bottom: none; }
 
-aside.layout-sidebar-first nav[role="navigation"] .au-link-list, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results {
-  padding: 0;
-  border: none;
-  display: block; }
-  aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-0 > a, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-0.chosen-results > a, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-0.chosen-results > a {
-    border-left: none; }
-  aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-0 > li, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-0.chosen-results > li, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-0.chosen-results > li {
-    border-left: none; }
-    aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-0 > li:hover, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-0.chosen-results > li:hover, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-0.chosen-results > li:hover {
-      border-left: none; }
-    aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-0 > li > a, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-0.chosen-results > li > a, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-0.chosen-results > li > a {
-      font-size: 20px;
-      font-size: 1.25rem;
-      line-height: 1.6;
-      margin-left: 16px;
-      margin-left: 1rem;
-      padding: 16px;
-      padding: 1rem;
-      font-weight: bold;
+aside.layout-sidebar-first nav[role="navigation"] {
+  display: none;
+  visibility: hidden; }
+  @media (min-width: 992px) {
+    aside.layout-sidebar-first nav[role="navigation"] {
       display: block;
-      color: #313131;
-      text-decoration: none;
-      border-bottom: 1px solid #7F7F7F; }
-      aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-0 > li > a:hover, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-0.chosen-results > li > a:hover, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-0.chosen-results > li > a:hover {
-        text-decoration: underline; }
-  aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-1, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-1.chosen-results, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-1.chosen-results {
-    border-left: 8px solid #f5f5f5; }
-  aside.layout-sidebar-first nav[role="navigation"] .au-link-list li, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results li {
-    margin: 0;
-    transition: border-color 0.1s linear; }
-    aside.layout-sidebar-first nav[role="navigation"] .au-link-list li.menu-item--expanded > a, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li.menu-item--expanded > a, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results li.menu-item--expanded > a {
-      margin-left: 0;
-      padding-left: 24px;
-      padding-left: 1.5rem; }
-    aside.layout-sidebar-first nav[role="navigation"] .au-link-list li > a, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li > a, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results li > a {
-      border-bottom: 1px solid #7F7F7F;
-      text-decoration: none;
+      visibility: visible; } }
+  aside.layout-sidebar-first nav[role="navigation"] .au-link-list, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results {
+    padding: 0; }
+    aside.layout-sidebar-first nav[role="navigation"] .au-link-list li, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results li {
+      margin: 0;
+      border-top: 1px solid #7F7F7F; }
+    aside.layout-sidebar-first nav[role="navigation"] .au-link-list a, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results a, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results a {
       display: block;
-      padding: 16px;
-      padding: 1rem;
-      margin-left: 8px;
-      margin-left: 0.5rem; }
-      aside.layout-sidebar-first nav[role="navigation"] .au-link-list li > a:hover, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li > a:hover, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results li > a:hover {
-        text-decoration: underline; }
-      aside.layout-sidebar-first nav[role="navigation"] .au-link-list li > a.is-active, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li > a.is-active, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results li > a.is-active {
+      text-decoration: none;
+      border-left: 8px solid transparent; }
+      aside.layout-sidebar-first nav[role="navigation"] .au-link-list a:hover, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results a:hover, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results a:hover {
+        text-decoration: underline;
+        border-left: 8px solid #00698f; }
+      aside.layout-sidebar-first nav[role="navigation"] .au-link-list a.is-active, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results a.is-active, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results a.is-active {
         background-color: #00698f;
         color: #ffffff;
         border: none;
-        margin-left: 0;
         margin-top: -1px;
-        padding-left: 32px;
-        padding-left: 2rem;
-        padding-right: 32px;
-        padding-right: 2rem; }
-        aside.layout-sidebar-first nav[role="navigation"] .au-link-list li > a.is-active:hover, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li > a.is-active:hover, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results li > a.is-active:hover {
-          border: none; }
-  aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-level-2 > li > a, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results .menu-level-2 > li > a, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results .menu-level-2 > li > a {
-    padding-left: 40px;
-    padding-left: 2.5rem; }
-  aside.layout-sidebar-first nav[role="navigation"] .au-link-list .menu-level-2 > li > .menu-level-3 > li > a, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results .menu-level-2 > li > .menu-level-3 > li > a, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results .menu-level-2 > li > .menu-level-3 > li > a {
-    padding-left: 56px;
-    padding-left: 3.5rem; }
+        margin-bottom: -1px; }
+    aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-0 > li, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-0.chosen-results > li, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-0.chosen-results > li {
+      border: none; }
+      aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-0 > li > a, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-0.chosen-results > li > a, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-0.chosen-results > li > a {
+        font-size: 20px;
+        font-size: 1.25rem;
+        line-height: 1.6;
+        margin-left: 16px;
+        margin-left: 1rem;
+        padding: 16px 8px 16px 16px;
+        padding: 1rem 0.5rem 1rem 1rem;
+        border-top: 1px solid #7F7F7F;
+        font-weight: bold;
+        color: #313131;
+        border-left: none; }
+        aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-0 > li > a:hover, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-0.chosen-results > li > a:hover, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-0.chosen-results > li > a:hover {
+          border-left: none; }
+        aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-0 > li > a:first-child, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-0.chosen-results > li > a:first-child, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-0.chosen-results > li > a:first-child {
+          border-top: none; }
+    aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-1, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-1.chosen-results, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-1.chosen-results {
+      border-left: 8px solid #f5f5f5; }
+      aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-1 > li, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-1.chosen-results > li, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-1.chosen-results > li {
+        margin-left: 8px;
+        margin-left: 0.5rem; }
+        aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-1 > li > a, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-1.chosen-results > li > a, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-1.chosen-results > li > a {
+          padding: 16px 8px 16px 32px;
+          padding: 1rem 0.5rem 1rem 2rem;
+          margin-left: -24px;
+          margin-left: -1.5rem; }
+          aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-1 > li > a:hover, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-1.chosen-results > li > a:hover, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-1.chosen-results > li > a:hover {
+            margin-left: -16px;
+            margin-left: -1rem;
+            padding-left: 24px;
+            padding-left: 1.5rem; }
+          aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-1 > li > a.is-active, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-1.chosen-results > li > a.is-active, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-1.chosen-results > li > a.is-active {
+            margin-left: -16px;
+            margin-left: -1rem;
+            padding-left: 24px;
+            padding-left: 1.5rem; }
+    aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-2 > li > a, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-2.chosen-results > li > a, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-2.chosen-results > li > a {
+      padding: 16px 8px 16px 40px;
+      padding: 1rem 0.5rem 1rem 2.5rem;
+      margin-left: -16px;
+      margin-left: -1rem; }
+    aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-3 > li > a, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-3.chosen-results > li > a, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-3.chosen-results > li > a {
+      padding: 16px 8px 16px 56px;
+      padding: 1rem 0.5rem 1rem 3.5rem;
+      margin-left: -16px;
+      margin-left: -1rem; }
+    aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-4 > li > a, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-4.chosen-results > li > a, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-4.chosen-results > li > a {
+      padding: 16px 8px 16px 72px;
+      padding: 1rem 0.5rem 1rem 4.5rem;
+      margin-left: -16px;
+      margin-left: -1rem; }
 
 footer .au-site-logo_link {
   margin-top: 64px;
