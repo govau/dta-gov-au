@@ -65,18 +65,18 @@
     {% include '@dta_gov_au/includes/home.html.twig' %}
   {% else %}
     <div class="container">
-      <div class="cols-xs-12">
+      <div class="col-xs-12">
         {{ drupal_block('breadcrumbs_2') }}
       </div>
       <div class="row">
         {# If there is a sidebar, put it into the grid and adjust the main content area accordingly. #}
         {% if page.sidebar %}
-          <div class="col-xs-12 col-sm-3">
+          <div class="col-xs-12 col-md-3">
             <aside class="layout-sidebar-first" role="complementary">
               {{ page.sidebar }}
             </aside>
           </div>
-          <div class="col-xs-12 col-sm-8 col-sm-offset-1">
+          <div class="col-xs-12 col-md-8 col-md-offset-1">
             {{ page.content }}
           </div>
         {% else %}
