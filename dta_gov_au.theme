@@ -36,11 +36,14 @@ function dta_gov_au_theme_suggestions_block_alter(&$suggestions, $variables) {
 /**
  * Adds theme hook suggestions to blocks
  */
-  $block_id = $variables['elements']['#id'];
-  foreach ($suggestions as &$suggestion) {
-    $suggestion = str_replace('dta_uikit_base_', 'dta_gov_au_', $suggestion);
-  }
+   if(isset($variables['elements']['#id'])) {
+     $block_id = $variables['elements']['#id'];
+     foreach ($suggestions as &$suggestion) {
+       $suggestion = str_replace('dta_uikit_base_', 'dta_gov_au_', $suggestion);
+     }
+   }
 }
+
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -106,7 +109,9 @@ function dta_gov_au_preprocess_form_element__wrapped(&$variables) {
  * Implements hook_preprocess_block().
  */
 function dta_gov_au_preprocess_block(&$variables) {
-  $variables['content']['#attributes']['block'] = $variables['elements']['#id'];
+  if(isset($variables['elements']['#id'])) {
+    $variables['content']['#attributes']['block'] = $variables['elements']['#id'];
+  }
 }
 
 /**
