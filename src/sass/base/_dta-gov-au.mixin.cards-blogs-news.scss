@@ -1,19 +1,17 @@
 // A basic mixin to supply the cards for blogs and news items.
 @mixin cards-blogs-news {
-  @include AU-space( padding, 5unit 0 );
-  h2 {
-    @include AU-space( margin-bottom, 5unit );
-    font-weight: normal;
-  }
   .au-card-list {
     @include AU-card-cta-link($AU-color-foreground-text);
     * {
       font-weight: normal;
     }
     > li {
-      @include AU-space( margin-bottom, 1unit );
+      @include AU-space( margin-bottom, 2unit );
       @include AU-space( margin-top, 0 );
       @include AU-space( padding, 0 1.5unit)
+      @include AU-media( sm ) {
+        @include AU-space( margin-bottom, 2unit );
+      }
       @include AU-media( md ) {
         @include AU-space( padding, 0 0.75unit)
       }
@@ -38,7 +36,11 @@
       @include AU-space( margin, -2unit -2unit 1.5unit -2unit );
     }
     .au-card--content_type {
-      @include AU-space( margin-bottom, 5unit );
+      @include AU-fontgrid( xs, nospace );
+      @include AU-space( margin-bottom, 3.25unit );
+      @include AU-media( sm ) {
+        @include AU-space( margin-bottom, 5unit );
+      }
       font-weight: bold;
       a {
         color: $AU-color-foreground-text;
@@ -47,8 +49,12 @@
     }
     .au-card--author_name {
       position: absolute;
-      @include AU-space( top, 18.5unit );
+      @include AU-space( top, 16.5unit );
       @include AU-space( margin, 0unit );
+      @include AU-media( md ) {
+        @include AU-space( top, 18.5unit );
+      }
+
       a {
         color: $AU-color-foreground-muted-suggestion;
       }
@@ -68,7 +74,11 @@
       }
     }
     .au-card__title {
-      @include AU-space( margin, 0 0 2.375unit 0 );
+      @include AU-fontgrid( lg );
+      @include AU-space( margin, 0 0 0.875unit 0 );
+      @include AU-media ( md ) {
+        @include AU-space( margin, 0 0 2.375unit 0 );
+      }
       a {
         color: $AU-color-foreground-action;
         text-decoration: underline;

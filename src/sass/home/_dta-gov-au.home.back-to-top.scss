@@ -1,9 +1,16 @@
 // Styles for back to top link on the home page.
 
 #back-to-top {
-  @include AU-space( margin-bottom, 2unit );
+  @include AU-space( margin-bottom, 3unit );
+  @include AU-media( sm ) {
+    @include AU-space( margin-bottom, 2.5unit );
+  }
+  @include AU-media( md ) {
+    @include AU-space( margin-bottom, 4.875unit );
+  }
   text-align: center;
   a {
+    @include AU-fontgrid( lg, nospace );
     color: $AU-color-foreground-action;
     font-weight: bold;
     &:after {
