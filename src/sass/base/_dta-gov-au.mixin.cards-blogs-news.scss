@@ -13,6 +13,10 @@
     > li {
       @include AU-space( margin-bottom, 1unit );
       @include AU-space( margin-top, 0 );
+      @include AU-space( padding, 0 1.5unit)
+      @include AU-media( md ) {
+        @include AU-space( padding, 0 0.75unit)
+      }
     }
   }
   .au-card {
@@ -34,22 +38,17 @@
       @include AU-space( margin, -2unit -2unit 1.5unit -2unit );
     }
     .au-card--content_type {
-      @include AU-space( margin-bottom, 0 );
+      @include AU-space( margin-bottom, 5unit );
       font-weight: bold;
-      + .au-card--author_name {
-        @include AU-space( margin-top, 0 );
-      }
-      + .au-card__title {
-        @include AU-space( margin-top, 2unit );
-      }
       a {
         color: $AU-color-foreground-text;
         font-weight: bold;
       }
     }
     .au-card--author_name {
-      @include AU-space( margin-bottom, 1.5unit );
-      @include AU-space( margin-top, 0unit );
+      position: absolute;
+      @include AU-space( top, 18.5unit );
+      @include AU-space( margin, 0unit );
       a {
         color: $AU-color-foreground-muted-suggestion;
       }
@@ -69,7 +68,7 @@
       }
     }
     .au-card__title {
-      @include AU-space( margin, 0 0 2unit 0 );
+      @include AU-space( margin, 0 0 2.375unit 0 );
       a {
         color: $AU-color-foreground-action;
         text-decoration: underline;

@@ -23,6 +23,9 @@
   h2 {
     @include AU-fontgrid( xl, nospace );
     font-weight: normal;
+    @include AU-media( sm ) {
+      @include AU-fontgrid( lg, nospace );
+    }
   }
   p:last-of-type {
     @include AU-space( margin-bottom, 2unit );
@@ -34,5 +37,8 @@
   @include AU-media( sm ) {
     @include AU-space( padding-top, 15unit );
     @include AU-space( padding-bottom, 15unit );
+    .au-btn {
+      @include AU-fontgrid( sm );
+    }
   }
 }

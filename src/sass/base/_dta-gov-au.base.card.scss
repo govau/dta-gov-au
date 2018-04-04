@@ -1,5 +1,8 @@
 .au-card {
-	@include AU-space( padding, 2unit );
+	@include AU-space( padding, 1.5unit );
+	@include AU-media( md ) {
+		@include AU-space( padding, 2unit );
+	}
   font-weight: normal;
 	display:block;
 	max-width: $AU-maxwidth;
@@ -18,11 +21,16 @@
 		font-weight: normal;
 	}
 	.au-card__title {
-		@include AU-space( margin-bottom, 1.5unit );
+		@include AU-fontgrid( md );
+		@include AU-space( margin-bottom, 1unit );
 		text-decoration: underline;
 		text-decoration-color: currentColor;
 		transition: text-decoration-color 0.3s ease-in-out;
 		font-weight: normal;
+		@include AU-media( md ) {
+			@include AU-fontgrid( lg );
+			@include AU-space( margin-bottom, 1.5unit );
+		}
 	}
 
 	&.au-cta-link:hover {
@@ -32,7 +40,12 @@
 	}
 
 	.au-card__text {
-		@include AU-space( margin-bottom, 2unit );
+		@include AU-space( margin-bottom, 1unit );
+		@include AU-fontgrid( sm );
+		@include AU-media( md ) {
+			@include AU-fontgrid( md );
+			@include AU-space( margin-bottom, 2unit );
+		}
 	}
 
 	hr {
@@ -45,7 +58,6 @@
 	}
 
 	&.au-card--shadow {
-		@include AU-space( padding, 2unit );
 		border-radius: 4px;
 		overflow:hidden;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
