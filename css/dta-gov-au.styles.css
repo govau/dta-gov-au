@@ -2229,8 +2229,12 @@ body {
   background-color: #414141; }
 
 .search-api-page-block-form {
-  margin-bottom: 80px;
-  margin-bottom: 5rem; }
+  margin-bottom: 64px;
+  margin-bottom: 4rem; }
+  @media (min-width: 768px) {
+    .search-api-page-block-form {
+      margin-bottom: 80px;
+      margin-bottom: 5rem; } }
   .search-api-page-block-form form {
     display: table;
     width: 100%; }
@@ -2568,30 +2572,44 @@ body {
       .page-front #highlight .highlight-block {
         margin-bottom: 0; } }
   .page-front #highlight h2 {
-    font-size: 32px;
-    font-size: 2rem;
+    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1;
     font-weight: normal; }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       .page-front #highlight h2 {
-        font-size: 24px;
-        font-size: 1.5rem;
+        font-size: 32px;
+        font-size: 2rem;
         line-height: 1; } }
-  .page-front #highlight p:last-of-type {
-    margin-bottom: 32px;
-    margin-bottom: 2rem; }
+  .page-front #highlight p {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5; }
+    @media (min-width: 992px) {
+      .page-front #highlight p {
+        font-size: 20px;
+        font-size: 1.25rem;
+        line-height: 1.6; } }
+    .page-front #highlight p:last-of-type {
+      margin-bottom: 32px;
+      margin-bottom: 2rem; }
   .page-front #highlight .link-wrapper {
     margin-top: auto; }
+  .page-front #highlight .au-btn, .page-front #highlight .chosen-container.chosen-container-multi.au-select li.search-choice, .chosen-container.chosen-container-multi.au-select .page-front #highlight li.search-choice, .page-front #highlight .au-text-input[value="Reset"], .page-front #highlight .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[value="Reset"][type="text"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field .page-front #highlight input[value="Reset"][type="text"] {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5; }
+    @media (min-width: 992px) {
+      .page-front #highlight .au-btn, .page-front #highlight .chosen-container.chosen-container-multi.au-select li.search-choice, .chosen-container.chosen-container-multi.au-select .page-front #highlight li.search-choice, .page-front #highlight .au-text-input[value="Reset"], .page-front #highlight .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[value="Reset"][type="text"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field .page-front #highlight input[value="Reset"][type="text"] {
+        font-size: 20px;
+        font-size: 1.25rem;
+        line-height: 1.6; } }
   @media (min-width: 768px) {
     .page-front #highlight {
       padding-top: 240px;
       padding-top: 15rem;
       padding-bottom: 240px;
-      padding-bottom: 15rem; }
-      .page-front #highlight .au-btn, .page-front #highlight .chosen-container.chosen-container-multi.au-select li.search-choice, .chosen-container.chosen-container-multi.au-select .page-front #highlight li.search-choice, .page-front #highlight .au-text-input[value="Reset"], .page-front #highlight .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[value="Reset"][type="text"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field .page-front #highlight input[value="Reset"][type="text"] {
-        font-size: 16px;
-        font-size: 1rem;
-        line-height: 1.5; } }
+      padding-bottom: 15rem; } }
 
 .page-front #top-content {
   margin-top: 80px;
@@ -2879,18 +2897,24 @@ header {
     header.au-header.au-header--hero.au-header--alt.au-header--dark {
       background-color: #414141; }
   header img.site-logo {
-    margin-bottom: 80px;
-    margin-bottom: 5rem; }
+    margin-bottom: 64px;
+    margin-bottom: 4rem; }
+    @media (min-width: 768px) {
+      header img.site-logo {
+        margin-bottom: 80px;
+        margin-bottom: 5rem; } }
   header h2 {
     margin: 0 0 48px 0;
     margin: 0 0 3rem 0;
-    font-size: 48px;
-    font-size: 3rem;
+    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 1.5;
     color: #61DAFF; }
-  header h3 {
-    margin-bottom: 24px;
-    margin-bottom: 1.5rem; }
+    @media (min-width: 768px) {
+      header h2 {
+        font-size: 48px;
+        font-size: 3rem;
+        line-height: 1.5; } }
   header .au-body .au-link-list, header .au-body .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results, .chosen-container.chosen-container-multi.au-select .chosen-drop header .au-body .chosen-results {
     margin-bottom: 80px;
     margin-bottom: 5rem; }

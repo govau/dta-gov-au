@@ -1,5 +1,8 @@
 // Image styles for the header.
 
 img.site-logo {
-  @include AU-space( margin-bottom, 5unit );
+  @include AU-space( margin-bottom, 4unit );
+  @include AU-media( sm ) {
+    @include AU-space( margin-bottom, 5unit );
+  }
 }

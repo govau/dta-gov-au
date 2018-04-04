@@ -21,24 +21,33 @@
     }
   }
   h2 {
-    @include AU-fontgrid( xl, nospace );
+    @include AU-fontgrid( lg, nospace );
     font-weight: normal;
-    @include AU-media( sm ) {
-      @include AU-fontgrid( lg, nospace );
+    @include AU-media( md ) {
+      @include AU-fontgrid( xl, nospace );
     }
   }
-  p:last-of-type {
-    @include AU-space( margin-bottom, 2unit );
+  p {
+    @include AU-fontgrid( sm );
+    @include AU-media( md ) {
+      @include AU-fontgrid( md );
+    }
+    &:last-of-type {
+      @include AU-space( margin-bottom, 2unit );
+    }
   }
   .link-wrapper {
     @include AU-space( margin-top, auto );
+  }
+  .au-btn {
+    @include AU-fontgrid( sm );
+    @include AU-media( md ) {
+      @include AU-fontgrid( md );
+    }
   }
   @include AU-space( padding-top, 3unit );
   @include AU-media( sm ) {
     @include AU-space( padding-top, 15unit );
     @include AU-space( padding-bottom, 15unit );
-    .au-btn {
-      @include AU-fontgrid( sm );
-    }
   }
 }
