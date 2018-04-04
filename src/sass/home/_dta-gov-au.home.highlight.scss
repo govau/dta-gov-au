@@ -1,7 +1,9 @@
 // Highlight element for the home page.
 
 #highlight {
-  background-image: url('../images/highlight-bg.png');
+  @include AU-media( sm ) {
+    background-image: url('../images/highlight-bg.png');
+  }
   background-position: center top;
   background-size: cover;
   .container {
@@ -14,21 +16,29 @@
     border-left: 1px solid $AU-color-background-shade-suggestion;
     display: flex;
     flex-direction: column;
-    @include AU-space( margin-bottom, 3unit );
+    @include AU-space( margin-bottom, 2unit );
+    @include AU-media ( sm ) {
+      @include AU-space( margin-bottom, 3unit );
+    }
     @include AU-space( padding-left, 1.5unit );
     @include AU-media( sm ) {
       @include AU-space( margin-bottom, 0 );
     }
   }
   h2 {
-    @include AU-fontgrid( lg, nospace );
+    @include AU-fontgrid( xl, nospace );
     font-weight: normal;
+    @include AU-media( sm ) {
+      @include AU-fontgrid( lg, nospace );
+    }
     @include AU-media( md ) {
       @include AU-fontgrid( xl, nospace );
     }
   }
   p {
-    @include AU-fontgrid( sm );
+    @include AU-fontgrid( md );
+    @include AU-media( sm ){
+      @include AU-fontgrid( sm );}
     @include AU-media( md ) {
       @include AU-fontgrid( md );
     }
