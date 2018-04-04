@@ -13,25 +13,18 @@
   .au-body {
     background-color: transparent;
   }
-  .au-card {
-    @include AU-space( padding, 2unit );
-    * {
-      font-weight: normal;
-    }
-    .au-card__text {
-      @include AU-space( margin-bottom, auto );
-      @include AU-space( margin-top, 0 );
-    }
-  }
+
   h2 {
     font-weight: normal;
     @include AU-space( margin-bottom, 5unit  );
   }
   .au-card__title {
-    font-weight: normal;
-    @include AU-space( margin-top, 1.5unit );
+    @include AU-space( margin-top, 2unit );
     @include AU-space( margin-bottom, 1.5unit );
-    text-decoration: underline;
+    @include AU-media( md ) {
+      @include AU-space( margin-top, 3.5unit );
+      @include AU-space( margin-bottom, 1unit );
+    }
   }
   .au-card__image {
     @include AU-space( max-height, 13unit );
@@ -40,12 +33,6 @@
       @extend .au-responsive-media-img;
       height: 100%;
     }
-  }
-  .au-card__title {
-    @include AU-space( margin-bottom, 1.5unit );
-    text-decoration: underline;
-    text-decoration-color: currentColor;
-    transition: text-decoration-color 0.3s ease-in-out;
   }
 
   .au-cta-link:hover {
