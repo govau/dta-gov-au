@@ -3466,8 +3466,14 @@ main[role="main"].page-content {
     background-color: #f5f5f5;
     margin-top: 32px;
     margin-top: 2rem;
-    padding: 16px;
-    padding: 1rem; }
+    margin-right: 0px;
+    margin-right: 0rem;
+    padding: 24px;
+    padding: 1.5rem; }
+    @media (min-width: 1200px) {
+      main[role="main"].page-content #contact-module {
+        margin-right: 32px;
+        margin-right: 2rem; } }
     main[role="main"].page-content #contact-module h2 {
       font-size: 32px;
       font-size: 2rem;
