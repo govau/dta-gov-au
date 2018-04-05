@@ -1,8 +1,16 @@
 // Search block.
+
 .search-api-page-block-form {
   @include AU-space( margin-bottom, 4unit );
   @include AU-media( sm ) {
     @include AU-space( margin-bottom, 5unit );
+  }
+
+  .au-header--content & {
+    @include AU-space( margin-bottom, 2.5unit );
+    @include AU-media( sm ) {
+      @include AU-space( margin-bottom, 5unit );
+    }
   }
 
   form {

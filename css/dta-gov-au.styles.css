@@ -2235,6 +2235,13 @@ body {
     .search-api-page-block-form {
       margin-bottom: 80px;
       margin-bottom: 5rem; } }
+  .au-header--content .search-api-page-block-form {
+    margin-bottom: 40px;
+    margin-bottom: 2.5rem; }
+    @media (min-width: 768px) {
+      .au-header--content .search-api-page-block-form {
+        margin-bottom: 80px;
+        margin-bottom: 5rem; } }
   .search-api-page-block-form form {
     display: table;
     width: 100%; }
@@ -3071,13 +3078,29 @@ header {
     padding: 1.5rem 0 0 0; }
     header.au-header.au-header--hero.au-header--alt.au-header--dark {
       background-color: #414141; }
+      header.au-header.au-header--hero.au-header--alt.au-header--dark.au-header--content {
+        padding-top: 64px;
+        padding-top: 4rem; }
+        @media (min-width: 768px) {
+          header.au-header.au-header--hero.au-header--alt.au-header--dark.au-header--content {
+            padding-top: 57px;
+            padding-top: 3.5625rem; } }
   header img.site-logo {
-    margin-bottom: 64px;
-    margin-bottom: 4rem; }
+    margin-top: -8px;
+    margin-top: -0.5rem;
+    margin-bottom: 72px;
+    margin-bottom: 4.5rem; }
     @media (min-width: 768px) {
       header img.site-logo {
-        margin-bottom: 80px;
-        margin-bottom: 5rem; } }
+        margin-bottom: 88px;
+        margin-bottom: 5.5rem; } }
+    header img.site-logo.content-page {
+      margin-bottom: 48px;
+      margin-bottom: 3rem; }
+      @media (min-width: 768px) {
+        header img.site-logo.content-page {
+          margin-bottom: 68px;
+          margin-bottom: 4.25rem; } }
   header h2 {
     margin: 0 0 48px 0;
     margin: 0 0 3rem 0;
@@ -3144,9 +3167,6 @@ header {
             text-decoration: none;
             border-color: #ffffff;
             color: #61DAFF; }
-  header.au-header--content #site-search {
-    margin-top: 20px;
-    margin-top: 1.25rem; }
 
 main[role="main"].page-content {
   padding-bottom: 80px;
@@ -3155,10 +3175,37 @@ main[role="main"].page-content {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.6; }
+  main[role="main"].page-content #block-breadcrumbs-2 {
+    margin-bottom: 40px;
+    margin-bottom: 2.5rem; }
+    @media (min-width: 768px) {
+      main[role="main"].page-content #block-breadcrumbs-2 {
+        margin-bottom: 60px;
+        margin-bottom: 3.75rem; } }
+    @media (min-width: 992px) {
+      main[role="main"].page-content #block-breadcrumbs-2 {
+        margin-bottom: 48px;
+        margin-bottom: 3rem; } }
   main[role="main"].page-content .au-breadcrumbs {
-    margin-bottom: 48px;
-    margin-bottom: 3rem;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
     border-bottom: 1px solid #e0e0e0; }
+    @media (min-width: 992px) {
+      main[role="main"].page-content .au-breadcrumbs {
+        position: inherit;
+        width: auto;
+        height: auto;
+        padding: inherit;
+        margin: inherit;
+        overflow: inherit;
+        clip: inherit;
+        border: none; } }
     main[role="main"].page-content .au-breadcrumbs ol {
       padding-left: 0; }
     main[role="main"].page-content .au-breadcrumbs a {
@@ -3183,9 +3230,18 @@ main[role="main"].page-content {
     margin: 48px 0;
     margin: 3rem 0; }
     main[role="main"].page-content nav.au-inpage-nav-links .au-inpage-nav-links__heading {
+      font-weight: bold;
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 1.5;
       font-size: 24px;
       font-size: 1.5rem;
       line-height: 1.5; }
+      @media (min-width: 768px) {
+        main[role="main"].page-content nav.au-inpage-nav-links .au-inpage-nav-links__heading {
+          font-size: 20px;
+          font-size: 1.25rem;
+          line-height: 1.6; } }
     main[role="main"].page-content nav.au-inpage-nav-links .au-link-list > li, main[role="main"].page-content nav.au-inpage-nav-links .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results > li, .chosen-container.chosen-container-multi.au-select .chosen-drop main[role="main"].page-content nav.au-inpage-nav-links .chosen-results > li {
       margin-top: 24px;
       margin-top: 1.5rem;

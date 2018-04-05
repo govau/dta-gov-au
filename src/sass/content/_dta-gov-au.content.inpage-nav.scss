@@ -3,6 +3,11 @@
 nav.au-inpage-nav-links {
   @include AU-space( margin, 3unit 0 );
   .au-inpage-nav-links__heading {
+    font-weight: bold;
+    @include AU-fontgrid( lg );
+    @include AU-media ( sm ) {
+      @include AU-fontgrid( md );
+    }
     @include AU-fontgrid( lg );
   }
   .au-link-list > li {

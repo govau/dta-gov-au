@@ -1,8 +1,16 @@
 // Image styles for the header.
 
 img.site-logo {
-  @include AU-space( margin-bottom, 4unit );
+  // This bit extra just removes a tiny bit of null space at the top of the image.
+  @include AU-space( margin-top, -0.5unit );
+  @include AU-space( margin-bottom, 4.5unit );
   @include AU-media( sm ) {
-    @include AU-space( margin-bottom, 5unit );
+    @include AU-space( margin-bottom, 5.5unit );
+  }
+  &.content-page {
+    @include AU-space( margin-bottom, 3unit );
+    @include AU-media( sm ) {
+      @include AU-space( margin-bottom, 4.25unit );
+    }
   }
 }

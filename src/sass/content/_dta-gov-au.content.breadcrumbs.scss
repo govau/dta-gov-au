@@ -1,7 +1,32 @@
 // Styles for the breadcrumbs.
-
+#block-breadcrumbs-2 {
+  @include AU-space( margin-bottom, 2.5unit );
+  @include AU-media( sm ) {
+    @include AU-space( margin-bottom, 3.75unit );
+  }
+  @include AU-media( md ) {
+    @include AU-space( margin-bottom, 3unit );
+  }
+}
 .au-breadcrumbs {
-  @include AU-space( margin-bottom, 3unit );
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  @include AU-media( md ) {
+    position: inherit;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: inherit;
+    clip: inherit;
+    border: none;
+  }
   border-bottom: 1px solid $AU-color-background-alt-shade-suggestion;
   ol {
     @include AU-space( padding-left, 0 );
