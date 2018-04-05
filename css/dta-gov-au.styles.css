@@ -2554,8 +2554,11 @@ figure {
   margin: 0; }
 
 table {
-  width: 100%;
-  border-collapse: collapse; }
+  max-width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 32px 0;
+  margin: 2rem 0; }
   table thead > tr {
     background-color: #e0e0e0;
     border-bottom: none; }
@@ -2568,17 +2571,42 @@ table {
     vertical-align: top;
     text-align: left;
     padding: 8px;
-    padding: 0.5rem; }
+    padding: 0.5rem;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #e0e0e0; }
   table td {
     vertical-align: top;
     text-align: left;
     padding: 8px;
-    padding: 0.5rem; }
+    padding: 0.5rem;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5; }
   table caption {
     text-align: left;
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1.5; }
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin: 16px 0;
+    margin: 1rem 0; }
+
+div.horizontal-scroll-table-container {
+  width: 100%;
+  overflow: auto; }
+  @media (min-width: 992px) {
+    div.horizontal-scroll-table-container {
+      overflow: initial; } }
+  @media (min-width: 768px) {
+    div.horizontal-scroll-table-container table th:first-child,
+    div.horizontal-scroll-table-container table td:first-child {
+      max-width: 20em; }
+    div.horizontal-scroll-table-container table td:first-child[colspan] {
+      max-width: initial; } }
+  @media (min-width: 992px) {
+    div.horizontal-scroll-table-container table {
+      max-width: 100%; } }
 
 #off-canvas .mm-navbar {
   border-color: #7F7F7F; }
