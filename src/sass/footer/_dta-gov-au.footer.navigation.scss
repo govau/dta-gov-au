@@ -1,21 +1,25 @@
 // Footer navigation styles.
 
 .au-footer__navigation {
-  @include AU-space( margin-top, 5unit );
-  @include AU-space( margin-bottom, 2unit );
+  @include AU-space( margin-bottom, 2.5unit );
+  @include AU-media( sm ) {
+    @include AU-space( margin-bottom, 1.625unit );
+    @include AU-space( margin-top, 6.875unit );
+  }
   .au-link-list {
     li {
-      @include AU-space( margin-right, 1unit );
       display: block;
+      @include AU-space( margin-bottom, 1unit );
       @include AU-media( sm ) {
+        @include AU-space( margin, 0 1unit 0.5unit 0 );
         display: inline-block;
       }
     }
     a {
       color: $AU-color-foreground-background;
-      text-decoration: none;
+      text-decoration: underline;
       &:hover {
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
   }

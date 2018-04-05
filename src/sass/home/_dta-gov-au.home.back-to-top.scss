@@ -11,6 +11,9 @@
   text-align: center;
   a {
     @include AU-fontgrid( lg, nospace );
+    @include AU-media( md ) {
+      @include AU-fontgrid( md, nospace );
+    }
     color: $AU-color-foreground-action;
     font-weight: bold;
     &:after {

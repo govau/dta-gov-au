@@ -1,11 +1,13 @@
 // Styles for the social media area.
 
 #social-media {
-  @include AU-space( margin-top, 5.625unit );
   h2 {
+    font-weight: normal;
     @include AU-fontgrid( md, nospace );
     @include AU-space( margin-bottom, 1.5unit );
-    font-weight: normal;
+    @include AU-media( sm ) {
+      @include AU-space( margin-top, 6.875unit );
+    }
   }
   .au-link-list {
     li {

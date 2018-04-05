@@ -51,8 +51,11 @@
       position: absolute;
       @include AU-space( top, 16.5unit );
       @include AU-space( margin, 0unit );
+      @include AU-media( sm ) {
+        @include AU-space( top, 16unit );
+      }
       @include AU-media( md ) {
-        @include AU-space( top, 18.5unit );
+        @include AU-space( top, 15unit );
       }
 
       a {
