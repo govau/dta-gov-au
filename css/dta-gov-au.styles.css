@@ -3454,6 +3454,30 @@ main[role="main"].page-content {
       margin-bottom: 1rem; }
       main[role="main"].page-content .au-current-vacancies .au-current-vacancies__item:last-of-type {
         border-bottom: none; }
+  main[role="main"].page-content .au-landing-page-level-2-cards {
+    margin-top: 40px;
+    margin-top: 2.5rem; }
+    @media (min-width: 768px) {
+      main[role="main"].page-content .au-landing-page-level-2-cards {
+        margin-top: 64px;
+        margin-top: 4rem; } }
+    @media (min-width: 992px) {
+      main[role="main"].page-content .au-landing-page-level-2-cards {
+        margin-top: 80px;
+        margin-top: 5rem; } }
+    main[role="main"].page-content .au-landing-page-level-2-cards .au-card {
+      padding: 16px;
+      padding: 1rem; }
+      main[role="main"].page-content .au-landing-page-level-2-cards .au-card .au-card__title {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.5; }
+      main[role="main"].page-content .au-landing-page-level-2-cards .au-card .au-card__text {
+        font-size: 14px;
+        font-size: 0.875rem;
+        line-height: 1.42857;
+        margin-bottom: 16px;
+        margin-bottom: 1rem; }
 
 aside.layout-sidebar-first nav[role="navigation"] {
   display: none;
