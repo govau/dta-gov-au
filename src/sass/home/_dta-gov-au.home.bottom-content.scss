@@ -1,6 +1,20 @@
 // Styles for the 'bottom content' block on the home page.
 
 #bottom-content {
+  @include AU-space( padding, 2.5unit 0 );
+  @include AU-media( sm ) {
+    @include AU-space( padding, 5unit 0 );
+  }
+  h2 {
+    font-weight: normal;
+    @include AU-space( margin-bottom, 2.5unit );
+    @include AU-fontgrid( xl );
+    @include AU-media( sm ) {
+      @include AU-space( margin-bottom, 5unit );
+    }
+    @include AU-media( md ) {
+    }
+  }
   @include more-link();
   @include cards-blogs-news;
 }

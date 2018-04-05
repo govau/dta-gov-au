@@ -2,14 +2,22 @@
 
 #top-content {
   @include more-link();
-  @include AU-space( margin-top, 5unit );
-  @include AU-space( margin-bottom, 5unit );
+  @include AU-space( margin-top, 3unit );
+  @include AU-space( margin-bottom, 2.5unit );
+  @include AU-media ( sm ) {
+    @include AU-space( margin-top, 5unit );
+    @include AU-space( margin-bottom, 5unit );
+  }
   .au-card-list {
     @include AU-card-cta-link($AU-color-foreground-text);
     @include AU-card-colours;
   }
   h2 {
     font-weight: normal;
-    @include AU-space( margin-bottom, 5unit );
+    @include AU-fontgrid( xl, nospace );
+    @include AU-media ( sm ) {
+      @include AU-space( margin-bottom, 5unit );
+    }
+    @include AU-space( margin-bottom, 2.5unit );
   }
 }

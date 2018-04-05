@@ -22,18 +22,25 @@
   }
   h2 {
     font-weight: normal;
-    @include AU-fontgrid( lg );
-    @include AU-space( margin-bottom, 2.5unit );
-    @include AU-space( margin-top, 5unit );
+    @include AU-fontgrid( xl );
+    @include AU-space( margin-bottom, 2unit );
+    @include AU-space( margin-top, 4unit );
+    @include AU-media( sm ) {
+      @include AU-fontgrid( lg );
+      @include AU-space( margin-top, 5unit );
+      @include AU-space( margin-bottom, 2.5unit );
+    }
     @include AU-media( md ) {
       @include AU-fontgrid( xl );
       @include AU-space( margin-bottom, 1.5unit );
-      @include AU-space( margin-top, 5unit );
     }
   }
   p {
     @include AU-space( margin-right, 2unit );
-    @include AU-fontgrid( sm );
+    @include AU-fontgrid( md );
+    @include AU-media( sm ) {
+      @include AU-fontgrid( sm );
+    }
     @include AU-media( md ) {
       @include AU-fontgrid( md );
     }
@@ -42,7 +49,11 @@
     }
   }
   .au-btn {
-    @include AU-space( margin-top, 4unit );
-    @include AU-space( margin-bottom, 5unit );
+    @include AU-space( margin-top, 2unit );
+    @include AU-space( margin-bottom, 4unit );
+    @include AU-media( sm ) {
+      @include AU-space( margin-top, 4unit );
+      @include AU-space( margin-bottom, 5unit );
+    }
   }
 }

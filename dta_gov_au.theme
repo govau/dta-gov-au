@@ -53,7 +53,7 @@ function dta_gov_au_theme_suggestions_block_alter(&$suggestions, $variables) {
  **/
 
 function dta_gov_au_form_search_api_page_block_form_alter(&$form, &$form_state, $form_id) {
-  $form['keys']['#attributes']['placeholder'] = t('Search dta.gov.au');
+  $form['keys']['#attributes']['placeholder'] = t('What can we do for you?');
 }
 
 /**

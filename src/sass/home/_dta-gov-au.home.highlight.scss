@@ -1,7 +1,9 @@
 // Highlight element for the home page.
 
 #highlight {
-  background-image: url('../images/highlight-bg.png');
+  @include AU-media( sm ) {
+    background-image: url('../images/highlight-bg.png');
+  }
   background-position: center top;
   background-size: cover;
   .container {
@@ -14,7 +16,10 @@
     border-left: 1px solid $AU-color-background-shade-suggestion;
     display: flex;
     flex-direction: column;
-    @include AU-space( margin-bottom, 3unit );
+    @include AU-space( margin-bottom, 2unit );
+    @include AU-media ( sm ) {
+      @include AU-space( margin-bottom, 3unit );
+    }
     @include AU-space( padding-left, 1.5unit );
     @include AU-media( sm ) {
       @include AU-space( margin-bottom, 0 );
@@ -26,19 +31,33 @@
     @include AU-media( sm ) {
       @include AU-fontgrid( lg, nospace );
     }
+    @include AU-media( md ) {
+      @include AU-fontgrid( xl, nospace );
+    }
   }
-  p:last-of-type {
-    @include AU-space( margin-bottom, 2unit );
+  p {
+    @include AU-fontgrid( md );
+    @include AU-media( sm ){
+      @include AU-fontgrid( sm );}
+    @include AU-media( md ) {
+      @include AU-fontgrid( md );
+    }
+    &:last-of-type {
+      @include AU-space( margin-bottom, 2unit );
+    }
   }
   .link-wrapper {
     @include AU-space( margin-top, auto );
+  }
+  .au-btn {
+    @include AU-fontgrid( sm );
+    @include AU-media( md ) {
+      @include AU-fontgrid( md );
+    }
   }
   @include AU-space( padding-top, 3unit );
   @include AU-media( sm ) {
     @include AU-space( padding-top, 15unit );
     @include AU-space( padding-bottom, 15unit );
-    .au-btn {
-      @include AU-fontgrid( sm );
-    }
   }
 }

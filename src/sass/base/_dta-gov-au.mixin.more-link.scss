@@ -1,14 +1,21 @@
 @mixin more-link( $color:$AU-color-foreground-action, $align:right ) {
   .more-link {
-    @include AU-space( padding-right, 2unit );
-    text-align: $align;
-    a {
-      color: $color;
-      &:after {
-        background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
-				'<path fill="#{ $AU-color-foreground-action }" d="M128 64l-64 64-16-16 64-64"/>' +
-				'<path fill="#{ $AU-color-foreground-action }" d="M128 64l-16 16-64-64L64 0"/>' +
-			'</svg>');
+    @include AU-space( margin, 0 );
+    text-align: center;
+    @include AU-media( sm ) {
+      text-align: $align;
+      @include AU-space( padding-right, 2unit );
+    }
+    &.au-cta-link {
+      a {
+        color: $color;
+        &:after {
+          @include AU-space( margin-left, 0.5625unit );
+          background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
+  				'<path fill="#{ $AU-color-foreground-action }" d="M128 64l-64 64-16-16 64-64"/>' +
+  				'<path fill="#{ $AU-color-foreground-action }" d="M128 64l-16 16-64-64L64 0"/>' +
+  			'</svg>');
+        }
       }
     }
   }
