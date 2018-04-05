@@ -57,7 +57,9 @@
       @include AU-media( md ) {
         @include AU-space( top, 15unit );
       }
-
+      @include AU-media( lg ) {
+        @include AU-space( top, 18unit );
+      }
       a {
         color: $AU-color-foreground-muted-suggestion;
       }
