@@ -1,0 +1,14 @@
+// Styles for the beta ribbon.
+
+.au-ribbon {
+  border-top: 4px solid $AU-color-beta;
+  border-bottom: 4px solid $AU-color-beta;
+  @include AU-space( padding, 1unit );
+  position: sticky;
+  @include AU-space( top, -1px );
+  z-index: 500;
+  p {
+    @include AU-fontgrid( xs );
+    max-width: none;
+  }
+}

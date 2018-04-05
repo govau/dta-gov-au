@@ -2224,6 +2224,20 @@ textarea.au-text-input {
   max-width: 100%;
   min-height: 6em; }
 
+.au-ribbon {
+  border-top: 4px solid #ee6523;
+  border-bottom: 4px solid #ee6523;
+  padding: 16px;
+  padding: 1rem;
+  position: sticky;
+  top: -1px;
+  z-index: 500; }
+  .au-ribbon p {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.42857;
+    max-width: none; }
+
 body {
   margin: 0; }
   body .layout-container {
