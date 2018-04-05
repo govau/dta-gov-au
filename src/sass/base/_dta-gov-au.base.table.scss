@@ -1,8 +1,10 @@
 // Styles for tables. These are basic until GOLD releases a component.
 
 table {
-  width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
+  @include AU-space( margin, 2unit 0 );
   thead > tr {
     background-color: $AU-color-background-alt-shade-suggestion;
     border-bottom: none;
@@ -18,14 +20,42 @@ table {
     vertical-align: top;
     text-align: left;
     @include AU-space( padding, 0.5unit);
+    @include AU-fontgrid( sm );
+    background-color: $AU-color-background-alt-shade-suggestion;
   }
   td {
     vertical-align: top;
     text-align: left;
     @include AU-space( padding, 0.5unit);
+    @include AU-fontgrid( sm );
   }
   caption {
     text-align: left;
-    @include AU-fontgrid( lg );
+    @include AU-fontgrid( md );
+    @include AU-space( margin, 1unit 0 );
+  }
+}
+
+div.horizontal-scroll-table-container {
+  width: 100%;
+  overflow: auto;
+
+  @include AU-media( md ) {
+    overflow: initial;
+  }
+
+  table {
+    @include AU-media( sm ) {
+      th:first-child,
+      td:first-child {
+        max-width: 20em;
+      }
+      td:first-child[colspan] {
+        max-width: initial;
+      }
+    }
+    @include AU-media( md ) {
+      max-width: 100%;
+    }
   }
 }
