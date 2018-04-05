@@ -1,0 +1,21 @@
+// Styles for cards on level 2 landing pages.
+
+.au-landing-page-level-2-cards {
+  @include AU-space( margin-top, 2.5unit );
+  @include AU-media( sm ) {
+    @include AU-space( margin-top, 4unit );
+  }
+  @include AU-media( md ) {
+    @include AU-space( margin-top, 5unit );
+  }
+  .au-card {
+    @include AU-space( padding, 1unit );
+    .au-card__title {
+      @include AU-fontgrid( sm );
+    }
+    .au-card__text {
+      @include AU-fontgrid( xs );
+      @include AU-space( margin-bottom, 1unit );
+    }
+  }
+}
