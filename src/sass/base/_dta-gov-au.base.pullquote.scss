@@ -1,0 +1,10 @@
+// Styles for pullquotes.
+
+p.au-pullquote,
+blockquote {
+  background-color: lighten($AU-color-foreground-action, 60%);
+  @include AU-space( padding, 1.5unit );
+  font-weight: bold;
+  @include AU-space( margin-left, 0 );
+  @include AU-space( margin-right, 0 );
+}

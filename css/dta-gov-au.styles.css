@@ -2645,6 +2645,15 @@ div.horizontal-scroll-table-container {
   font-size: 1rem;
   line-height: 1.5; }
 
+p.au-pullquote,
+blockquote {
+  background-color: #c2efff;
+  padding: 24px;
+  padding: 1.5rem;
+  font-weight: bold;
+  margin-left: 0;
+  margin-right: 0; }
+
 body {
   margin: 0; }
   body .layout-container {
