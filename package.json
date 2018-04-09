@@ -35,10 +35,12 @@
   },
   "scripts": {
     "build": "node-sass src/sass/dta-gov-au.styles.scss css/dta-gov-au.styles.css --source-map true",
-    "cache-rebuild": "drush cr",
+    "cache-rebuild:all": "drush cr",
+    "cache-rebuild:js": "drush cache:clear css-js",
     "browser-refresh": "browser-sync reload",
+    "watch:js": "onchange \"js/*.js\" -- npm-run-all cache-rebuild:js browser-refresh",
     "watch:sass": "npm run build && onchange \"src/sass/**/*.scss\" \"templates/**/*.twig\" -- npm run build",
-    "watch:twig": "onchange \"../dta-ui-kit-base/templates/**/*.twig\" \"templates/**/*.twig\" \"*.theme\" -- npm-run-all cache-rebuild browser-refresh",
+    "watch:twig": "onchange \"../dta-ui-kit-base/templates/**/*.twig\" \"templates/**/*.twig\" \"*.theme\" -- npm-run-all cache-rebuild:all browser-refresh",
     "serve": "browser-sync start --proxy 'au.gov.dta.test:8888' --files=\"css/*.css\" \"js/*.js\" \"../dta-ui-kit-base/templates/**/*.twig\" \"templates/**/*.twig\"",
     "watch": "npm-run-all --parallel serve watch:*",
     "test": "echo \"Error: no test specified\" && exit 1"
