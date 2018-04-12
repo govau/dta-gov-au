@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Template to provide expert HTML for the field.
+ *
+ * Available variables:
+ * - element: The field element.
+ * - label: The label of the field.
+ * - settings: The settings for the field.
+ * - items: List of all the field items. Each item contains:
+ *   - attributes: List of HTML attributes for each item.
+ *   - content: The field item's content.
+ */
+
+ /**
+  * This field is overridden using the Empty Fields module. We check for the length
+  * of the field. If it is more than 1 (ie not an empty string), we print a default
+  * value which is hidden from screen readers. This is to resolve an accessibility
+  * issue: https://github.com/govau/dta-gov-au/issues/128.
+#}
+
+{% for item in items %}
+  {% if item.content|length > 1 %}
+    <h2>{{- item.content -}}</h2>
+  {% else %}
+    <h2 class="sr-only">Related content</h2>
+  {% endif %}
+{% endfor %}
