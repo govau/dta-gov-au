@@ -31,7 +31,7 @@ table {
   }
   caption {
     text-align: left;
-    @include AU-fontgrid( md );
+    @include AU-fontgrid( sm );
     @include AU-space( margin, 1unit 0 );
   }
 }

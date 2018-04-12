@@ -3,7 +3,7 @@
 main[role="main"].page-content {
   @include AU-space( padding-bottom, 5unit );
   .au-body {
-    @include AU-fontgrid( md );
+    @include AU-fontgrid( sm );
   }
   @import "dta-gov-au.content.breadcrumbs";
   @import "dta-gov-au.content.main";
