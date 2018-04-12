@@ -15,14 +15,32 @@ function dta_gov_au_preprocess_maintenance_page(&$variables) {
  * Implements hook_preprocess_menu().
  *
  * Adds 'is_front' variable to html.html.twig.
+ * Adds the 'active' class to the active <li>.
  *
  **/
-function dta_gov_au_preprocess_menu(&$variables) {
+function dta_gov_au_preprocess_menu(&$variables, $hook) {
   try {
     $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
   }
   catch (Exception $e) {
     $variables['is_front'] = FALSE;
+  }
+	if ($hook == 'menu') {
+		dta_gov_au_menu_active_item($variables['items']);
+	}
+}
+
+function dta_gov_au_menu_active_item(&$items) {
+  $current_path = \Drupal::request()->getRequestUri();
+  foreach ($items as $key => $item) {
+    // if path is current path, set active to li
+    if ($item['url']->toString() == $current_path) {
+      // add active linl
+      $items[$key]['attributes']['class'] = 'active';
+    }
+    if (!empty($items[$key]['below'])) {
+      dta_gov_au_menu_active_item($items[$key]['below']);
+    }
   }
 }
 

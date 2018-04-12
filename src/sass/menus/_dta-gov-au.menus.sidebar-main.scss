@@ -11,7 +11,7 @@ nav[role="navigation"] {
     @include AU-space( padding, 0 );
     li {
       @include AU-space( margin, 0 );
-      border-top: 1px solid $AU-color-foreground-border-suggestion;
+      border-top: 1px solid $AU-color-background-alt-shade-suggestion;
     }
     a {
       display: block;
@@ -22,8 +22,9 @@ nav[role="navigation"] {
         border-left: 8px solid $AU-color-foreground-action;
       }
       &.is-active {
-        background-color: $AU-color-foreground-action;
-        color: $AU-color-foreground-background;
+        background-color: $AU-color-background-alt-shade-suggestion;
+        color: $AU-color-foreground-text;
+        font-weight: bold;
         border: none;
         margin-top: -1px;
         margin-bottom: -1px;

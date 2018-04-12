@@ -3585,7 +3585,7 @@ aside.layout-sidebar-first nav[role="navigation"] {
     padding: 0; }
     aside.layout-sidebar-first nav[role="navigation"] .au-link-list li, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results li {
       margin: 0;
-      border-top: 1px solid #7F7F7F; }
+      border-top: 1px solid #e0e0e0; }
     aside.layout-sidebar-first nav[role="navigation"] .au-link-list a, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results a, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results a {
       display: block;
       text-decoration: none;
@@ -3594,8 +3594,9 @@ aside.layout-sidebar-first nav[role="navigation"] {
         text-decoration: underline;
         border-left: 8px solid #007099; }
       aside.layout-sidebar-first nav[role="navigation"] .au-link-list a.is-active, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results a.is-active, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .chosen-results a.is-active {
-        background-color: #007099;
-        color: #ffffff;
+        background-color: #e0e0e0;
+        color: #313131;
+        font-weight: bold;
         border: none;
         margin-top: -1px;
         margin-bottom: -1px; }
