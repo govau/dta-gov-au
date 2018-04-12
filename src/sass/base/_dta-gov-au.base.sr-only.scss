@@ -1,0 +1,5 @@
+// Style for screen reader only content.
+
+.sr-only {
+  @include AU-sronly;
+}
