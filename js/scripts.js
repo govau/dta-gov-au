@@ -42,7 +42,7 @@
           "http://www.w3.org/TR/SVG11/feature#Image", "1.1"
         );
       }
-      if (svgasimg()) {
+      if (!svgasimg()) {
         $('img, IMG', context)
           .once('svg-swapped')
           .each(function(index, element) {
