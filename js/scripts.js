@@ -24,12 +24,33 @@
     }
   }
   Drupal.behaviors.dtagovauChosenAccessibilityFix = {
+    // Fixes an accessibility issue with the Chosen library.
     attach: function(context, settings) {
       $('body').on('chosen:ready', function(evt, params) {
         $('.js-form-item.js-form-type-select', context).once('chosenAccessibilityFix').each(function(index, element) {
           $(this).find('.chosen-container-multi input.chosen-search-input').attr('aria-label', $.trim($(this).find('label').text()));
         });
       });
+    }
+  }
+  Drupal.behaviors.dtagovauSVGSwap = {
+    // Swaps out SVG images for PNGs on non-supporting browsers. Taken from
+    // https://css-tricks.com/a-complete-guide-to-svg-fallbacks/.
+    attach: function(context, settings) {
+      function svgasimg() {
+        return document.implementation.hasFeature(
+          "http://www.w3.org/TR/SVG11/feature#Image", "1.1"
+        );
+      }
+      if (svgasimg()) {
+        $('img, IMG', context)
+          .once('svg-swapped')
+          .each(function(index, element) {
+            if ($(this).attr('src').match(/svgz?$/)) {
+              $(this).attr('src', $(this).attr('data-fallback'));
+            }
+          });
+      }
     }
   }
 }(jQuery));
