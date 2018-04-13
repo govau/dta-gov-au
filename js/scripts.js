@@ -23,4 +23,13 @@
       });
     }
   }
+  Drupal.behaviors.dtagovauChosenAccessibilityFix = {
+    attach: function(context, settings) {
+      $('body').on('chosen:ready', function(evt, params) {
+        $('.js-form-item.js-form-type-select', context).once('chosenAccessibilityFix').each(function(index, element) {
+          $(this).find('.chosen-container-multi input.chosen-search-input').attr('aria-label', $.trim($(this).find('label').text()));
+        });
+      });
+    }
+  }
 }(jQuery));
