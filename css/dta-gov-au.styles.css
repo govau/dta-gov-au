@@ -3287,8 +3287,7 @@ header {
             text-decoration: underline; }
           header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a:active, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li a:active, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results li a:active, header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a.is-active, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li a.is-active, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results li a.is-active {
             text-decoration: none;
-            border-color: #ffffff;
-            color: #45C2F0; }
+            border-color: #ffffff; }
 
 main[role="main"].page-content {
   padding-bottom: 80px;
