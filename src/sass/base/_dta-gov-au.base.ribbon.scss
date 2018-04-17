@@ -2,14 +2,13 @@
 
 .au-ribbon {
   @include AU-space( padding, 0.5unit );
-  background-color: $AU-color-beta;
-  color: $AU-colordark-foreground-text;
   p {
     @include AU-fontgrid( xs, nospace );
     max-width: none;
-    a {
-      color: $AU-colordark-foreground-text;
-    }
+  }
+  span.stage-beta {
+    color: $AU-color-foreground-text-beta;
+    font-weight: bold;
   }
   .au-external {
     @include AU-space( padding-right, 1unit );

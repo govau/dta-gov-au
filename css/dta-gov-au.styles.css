@@ -2226,16 +2226,15 @@ textarea.au-text-input {
 
 .au-ribbon {
   padding: 8px;
-  padding: 0.5rem;
-  background-color: #EE6523;
-  color: #ffffff; }
+  padding: 0.5rem; }
   .au-ribbon p {
     font-size: 14px;
     font-size: 0.875rem;
     line-height: 1.14286;
     max-width: none; }
-    .au-ribbon p a {
-      color: #ffffff; }
+  .au-ribbon span.stage-beta {
+    color: #CD4D10;
+    font-weight: bold; }
   .au-ribbon .au-external {
     padding-right: 16px;
     padding-right: 1rem;
