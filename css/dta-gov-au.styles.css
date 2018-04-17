@@ -468,7 +468,7 @@
   .au-body.au-body--alt, #off-canvas {
     background: #F0F3F5; }
   .au-body.au-body--dark, #off-canvas {
-    background: #414141;
+    background: #313131;
     color: #ffffff; }
     .au-body.au-body--dark a, #off-canvas a {
       color: #45C2F0; }
@@ -495,7 +495,7 @@
       outline: 3px solid #C390F9; }
     .au-body.au-body--dark mark, #off-canvas mark {
       background-color: #45C2F0;
-      color: #414141; }
+      color: #313131; }
     .au-body.au-body--dark kbd, #off-canvas kbd {
       background-color: #1D1D1D; }
     .au-body.au-body--dark hr, #off-canvas hr {
@@ -672,20 +672,20 @@ a.au-text-input[value="Reset"] {
   .au-btn.au-btn--dark, .chosen-container.chosen-container-multi.au-select li.au-btn--dark.search-choice, .au-btn--dark.au-text-input[value="Reset"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--dark[value="Reset"][type="text"],
   a.au-btn.au-btn--dark,
   a.au-btn--dark.au-text-input[value="Reset"] {
-    color: #414141;
+    color: #313131;
     background-color: #45C2F0;
     border-color: #45C2F0; }
     .au-btn.au-btn--dark:hover:not(:disabled), .chosen-container.chosen-container-multi.au-select li.au-btn--dark.search-choice:hover:not(:disabled), .au-btn--dark.au-text-input[value="Reset"]:hover:not(:disabled), .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--dark[value="Reset"][type="text"]:hover:not(:disabled),
     a.au-btn.au-btn--dark:hover:not(:disabled),
     a.au-btn--dark.au-text-input[value="Reset"]:hover:not(:disabled) {
-      color: #414141;
+      color: #313131;
       border-color: #ffffff;
       background-color: #ffffff; }
     .ie8 .au-btn.au-btn--dark:hover, .ie8 .chosen-container.chosen-container-multi.au-select li.au-btn--dark.search-choice:hover, .chosen-container.chosen-container-multi.au-select .ie8 li.au-btn--dark.search-choice:hover, .ie8 .au-btn--dark.au-text-input[value="Reset"]:hover, .ie8 .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--dark[value="Reset"][type="text"]:hover, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field .ie8 input.au-btn--dark[value="Reset"][type="text"]:hover,
     .ie8
     a.au-btn.au-btn--dark:hover,
     .ie8 a.au-btn--dark.au-text-input[value="Reset"]:hover {
-      color: #414141;
+      color: #313131;
       border-color: #ffffff;
       background-color: #ffffff; }
     .au-btn.au-btn--dark:focus, .chosen-container.chosen-container-multi.au-select li.au-btn--dark.search-choice:focus, .au-btn--dark.au-text-input[value="Reset"]:focus, .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input.au-btn--dark[value="Reset"][type="text"]:focus,
@@ -1541,7 +1541,7 @@ a.au-text-input[value="Reset"] {
     background-color: #f5f5f5; }
   .au-header.au-header--dark {
     color: #ffffff;
-    background-color: #414141; }
+    background-color: #313131; }
   .au-header.au-header--alt.au-header--dark {
     color: #ffffff;
     background-color: #282828; }
@@ -1807,7 +1807,7 @@ a.au-text-input[value="Reset"] {
   .au-page-alerts.au-page-alerts--alt:before {
     background-color: #f5f5f5; }
   .au-page-alerts.au-page-alerts--dark:before {
-    background-color: #414141; }
+    background-color: #313131; }
   .au-page-alerts.au-page-alerts--dark:after {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E   %3Cpath fill='%23ffffff' d='M11 17.8h2v-8h-2v8zm0-11.6v2h2v-2h-2z'/%3E  %3C/svg%3E"); }
   .au-page-alerts.au-page-alerts--alt.au-page-alerts--dark:before {
@@ -2266,7 +2266,7 @@ body {
     margin: 0; }
 
 .au-body.au-body--dark.au-body--alt, #off-canvas {
-  background-color: #414141; }
+  background-color: #313131; }
 
 .search-api-page-block-form {
   margin-bottom: 64px;
@@ -2707,7 +2707,7 @@ body {
     margin: 0; }
 
 .au-body.au-body--dark.au-body--alt, #off-canvas {
-  background-color: #414141; }
+  background-color: #313131; }
 
 .page-front #highlight {
   background-position: center top;
@@ -2950,7 +2950,7 @@ body {
       background-size: 54%;
       background-position: right 25%; } }
   .page-front #mid-bottom-content .row {
-    background-color: #414141; }
+    background-color: #313131; }
   .page-front #mid-bottom-content h2 {
     font-weight: normal;
     font-size: 32px;
@@ -3199,7 +3199,7 @@ header {
     padding: 24px 0 0 0;
     padding: 1.5rem 0 0 0; }
     header.au-header.au-header--hero.au-header--alt.au-header--dark {
-      background-color: #414141; }
+      background-color: #313131; }
       header.au-header.au-header--hero.au-header--alt.au-header--dark.au-header--content {
         padding-top: 64px;
         padding-top: 4rem; }
