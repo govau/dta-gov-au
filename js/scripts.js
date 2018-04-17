@@ -57,20 +57,20 @@
     attach: function(context, settings) {
       $('header .ui-autocomplete-input').autocomplete({
         open: function() {
-          $('ul.ui-menu').width( $(this)[0].offsetWidth - 20);
+          $('ul.ui-menu').width( $(this)[0].offsetWidth - 2);
         },
         position: {
-          my: 'left+18 top-24',
+          my: 'left top-24',
           at: 'left bottom',
           of: 'header .ui-autocomplete-input'
         }
       });
       $('main .ui-autocomplete-input').autocomplete({
         open: function() {
-          $('ul.ui-menu').width( $(this)[0].offsetWidth - 20);
+          $('ul.ui-menu').width( $(this)[0].offsetWidth - 2);
         },
         position: {
-          my: 'left+18 top-24',
+          my: 'left top-24',
           at: 'left bottom',
           of: 'main .ui-autocomplete-input'
         }

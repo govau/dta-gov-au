@@ -76,8 +76,8 @@
       @include AU-media( sm ) {
         @include AU-space( padding, 0.8unit 3unit 0.8unit 1.5unit );
       }
-      @include AU-space( border-top-left-radius, 10unit);
-      @include AU-space( border-bottom-left-radius, 10unit);
+      @include AU-space( border-top-right-radius, 0 );
+      @include AU-space( border-bottom-right-radius, 0 );
       border: none;
       background-color: $AU-color-foreground-background;
       box-sizing: border-box;
@@ -88,8 +88,8 @@
     .button {
       @include AU-space( width, 5.125unit);
       @include AU-space( height, 2.7unit);
-      @include AU-space( border-top-right-radius, 3.125unit);
-      @include AU-space( border-bottom-right-radius, 3.125unit);
+      @include AU-space( border-top-left-radius, 0 );
+      @include AU-space( border-bottom-left-radius, 0 );
       @include AU-space( padding, 0 1unit );
       cursor: pointer;
       border: none;

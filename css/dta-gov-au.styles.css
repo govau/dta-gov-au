@@ -2344,10 +2344,8 @@ body {
     .search-api-page-block-form form .form-text {
       padding: 13px 32px 13px 16px;
       padding: 0.8rem 2rem 0.8rem 1rem;
-      border-top-left-radius: 160px;
-      border-top-left-radius: 10rem;
-      border-bottom-left-radius: 160px;
-      border-bottom-left-radius: 10rem;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
       border: none;
       background-color: #ffffff;
       box-sizing: border-box; }
@@ -2362,10 +2360,8 @@ body {
       width: 5.125rem;
       height: 43px;
       height: 2.7rem;
-      border-top-right-radius: 50px;
-      border-top-right-radius: 3.125rem;
-      border-bottom-right-radius: 50px;
-      border-bottom-right-radius: 3.125rem;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
       padding: 0 16px;
       padding: 0 1rem;
       cursor: pointer;
@@ -2406,6 +2402,10 @@ label {
 
 .ui-autocomplete {
   position: absolute; }
+
+ul.ui-menu {
+  padding-left: 16px;
+  padding-left: 1rem; }
 
 .au-card {
   padding: 24px;
