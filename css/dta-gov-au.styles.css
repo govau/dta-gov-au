@@ -2404,6 +2404,9 @@ label {
 .au-select {
   -webkit-appearance: none; }
 
+.ui-autocomplete {
+  position: absolute; }
+
 .au-card {
   padding: 24px;
   padding: 1.5rem;
