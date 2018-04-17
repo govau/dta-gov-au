@@ -2283,6 +2283,18 @@ body {
       .au-header--content .search-api-page-block-form {
         margin-bottom: 80px;
         margin-bottom: 5rem; } }
+    @media (min-width: 992px) {
+      .au-header--content .search-api-page-block-form {
+        margin-bottom: 72px;
+        margin-bottom: 4.5rem;
+        padding-top: 8px;
+        padding-top: 0.5rem; } }
+    @media (min-width: 1200px) {
+      .au-header--content .search-api-page-block-form {
+        margin-bottom: 61px;
+        margin-bottom: 3.8rem;
+        padding-top: 19px;
+        padding-top: 1.2rem; } }
   .search-api-page-block-form form {
     display: table;
     width: 100%; }

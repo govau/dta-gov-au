@@ -11,6 +11,14 @@
     @include AU-media( sm ) {
       @include AU-space( margin-bottom, 5unit );
     }
+    @include AU-media( md ) {
+      @include AU-space( margin-bottom, 4.5unit );
+      @include AU-space( padding-top, 0.5unit );
+    }
+    @include AU-media( lg ) {
+      @include AU-space( margin-bottom, 3.8unit );
+      @include AU-space( padding-top, 1.2unit );
+    }
   }
 
   form {
