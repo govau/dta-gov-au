@@ -64,7 +64,13 @@ label {
   -webkit-appearance: none;
 }
 
-// There's a gap between the autocomplete results and the search box.
+// There's a gap between the autocomplete results and the search box. Note the actual
+// repositioning is done via JS.
 .ui-autocomplete {
   position: absolute;
+}
+
+// This evens up the autocomplete suggestions with the search text.
+ul.ui-menu {
+  @include AU-space( padding-left, 1unit );
 }
