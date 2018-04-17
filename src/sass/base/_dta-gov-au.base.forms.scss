@@ -63,3 +63,8 @@ label {
   // Not sure why this isn't getting added via Autoprefixer but w/e.
   -webkit-appearance: none;
 }
+
+// There's a gap between the autocomplete results and the search box.
+.ui-autocomplete {
+  position: absolute;
+}

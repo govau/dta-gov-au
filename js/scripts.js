@@ -52,4 +52,29 @@
       }
     }
   }
+  Drupal.behaviors.dtagovauAutocompleteReposition = {
+    // Reposition the autocomplete drop downs for better UI.
+    attach: function(context, settings) {
+      $('header .ui-autocomplete-input').autocomplete({
+        open: function() {
+          $('ul.ui-menu').width( $(this)[0].offsetWidth - 20);
+        },
+        position: {
+          my: 'left+18 top-24',
+          at: 'left bottom',
+          of: 'header .ui-autocomplete-input'
+        }
+      });
+      $('main .ui-autocomplete-input').autocomplete({
+        open: function() {
+          $('ul.ui-menu').width( $(this)[0].offsetWidth - 20);
+        },
+        position: {
+          my: 'left+18 top-24',
+          at: 'left bottom',
+          of: 'main .ui-autocomplete-input'
+        }
+      });
+    }
+  }
 }(jQuery));
