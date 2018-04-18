@@ -1,49 +1,61 @@
 // Style for the main menu.
+
+// Style for desktop.
 @include AU-media( md ) {
-  .responsive-menu-toggle-wrapper {
-    display: none;
-    visibility: hidden;
-  }
   #block-mainnavigation-2 {
     display: block !important;
     visibility: visible !important;
-  }
-}
-#block-mainnavigation-2 {
-  display: none;
-  visibility: hidden;
-  &.au-body.au-body--dark {
-    .au-link-list {
-      @include AU-space( margin-bottom, 1.0625unit );
-      @include AU-space( padding-bottom, 0unit );
-      @include AU-space( padding-top, 0unit );
-      display: flex;
-      li {
-        @include AU-fontgrid( sm, nospace );
-        @include AU-space( margin, 0 0 1.5unit 0);
-        @include AU-media( md ) {
-          @include AU-space( margin, 0 3unit 0 0 );
-        }
-        &:last-of-type {
-          margin-left: auto;
-        }
-        a {
-          @include AU-space( padding-bottom, 1unit )
-          color: $AU-colordark-foreground-text;
-          text-decoration: none;
-          border-bottom: 8px solid transparent;
-          &:hover {
-            color: $AU-colordark-foreground-action;
-            border-bottom: 8px solid $AU-colordark-foreground-action;
-            text-decoration: underline;
+    &.au-accordion__body {
+      .js & {
+    		&.au-accordion--open {
+    			display: block;
+    			height: auto;
+    		}
+
+    		&.au-accordion--closed {
+    			display: block;
+    			height: auto;
+    		}
+    	}
+    }
+    &.au-body.au-body--dark {
+      .au-link-list {
+        @include AU-space( margin-bottom, 1.0625unit );
+        @include AU-space( padding-bottom, 0unit );
+        @include AU-space( padding-top, 0unit );
+        display: flex;
+        li {
+          @include AU-fontgrid( sm, nospace );
+          @include AU-space( margin, 0 0 1.5unit 0);
+          @include AU-media( md ) {
+            @include AU-space( margin, 0 3unit 0 0 );
           }
-          &:active,
-          &.is-active {
+          &:last-of-type {
+            margin-left: auto;
+          }
+          a {
+            @include AU-space( padding-bottom, 1unit )
+            color: $AU-colordark-foreground-text;
             text-decoration: none;
-            border-color: $AU-color-foreground-background;
+            border-bottom: 8px solid transparent;
+            &:hover {
+              color: $AU-colordark-foreground-action;
+              border-bottom: 8px solid $AU-colordark-foreground-action;
+              text-decoration: underline;
+            }
+            &:active,
+            &.is-active {
+              text-decoration: none;
+              border-color: $AU-color-foreground-background;
+            }
           }
         }
       }
     }
   }
+}
+
+// Global styles for mobile > tablet.
+#block-mainnavigation-2 {
+
 }

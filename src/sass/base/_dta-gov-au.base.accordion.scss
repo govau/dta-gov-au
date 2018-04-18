@@ -1,0 +1,15 @@
+// Style overrides for the accordion.
+
+.au-accordion {
+  border: none;
+  @include AU-space( margin-bottom, 1unit );
+  @include AU-media( md ) {
+    @include AU-space( margin-bottom, 0unit );
+  }
+  .au-accordion__body-wrapper {
+    border: none;
+    @include AU-media( md ) {
+      @include AU-space( padding, 0unit );
+    }
+  }
+}
