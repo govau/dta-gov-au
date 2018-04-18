@@ -881,22 +881,17 @@
 
       $('.js-au-accordion-wrapper').AUaccordion({
 				onOpen: function() {
-          console.log('onOpen');
 				},
 				afterOpen: function() {
           $('button.js-au-accordion').html('Close menu');
-          console.log('afterOpen');
 				},
 				onClose: function() {
-          console.log('onClose');
 				},
 				afterClose: function() {
           $('button.js-au-accordion').html('Open menu');
-          console.log('afterClose');
 				},
 			});
       if ($('body').hasClass('md')) {
-        AU.accordion.Open($('.js-au-accordion-wrapper'));
       }
     }
   }
@@ -905,7 +900,6 @@
     attach: function(context, settings) {
       function getWidth() {
         var pixels = $(window).width();
-        console.log(pixels);
         if (pixels <= 576) {
           AU.accordion.Close( $( '.js-au-accordion-wrapper' ).children('.js-au-accordion')[ 0 ], 50);
           return 'mobile';
