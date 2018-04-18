@@ -3507,6 +3507,18 @@ header {
       header #block-mainnavigation-2-button {
         display: none;
         visibility: hidden; } }
+  header #block-mainnavigation-2.au-body.au-body--dark .au-link-list, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results {
+    margin-bottom: 17px;
+    margin-bottom: 1.0625rem; }
+    header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li a, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results li a {
+      color: #45C2F0;
+      text-decoration: none; }
+      header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a:hover, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li a:hover, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results li a:hover {
+        color: #ffffff;
+        text-decoration: underline; }
+      header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a:active, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li a:active, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results li a:active, header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a.is-active, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li a.is-active, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results li a.is-active {
+        color: #ffffff !important;
+        text-decoration: none; }
   @media (min-width: 992px) {
     header #block-mainnavigation-2 {
       display: block !important;
@@ -3518,12 +3530,12 @@ header {
         display: block;
         height: auto; }
       header #block-mainnavigation-2.au-body.au-body--dark .au-link-list, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results {
-        margin-bottom: 17px;
-        margin-bottom: 1.0625rem;
         padding-bottom: 0px;
         padding-bottom: 0rem;
         padding-top: 0px;
         padding-top: 0rem;
+        margin-bottom: -8px;
+        margin-bottom: -0.5rem;
         display: flex; }
         header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results li {
           font-size: 16px;
@@ -3539,18 +3551,14 @@ header {
           header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li:last-of-type, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li:last-of-type, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results li:last-of-type {
             margin-left: auto; }
           header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li a, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results li a {
+            display: block;
             padding-bottom: 16px;
             padding-bottom: 1rem;
-            color: #ffffff;
-            text-decoration: none;
             border-bottom: 8px solid transparent; }
             header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a:hover, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li a:hover, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results li a:hover {
-              color: #45C2F0;
-              border-bottom: 8px solid #45C2F0;
-              text-decoration: underline; }
+              border-bottom: 8px solid #ffffff; }
             header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a:active, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li a:active, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results li a:active, header #block-mainnavigation-2.au-body.au-body--dark .au-link-list li a.is-active, header #block-mainnavigation-2.au-body.au-body--dark .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li a.is-active, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2.au-body.au-body--dark .chosen-results li a.is-active {
-              text-decoration: none;
-              border-color: #ffffff; } }
+              border-bottom: 8px solid #ffffff; } }
 
 main[role="main"].page-content {
   padding-bottom: 80px;
