@@ -54,6 +54,7 @@
     }
     .form-text,
     .button {
+      appearance: none;
       @include AU-fontgrid( xs, nospace );
       @include AU-media( sm ) {
         @include AU-fontgrid( sm, nospace);
