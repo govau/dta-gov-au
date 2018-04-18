@@ -19,7 +19,7 @@ nav[role="navigation"] {
       border-left: 8px solid transparent;
       &:hover {
         text-decoration: underline;
-        border-left: 8px solid $AU-color-foreground-action;
+        border-left: 8px solid $AU-colordark-foreground-action;
       }
       &.is-active {
         background-color: $AU-color-background-alt-shade-suggestion;
@@ -28,6 +28,7 @@ nav[role="navigation"] {
         border: none;
         margin-top: -1px;
         margin-bottom: -1px;
+        border-left: 8px solid $AU-colordark-foreground-action;
       }
     }
 
