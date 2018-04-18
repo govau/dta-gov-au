@@ -30,32 +30,36 @@ nav[role="navigation"] {
         margin-bottom: -1px;
       }
     }
+
+    // Took this out because we moved all the menu items up a level, so this
+    // top level design wasn't needed. Keeping it for posterity.
+    //
+    // &.menu-level-0 {
+    //   > li {
+    //     // Menu level 0 (root)
+    //     border: none;
+    //     > a {
+    //       // The root 'title' of each menu section.
+    //       @include AU-fontgrid( md );
+    //       @include AU-space( margin-left, 1unit );
+    //       @include AU-space( padding, 1unit 0.5unit 1unit 1unit);
+    //       border-top: 1px solid $AU-color-foreground-border-suggestion;
+    //       font-weight: bold;
+    //       color: $AU-color-foreground-text;
+    //       border-left: none;
+    //       &:hover {
+    //         border-left: none;
+    //       }
+    //       &:first-child {
+    //         border-top: none;
+    //       }
+    //       &.is-active {
+    //         color: $AU-color-foreground-background;
+    //       }
+    //     }
+    //   }
+    // }
     &.menu-level-0 {
-      > li {
-        // Menu level 0 (root)
-        border: none;
-        > a {
-          // The root 'title' of each menu section.
-          @include AU-fontgrid( md );
-          @include AU-space( margin-left, 1unit );
-          @include AU-space( padding, 1unit 0.5unit 1unit 1unit);
-          border-top: 1px solid $AU-color-foreground-border-suggestion;
-          font-weight: bold;
-          color: $AU-color-foreground-text;
-          border-left: none;
-          &:hover {
-            border-left: none;
-          }
-          &:first-child {
-            border-top: none;
-          }
-          &.is-active {
-            color: $AU-color-foreground-background;
-          }
-        }
-      }
-    }
-    &.menu-level-1 {
       // Menu level 1
       // This is the border for the entire menu tree.
       border-left: 8px solid $AU-color-background-shade-suggestion;
@@ -76,7 +80,7 @@ nav[role="navigation"] {
         }
       }
     }
-    &.menu-level-2 {
+    &.menu-level-1 {
       // Menu level 2
       > li {
         > a {
@@ -88,7 +92,7 @@ nav[role="navigation"] {
         }
       }
     }
-    &.menu-level-3 {
+    &.menu-level-2 {
       // Menu level 3
       > li {
         > a {
@@ -100,7 +104,7 @@ nav[role="navigation"] {
         }
       }
     }
-    &.menu-level-4 {
+    &.menu-level-3 {
       // Menu level 4!
       > li {
         > a {
