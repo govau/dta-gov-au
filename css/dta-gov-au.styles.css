@@ -2477,6 +2477,9 @@ body {
   body .layout-container {
     margin: 0; }
 
+.au-body img, #off-canvas img {
+  height: auto; }
+
 .au-body.au-body--dark.au-body--alt, #off-canvas {
   background-color: #313131; }
 
@@ -2974,6 +2977,9 @@ body {
   margin: 0; }
   body .layout-container {
     margin: 0; }
+
+.au-body img, #off-canvas img {
+  height: auto; }
 
 .au-body.au-body--dark.au-body--alt, #off-canvas {
   background-color: #313131; }
