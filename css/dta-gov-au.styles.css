@@ -2446,7 +2446,8 @@ textarea.au-text-input {
 
 .au-ribbon {
   padding: 8px;
-  padding: 0.5rem; }
+  padding: 0.5rem;
+  border-bottom: 4px solid #EE6523; }
   .au-ribbon p {
     font-size: 14px;
     font-size: 0.875rem;
