@@ -730,26 +730,30 @@ if( typeof exports !== 'undefined' ) {
   Drupal.behaviors.dtagovauAutocompleteReposition = {
     // Reposition the autocomplete drop downs for better UI.
     attach: function(context, settings) {
-      $('header .ui-autocomplete-input').autocomplete({
-        open: function() {
-          $('ul.ui-menu').width( $(this)[0].offsetWidth - 2);
-        },
-        position: {
-          my: 'left top-24',
-          at: 'left bottom',
-          of: 'header .ui-autocomplete-input'
-        }
-      });
-      $('main .ui-autocomplete-input').autocomplete({
-        open: function() {
-          $('ul.ui-menu').width( $(this)[0].offsetWidth - 2);
-        },
-        position: {
-          my: 'left top-24',
-          at: 'left bottom',
-          of: 'main .ui-autocomplete-input'
-        }
-      });
+      if ($('header .ui-autocomplete-input').length) {
+        $('header .ui-autocomplete-input').autocomplete({
+          open: function() {
+            $('ul.ui-menu').width( $(this)[0].offsetWidth - 2);
+          },
+          position: {
+            my: 'left top-24',
+            at: 'left bottom',
+            of: 'header .ui-autocomplete-input'
+          }
+        });
+      }
+      if ($('main .ui-autocomplete-input').length) {
+        $('main .ui-autocomplete-input').autocomplete({
+          open: function() {
+            $('ul.ui-menu').width( $(this)[0].offsetWidth - 2);
+          },
+          position: {
+            my: 'left top-24',
+            at: 'left bottom',
+            of: 'main .ui-autocomplete-input'
+          }
+        });
+      }
     }
   }
   Drupal.behaviors.dtagovauAUAccordion = {
