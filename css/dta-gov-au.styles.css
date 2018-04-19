@@ -3902,6 +3902,9 @@ main[role="main"].page-content {
       font-size: 20px;
       font-size: 1.25rem;
       line-height: 1.6; }
+  main[role="main"].page-content .views-exposed-form {
+    margin-bottom: 32px;
+    margin-bottom: 2rem; }
 
 aside.layout-sidebar-first nav[role="navigation"] {
   display: none;
