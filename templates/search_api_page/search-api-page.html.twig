@@ -1,0 +1,21 @@
+<div class="search-api-page-block-form-wrapper row col-xs-12">
+  <div class="col-xs-12 col-sm-6">
+    {{ form }}
+  </div>
+</div>
+
+{% if search_title %}
+  <h2>{{ search_title }}</h2>
+{% endif %}
+
+{% if no_of_results %}
+  <p>{{ no_of_results }}</p>
+{% endif %}
+
+{{ no_results_found }}
+
+{{ search_help }}
+
+{{ results }}
+
+{{ pager }}
