@@ -67,6 +67,18 @@
           }
         });
       }
+      if ($('header.au-header--content .ui-autocomplete-input').length) {
+        $('header.au-header--content .ui-autocomplete-input').autocomplete({
+          open: function() {
+            $('ul.ui-menu').width( $(this)[0].offsetWidth - 17);
+          },
+          position: {
+            my: 'left top',
+            at: 'left bottom',
+            of: 'header .ui-autocomplete-input'
+          }
+        });
+      }
       if ($('main .ui-autocomplete-input').length) {
         $('main .ui-autocomplete-input').autocomplete({
           open: function() {
