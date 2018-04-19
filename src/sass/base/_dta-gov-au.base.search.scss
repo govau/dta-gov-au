@@ -26,8 +26,14 @@ form#search-api-page-block-form,
 form.search-api-page-block-form {
   display: table;
   @supports(display: flex) {
-    display: flex;
-    width: auto;
+    max-width: 90%; // To resolve a flexbox bug in safari.
+    @include AU-media( sm ) {
+      max-width: none;
+    }
+    display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row;
+   flex-direction: row;
   }
   // TODO: Need a better way of referencing these elements. The form needs to be
   // updated via theme hooks and so on.
@@ -38,8 +44,8 @@ form.search-api-page-block-form {
     width: auto;
     @supports(display: flex) {
       display: block;
-      width: auto;
-      flex: 1;
+      width: 100%;
+      flex: 1 1 100%;
     }
   }
 
@@ -60,6 +66,7 @@ form.search-api-page-block-form {
       border: 1px solid $AU-color-foreground-border-suggestion;
     }
     appearance: none;
+    -webkit-appearance: none;
     @include AU-fontgrid( xs, nospace );
     @include AU-media( sm ) {
       @include AU-fontgrid( sm, nospace);
@@ -88,11 +95,28 @@ form.search-api-page-block-form {
     box-sizing: border-box;
     &::placeholder {
       color: $AU-color-foreground-muted-suggestion;
+      opacity: 1;
+    }
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $AU-color-foreground-muted-suggestion;
+      opacity: 1;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $AU-color-foreground-muted-suggestion;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $AU-color-foreground-muted-suggestion;
+      opacity: 1;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $AU-color-foreground-muted-suggestion;
+      opacity: 1;
     }
   }
   .button {
     @include AU-space( width, 5.125unit);
-    @include AU-space( height, 2.7unit);
+    @include AU-space( height, 2.875unit);
     @include AU-space( border-top-left-radius, 0 );
     @include AU-space( border-bottom-left-radius, 0 );
     @include AU-space( padding, 0 1unit );
@@ -103,7 +127,7 @@ form.search-api-page-block-form {
     }
     background-color: $AU-color-background-shade-suggestion !important;
     background-image: none;
-    height: 100%;
+    //height: 100%;
     &:hover {
       color: $AU-color-foreground-text;
     }
