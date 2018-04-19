@@ -1,0 +1,12 @@
+// Styles for the sign up box.
+
+#block-signup {
+  background-color: $AU-color-background-alt-shade-suggestion;
+  @include AU-space( padding, 1unit );
+  p {
+    @include AU-fontgrid( sm, heading );
+  }
+  .sign-up-button {
+    @include AU-fontgrid( md );
+  }
+}
