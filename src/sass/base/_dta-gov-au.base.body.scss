@@ -8,6 +8,9 @@ body {
 }
 
 .au-body {
+  img {
+    height: auto;
+  }
   &.au-body--dark {
     &.au-body--alt {
       background-color: $AU-colordark-background;
