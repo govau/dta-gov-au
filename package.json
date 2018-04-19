@@ -42,7 +42,7 @@
     "cache-rebuild:js": "drush cache:clear css-js",
     "browser-refresh": "browser-sync reload",
     "concat-js": "concat -o js/scripts.js ./pancake/js/pancake.min.js ./src/js/*.js",
-    "watch:js": "onchange \"src/js/*.js\" -- npm-run-all concat-js cache-rebuild:js browser-refresh",
+    "watch:js": "onchange \"./js/*.js\" -- npm-run-all cache-rebuild:js browser-refresh",
     "watch:sass": "npm run build && onchange \"src/sass/**/*.scss\" \"templates/**/*.twig\" -- npm run build",
     "watch:twig": "onchange \"../dta-ui-kit-base/templates/**/*.twig\" \"templates/**/*.twig\" \"*.theme\" -- npm-run-all cache-rebuild:all browser-refresh",
     "serve": "browser-sync start --proxy 'au.gov.dta.test:8888' --files=\"css/*.css\" \"js/*.js\" \"../dta-ui-kit-base/templates/**/*.twig\" \"templates/**/*.twig\"",
