@@ -6,7 +6,7 @@
     @include AU-space( margin-bottom, 5unit );
   }
 
-  .au-header--content & {
+  .au-header--content &, {
     @include AU-space( margin-bottom, 2.5unit );
     @include AU-media( sm ) {
       @include AU-space( margin-bottom, 5unit );
@@ -20,87 +20,92 @@
       @include AU-space( padding-top, 1.2unit );
     }
   }
+}
 
-  form {
-    display: table;
-    width: 100%;
+form#search-api-page-block-form,
+form.search-api-page-block-form {
+  display: table;
+  @supports(display: flex) {
+    display: flex;
+    width: auto;
+  }
+  // TODO: Need a better way of referencing these elements. The form needs to be
+  // updated via theme hooks and so on.
+
+  // This is the text input wrapper.
+  .form-item-keys {
+    display: table-cell;
+    width: auto;
     @supports(display: flex) {
-      display: flex;
-      width: auto;
-    }
-    // TODO: Need a better way of referencing these elements. The form needs to be
-    // updated via theme hooks and so on.
-
-    // This is the text input wrapper.
-    .form-item-keys {
-      display: table-cell;
-      width: auto;
-      @supports(display: flex) {
-        display: block;
-        width: auto;
-        flex: 1;
-      }
-    }
-
-    // This is the button wrapper.
-    .form-wrapper {
-      display: table-cell;
-      width:1em;
-      @supports(display: flex) {
-        display: block;
-        width: auto;
-        flex: 0;
-      }
-    }
-    .form-text,
-    .button {
-      appearance: none;
-      @include AU-fontgrid( xs, nospace );
-      @include AU-media( sm ) {
-        @include AU-fontgrid( sm, nospace);
-      }
-      color: $AU-color-foreground-text;
       display: block;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      &.form-autocomplete {
-        background-position: right 0.5rem center;
-      }
-      &:focus {
-       border-radius: 0;
-       outline: solid 3px $AU-color-foreground-focus;
-     }
+      width: auto;
+      flex: 1;
     }
-    .form-text {
-      @include AU-space( padding, 0.8unit 2unit 0.8unit 1unit );
-      @include AU-media( sm ) {
-        @include AU-space( padding, 0.8unit 3unit 0.8unit 1.5unit );
-      }
-      @include AU-space( border-top-right-radius, 0 );
-      @include AU-space( border-bottom-right-radius, 0 );
-      border: none;
-      background-color: $AU-color-foreground-background;
-      box-sizing: border-box;
-      &::placeholder {
-        color: $AU-color-foreground-muted-suggestion;
-      }
+  }
+
+  // This is the button wrapper.
+  .form-wrapper {
+    display: table-cell;
+    width:1em;
+    @supports(display: flex) {
+      display: block;
+      width: auto;
+      flex: 0;
     }
-    .button {
-      @include AU-space( width, 5.125unit);
-      @include AU-space( height, 2.7unit);
-      @include AU-space( border-top-left-radius, 0 );
-      @include AU-space( border-bottom-left-radius, 0 );
-      @include AU-space( padding, 0 1unit );
-      cursor: pointer;
-      border: none;
-      border-left: 1px solid $AU-color-foreground-border-suggestion;
-      background-color: $AU-color-background-shade-suggestion !important;
-      background-image: none;
-      height: 100%;
-      &:hover {
-        color: $AU-color-foreground-text;
-      }
+  }
+  .form-text,
+  .button {
+    border: none;
+    .search-api-page-block-form-wrapper & {
+      border: 1px solid $AU-color-foreground-border-suggestion;
+    }
+    appearance: none;
+    @include AU-fontgrid( xs, nospace );
+    @include AU-media( sm ) {
+      @include AU-fontgrid( sm, nospace);
+    }
+    color: $AU-color-foreground-text;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    &.form-autocomplete {
+      background-position: right 0.5rem center;
+    }
+    &:focus {
+     border-radius: 0;
+     outline: solid 3px $AU-color-foreground-focus;
+   }
+  }
+  .form-text {
+    @include AU-space( padding, 0.8unit 2unit 0.8unit 1unit );
+    @include AU-media( sm ) {
+      @include AU-space( padding, 0.8unit 3unit 0.8unit 1.5unit );
+    }
+    @include AU-space( border-top-right-radius, 0 );
+    @include AU-space( border-bottom-right-radius, 0 );
+    background-color: $AU-color-foreground-background;
+    box-sizing: border-box;
+    &::placeholder {
+      color: $AU-color-foreground-muted-suggestion;
+    }
+  }
+  .button {
+    @include AU-space( width, 5.125unit);
+    @include AU-space( height, 2.7unit);
+    @include AU-space( border-top-left-radius, 0 );
+    @include AU-space( border-bottom-left-radius, 0 );
+    @include AU-space( padding, 0 1unit );
+    cursor: pointer;
+    border-left: 1px solid $AU-color-foreground-border-suggestion;
+    .search-api-page-block-form-wrapper & {
+      border-left: none;
+    }
+    background-color: $AU-color-background-shade-suggestion !important;
+    background-image: none;
+    height: 100%;
+    &:hover {
+      color: $AU-color-foreground-text;
     }
   }
 }
