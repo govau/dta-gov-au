@@ -2456,30 +2456,6 @@ textarea.au-text-input {
   .au-ribbon span.stage-beta {
     color: #CD4D10;
     font-weight: bold; }
-  .au-ribbon .au-external {
-    padding-right: 16px;
-    padding-right: 1rem;
-    position: relative; }
-    .au-ribbon .au-external:after {
-      content: '';
-      width: 13px;
-      width: 0.8rem;
-      height: 13px;
-      height: 0.8rem;
-      margin-left: 4px;
-      margin-left: 0.25rem;
-      top: 3px;
-      top: 0.2rem;
-      display: inline-block;
-      position: absolute;
-      background-repeat: no-repeat;
-      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'%3E    %3Cpath fill='%23ffffff' d='M1408 928v320q0 119-84.5 203.5T1120 1536H288q-119 0-203.5-84.5T0 1248V416q0-119 84.5-203.5T288 128h704q14 0 23 9t9 23v64q0 14-9 23t-23 9H288q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113V928q0-14 9-23t23-9h64q14 0 23 9t9 23zm384-864v512q0 26-19 45t-45 19-45-19l-176-176-652 652q-10 10-23 10t-23-10L695 983q-10-10-10-23t10-23l652-652-176-176q-19-19-19-45t19-45 45-19h512q26 0 45 19t19 45z'/%3E%3C/svg%3E");
-      background-position: center; }
-    .ie8 .au-ribbon .au-external:after,
-    .lt-ie8 .au-ribbon .au-external:after {
-      background: none;
-      content: '⇗';
-      color: #ffffff; }
 
 .au-accordion {
   border: none;
@@ -2937,6 +2913,36 @@ blockquote {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0; }
+
+.au-external {
+  padding-right: 16px;
+  padding-right: 1rem;
+  position: relative; }
+  .au-external.light:after {
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'%3E      %3Cpath fill='%23007099' d='M1408 928v320q0 119-84.5 203.5T1120 1536H288q-119 0-203.5-84.5T0 1248V416q0-119 84.5-203.5T288 128h704q14 0 23 9t9 23v64q0 14-9 23t-23 9H288q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113V928q0-14 9-23t23-9h64q14 0 23 9t9 23zm384-864v512q0 26-19 45t-45 19-45-19l-176-176-652 652q-10 10-23 10t-23-10L695 983q-10-10-10-23t10-23l652-652-176-176q-19-19-19-45t19-45 45-19h512q26 0 45 19t19 45z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; }
+  .au-external.dark:after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'%3E     %3Cpath fill='%2345C2F0' d='M1408 928v320q0 119-84.5 203.5T1120 1536H288q-119 0-203.5-84.5T0 1248V416q0-119 84.5-203.5T288 128h704q14 0 23 9t9 23v64q0 14-9 23t-23 9H288q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113V928q0-14 9-23t23-9h64q14 0 23 9t9 23zm384-864v512q0 26-19 45t-45 19-45-19l-176-176-652 652q-10 10-23 10t-23-10L695 983q-10-10-10-23t10-23l652-652-176-176q-19-19-19-45t19-45 45-19h512q26 0 45 19t19 45z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; }
+  .au-external:after {
+    content: '';
+    text-decoration: none;
+    width: 13px;
+    width: 0.8rem;
+    height: 13px;
+    height: 0.8rem;
+    margin-left: 4px;
+    margin-left: 0.25rem;
+    bottom: 2px;
+    bottom: 0.125rem;
+    display: inline-block;
+    position: absolute;
+    background-position: center; }
+  .ie8 .au-external:after,
+  .lt-ie8 .au-external:after {
+    background: none;
+    content: '⇗';
+    color: #ffffff; }
 
 body {
   margin: 0; }
@@ -3858,6 +3864,18 @@ main[role="main"].page-content {
         line-height: 1.42857;
         margin-bottom: 16px;
         margin-bottom: 1rem; }
+  main[role="main"].page-content #block-signup {
+    background-color: #e0e0e0;
+    padding: 16px;
+    padding: 1rem; }
+    main[role="main"].page-content #block-signup p {
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 1.25; }
+    main[role="main"].page-content #block-signup .sign-up-button {
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 1.6; }
 
 aside.layout-sidebar-first nav[role="navigation"] {
   display: none;
