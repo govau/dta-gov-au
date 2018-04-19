@@ -84,6 +84,9 @@ nav[role="navigation"] {
     &.menu-level-1 {
       // Menu level 2
       > li {
+        &.menu-item--active-trail.menu-item--expanded > a {
+          font-weight: bold;
+        }
         > a {
           @include AU-space( padding, 1unit 0.5unit 1unit 2.5unit );
           @include AU-space( margin-left, -1unit );

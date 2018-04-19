@@ -3906,6 +3906,8 @@ aside.layout-sidebar-first nav[role="navigation"] {
             margin-left: -1rem;
             padding-left: 24px;
             padding-left: 1.5rem; }
+    aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-1 > li.menu-item--active-trail.menu-item--expanded > a, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-1.chosen-results > li.menu-item--active-trail.menu-item--expanded > a, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-1.chosen-results > li.menu-item--active-trail.menu-item--expanded > a {
+      font-weight: bold; }
     aside.layout-sidebar-first nav[role="navigation"] .au-link-list.menu-level-1 > li > a, aside.layout-sidebar-first nav[role="navigation"] .chosen-container.chosen-container-multi.au-select .chosen-drop .menu-level-1.chosen-results > li > a, .chosen-container.chosen-container-multi.au-select .chosen-drop aside.layout-sidebar-first nav[role="navigation"] .menu-level-1.chosen-results > li > a {
       padding: 16px 8px 16px 40px;
       padding: 1rem 0.5rem 1rem 2.5rem;
