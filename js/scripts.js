@@ -93,21 +93,21 @@
       }
     }
   }
-  // Drupal.behaviors.dtagovauAUAccordion = {
-  //   // Add accordions.
-  //   attach: function(context, settings) {
-  //     $('.js-au-accordion-wrapper').AUaccordion({
-	// 			onOpen: function() {
-	// 			},
-	// 			afterOpen: function() {
-  //         $('button.js-au-accordion').html('Close menu');
-	// 			},
-	// 			onClose: function() {
-	// 			},
-	// 			afterClose: function() {
-  //         $('button.js-au-accordion').html('Open menu');
-	// 			},
-	// 		});
-  //   }
-  // }
+  Drupal.behaviors.dtagovauAccordion = {
+    // Update accordions.
+    attach: function(context, settings) {
+      $(function() {
+        $('a#superfish-main-toggle').not('sf-expanded').find('span').html('Open menu');
+        $('a#superfish-main-toggle.sf-expanded').find('span').html('Open menu');
+        $('a#superfish-main-toggle').click(function() {
+          if($(this).hasClass('sf-expanded')) {
+            $(this).children('span').html('Close menu');
+          } else {
+            $(this).children('span').html('Open menu');
+          };
+        });
+      })
+
+    }
+  }
 }(jQuery));
