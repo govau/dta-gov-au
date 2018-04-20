@@ -1,0 +1,13 @@
+// Style for the beta badge.
+
+.au-badge {
+  border: 1px solid $AU-colordark-foreground-text;
+  @include AU-space( border-radius, 0.7unit );
+  @include AU-space( padding, 0.1unit 0.5unit );
+  @include AU-space( font-size, 0.85unit );
+  @include AU-space( margin-left, 0.5unit );
+  color: $AU-colordark-foreground-text;
+  font-weight: normal;
+  text-transform: lowercase;
+  vertical-align: super;
+}

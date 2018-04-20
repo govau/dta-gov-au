@@ -3,8 +3,8 @@
 h2 {
   @include AU-space( margin, 0 0 3unit 0 );
   @include AU-fontgrid( xxl );
-  color: $AU-colordark-foreground-action;
-  @include AU-media( sm ) {
-    @include AU-fontgrid( xxxl );
+  &.content-page  {
+    @include AU-fontgrid( xl );
   }
+  color: $AU-colordark-foreground-action;
 }
