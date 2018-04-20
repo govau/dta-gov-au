@@ -3860,7 +3860,8 @@ main[role="main"].page-content {
     main[role="main"].page-content .au-cards--blogs-news .au-card .au-card--date {
       margin: auto 0 0 0;
       color: #636363; }
-  main[role="main"].page-content #contact-module {
+  main[role="main"].page-content #contact-module,
+  main[role="main"].page-content .au-media-contact {
     background-color: #f5f5f5;
     margin-top: 32px;
     margin-top: 2rem;
@@ -3869,10 +3870,12 @@ main[role="main"].page-content {
     padding: 24px;
     padding: 1.5rem; }
     @media (min-width: 1200px) {
-      main[role="main"].page-content #contact-module {
+      main[role="main"].page-content #contact-module,
+      main[role="main"].page-content .au-media-contact {
         margin-right: 32px;
         margin-right: 2rem; } }
-    main[role="main"].page-content #contact-module h2 {
+    main[role="main"].page-content #contact-module h2,
+    main[role="main"].page-content .au-media-contact h2 {
       font-size: 32px;
       font-size: 2rem;
       line-height: 1.5;
