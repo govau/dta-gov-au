@@ -2484,29 +2484,29 @@ body {
   background-color: #313131; }
 
 .search-api-page-block-form {
-  margin-bottom: 64px;
-  margin-bottom: 4rem; }
+  margin-bottom: 40px;
+  margin-bottom: 2.5rem; }
   @media (min-width: 768px) {
     .search-api-page-block-form {
-      margin-bottom: 80px;
-      margin-bottom: 5rem; } }
+      margin-bottom: 40px;
+      margin-bottom: 2.5rem; } }
   .au-header--content .search-api-page-block-form {
     margin-bottom: 40px;
     margin-bottom: 2.5rem; }
     @media (min-width: 768px) {
       .au-header--content .search-api-page-block-form {
-        margin-bottom: 80px;
-        margin-bottom: 5rem; } }
+        margin-bottom: 40px;
+        margin-bottom: 2.5rem; } }
     @media (min-width: 992px) {
       .au-header--content .search-api-page-block-form {
-        margin-bottom: 72px;
-        margin-bottom: 4.5rem;
+        margin-bottom: 48px;
+        margin-bottom: 3rem;
         padding-top: 8px;
         padding-top: 0.5rem; } }
     @media (min-width: 1200px) {
       .au-header--content .search-api-page-block-form {
-        margin-bottom: 61px;
-        margin-bottom: 3.8rem;
+        margin-bottom: 48px;
+        margin-bottom: 3rem;
         padding-top: 19px;
         padding-top: 1.2rem; } }
 
@@ -3511,21 +3511,8 @@ header {
             padding-top: 57px;
             padding-top: 3.5625rem; } }
   header img.site-logo {
-    margin-top: -8px;
-    margin-top: -0.5rem;
-    margin-bottom: 72px;
-    margin-bottom: 4.5rem; }
-    @media (min-width: 768px) {
-      header img.site-logo {
-        margin-bottom: 88px;
-        margin-bottom: 5.5rem; } }
-    header img.site-logo.content-page {
-      margin-bottom: 48px;
-      margin-bottom: 3rem; }
-      @media (min-width: 768px) {
-        header img.site-logo.content-page {
-          margin-bottom: 68px;
-          margin-bottom: 4.25rem; } }
+    margin-bottom: 40px;
+    margin-bottom: 2.5rem; }
   header h2 {
     margin: 0 0 48px 0;
     margin: 0 0 3rem 0;
@@ -3533,16 +3520,32 @@ header {
     font-size: 2.5rem;
     line-height: 1.5;
     color: #45C2F0; }
-    @media (min-width: 768px) {
-      header h2 {
-        font-size: 48px;
-        font-size: 3rem;
-        line-height: 1.5; } }
+    header h2.content-page {
+      font-size: 32px;
+      font-size: 2rem;
+      line-height: 1.5; }
+  header .au-badge {
+    border: 1px solid #ffffff;
+    border-radius: 11px;
+    border-radius: 0.7rem;
+    padding: 2px 8px;
+    padding: 0.1rem 0.5rem;
+    font-size: 14px;
+    font-size: 0.85rem;
+    margin-left: 8px;
+    margin-left: 0.5rem;
+    color: #ffffff;
+    font-weight: normal;
+    text-transform: lowercase;
+    vertical-align: super; }
   header .au-body .au-link-list.au-link-list--inline > li, header #off-canvas .au-link-list.au-link-list--inline > li, header .au-body .chosen-container.chosen-container-multi.au-select .chosen-drop .au-link-list--inline.chosen-results > li, .chosen-container.chosen-container-multi.au-select .chosen-drop header .au-body .au-link-list--inline.chosen-results > li, header #off-canvas .chosen-container.chosen-container-multi.au-select .chosen-drop .au-link-list--inline.chosen-results > li, .chosen-container.chosen-container-multi.au-select .chosen-drop header #off-canvas .au-link-list--inline.chosen-results > li {
     display: block; }
     @media (min-width: 992px) {
       header .au-body .au-link-list.au-link-list--inline > li, header #off-canvas .au-link-list.au-link-list--inline > li, header .au-body .chosen-container.chosen-container-multi.au-select .chosen-drop .au-link-list--inline.chosen-results > li, .chosen-container.chosen-container-multi.au-select .chosen-drop header .au-body .au-link-list--inline.chosen-results > li, header #off-canvas .chosen-container.chosen-container-multi.au-select .chosen-drop .au-link-list--inline.chosen-results > li, .chosen-container.chosen-container-multi.au-select .chosen-drop header #off-canvas .au-link-list--inline.chosen-results > li {
         display: inline-block; } }
+  header .search-api-page-block-form {
+    padding-top: 24px;
+    padding-top: 1.5rem; }
 
 main[role="main"].page-content {
   padding-bottom: 80px;
