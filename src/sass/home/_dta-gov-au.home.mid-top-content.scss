@@ -34,8 +34,6 @@
     }
   }
   .au-card__image {
-    @include AU-space( max-height, 13unit );
-    overflow: hidden;
     img {
       @extend .au-responsive-media-img;
       height: 100%;
