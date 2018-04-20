@@ -3228,12 +3228,8 @@ body {
         margin-top: 3.5rem;
         margin-bottom: 16px;
         margin-bottom: 1rem; } }
-  .page-front #mid-top-content .au-card__image {
-    max-height: 208px;
-    max-height: 13rem;
-    overflow: hidden; }
-    .page-front #mid-top-content .au-card__image img {
-      height: 100%; }
+  .page-front #mid-top-content .au-card__image img {
+    height: 100%; }
   .page-front #mid-top-content .au-cta-link:hover .au-card__title {
     text-decoration-color: transparent; }
 
