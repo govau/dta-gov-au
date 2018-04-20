@@ -1,0 +1,63 @@
+// Style for the main menu.
+#block-mainnavigation-2,
+#block-mainnavigation-4 {
+  ul.au-link-list {
+    @include AU-space( margin-bottom, 1.0625unit );
+    li {
+      a {
+        color: $AU-colordark-foreground-action;
+        @include AU-space( padding-left, 2.25unit );
+        text-decoration: none;
+        &:hover {
+          color: $AU-colordark-foreground-text;
+          text-decoration: underline;
+        }
+        &:active,
+        &.is-active {
+          color: $AU-colordark-foreground-text !important;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+// Style for desktop.
+@include AU-media( sm ) {
+  #block-mainnavigation-2,
+  #block-mainnavigation-4 {
+    ul.au-link-list {
+      @include AU-space( padding-bottom, 0unit );
+      @include AU-space( padding-top, 0unit );
+      @include AU-space( margin-bottom, -0.5unit );
+      display: flex;
+      li {
+        @include AU-fontgrid( sm, nospace );
+        @include AU-space( margin, 0 1unit 0 0 );
+        @include AU-media( md ) {
+          @include AU-space( margin, 0 3unit 0 0 );
+        }
+        &:last-of-type {
+          margin-left: auto;
+        }
+        a {
+          display: block;
+          @include AU-space( padding, 0 0 1unit 0 );
+          border-bottom: 8px solid transparent;
+          &:hover {
+            border-bottom: 8px solid $AU-colordark-foreground-text;
+          }
+          &:active,
+          &.is-active {
+            border-bottom: 8px solid $AU-colordark-foreground-text;
+          }
+        }
+      }
+      &.sf-menu {
+        a {
+
+        }
+      }
+    }
+  }
+}

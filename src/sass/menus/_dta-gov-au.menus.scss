@@ -1,4 +1,8 @@
 // Styles for menus which don't live in another element (ie side bars).
+header {
+  @import "dta-gov-au.menus.menu-toggle";
+  @import "dta-gov-au.menus.main-menu";
+}
 
 aside.layout-sidebar-first {
   @import "dta-gov-au.menus.sidebar-main";
