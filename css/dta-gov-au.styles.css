@@ -3234,19 +3234,20 @@ body {
     text-decoration-color: transparent; }
 
 .page-front #mid-bottom-content {
-  background-image: url("../images/mid-bottom-bg.png");
-  background-position: 300% center;
-  background-repeat: no-repeat; }
+  background-image: none; }
   @media (min-width: 768px) {
     .page-front #mid-bottom-content {
-      background-size: 89%;
-      background-position: right center; } }
+      background-image: url("../images/mid-bottom-bg.png");
+      background-repeat: no-repeat;
+      background-size: 158%;
+      background-position: -22% center; } }
   @media (min-width: 992px) {
     .page-front #mid-bottom-content {
-      background-size: 66%; } }
+      background-size: 130%;
+      background-position: -40%; } }
   @media (min-width: 1200px) {
     .page-front #mid-bottom-content {
-      background-size: 54%;
+      background-size: contain;
       background-position: right 25%; } }
   .page-front #mid-bottom-content .row {
     background-color: #313131; }

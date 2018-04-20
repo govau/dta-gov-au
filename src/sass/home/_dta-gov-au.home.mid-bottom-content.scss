@@ -1,17 +1,18 @@
 // Styles for the mid-bottom block on the home page.
 #mid-bottom-content {
-  background-image: url('../images/mid-bottom-bg.png');
-  background-position: 300% center;
-  background-repeat: no-repeat;
+  background-image: none;
   @include AU-media ( sm ) {
-    background-size: 89%;
-    background-position: right center;
+    background-image: url('../images/mid-bottom-bg.png');
+    background-repeat: no-repeat;
+    background-size: 158%;
+    background-position: -22% center;
   }
   @include AU-media ( md ) {
-    background-size: 66%;
+    background-size: 130%;
+    background-position: -40%;
   }
   @include AU-media ( lg ) {
-    background-size: 54%;
+    background-size: contain;
     background-position: right 25%;
 
   }
