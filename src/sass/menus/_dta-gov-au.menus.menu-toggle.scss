@@ -7,8 +7,10 @@
     @include AU-space( padding-left, 0.5unit );
     @include AU-space( margin-bottom, 1unit );
     color: $AU-colordark-foreground-action;
+    text-decoration: none;
     &:hover {
       color: $AU-colordark-foreground-text;
+      text-decoration: underline;
     }
     &:before {
       @include AU-space( width, 1.25unit );
@@ -20,6 +22,9 @@
       content: " ";
       background-repeat: no-repeat;
       margin-top: -2px;
+    }
+    &:focus {
+      @include AU-focus( dark );
     }
     &:before {
       background-image: AU-svguri(
