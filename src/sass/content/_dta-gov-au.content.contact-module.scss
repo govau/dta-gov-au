@@ -1,6 +1,7 @@
 // Styles for the contact module.
 
-#contact-module {
+#contact-module,
+.au-media-contact {
   background-color: $AU-color-background-shade-suggestion;
   @include AU-space( margin-top, 2unit );
   @include AU-space( margin-right, 0unit );
