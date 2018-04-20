@@ -4,9 +4,13 @@
   ul.au-link-list {
     @include AU-space( margin-bottom, 1.0625unit );
     li {
+      border-bottom: 1px solid $AU-colordark-foreground-border-suggestion;
+      &:first-child {
+        border-top: 1px solid $AU-colordark-foreground-border-suggestion;
+      }
       a {
         color: $AU-colordark-foreground-action;
-        @include AU-space( padding-left, 2.25unit );
+        @include AU-space( padding-left, 0.75unit );
         text-decoration: none;
         &:hover {
           color: $AU-colordark-foreground-text;
@@ -16,6 +20,10 @@
         &.is-active {
           color: $AU-colordark-foreground-text !important;
           text-decoration: none;
+          font-weight: bold;
+        }
+        &:focus {
+          @include AU-focus( dark );
         }
       }
     }
@@ -32,6 +40,10 @@
       @include AU-space( margin-bottom, -0.5unit );
       display: flex;
       li {
+        border-bottom: none;
+        &:first-child {
+          border-top: none;
+        }
         @include AU-fontgrid( sm, nospace );
         @include AU-space( margin, 0 1unit 0 0 );
         @include AU-media( md ) {
