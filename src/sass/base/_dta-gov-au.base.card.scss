@@ -6,7 +6,7 @@
   font-weight: normal;
 	display:block;
 	max-width: $AU-maxwidth;
-	width: 100%;
+	//width: 100%; Removed to solve IE9/10 layout bug in cards.
 	img,
 	svg {
 		display: block;
@@ -166,11 +166,21 @@ a.au-card {
 	}
 
 	&.au-card-list--matchheight {
-		display:flex;
-		flex-wrap: wrap;
+		display: table;
+		@supports( display: flex ) {
+			display: flex;
+			flex-wrap: wrap;
+		}
 
 		li {
-			display:flex;
+			@supports( display: flex ) {
+				display: flex;
+			}
+			display: table-cell;
+			// Hack to fix uneven card sizes.
+			:root & {
+				min-height: 520px\9;
+			}
 			@include AU-space( padding, 0 );
 			@include AU-media( sm ) {
 				@include AU-space( padding, 0 0.75unit );

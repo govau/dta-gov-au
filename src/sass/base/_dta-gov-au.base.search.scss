@@ -4,10 +4,7 @@ form#search-api-page-block-form,
 form.search-api-page-block-form {
   display: table;
   @supports(display: flex) {
-    max-width: 90%; // To resolve a flexbox bug in safari.
-    @include AU-media( sm ) {
-      max-width: none;
-    }
+    max-width: 90%; // To resolve an apparent flexbox bug in safari.
     display: -webkit-flex;
    display: flex;
    -webkit-flex-direction: row;
