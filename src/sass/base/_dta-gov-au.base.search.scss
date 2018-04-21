@@ -27,6 +27,7 @@ form.search-api-page-block-form {
   // This is the button wrapper.
   .form-wrapper {
     display: table-cell;
+    vertical-align: top;
     width:1em;
     @supports(display: flex) {
       display: block;

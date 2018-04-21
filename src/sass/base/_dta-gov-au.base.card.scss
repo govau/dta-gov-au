@@ -79,9 +79,11 @@
 		.au-card__bg {
 			@include AU-space( margin-left, -1unit );
 			@include AU-space( margin-right, -1unit );
+			height: auto;
 
 			&:first-child {
 				@include AU-space( margin-top, -1unit );
+				min-height: 0%;
 			}
 
 			&:last-child {
@@ -173,14 +175,14 @@ a.au-card {
 		}
 
 		li {
+			display: table-cell;
 			@supports( display: flex ) {
 				display: flex;
 			}
-			display: table-cell;
-			// Hack to fix uneven card sizes.
-			:root & {
-				min-height: 520px\9;
-			}
+			// Hack to fix uneven card sizes on IE9+10..
+			// :root & {
+			// 	min-height: 520px\9;
+			// }
 			@include AU-space( padding, 0 );
 			@include AU-media( sm ) {
 				@include AU-space( padding, 0 0.75unit );
