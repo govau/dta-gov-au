@@ -73,4 +73,5 @@ label {
 // This evens up the autocomplete suggestions with the search text.
 ul.ui-menu {
   @include AU-space( padding-left, 1unit );
+  z-index: 500; // To make sure it appears over the top menu.
 }
