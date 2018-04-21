@@ -3,8 +3,22 @@
 h2 {
   @include AU-space( margin, 0 0 3unit 0 );
   @include AU-fontgrid( xxl );
-  &.content-page  {
+  white-space: normal;
+  @include AU-media( sm ) {
+    white-space: nowrap;
+  }
+  br {
+    display: none;
+    @include AU-media( sm ) {
+      display: inline;
+    }
+  }
+  &.au-header__content--heading  {
     @include AU-fontgrid( xl );
+    white-space: normal;
+    @include AU-media( sm ) {
+      white-space: nowrap;
+    }
   }
   color: $AU-colordark-foreground-action;
 }

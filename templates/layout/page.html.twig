@@ -54,11 +54,7 @@
 
   {% include '@dta_gov_au/includes/ribbon.html.twig' %}
 
-  {% if is_front %}
-    {% include '@dta_gov_au/includes/header-home.html.twig' %}
-  {% else %}
-    {% include '@dta_gov_au/includes/header.html.twig' %}
-  {% endif %}
+  {% include '@dta_gov_au/includes/header.html.twig' %}
 
   <main{{ attributes.addClass(main_classes) }} role="main">
   <a id="top" tabindex="-1"></a>{# link is in html.html.twig #}
