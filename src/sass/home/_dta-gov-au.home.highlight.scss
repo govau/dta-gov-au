@@ -6,6 +6,9 @@
   }
   background-position: center top;
   background-size: cover;
+  @include AU-space( margin-top, -1.5unit );
+  position: relative;
+  z-index: -2;
   .container {
     display: display;
     @include AU-media( sm ) {
