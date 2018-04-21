@@ -4032,7 +4032,9 @@ header #block-mainnavigation-4 ul.chosen-results {
 
 aside.layout-sidebar-first nav[role="navigation"] {
   display: none;
-  visibility: hidden; }
+  visibility: hidden;
+  margin-top: 48px;
+  margin-top: 3rem; }
   @media (min-width: 992px) {
     aside.layout-sidebar-first nav[role="navigation"] {
       display: block;

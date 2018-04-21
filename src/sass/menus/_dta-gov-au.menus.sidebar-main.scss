@@ -3,6 +3,7 @@
 nav[role="navigation"] {
   display: none;
   visibility: hidden;
+  @include AU-space( margin-top, 3unit );
   @include AU-media( md ) {
     display: block;
     visibility: visible;
