@@ -1,13 +1,5 @@
 // Styles for the breadcrumbs.
-#block-breadcrumbs-2 {
-  @include AU-space( margin-bottom, 2.5unit );
-  @include AU-media( sm ) {
-    @include AU-space( margin-bottom, 3.75unit );
-  }
-  @include AU-media( md ) {
-    @include AU-space( margin-bottom, 3unit );
-  }
-}
+
 .au-breadcrumbs {
   position: absolute;
   width: 1px;

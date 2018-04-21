@@ -3,6 +3,10 @@
 #block-signup {
   background-color: $AU-color-background-alt-shade-suggestion;
   @include AU-space( padding, 1unit );
+  @include AU-space( margin-top, 3unit );
+  h2 {
+    @include AU-space( margin-top, 0unit );
+  }
   p {
     @include AU-fontgrid( sm, heading );
   }

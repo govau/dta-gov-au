@@ -3556,17 +3556,6 @@ main[role="main"].page-content {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5; }
-  main[role="main"].page-content #block-breadcrumbs-2 {
-    margin-bottom: 40px;
-    margin-bottom: 2.5rem; }
-    @media (min-width: 768px) {
-      main[role="main"].page-content #block-breadcrumbs-2 {
-        margin-bottom: 60px;
-        margin-bottom: 3.75rem; } }
-    @media (min-width: 992px) {
-      main[role="main"].page-content #block-breadcrumbs-2 {
-        margin-bottom: 48px;
-        margin-bottom: 3rem; } }
   main[role="main"].page-content .au-breadcrumbs {
     position: absolute;
     width: 1px;
@@ -3597,9 +3586,7 @@ main[role="main"].page-content {
   main[role="main"].page-content h1 {
     font-size: 40px;
     font-size: 2.5rem;
-    line-height: 1.5;
-    margin-bottom: 32px;
-    margin-bottom: 2rem; }
+    line-height: 1.5; }
   main[role="main"].page-content h1, main[role="main"].page-content h4 {
     font-weight: bold; }
   main[role="main"].page-content h2, main[role="main"].page-content h3 {
@@ -3857,7 +3844,12 @@ main[role="main"].page-content {
   main[role="main"].page-content #block-signup {
     background-color: #e0e0e0;
     padding: 16px;
-    padding: 1rem; }
+    padding: 1rem;
+    margin-top: 48px;
+    margin-top: 3rem; }
+    main[role="main"].page-content #block-signup h2 {
+      margin-top: 0px;
+      margin-top: 0rem; }
     main[role="main"].page-content #block-signup p {
       font-size: 16px;
       font-size: 1rem;

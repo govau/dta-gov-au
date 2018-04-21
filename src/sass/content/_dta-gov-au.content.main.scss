@@ -2,7 +2,6 @@
 
 h1 {
   @include AU-fontgrid( xxl );
-  @include AU-space( margin-bottom, 2unit );
 }
 
 h1, h4 {
