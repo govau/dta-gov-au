@@ -2106,12 +2106,12 @@ a.au-text-input[value="Reset"] {
     margin-top: 16px;
     margin-top: 1rem; }
 
-.au-responsive-media-img, .page-front #mid-top-content .au-card__image img,
+.au-responsive-media-img,
 .au-body img, #off-canvas img,
 .au-responsive-media img {
   max-width: 100%; }
 
-* + .au-responsive-media-img, .page-front #mid-top-content .au-card__image * + img,
+* + .au-responsive-media-img,
 .au-body * + img, #off-canvas * + img,
 .au-responsive-media * + img {
   margin-top: 16px;
@@ -2817,9 +2817,13 @@ a.au-card {
       background-color: #F6DAE9; }
   .au-card-list li {
     list-style: none;
-    padding-top: 0;
+    padding: 0;
     padding-bottom: 0;
     margin: 0; }
+    @media (min-width: 768px) {
+      .au-card-list li {
+        padding: 0 40px;
+        padding: 0 2.5rem; } }
   .au-body .au-card-list li, #off-canvas .au-card-list li {
     margin-top: 24px;
     margin-top: 1.5rem; }
@@ -2828,8 +2832,7 @@ a.au-card {
     flex-wrap: wrap; }
     .au-card-list.au-card-list--matchheight li {
       display: flex;
-      padding: 0 40px;
-      padding: 0 2.5rem;
+      padding: 0;
       margin: 0; }
       @media (min-width: 768px) {
         .au-card-list.au-card-list--matchheight li {
@@ -3202,7 +3205,7 @@ body {
         margin-bottom: 16px;
         margin-bottom: 1rem; } }
   .page-front #mid-top-content .au-card__image img {
-    height: 100%; }
+    margin: 0 auto; }
   .page-front #mid-top-content .au-cta-link:hover .au-card__title {
     text-decoration-color: transparent; }
 
@@ -3328,16 +3331,13 @@ body {
   .page-front #bottom-content .au-card-list * {
     font-weight: normal; }
   .page-front #bottom-content .au-card-list > li {
-    margin-bottom: 32px;
-    margin-bottom: 2rem;
-    margin-top: 0;
-    padding: 0 24px;
-    padding: 0 1.5rem; }
+    margin: 0 auto 32px auto;
+    margin: 0 auto 2rem auto;
+    padding: 0px;
+    padding: 0rem;
+    max-width: 376px;
+    max-width: 23.5rem; }
     @media (min-width: 768px) {
-      .page-front #bottom-content .au-card-list > li {
-        margin-bottom: 32px;
-        margin-bottom: 2rem; } }
-    @media (min-width: 992px) {
       .page-front #bottom-content .au-card-list > li {
         padding: 0 12px;
         padding: 0 0.75rem; } }
@@ -3374,14 +3374,14 @@ body {
         font-weight: bold; }
     .page-front #bottom-content .au-card .au-card--author_name {
       position: absolute;
-      top: 264px;
-      top: 16.5rem;
+      top: 288px;
+      top: 18rem;
       margin: 0px;
       margin: 0rem; }
       @media (min-width: 768px) {
         .page-front #bottom-content .au-card .au-card--author_name {
-          top: 256px;
-          top: 16rem; } }
+          top: 264px;
+          top: 16.5rem; } }
       @media (min-width: 992px) {
         .page-front #bottom-content .au-card .au-card--author_name {
           top: 240px;
@@ -3651,16 +3651,13 @@ main[role="main"].page-content {
   main[role="main"].page-content .au-cards--blogs-news .au-card-list * {
     font-weight: normal; }
   main[role="main"].page-content .au-cards--blogs-news .au-card-list > li {
-    margin-bottom: 32px;
-    margin-bottom: 2rem;
-    margin-top: 0;
-    padding: 0 24px;
-    padding: 0 1.5rem; }
+    margin: 0 auto 32px auto;
+    margin: 0 auto 2rem auto;
+    padding: 0px;
+    padding: 0rem;
+    max-width: 376px;
+    max-width: 23.5rem; }
     @media (min-width: 768px) {
-      main[role="main"].page-content .au-cards--blogs-news .au-card-list > li {
-        margin-bottom: 32px;
-        margin-bottom: 2rem; } }
-    @media (min-width: 992px) {
       main[role="main"].page-content .au-cards--blogs-news .au-card-list > li {
         padding: 0 12px;
         padding: 0 0.75rem; } }
@@ -3697,14 +3694,14 @@ main[role="main"].page-content {
         font-weight: bold; }
     main[role="main"].page-content .au-cards--blogs-news .au-card .au-card--author_name {
       position: absolute;
-      top: 264px;
-      top: 16.5rem;
+      top: 288px;
+      top: 18rem;
       margin: 0px;
       margin: 0rem; }
       @media (min-width: 768px) {
         main[role="main"].page-content .au-cards--blogs-news .au-card .au-card--author_name {
-          top: 256px;
-          top: 16rem; } }
+          top: 264px;
+          top: 16.5rem; } }
       @media (min-width: 992px) {
         main[role="main"].page-content .au-cards--blogs-news .au-card .au-card--author_name {
           top: 240px;

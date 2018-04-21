@@ -35,8 +35,7 @@
   }
   .au-card__image {
     img {
-      @extend .au-responsive-media-img;
-      height: 100%;
+      @include AU-space( margin, 0 auto );
     }
   }
 
