@@ -2483,33 +2483,6 @@ body {
 .au-body.au-body--dark.au-body--alt, #off-canvas {
   background-color: #313131; }
 
-.search-api-page-block-form {
-  margin-bottom: 40px;
-  margin-bottom: 2.5rem; }
-  @media (min-width: 768px) {
-    .search-api-page-block-form {
-      margin-bottom: 40px;
-      margin-bottom: 2.5rem; } }
-  .au-header--content .search-api-page-block-form {
-    margin-bottom: 40px;
-    margin-bottom: 2.5rem; }
-    @media (min-width: 768px) {
-      .au-header--content .search-api-page-block-form {
-        margin-bottom: 40px;
-        margin-bottom: 2.5rem; } }
-    @media (min-width: 992px) {
-      .au-header--content .search-api-page-block-form {
-        margin-bottom: 48px;
-        margin-bottom: 3rem;
-        padding-top: 8px;
-        padding-top: 0.5rem; } }
-    @media (min-width: 1200px) {
-      .au-header--content .search-api-page-block-form {
-        margin-bottom: 48px;
-        margin-bottom: 3rem;
-        padding-top: 19px;
-        padding-top: 1.2rem; } }
-
 form#search-api-page-block-form,
 form.search-api-page-block-form {
   display: table; }
@@ -3500,27 +3473,35 @@ header {
     padding: 1.5rem 0 0 0; }
     header.au-header.au-header--hero.au-header--alt.au-header--dark {
       background-color: #313131; }
-      header.au-header.au-header--hero.au-header--alt.au-header--dark.au-header--content {
-        padding-top: 64px;
-        padding-top: 4rem; }
-        @media (min-width: 768px) {
-          header.au-header.au-header--hero.au-header--alt.au-header--dark.au-header--content {
-            padding-top: 57px;
-            padding-top: 3.5625rem; } }
   header img.site-logo {
     margin-bottom: 40px;
-    margin-bottom: 2.5rem; }
+    margin-bottom: 2.5rem;
+    max-width: 300px;
+    max-width: 18.75rem; }
   header h2 {
     margin: 0 0 48px 0;
     margin: 0 0 3rem 0;
     font-size: 40px;
     font-size: 2.5rem;
     line-height: 1.5;
+    white-space: normal;
     color: #45C2F0; }
-    header h2.content-page {
+    @media (min-width: 768px) {
+      header h2 {
+        white-space: nowrap; } }
+    header h2 br {
+      display: none; }
+      @media (min-width: 768px) {
+        header h2 br {
+          display: inline; } }
+    header h2.au-header__content--heading {
       font-size: 32px;
       font-size: 2rem;
-      line-height: 1.5; }
+      line-height: 1.5;
+      white-space: normal; }
+      @media (min-width: 768px) {
+        header h2.au-header__content--heading {
+          white-space: nowrap; } }
   header .au-badge {
     border: 1px solid #ffffff;
     border-radius: 11px;
@@ -3541,8 +3522,10 @@ header {
       header .au-body .au-link-list.au-link-list--inline > li, header #off-canvas .au-link-list.au-link-list--inline > li, header .au-body .chosen-container.chosen-container-multi.au-select .chosen-drop .au-link-list--inline.chosen-results > li, .chosen-container.chosen-container-multi.au-select .chosen-drop header .au-body .au-link-list--inline.chosen-results > li, header #off-canvas .chosen-container.chosen-container-multi.au-select .chosen-drop .au-link-list--inline.chosen-results > li, .chosen-container.chosen-container-multi.au-select .chosen-drop header #off-canvas .au-link-list--inline.chosen-results > li {
         display: inline-block; } }
   header .search-api-page-block-form {
-    padding-top: 24px;
-    padding-top: 1.5rem; }
+    padding-top: 16px;
+    padding-top: 1rem;
+    margin-bottom: 40px;
+    margin-bottom: 2.5rem; }
 
 main[role="main"].page-content {
   padding-bottom: 80px;
@@ -3940,7 +3923,11 @@ header #block-mainnavigation-4 ul.chosen-results {
       header #block-mainnavigation-4 .chosen-container.chosen-container-multi.au-select .chosen-drop ul.chosen-results li a.is-active, .chosen-container.chosen-container-multi.au-select .chosen-drop
       header #block-mainnavigation-4 ul.chosen-results li a.is-active {
         color: #ffffff !important;
-        text-decoration: none;
+        text-decoration: none; }
+      header #block-mainnavigation-2 ul.au-link-list li a.is-active, header #block-mainnavigation-2 .chosen-container.chosen-container-multi.au-select .chosen-drop ul.chosen-results li a.is-active, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2 ul.chosen-results li a.is-active,
+      header #block-mainnavigation-4 ul.au-link-list li a.is-active,
+      header #block-mainnavigation-4 .chosen-container.chosen-container-multi.au-select .chosen-drop ul.chosen-results li a.is-active, .chosen-container.chosen-container-multi.au-select .chosen-drop
+      header #block-mainnavigation-4 ul.chosen-results li a.is-active {
         font-weight: bold; }
       header #block-mainnavigation-2 ul.au-link-list li a:focus:focus, header #block-mainnavigation-2 .chosen-container.chosen-container-multi.au-select .chosen-drop ul.chosen-results li a:focus:focus, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2 ul.chosen-results li a:focus:focus,
       header #block-mainnavigation-4 ul.au-link-list li a:focus:focus,
@@ -4015,7 +4002,8 @@ header #block-mainnavigation-4 ul.chosen-results {
         header #block-mainnavigation-4 ul.au-link-list li a.is-active,
         header #block-mainnavigation-4 .chosen-container.chosen-container-multi.au-select .chosen-drop ul.chosen-results li a.is-active, .chosen-container.chosen-container-multi.au-select .chosen-drop
         header #block-mainnavigation-4 ul.chosen-results li a.is-active {
-          border-bottom: 8px solid #ffffff; } }
+          border-bottom: 8px solid #ffffff;
+          font-weight: normal; } }
 
 aside.layout-sidebar-first nav[role="navigation"] {
   display: none;

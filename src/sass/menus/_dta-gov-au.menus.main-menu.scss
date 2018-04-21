@@ -20,6 +20,8 @@
         &.is-active {
           color: $AU-colordark-foreground-text !important;
           text-decoration: none;
+        }
+        &.is-active {
           font-weight: bold;
         }
         &:focus {
@@ -62,12 +64,8 @@
           &:active,
           &.is-active {
             border-bottom: 8px solid $AU-colordark-foreground-text;
+            font-weight: normal;
           }
-        }
-      }
-      &.sf-menu {
-        a {
-
         }
       }
     }

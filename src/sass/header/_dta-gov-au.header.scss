@@ -7,14 +7,9 @@ header {
     @include AU-space( padding, 1.5unit 0 0 0 );
     &.au-header--alt.au-header--dark {
       background-color: $AU-colordark-background;
-      &.au-header--content {
-        @include AU-space( padding-top, 4unit );
-        @include AU-media (sm ) {
-          @include AU-space( padding-top, 3.5625unit );
-        }
-      }
     }
   }
+  
   @import "dta-gov-au.header.images";
   @import "dta-gov-au.header.headings";
   @import "dta-gov-au.header.beta";

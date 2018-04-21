@@ -1,5 +1,6 @@
 // Search styles for the header. Please also see /base/_dta-gov-au.base.search.scss for the 'interior' search style.
 
 .search-api-page-block-form {
-  @include AU-space( padding-top, 1.5unit );
+  @include AU-space( padding-top, 1unit );
+  @include AU-space( margin-bottom, 2.5unit );
 }
