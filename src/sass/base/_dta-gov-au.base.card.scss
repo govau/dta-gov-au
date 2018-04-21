@@ -151,9 +151,12 @@ a.au-card {
 
 	li {
 		list-style: none;
-		@include AU-space( padding-top, 0);
+		@include AU-space( padding, 0);
 		@include AU-space( padding-bottom, 0);
 		@include AU-space( margin, 0 );
+		@include AU-media( sm ) {
+			@include AU-space( padding, 0 2.5unit );
+		}
 	}
 
 	.au-body & {
@@ -168,7 +171,7 @@ a.au-card {
 
 		li {
 			display:flex;
-			@include AU-space( padding, 0 2.5unit );
+			@include AU-space( padding, 0 );
 			@include AU-media( sm ) {
 				@include AU-space( padding, 0 0.75unit );
 			}
