@@ -3,13 +3,15 @@
 header {
   border-bottom: 8px solid $AU-colordark-foreground-action;
   box-shadow: 0 0 5px 0 $AU-color-foreground-border-suggestion;
+  position: relative;
+  z-index: 5;
   &.au-header.au-header--hero {
     @include AU-space( padding, 1.5unit 0 0 0 );
     &.au-header--alt.au-header--dark {
       background-color: $AU-colordark-background;
     }
   }
-  
+
   @import "dta-gov-au.header.images";
   @import "dta-gov-au.header.headings";
   @import "dta-gov-au.header.beta";
