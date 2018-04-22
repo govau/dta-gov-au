@@ -1,12 +1,16 @@
 .au-card {
 	@include AU-space( padding, 1.5unit );
+	width: 100%;
+	@include AU-media( sm ) {
+		width: auto;
+	}
 	@include AU-media( md ) {
 		@include AU-space( padding, 2unit );
 	}
   font-weight: normal;
 	display:block;
 	max-width: $AU-maxwidth;
-	//width: 100%; Removed to solve IE9/10 layout bug in cards.
+	//width: 100%; //Removed to solve IE9/10 layout bug in cards.
 	img,
 	svg {
 		display: block;
