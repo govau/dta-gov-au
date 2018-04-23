@@ -1,0 +1,7 @@
+// Image styles.
+
+.au-hero {
+  img {
+    @include AU-space( margin-bottom, 2unit );
+  }
+}
