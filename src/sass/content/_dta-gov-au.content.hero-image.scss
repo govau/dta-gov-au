@@ -1,9 +1,11 @@
 // Styles for the hero image.
 
 .au-hero {
+  img {
+    @include AU-space( margin-bottom, 1unit );
+  }
   figcaption {
     font-style: italic;
-    @include AU-space( margin-top, 0.5unit );
     @include AU-space( margin-bottom, 2unit );
   }
 }

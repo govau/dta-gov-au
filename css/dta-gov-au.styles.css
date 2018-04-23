@@ -3592,7 +3592,9 @@ main[role="main"].page-content {
   main[role="main"].page-content h1 {
     font-size: 40px;
     font-size: 2.5rem;
-    line-height: 1.5; }
+    line-height: 1.5;
+    margin-top: 32px;
+    margin-top: 2rem; }
   main[role="main"].page-content h1, main[role="main"].page-content h4 {
     font-weight: bold; }
   main[role="main"].page-content h2, main[role="main"].page-content h3 {
@@ -3602,7 +3604,8 @@ main[role="main"].page-content {
     margin-bottom: 6rem; }
   main[role="main"].page-content nav.au-inpage-nav-links {
     margin: 48px 0;
-    margin: 3rem 0; }
+    margin: 3rem 0;
+    border-left-color: #45C2F0; }
     main[role="main"].page-content nav.au-inpage-nav-links .au-inpage-nav-links__heading {
       font-weight: bold;
       font-size: 20px;
@@ -3643,10 +3646,11 @@ main[role="main"].page-content {
       line-height: 1.5;
       color: #636363;
       max-width: 42em; }
+  main[role="main"].page-content .au-hero img {
+    margin-bottom: 16px;
+    margin-bottom: 1rem; }
   main[role="main"].page-content .au-hero figcaption {
     font-style: italic;
-    margin-top: 8px;
-    margin-top: 0.5rem;
     margin-bottom: 32px;
     margin-bottom: 2rem; }
   main[role="main"].page-content .au-cards--blogs-news .au-card-list .au-cta-link {
