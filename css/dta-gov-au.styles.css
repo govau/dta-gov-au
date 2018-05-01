@@ -2457,20 +2457,8 @@ textarea.au-text-input {
     color: #CD4D10;
     font-weight: bold; }
 
-.au-accordion {
-  border: none;
-  margin-bottom: 16px;
-  margin-bottom: 1rem; }
-  @media (min-width: 992px) {
-    .au-accordion {
-      margin-bottom: 0px;
-      margin-bottom: 0rem; } }
-  .au-accordion .au-accordion__body-wrapper {
-    border: none; }
-    @media (min-width: 992px) {
-      .au-accordion .au-accordion__body-wrapper {
-        padding: 0px;
-        padding: 0rem; } }
+.au-accordion p {
+  max-width: none; }
 
 body {
   margin: 0; }
