@@ -4,6 +4,7 @@ global-styling:
     theme:
       css/dta-gov-au.styles.css: {}
   js:
+    js/pancake.js: {}
     js/scripts.js: {}
   dependencies:
     - core/drupal

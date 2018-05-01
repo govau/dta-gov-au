@@ -9,7 +9,7 @@
 
   Drupal.behaviors.dtagovauSmoothScroll = {
     attach: function(context, settings) {
-      $('a', context).once('smoothScroll').click(function(event) {
+      $('a:not(.js-au-accordion)', context).once('smoothScroll').click(function(event) {
         var speed = 500;
         var href = $(this).attr("href").split('#')[1];
         if (href) {
@@ -105,6 +105,9 @@
           } else {
             $(this).children('span').html('Open menu');
           };
+        });
+        $('.js-au-accordion', context).once('au-accordion').click(function(event) {
+          return AU.accordion.Toggle( this );
         });
       })
 
