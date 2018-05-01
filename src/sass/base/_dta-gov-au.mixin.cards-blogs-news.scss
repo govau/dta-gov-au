@@ -64,6 +64,24 @@
       a {
         color: $AU-color-foreground-muted-suggestion;
       }
+      &.au-card--author_name--no-image {
+        position: relative;
+        top: 0;
+        @include AU-space( margin-top, -3.3unit );
+        @include AU-space( margin-bottom, 2.5unit );
+        @include AU-media( sm ) {
+          @include AU-space( margin-top, -5unit );
+          @include AU-space( margin-bottom, 3unit );
+        }
+        @include AU-media( md ) {
+          @include AU-space( margin-top, -4.5unit );
+          @include AU-space( margin-bottom, 3.25unit );
+        }
+        @include AU-media( lg ) {
+          @include AU-space( margin-top, -4unit );
+          @include AU-space( margin-bottom, 3unit );
+        }
+      }
     }
     .au-card--author_image {
       position: absolute;

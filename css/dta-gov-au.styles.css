@@ -3411,6 +3411,31 @@ body {
           top: 18rem; } }
       .page-front #bottom-content .au-card .au-card--author_name a {
         color: #636363; }
+      .page-front #bottom-content .au-card .au-card--author_name.au-card--author_name--no-image {
+        position: relative;
+        top: 0;
+        margin-top: -53px;
+        margin-top: -3.3rem;
+        margin-bottom: 40px;
+        margin-bottom: 2.5rem; }
+        @media (min-width: 768px) {
+          .page-front #bottom-content .au-card .au-card--author_name.au-card--author_name--no-image {
+            margin-top: -80px;
+            margin-top: -5rem;
+            margin-bottom: 48px;
+            margin-bottom: 3rem; } }
+        @media (min-width: 992px) {
+          .page-front #bottom-content .au-card .au-card--author_name.au-card--author_name--no-image {
+            margin-top: -72px;
+            margin-top: -4.5rem;
+            margin-bottom: 52px;
+            margin-bottom: 3.25rem; } }
+        @media (min-width: 1200px) {
+          .page-front #bottom-content .au-card .au-card--author_name.au-card--author_name--no-image {
+            margin-top: -64px;
+            margin-top: -4rem;
+            margin-bottom: 48px;
+            margin-bottom: 3rem; } }
     .page-front #bottom-content .au-card .au-card--author_image {
       position: absolute;
       right: 16px;
@@ -3737,6 +3762,31 @@ main[role="main"].page-content {
           top: 18rem; } }
       main[role="main"].page-content .au-cards--blogs-news .au-card .au-card--author_name a {
         color: #636363; }
+      main[role="main"].page-content .au-cards--blogs-news .au-card .au-card--author_name.au-card--author_name--no-image {
+        position: relative;
+        top: 0;
+        margin-top: -53px;
+        margin-top: -3.3rem;
+        margin-bottom: 40px;
+        margin-bottom: 2.5rem; }
+        @media (min-width: 768px) {
+          main[role="main"].page-content .au-cards--blogs-news .au-card .au-card--author_name.au-card--author_name--no-image {
+            margin-top: -80px;
+            margin-top: -5rem;
+            margin-bottom: 48px;
+            margin-bottom: 3rem; } }
+        @media (min-width: 992px) {
+          main[role="main"].page-content .au-cards--blogs-news .au-card .au-card--author_name.au-card--author_name--no-image {
+            margin-top: -72px;
+            margin-top: -4.5rem;
+            margin-bottom: 52px;
+            margin-bottom: 3.25rem; } }
+        @media (min-width: 1200px) {
+          main[role="main"].page-content .au-cards--blogs-news .au-card .au-card--author_name.au-card--author_name--no-image {
+            margin-top: -64px;
+            margin-top: -4rem;
+            margin-bottom: 48px;
+            margin-bottom: 3rem; } }
     main[role="main"].page-content .au-cards--blogs-news .au-card .au-card--author_image {
       position: absolute;
       right: 16px;
