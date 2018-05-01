@@ -19,18 +19,18 @@
     "@gov.au/inpage-nav": "^2.0.1",
     "@gov.au/link-list": "^2.0.1",
     "@gov.au/page-alerts": "^2.0.1",
-    "@gov.au/responsive-media": "^2.0.2",
+    "@gov.au/responsive-media": "^2.0.4",
     "@gov.au/select": "^2.0.1",
     "@gov.au/skip-link": "^2.0.2",
     "@gov.au/tags": "^2.0.1",
     "@gov.au/text-inputs": "^2.0.2",
     "autoprefixer": "^7.2.6",
-    "node-sass": "^4.7.2",
-    "npm": "^5.7.1",
+    "node-sass": "^4.9.0",
+    "npm": "^5.8.0",
     "postcss-cli": "^4.1.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.24.1",
     "npm-run-all": "^4.1.2",
     "onchange": "^3.3.0",
     "sass-versioning": "^0.3.0"
