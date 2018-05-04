@@ -30,6 +30,7 @@
       height: 100%;
       img {
         height: auto;
+        @include AU-space( margin-top, 0unit );
       }
     }
     .au-card__fullwidth:first-child {
