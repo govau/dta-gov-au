@@ -2883,13 +2883,14 @@ a.au-card {
       .au-card-list.au-card-list--matchheight {
         display: flex;
         flex-wrap: wrap; } }
+    .au-card-list.au-card-list--matchheight li, .au-card-list.au-card-list--matchheight article {
+      display: table-cell; }
+      @supports (display: flex) {
+        .au-card-list.au-card-list--matchheight li, .au-card-list.au-card-list--matchheight article {
+          display: flex; } }
     .au-card-list.au-card-list--matchheight li {
-      display: table-cell;
       padding: 0;
       margin: 0; }
-      @supports (display: flex) {
-        .au-card-list.au-card-list--matchheight li {
-          display: flex; } }
       @media (min-width: 768px) {
         .au-card-list.au-card-list--matchheight li {
           padding: 0 12px;
