@@ -47,7 +47,7 @@
     "watch:js": "onchange \"./js/*.js\" -- npm-run-all cache-rebuild:js browser-refresh",
     "watch:sass": "npm run build && onchange \"src/sass/**/*.scss\" \"templates/**/*.twig\" -- npm run build",
     "watch:twig": "onchange \"../dta-ui-kit-base/templates/**/*.twig\" \"templates/**/*.twig\" \"*.theme\" -- npm-run-all cache-rebuild:all browser-refresh",
-    "serve": "browser-sync start --proxy 'au.gov.dta.test:8888' --files=\"css/*.css\" \"js/*.js\" \"../dta-ui-kit-base/templates/**/*.twig\" \"templates/**/*.twig\"",
+    "serve": "browser-sync start --proxy 'au.gov.cld.y.dta-website-rebuild-test:8888/' --files=\"css/*.css\" \"js/*.js\" \"../dta-ui-kit-base/templates/**/*.twig\" \"templates/**/*.twig\"",
     "watch": "npm-run-all --parallel copy-js serve watch:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
