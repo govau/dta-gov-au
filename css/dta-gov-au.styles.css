@@ -3641,8 +3641,7 @@ main[role="main"].page-content {
     line-height: 1.5; }
   main[role="main"].page-content .au-breadcrumbs {
     display: none;
-    visibility: hidden;
-    border-bottom: 1px solid #e0e0e0; }
+    visibility: hidden; }
     @media (min-width: 768px) {
       main[role="main"].page-content .au-breadcrumbs {
         display: block;
