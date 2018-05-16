@@ -3640,25 +3640,13 @@ main[role="main"].page-content {
     font-size: 1rem;
     line-height: 1.5; }
   main[role="main"].page-content .au-breadcrumbs {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+    display: none;
+    visibility: hidden;
     border-bottom: 1px solid #e0e0e0; }
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
       main[role="main"].page-content .au-breadcrumbs {
-        position: inherit;
-        width: auto;
-        height: auto;
-        padding: inherit;
-        margin: 0;
-        overflow: inherit;
-        clip: inherit;
-        border: none; } }
+        display: block;
+        visibility: visible; } }
     main[role="main"].page-content .au-breadcrumbs ol {
       padding-left: 0; }
     main[role="main"].page-content .au-breadcrumbs a {
