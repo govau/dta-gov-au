@@ -1,23 +1,11 @@
 // Styles for the breadcrumbs.
 
 .au-breadcrumbs {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-  @include AU-media( md ) {
-    position: inherit;
-    width: auto;
-    height: auto;
-    padding: inherit;
-    margin: 0;
-    overflow: inherit;
-    clip: inherit;
-    border: none;
+  display: none;
+  visibility: hidden;
+  @include AU-media( sm ) {
+    display: block;
+    visibility: visible;
   }
   border-bottom: 1px solid $AU-color-background-alt-shade-suggestion;
   ol {
