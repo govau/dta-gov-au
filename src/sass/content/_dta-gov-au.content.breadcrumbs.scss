@@ -7,7 +7,6 @@
     display: block;
     visibility: visible;
   }
-  border-bottom: 1px solid $AU-color-background-alt-shade-suggestion;
   ol {
     @include AU-space( padding-left, 0 );
   }
