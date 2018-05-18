@@ -25,63 +25,11 @@
       }
     }
     .au-card__image {
-      @include AU-space( margin-bottom, 0.5unit );
       position: relative;
       height: 100%;
       img {
         height: auto;
         @include AU-space( margin-top, 0unit );
-      }
-    }
-    .au-card__fullwidth:first-child {
-      @include AU-space( margin, -2unit -2unit 1.5unit -2unit );
-      height: auto;
-    }
-    .au-card--content_type {
-      @include AU-fontgrid( xs, nospace );
-      @include AU-space( margin-bottom, 3.25unit );
-      @include AU-media( sm ) {
-        @include AU-space( margin-bottom, 5unit );
-      }
-      font-weight: bold;
-      a {
-        color: $AU-color-foreground-text;
-        font-weight: bold;
-      }
-    }
-    .au-card--author_name {
-      position: absolute;
-      @include AU-space( top, 18unit );
-      @include AU-space( margin, 0unit );
-      @include AU-media( sm ) {
-        @include AU-space( top, 16.5unit );
-      }
-      @include AU-media( md ) {
-        @include AU-space( top, 15unit );
-      }
-      @include AU-media( lg ) {
-        @include AU-space( top, 18unit );
-      }
-      a {
-        color: $AU-color-foreground-muted-suggestion;
-      }
-      &.au-card--author_name--no-image {
-        position: relative;
-        top: 0;
-        @include AU-space( margin-top, -3.3unit );
-        @include AU-space( margin-bottom, 2.5unit );
-        @include AU-media( sm ) {
-          @include AU-space( margin-top, -5unit );
-          @include AU-space( margin-bottom, 3unit );
-        }
-        @include AU-media( md ) {
-          @include AU-space( margin-top, -4.5unit );
-          @include AU-space( margin-bottom, 3.25unit );
-        }
-        @include AU-media( lg ) {
-          @include AU-space( margin-top, -4unit );
-          @include AU-space( margin-bottom, 3unit );
-        }
       }
     }
     .au-card--author_image {
@@ -100,6 +48,10 @@
         height: auto;
       }
     }
+    .au-card__fullwidth:first-child {
+      @include AU-space( margin, -2unit -2unit 3unit -2unit );
+      height: auto;
+    }
     .au-card__title {
       @include AU-fontgrid( lg );
       @include AU-space( margin, 0 0 0.875unit 0 );
@@ -114,18 +66,22 @@
         }
       }
     }
-    p {
-      @include AU-fontgrid( xs );
-      @include AU-space( margin, 0 0 1.5unit 0 );
-    }
-    .au-card--line {
-      border-top: 1px solid $AU-color-background-alt-shade-suggestion;
-      width: 100%;
-      @include AU-space( margin, 0 0 1unit 0);
-    }
-    .au-card--date {
-      @include AU-space( margin, auto 0 0 0 );
-      color: $AU-color-foreground-muted-suggestion;
+    footer {
+      @include AU-space( margin-top, auto);
+      .au-card--author_name,
+      .au-card--content_type {
+        @include AU-fontgrid( xs );
+        font-weight: bold;
+        a {
+          color: $AU-color-foreground-text;
+          font-weight: bold;
+        }
+      }
+      .au-card--date {
+        @include AU-fontgrid( xs );
+        @include AU-space( margin-bottom, 1unit );
+        color: $AU-color-foreground-muted-suggestion;
+      }
     }
   }
 }
