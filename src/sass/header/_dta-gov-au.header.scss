@@ -1,6 +1,6 @@
 // Main header styles.
 
-header {
+header[role="banner"] {
   border-bottom: 8px solid $AU-colordark-foreground-action;
   box-shadow: 0 0 5px 0 $AU-color-foreground-border-suggestion;
   position: relative;
