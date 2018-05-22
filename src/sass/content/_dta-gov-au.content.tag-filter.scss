@@ -1,9 +1,14 @@
 // Styles for the tag filter.
-.views-exposed-form {
-  @include AU-space( margin-bottom, 2unit );
-  .js-form-item.js-form-type-select {
 
-  }
-  .form-actions {
+.block-facet--checkbox {
+  .facets-widget-checkbox {
+    .item-list__checkbox {
+      column-count: 3;
+      column-width: 33%;
+      li {
+        display: block;
+        @include AU-space( margin-top, 0unit );
+      }
+    }
   }
 }

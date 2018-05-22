@@ -11,8 +11,6 @@
 
   'use strict';
 
-  console.log('This is the replacement file.');
-
   Drupal.facets = Drupal.facets || {};
   Drupal.behaviors.facetsCheckboxWidget = {
     attach: function (context, settings) {
@@ -47,7 +45,7 @@
       .data('facetsredir', href);
     var label = $('<label class="au-control-input" for="' + id + '">' + description + '</label>');
 
-    // This just prepends the checkbox into the label to rearrange the elements 
+    // This just prepends the checkbox into the label to rearrange the elements
     // slightly.
     $(label).prepend(checkbox);
 
