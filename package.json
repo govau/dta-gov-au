@@ -30,6 +30,7 @@
     "postcss-cli": "^4.1.1"
   },
   "devDependencies": {
+    "@gov.au/control-input": "^2.1.0",
     "browser-sync": "^2.24.1",
     "imagemin-cli": "^3.0.0",
     "npm-run-all": "^4.1.2",

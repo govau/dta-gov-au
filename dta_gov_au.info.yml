@@ -7,6 +7,9 @@ libraries:
   - dta_gov_au/global-styling
 libraries-override:
   dta_uikit_base/global-styling: dta_gov_au/global-styling
+  facets/drupal.facets.checkbox-widget:
+    js:
+      js/checkbox-widget.js: js/checkbox-widget.js
 regions:
   top-bar: Top bar
   header: Header
