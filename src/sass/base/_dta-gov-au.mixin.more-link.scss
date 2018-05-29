@@ -2,10 +2,7 @@
   .more-link {
     @include AU-space( margin, 2unit 0 0 0 );
     @include AU-fontgrid( sm );
-    text-align: center;
-    @include AU-media( sm ) {
-      text-align: $align;
-    }
+    text-align: $align;
     &.au-cta-link {
       a {
         font-weight: normal;
