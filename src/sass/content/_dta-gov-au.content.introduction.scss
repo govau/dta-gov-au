@@ -2,9 +2,6 @@
 
 .au-introduction {
   @include AU-space( margin-bottom, 2unit );
-  p {
-    @include AU-fontgrid( lg );
-    color: $AU-color-foreground-muted-suggestion;
-    max-width: $AU-maxwidth;
-  }
+  @include AU-fontgrid( lg );
+  color: $AU-color-foreground-muted-suggestion;
 }
