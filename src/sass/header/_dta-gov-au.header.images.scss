@@ -1,12 +1,13 @@
 // Image styles for the header.
 a[rel="home"] {
   border: none;
+  display: block;
+  @include AU-space( margin-bottom, 2.5unit );
   &:focus {
     @include AU-outline;
   }
 }
 img.site-logo {
-  @include AU-space( margin-bottom, 2.5unit );
   @include AU-space( max-width, 18.75unit );
   border: none;
 }
