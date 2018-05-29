@@ -3604,19 +3604,13 @@ body {
       margin-bottom: 2.5rem; } }
   @media (min-width: 992px) {
     .page-front #back-to-top {
-      margin-bottom: 78px;
-      margin-bottom: 4.875rem; } }
+      margin-bottom: 80px;
+      margin-bottom: 5rem; } }
   .page-front #back-to-top a {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1;
-    color: #007099;
-    font-weight: bold; }
-    @media (min-width: 992px) {
-      .page-front #back-to-top a {
-        font-size: 20px;
-        font-size: 1.25rem;
-        line-height: 1; } }
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #007099; }
     .page-front #back-to-top a:after {
       content: '\02191';
       background-image: none; }
