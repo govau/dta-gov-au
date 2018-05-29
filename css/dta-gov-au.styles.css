@@ -2732,36 +2732,21 @@ body {
 
 form#search-api-page-block-form,
 form.search-api-page-block-form {
-  display: table; }
-  @supports (display: flex) {
-    form#search-api-page-block-form,
-    form.search-api-page-block-form {
-      max-width: 90%;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-flex-direction: row;
-      flex-direction: row; } }
+  display: table;
+  width: 100%;
+  text-align: right; }
   form#search-api-page-block-form .form-item-keys,
   form.search-api-page-block-form .form-item-keys {
     display: table-cell;
-    width: auto; }
-    @supports (display: flex) {
-      form#search-api-page-block-form .form-item-keys,
-      form.search-api-page-block-form .form-item-keys {
-        display: block;
-        width: 100%;
-        flex: 1 1 100%; } }
+    vertical-align: top;
+    text-align: right; }
   form#search-api-page-block-form .form-wrapper,
   form.search-api-page-block-form .form-wrapper {
     display: table-cell;
     vertical-align: top;
-    width: 1em; }
-    @supports (display: flex) {
-      form#search-api-page-block-form .form-wrapper,
-      form.search-api-page-block-form .form-wrapper {
-        display: block;
-        width: auto;
-        flex: 0; } }
+    text-align: right;
+    width: 82px;
+    width: 5.125rem; }
   form#search-api-page-block-form .form-text,
   form#search-api-page-block-form .button,
   form.search-api-page-block-form .form-text,
@@ -2775,7 +2760,7 @@ form.search-api-page-block-form {
     color: #313131;
     display: block;
     width: 100%;
-    margin: 0;
+    margin: 0 0 0 auto;
     padding: 0; }
     .search-api-page-block-form-wrapper form#search-api-page-block-form .form-text, .search-api-page-block-form-wrapper
     form#search-api-page-block-form .button, .search-api-page-block-form-wrapper
@@ -2807,8 +2792,7 @@ form.search-api-page-block-form {
     padding: 0.8rem 2rem 0.8rem 1rem;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    background-color: #ffffff;
-    box-sizing: border-box; }
+    background-color: #ffffff; }
     @media (min-width: 768px) {
       form#search-api-page-block-form .form-text,
       form.search-api-page-block-form .form-text {
@@ -3336,10 +3320,7 @@ body {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5;
-    text-align: center; }
-    @media (min-width: 768px) {
-      .page-front #top-content .more-link {
-        text-align: right; } }
+    text-align: right; }
     .page-front #top-content .more-link.au-cta-link a {
       font-weight: normal;
       color: #007099; }
@@ -3406,10 +3387,7 @@ body {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5;
-    text-align: center; }
-    @media (min-width: 768px) {
-      .page-front #mid-top-content .more-link {
-        text-align: right; } }
+    text-align: right; }
     .page-front #mid-top-content .more-link.au-cta-link a {
       font-weight: normal;
       color: #007099; }
@@ -3555,10 +3533,7 @@ body {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5;
-    text-align: center; }
-    @media (min-width: 768px) {
-      .page-front #bottom-content .more-link {
-        text-align: right; } }
+    text-align: right; }
     .page-front #bottom-content .more-link.au-cta-link a {
       font-weight: normal;
       color: #007099; }
@@ -4160,7 +4135,7 @@ header #block-mainnavigation-4 .chosen-container.chosen-container-multi.au-selec
       header #block-mainnavigation-4 ul.au-link-list li:last-of-type,
       header #block-mainnavigation-4 .chosen-container.chosen-container-multi.au-select .chosen-drop ul.chosen-results li:last-of-type,
       .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-4 ul.chosen-results li:last-of-type {
-        margin-left: auto; }
+        margin: 0 0 0 auto; }
       header #block-mainnavigation-2 ul.au-link-list li a, header #block-mainnavigation-2 .chosen-container.chosen-container-multi.au-select .chosen-drop ul.chosen-results li a, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2 ul.chosen-results li a,
       header #block-mainnavigation-4 ul.au-link-list li a,
       header #block-mainnavigation-4 .chosen-container.chosen-container-multi.au-select .chosen-drop ul.chosen-results li a,
