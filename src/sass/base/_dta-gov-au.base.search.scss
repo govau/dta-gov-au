@@ -3,37 +3,23 @@
 form#search-api-page-block-form,
 form.search-api-page-block-form {
   display: table;
-  @supports(display: flex) {
-    max-width: 90%; // To resolve an apparent flexbox bug in safari.
-    display: -webkit-flex;
-   display: flex;
-   -webkit-flex-direction: row;
-   flex-direction: row;
-  }
-  // TODO: Need a better way of referencing these elements. The form needs to be
-  // updated via theme hooks and so on.
+  width: 100%;
+  text-align: right;
+
 
   // This is the text input wrapper.
   .form-item-keys {
     display: table-cell;
-    width: auto;
-    @supports(display: flex) {
-      display: block;
-      width: 100%;
-      flex: 1 1 100%;
-    }
+    vertical-align: top;
+    text-align: right;
   }
 
   // This is the button wrapper.
   .form-wrapper {
     display: table-cell;
     vertical-align: top;
-    width:1em;
-    @supports(display: flex) {
-      display: block;
-      width: auto;
-      flex: 0;
-    }
+    text-align: right;
+    @include AU-space( width, 5.125unit );
   }
   .form-text,
   .button {
@@ -50,7 +36,7 @@ form.search-api-page-block-form {
     color: $AU-color-foreground-text;
     display: block;
     width: 100%;
-    margin: 0;
+    @include AU-space( margin, 0 0 0 auto);
     padding: 0;
     &.form-autocomplete {
       background-position: right 0.5rem center;
@@ -68,7 +54,6 @@ form.search-api-page-block-form {
     @include AU-space( border-top-right-radius, 0 );
     @include AU-space( border-bottom-right-radius, 0 );
     background-color: $AU-color-foreground-background;
-    box-sizing: border-box;
     &::placeholder {
       color: $AU-color-foreground-muted-suggestion;
       opacity: 1;

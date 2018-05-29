@@ -52,7 +52,7 @@
           @include AU-space( margin, 0 3unit 0 0 );
         }
         &:last-of-type {
-          margin-left: auto;
+          @include AU-space( margin, 0 0 0 auto );
         }
         a {
           display: block;

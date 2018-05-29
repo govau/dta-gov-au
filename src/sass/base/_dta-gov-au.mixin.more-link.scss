@@ -1,13 +1,11 @@
 @mixin more-link( $color:$AU-color-foreground-action, $align:right ) {
   .more-link {
-    @include AU-space( margin, 0 );
-    text-align: center;
-    @include AU-media( sm ) {
-      text-align: $align;
-      @include AU-space( padding-right, 2unit );
-    }
+    @include AU-space( margin, 2unit 0 0 0 );
+    @include AU-fontgrid( sm );
+    text-align: $align;
     &.au-cta-link {
       a {
+        font-weight: normal;
         color: $color;
         &:after {
           @include AU-space( margin-left, 0.5625unit );

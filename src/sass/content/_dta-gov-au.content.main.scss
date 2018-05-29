@@ -5,13 +5,6 @@ h1 {
   @include AU-space( margin-top, 2unit );
 }
 
-h1, h4 {
-  font-weight: bold;
-}
-h2, h3 {
-  font-weight: normal;
-}
-
 .introduction {
   @include AU-space( margin-bottom, 6unit );
 }
