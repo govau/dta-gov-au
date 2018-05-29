@@ -2,16 +2,8 @@
 
 #contact-module,
 .au-media-contact {
-  background-color: $AU-color-background-shade-suggestion;
   @include AU-space( margin-top, 2unit );
-  @include AU-space( margin-right, 0unit );
-  @include AU-media( lg ) {
-    @include AU-space( margin-right, 2unit );
-  }
-
-  @include AU-space( padding, 1.5unit );
   h2 {
-    @include AU-fontgrid( xl );
     @include AU-space( margin-bottom, 1.5unit );
   }
 }
