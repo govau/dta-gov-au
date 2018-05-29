@@ -158,10 +158,25 @@ a.au-card {
 	li {
 		list-style: none;
 		@include AU-space( padding, 0);
-		@include AU-space( padding-bottom, 0);
-		@include AU-space( margin, 0 );
 		@include AU-media( sm ) {
 			@include AU-space( padding, 0 2.5unit );
+		}
+		&.col-xs-12 {
+			@include AU-space( padding, 0 );
+		}
+
+		@include AU-media( sm ) {
+			// Remove right margin from stuff on the right.
+			&:nth-child(3n) {
+				@include AU-space( padding-right, 0);
+				@include AU-space( padding-left, 1.5unit);
+			}
+
+			// Remove left margin from stuff on the left.
+			&:nth-child(3n+1) {
+				@include AU-space( padding-left, 0);
+				@include AU-space( padding-right, 1.5unit);
+			}
 		}
 	}
 
@@ -183,19 +198,8 @@ a.au-card {
 			@supports( display: flex ) {
 				display: flex;
 			}
-			// Hack to fix uneven card sizes on IE9+10..
-			// :root & {
-			// 	min-height: 520px\9;
-			// }
+			@include AU-space( margin-top, 0.5unit );
 		}
-		li {
-			@include AU-space( padding, 0 );
-			@include AU-media( sm ) {
-				@include AU-space( padding, 0 0.75unit );
-			}
-			@include AU-space( margin, 0 );
-		}
-
 		.au-card {
 			display:flex;
 			flex-direction: column;
