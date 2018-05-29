@@ -3556,17 +3556,15 @@ body {
     padding: 0rem;
     max-width: 376px;
     max-width: 23.5rem;
-    min-height: 560px;
-    min-height: 35rem; }
+    min-height: 488px;
+    min-height: 30.5rem; }
     @media (min-width: 768px) {
       .page-front #bottom-content .au-card-list > li {
         padding: 0 12px;
         padding: 0 0.75rem; } }
   .page-front #bottom-content .au-card {
     padding: 32px;
-    padding: 2rem;
-    min-height: 488px;
-    min-height: 30.5rem; }
+    padding: 2rem; }
     .page-front #bottom-content .au-card.au-cta-link {
       margin: 0; }
       .page-front #bottom-content .au-card.au-cta-link:after {
@@ -3604,13 +3602,7 @@ body {
     .page-front #bottom-content .au-card .au-card__title {
       font-size: 24px;
       font-size: 1.5rem;
-      line-height: 1.5;
-      margin: 0 0 14px 0;
-      margin: 0 0 0.875rem 0; }
-      @media (min-width: 992px) {
-        .page-front #bottom-content .au-card .au-card__title {
-          margin: 0 0 38px 0;
-          margin: 0 0 2.375rem 0; } }
+      line-height: 1.5; }
       .page-front #bottom-content .au-card .au-card__title a {
         color: #007099;
         text-decoration: underline; }
@@ -3824,17 +3816,15 @@ main[role="main"].page-content {
       padding: 0rem;
       max-width: 376px;
       max-width: 23.5rem;
-      min-height: 560px;
-      min-height: 35rem; }
+      min-height: 488px;
+      min-height: 30.5rem; }
       @media (min-width: 768px) {
         main[role="main"].page-content .au-cards--blogs-news .au-card-list > li {
           padding: 0 12px;
           padding: 0 0.75rem; } }
     main[role="main"].page-content .au-cards--blogs-news .au-card {
       padding: 32px;
-      padding: 2rem;
-      min-height: 488px;
-      min-height: 30.5rem; }
+      padding: 2rem; }
       main[role="main"].page-content .au-cards--blogs-news .au-card.au-cta-link {
         margin: 0; }
         main[role="main"].page-content .au-cards--blogs-news .au-card.au-cta-link:after {
@@ -3872,13 +3862,7 @@ main[role="main"].page-content {
       main[role="main"].page-content .au-cards--blogs-news .au-card .au-card__title {
         font-size: 24px;
         font-size: 1.5rem;
-        line-height: 1.5;
-        margin: 0 0 14px 0;
-        margin: 0 0 0.875rem 0; }
-        @media (min-width: 992px) {
-          main[role="main"].page-content .au-cards--blogs-news .au-card .au-card__title {
-            margin: 0 0 38px 0;
-            margin: 0 0 2.375rem 0; } }
+        line-height: 1.5; }
         main[role="main"].page-content .au-cards--blogs-news .au-card .au-card__title a {
           color: #007099;
           text-decoration: underline; }
