@@ -3,7 +3,7 @@
 #social-media {
   h2 {
     font-weight: normal;
-    @include AU-fontgrid( md, nospace );
+    @include AU-fontgrid( md );
     @include AU-space( margin-bottom, 1.5unit );
     @include AU-media( sm ) {
       @include AU-space( margin-top, 6.875unit );
@@ -11,7 +11,7 @@
   }
   .au-link-list {
     li {
-      @include AU-space( margin-bottom, 1.5unit );
+      @include AU-space( margin-bottom, 0.5unit );
     }
     a {
       @include AU-space( padding-left, 2.5unit );

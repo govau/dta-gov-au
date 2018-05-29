@@ -4208,7 +4208,7 @@ footer #social-media h2 {
   font-weight: normal;
   font-size: 20px;
   font-size: 1.25rem;
-  line-height: 1;
+  line-height: 1.6;
   margin-bottom: 24px;
   margin-bottom: 1.5rem; }
   @media (min-width: 768px) {
@@ -4217,8 +4217,8 @@ footer #social-media h2 {
       margin-top: 6.875rem; } }
 
 footer #social-media .au-link-list li, footer #social-media .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results li, .chosen-container.chosen-container-multi.au-select .chosen-drop footer #social-media .chosen-results li {
-  margin-bottom: 24px;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem; }
 
 footer #social-media .au-link-list a, footer #social-media .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results a, .chosen-container.chosen-container-multi.au-select .chosen-drop footer #social-media .chosen-results a {
   padding-left: 40px;
