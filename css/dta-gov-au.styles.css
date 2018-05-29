@@ -3331,14 +3331,17 @@ body {
   margin-bottom: 40px;
   margin-bottom: 2.5rem; }
   .page-front #top-content .more-link {
-    margin: 0;
+    margin: 32px 0 0 0;
+    margin: 2rem 0 0 0;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
     text-align: center; }
     @media (min-width: 768px) {
       .page-front #top-content .more-link {
-        text-align: right;
-        padding-right: 32px;
-        padding-right: 2rem; } }
+        text-align: right; } }
     .page-front #top-content .more-link.au-cta-link a {
+      font-weight: normal;
       color: #007099; }
       .page-front #top-content .more-link.au-cta-link a:after {
         margin-left: 9px;
@@ -3398,14 +3401,17 @@ body {
   padding-top: 0px;
   padding-top: 0rem; }
   .page-front #mid-top-content .more-link {
-    margin: 0;
+    margin: 32px 0 0 0;
+    margin: 2rem 0 0 0;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
     text-align: center; }
     @media (min-width: 768px) {
       .page-front #mid-top-content .more-link {
-        text-align: right;
-        padding-right: 32px;
-        padding-right: 2rem; } }
+        text-align: right; } }
     .page-front #mid-top-content .more-link.au-cta-link a {
+      font-weight: normal;
       color: #007099; }
       .page-front #mid-top-content .more-link.au-cta-link a:after {
         margin-left: 9px;
@@ -3544,14 +3550,17 @@ body {
         margin-bottom: 80px;
         margin-bottom: 5rem; } }
   .page-front #bottom-content .more-link {
-    margin: 0;
+    margin: 32px 0 0 0;
+    margin: 2rem 0 0 0;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
     text-align: center; }
     @media (min-width: 768px) {
       .page-front #bottom-content .more-link {
-        text-align: right;
-        padding-right: 32px;
-        padding-right: 2rem; } }
+        text-align: right; } }
     .page-front #bottom-content .more-link.au-cta-link a {
+      font-weight: normal;
       color: #007099; }
       .page-front #bottom-content .more-link.au-cta-link a:after {
         margin-left: 9px;
