@@ -3744,13 +3744,11 @@ main[role="main"].page-content {
     margin-bottom: 1rem; }
   main[role="main"].page-content .au-introduction {
     margin-bottom: 32px;
-    margin-bottom: 2rem; }
-    main[role="main"].page-content .au-introduction p {
-      font-size: 24px;
-      font-size: 1.5rem;
-      line-height: 1.5;
-      color: #636363;
-      max-width: 42em; }
+    margin-bottom: 2rem;
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #636363; }
   main[role="main"].page-content .au-hero img {
     margin-bottom: 16px;
     margin-bottom: 1rem; }
