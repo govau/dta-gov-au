@@ -43,12 +43,7 @@
 * @see template_preprocess_page()
 * @see html.html.twig
 */
-
-/**
-* This is the version of the header used off the home page. It does not include the branding element and the search bar is in a different location.
 #}
-
-{% set header_class = is_front ? '' : 'au-header__content' %}
 
 <header role="banner" class="au-header au-header--hero au-header--dark au-header--alt {{ header_class }}">
   <div class="container-fluid">
@@ -59,7 +54,7 @@
             <img class="au-responsive-media-img site-logo" src="{{ base_path ~ directory }}/logo.svg" alt="{{ 'Home'|t }}" data-fallback="{{ base_path ~ directory }}/logo.png" />
           </a>
           <h1 class="au-header--heading visually-hidden">Digital Transformation Agency</h1>
-          <h2 {% if header_class %}class="{{ header_class ~ '--heading' }}"{% endif %}>Simple, clear and fast {% if is_front %}<br />{% endif %}public services&nbsp;<span class="au-badge beta">beta</span></h2>
+          <h2>Simple, clear and fast {% if is_front %}<br />{% endif %}public services&nbsp;<span class="au-badge beta">beta</span></h2>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-3">
           {{ drupal_block('searchapipagesearchblockform') }}
