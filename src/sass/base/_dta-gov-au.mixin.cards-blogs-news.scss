@@ -9,7 +9,7 @@
       @include AU-space( margin, 0 auto 2unit auto );
       @include AU-space( padding, 0unit );
       @include AU-space( max-width, 23.5unit );
-      @include AU-space( min-height, 35unit );
+      @include AU-space( min-height, 30.5unit );
       @include AU-media( sm ) {
         @include AU-space( padding, 0 0.75unit)
       }
@@ -17,7 +17,6 @@
   }
   .au-card {
     @include AU-space( padding, 2unit );
-    @include AU-space( min-height, 30.5unit );
     &.au-cta-link {
       @include AU-space( margin, 0 );
       &:after {
@@ -54,10 +53,6 @@
     }
     .au-card__title {
       @include AU-fontgrid( lg );
-      @include AU-space( margin, 0 0 0.875unit 0 );
-      @include AU-media ( md ) {
-        @include AU-space( margin, 0 0 2.375unit 0 );
-      }
       a {
         color: $AU-color-foreground-action;
         text-decoration: underline;
