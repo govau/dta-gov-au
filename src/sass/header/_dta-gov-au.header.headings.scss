@@ -4,6 +4,7 @@ h2 {
   @include AU-space( margin, 0 0 3unit 0 );
   @include AU-fontgrid( xxl );
   white-space: normal;
+  color: $AU-colordark-foreground-action;
   @include AU-media( sm ) {
     white-space: nowrap;
   }
@@ -13,12 +14,4 @@ h2 {
       display: inline;
     }
   }
-  &.au-header__content--heading  {
-    @include AU-fontgrid( xl );
-    white-space: normal;
-    @include AU-media( sm ) {
-      white-space: nowrap;
-    }
-  }
-  color: $AU-colordark-foreground-action;
 }

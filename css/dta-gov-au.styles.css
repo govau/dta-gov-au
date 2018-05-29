@@ -3700,14 +3700,6 @@ header[role="banner"] {
       @media (min-width: 768px) {
         header[role="banner"] h2 br {
           display: inline; } }
-    header[role="banner"] h2.au-header__content--heading {
-      font-size: 32px;
-      font-size: 2rem;
-      line-height: 1.5;
-      white-space: normal; }
-      @media (min-width: 768px) {
-        header[role="banner"] h2.au-header__content--heading {
-          white-space: nowrap; } }
   header[role="banner"] .au-badge {
     border: 1px solid #ffffff;
     border-radius: 11px;
