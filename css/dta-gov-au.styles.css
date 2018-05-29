@@ -3438,14 +3438,10 @@ body {
 
 .page-front #mid-bottom-content {
   background-image: none; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .page-front #mid-bottom-content {
       background-image: url("../images/mid-bottom-bg.png");
       background-repeat: no-repeat;
-      background-size: 158%;
-      background-position: -22% center; } }
-  @media (min-width: 992px) {
-    .page-front #mid-bottom-content {
       background-size: 130%;
       background-position: -40%; } }
   @media (min-width: 1200px) {
@@ -3459,55 +3455,25 @@ body {
     font-size: 32px;
     font-size: 2rem;
     line-height: 1.5;
-    margin-bottom: 32px;
-    margin-bottom: 2rem;
     margin-top: 64px;
     margin-top: 4rem; }
-    @media (min-width: 768px) {
-      .page-front #mid-bottom-content h2 {
-        font-size: 24px;
-        font-size: 1.5rem;
-        line-height: 1.5;
-        margin-top: 80px;
-        margin-top: 5rem;
-        margin-bottom: 40px;
-        margin-bottom: 2.5rem; } }
-    @media (min-width: 992px) {
-      .page-front #mid-bottom-content h2 {
-        font-size: 32px;
-        font-size: 2rem;
-        line-height: 1.5;
-        margin-bottom: 24px;
-        margin-bottom: 1.5rem; } }
   .page-front #mid-bottom-content p {
-    margin-right: 32px;
-    margin-right: 2rem;
+    margin-top: 20px;
+    margin-top: 1.25rem;
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.6; }
-    @media (min-width: 768px) {
-      .page-front #mid-bottom-content p {
-        font-size: 16px;
-        font-size: 1rem;
-        line-height: 1.5; } }
     @media (min-width: 992px) {
       .page-front #mid-bottom-content p {
-        font-size: 20px;
-        font-size: 1.25rem;
-        line-height: 1.6; } }
+        margin-right: 32px;
+        margin-right: 2rem; } }
     .page-front #mid-bottom-content p:last-child {
       margin-top: 0; }
   .page-front #mid-bottom-content .au-btn, .page-front #mid-bottom-content .chosen-container.chosen-container-multi.au-select li.search-choice, .chosen-container.chosen-container-multi.au-select .page-front #mid-bottom-content li.search-choice, .page-front #mid-bottom-content .au-text-input[value="Reset"], .page-front #mid-bottom-content .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[value="Reset"][type="text"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field .page-front #mid-bottom-content input[value="Reset"][type="text"] {
-    margin-top: 32px;
-    margin-top: 2rem;
-    margin-bottom: 64px;
-    margin-bottom: 4rem; }
-    @media (min-width: 768px) {
-      .page-front #mid-bottom-content .au-btn, .page-front #mid-bottom-content .chosen-container.chosen-container-multi.au-select li.search-choice, .chosen-container.chosen-container-multi.au-select .page-front #mid-bottom-content li.search-choice, .page-front #mid-bottom-content .au-text-input[value="Reset"], .page-front #mid-bottom-content .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field input[value="Reset"][type="text"], .chosen-container.chosen-container-multi.au-select .chosen-choices li.search-field .page-front #mid-bottom-content input[value="Reset"][type="text"] {
-        margin-top: 64px;
-        margin-top: 4rem;
-        margin-bottom: 80px;
-        margin-bottom: 5rem; } }
+    margin-top: 64px;
+    margin-top: 4rem;
+    margin-bottom: 80px;
+    margin-bottom: 5rem; }
 
 .page-front #bottom-content {
   padding: 40px 0;
