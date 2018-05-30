@@ -3,13 +3,7 @@
   &:focus {
     @include AU-outline;
   }
-  @include AU-space( margin, 2unit 0unit 2.5unit -0.5unit );
-  @include AU-media( sm ) {
-    @include AU-space( margin, 6.875unit 0unit 0unit -0.25unit );
-  }
-  @include AU-media( md ) {
-    @include AU-space( margin-left, 0unit );
-  }
+  @include AU-space( margin, 0unit 0unit 2.5unit -0.5unit );
   .au-site-logo {
     @include AU-space( max-height, 3unit );
     border: none;
