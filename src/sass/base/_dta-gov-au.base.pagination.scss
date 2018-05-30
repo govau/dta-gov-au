@@ -2,4 +2,7 @@
 
 .au-pagination {
   text-align: center;
+  .pager__item.is-active {
+    font-weight: bold;
+  }
 }
