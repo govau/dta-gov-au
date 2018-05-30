@@ -4,7 +4,6 @@
   @include AU-space( margin-bottom, 2.5unit );
   @include AU-media( sm ) {
     @include AU-space( margin-bottom, 1.625unit );
-    @include AU-space( margin-top, 6.875unit );
   }
   .au-link-list {
     li {
