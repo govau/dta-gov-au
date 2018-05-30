@@ -194,15 +194,20 @@ a.au-card {
 		}
 
 		li, article {
+			@include AU-space( margin-top, 0.5unit );
 			display: table-cell;
 			@supports( display: flex ) {
 				display: flex;
 			}
-			@include AU-space( margin-top, 0.5unit );
 		}
 		.au-card {
-			display:flex;
-			flex-direction: column;
+			@include AU-media( sm ) {
+				@include AU-space( min-height, 17unit );
+			}
+			@supports( display: flex ) {
+				display:flex;
+				flex-direction: column;
+			}
 		}
 
 		.au-card__stretch {
