@@ -1,11 +1,13 @@
 // Styles for cards on level 2 landing pages.
 #related-links-block {
-  @include AU-space( margin-top, 3unit );
   h2 {
     @include AU-space( margin-bottom, 1.5unit );
   }
 }
 .au-landing-page-level-2-cards {
+  .au-card-list.au-card-list--matchheight .au-card {
+    @include AU-space( min-height, 13unit );
+  }
   .au-card {
     @include AU-space( padding, 1unit );
     .au-card__title {
