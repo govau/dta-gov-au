@@ -11,7 +11,7 @@ nav.au-inpage-nav-links {
     }
   }
   .au-link-list > li {
-    @include AU-space( margin-top, 1.5unit );
+    @include AU-space( margin-top, 0.5unit );
     @include AU-fontgrid( sm );
   }
 }

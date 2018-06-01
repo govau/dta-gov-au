@@ -3725,8 +3725,8 @@ main[role="main"].page-content {
           font-size: 1rem;
           line-height: 1.5; } }
     main[role="main"].page-content nav.au-inpage-nav-links .au-link-list > li, main[role="main"].page-content nav.au-inpage-nav-links .chosen-container.chosen-container-multi.au-select .chosen-drop .chosen-results > li, .chosen-container.chosen-container-multi.au-select .chosen-drop main[role="main"].page-content nav.au-inpage-nav-links .chosen-results > li {
-      margin-top: 24px;
-      margin-top: 1.5rem;
+      margin-top: 8px;
+      margin-top: 0.5rem;
       font-size: 16px;
       font-size: 1rem;
       line-height: 1.5; }
