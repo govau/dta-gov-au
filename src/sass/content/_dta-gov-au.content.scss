@@ -4,9 +4,11 @@ main[role="main"].page-content {
   @include AU-space( padding-bottom, 5unit );
   .au-body {
     @include AU-fontgrid( sm );
+    @include AU-space( margin-top, 2unit );
   }
   @import "dta-gov-au.content.breadcrumbs";
-  @import "dta-gov-au.content.main";
+  @import "dta-gov-au.content.heading";
+  @import "dta-gov-au.content.inpage-nav";
   @import "dta-gov-au.content.back-to-top";
   @import "dta-gov-au.content.primary-tabs";
   @import "dta-gov-au.content.author-date";

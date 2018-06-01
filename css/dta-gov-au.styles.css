@@ -3686,7 +3686,9 @@ main[role="main"].page-content {
   main[role="main"].page-content .au-body, main[role="main"].page-content #off-canvas {
     font-size: 16px;
     font-size: 1rem;
-    line-height: 1.5; }
+    line-height: 1.5;
+    margin-top: 32px;
+    margin-top: 2rem; }
   main[role="main"].page-content .au-breadcrumbs {
     display: none;
     visibility: hidden; }
@@ -3705,11 +3707,7 @@ main[role="main"].page-content {
     font-size: 40px;
     font-size: 2.5rem;
     line-height: 1.5;
-    margin-top: 32px;
-    margin-top: 2rem; }
-  main[role="main"].page-content .introduction {
-    margin-bottom: 96px;
-    margin-bottom: 6rem; }
+    line-height: 1.25; }
   main[role="main"].page-content nav.au-inpage-nav-links {
     margin: 48px 0;
     margin: 3rem 0;

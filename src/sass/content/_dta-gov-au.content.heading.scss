@@ -1,0 +1,6 @@
+// Styles for the 'main' content area (ie the body)
+
+h1 {
+  @include AU-fontgrid( xxl );
+  line-height: 1.25;
+}
