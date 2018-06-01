@@ -3,7 +3,12 @@
 h1 {
   @include AU-fontgrid( xxl );
   line-height: 1.25;
-  + div {
-    margin-top: 1.5rem;
+  + div,
+  + h2 {
+    @include AU-space( margin-top, 1.5unit );
   }
+}
+
+h2 {
+  @include AU-space( margin-top, 3unit );
 }
