@@ -8,6 +8,12 @@
       &:first-child {
         border-top: 1px solid $AU-colordark-foreground-border-suggestion;
       }
+      &.active-trail {
+        a {
+          color: $AU-colordark-foreground-text !important;
+          text-decoration: none;
+        }
+      }
       a {
         color: $AU-colordark-foreground-action;
         @include AU-space( padding-left, 0.75unit );

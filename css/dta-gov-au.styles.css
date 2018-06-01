@@ -3979,6 +3979,12 @@ header #block-mainnavigation-4 .chosen-container.chosen-container-multi.au-selec
     header #block-mainnavigation-4 .chosen-container.chosen-container-multi.au-select .chosen-drop ul.chosen-results li:first-child,
     .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-4 ul.chosen-results li:first-child {
       border-top: 1px solid #8c8c8c; }
+    header #block-mainnavigation-2 ul.au-link-list li.active-trail a, header #block-mainnavigation-2 .chosen-container.chosen-container-multi.au-select .chosen-drop ul.chosen-results li.active-trail a, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2 ul.chosen-results li.active-trail a,
+    header #block-mainnavigation-4 ul.au-link-list li.active-trail a,
+    header #block-mainnavigation-4 .chosen-container.chosen-container-multi.au-select .chosen-drop ul.chosen-results li.active-trail a,
+    .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-4 ul.chosen-results li.active-trail a {
+      color: #ffffff !important;
+      text-decoration: none; }
     header #block-mainnavigation-2 ul.au-link-list li a, header #block-mainnavigation-2 .chosen-container.chosen-container-multi.au-select .chosen-drop ul.chosen-results li a, .chosen-container.chosen-container-multi.au-select .chosen-drop header #block-mainnavigation-2 ul.chosen-results li a,
     header #block-mainnavigation-4 ul.au-link-list li a,
     header #block-mainnavigation-4 .chosen-container.chosen-container-multi.au-select .chosen-drop ul.chosen-results li a,
