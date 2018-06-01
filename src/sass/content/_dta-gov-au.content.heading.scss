@@ -3,4 +3,7 @@
 h1 {
   @include AU-fontgrid( xxl );
   line-height: 1.25;
+  + div {
+    margin-top: 1.5rem;
+  }
 }
