@@ -33,50 +33,22 @@ nav[role="navigation"] {
       }
     }
 
-    // Took this out because we moved all the menu items up a level, so this
-    // top level design wasn't needed. Keeping it for posterity.
-    //
-    // &.menu-level-0 {
-    //   > li {
-    //     // Menu level 0 (root)
-    //     border: none;
-    //     > a {
-    //       // The root 'title' of each menu section.
-    //       @include AU-fontgrid( md );
-    //       @include AU-space( margin-left, 1unit );
-    //       @include AU-space( padding, 1unit 0.5unit 1unit 1unit);
-    //       border-top: 1px solid $AU-color-foreground-border-suggestion;
-    //       font-weight: bold;
-    //       color: $AU-color-foreground-text;
-    //       border-left: none;
-    //       &:hover {
-    //         border-left: none;
-    //       }
-    //       &:first-child {
-    //         border-top: none;
-    //       }
-    //       &.is-active {
-    //         color: $AU-color-foreground-background;
-    //       }
-    //     }
-    //   }
-    // }
     &.menu-level-0 {
       // Menu level 1
       // This is the border for the entire menu tree.
       border-left: 8px solid $AU-color-background-shade-suggestion;
       > li {
         // This is the only time this is needed.
-        @include AU-space( margin-left, 0.5unit );
+        //@include AU-space( margin-left, 0.5unit );
         > a {
-          @include AU-space( padding, 1unit 0.5unit 1unit 2unit );
-          @include AU-space( margin-left, -1.5unit );
+          @include AU-space( padding, 1unit 0.5unit 1unit 1.5unit );
+          @include AU-space( margin-left, -0.5unit );
           &:hover {
-            @include AU-space( margin-left, -1unit );
+            @include AU-space( margin-left, -0.5unit );
             @include AU-space( padding-left, 1.5unit );
           }
           &.is-active {
-            @include AU-space( margin-left, -1unit );
+            //@include AU-space( margin-left, -1unit );
             @include AU-space( padding-left, 1.5unit );
           }
         }
@@ -89,8 +61,8 @@ nav[role="navigation"] {
           font-weight: bold;
         }
         > a {
-          @include AU-space( padding, 1unit 0.5unit 1unit 2.5unit );
-          @include AU-space( margin-left, -1unit );
+          @include AU-space( padding, 1unit 0.5unit 1unit 3unit );
+          @include AU-space( margin-left, -0.5unit );
           &.is-active {
             @include AU-space( padding-left, 3unit);
           }
@@ -101,8 +73,8 @@ nav[role="navigation"] {
       // Menu level 3
       > li {
         > a {
-          @include AU-space( padding, 1unit 0.5unit 1unit 3.5unit );
-          @include AU-space( margin-left, -1unit );
+          @include AU-space( padding, 1unit 0.5unit 1unit 4unit );
+          @include AU-space( margin-left, -0.5unit );
           &.is-active {
             @include AU-space( padding-left, 4unit );
           }
@@ -113,8 +85,8 @@ nav[role="navigation"] {
       // Menu level 4!
       > li {
         > a {
-          @include AU-space( padding, 1unit 0.5unit 1unit 4.5unit );
-          @include AU-space( margin-left, -1unit );
+          @include AU-space( padding, 1unit 0.5unit 1unit 5unit );
+          @include AU-space( margin-left, -0.5unit );
           &.is-active {
             @include AU-space( padding-left, 5unit );
           }
