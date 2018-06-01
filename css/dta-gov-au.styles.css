@@ -3222,6 +3222,19 @@ blockquote {
     content: '⇗';
     color: #ffffff; }
 
+#back-to-top {
+  margin: 32px 0px 16px 0px;
+  margin: 2rem 0rem 1rem 0rem;
+  text-align: center; }
+  #back-to-top a {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #007099; }
+    #back-to-top a:after {
+      content: '\02191';
+      background-image: none; }
+
 body {
   margin: 0; }
   body .layout-container {
@@ -3604,27 +3617,6 @@ body {
         margin-bottom: 16px;
         margin-bottom: 1rem;
         color: #636363; }
-
-.page-front #back-to-top {
-  margin-bottom: 48px;
-  margin-bottom: 3rem;
-  text-align: center; }
-  @media (min-width: 768px) {
-    .page-front #back-to-top {
-      margin-bottom: 40px;
-      margin-bottom: 2.5rem; } }
-  @media (min-width: 992px) {
-    .page-front #back-to-top {
-      margin-bottom: 80px;
-      margin-bottom: 5rem; } }
-  .page-front #back-to-top a {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #007099; }
-    .page-front #back-to-top a:after {
-      content: '\02191';
-      background-image: none; }
 
 header[role="banner"] {
   border-bottom: 8px solid #45C2F0;
