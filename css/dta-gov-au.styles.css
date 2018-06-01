@@ -2793,17 +2793,16 @@ ul.ui-menu {
   width: 100%;
   font-weight: normal;
   display: block;
-  max-width: 42em; }
-  @media (min-width: 768px) {
-    .au-card {
-      width: auto; } }
+  box-sizing: border-box; }
   @media (min-width: 992px) {
     .au-card {
       padding: 32px;
       padding: 2rem; } }
   .au-card img,
   .au-card svg {
-    display: block; }
+    display: block;
+    min-width: 100%;
+    height: auto; }
   .au-card * + hr,
   .au-card * + p,
   .au-card * + .au-card__title,
@@ -2972,6 +2971,9 @@ a.au-card {
         flex-wrap: wrap; } }
     .au-card-list.au-card-list--matchheight li, .au-card-list.au-card-list--matchheight article {
       display: table-cell; }
+      @media (min-width: 768px) {
+        .au-card-list.au-card-list--matchheight li, .au-card-list.au-card-list--matchheight article {
+          min-height: 17rem; } }
       @supports (display: flex) {
         .au-card-list.au-card-list--matchheight li, .au-card-list.au-card-list--matchheight article {
           display: flex; } }
@@ -3440,11 +3442,22 @@ body {
   .page-front #bottom-content .au-card-list > li, .page-front #bottom-content .au-card-list article {
     max-width: 376px;
     max-width: 23.5rem;
-    min-height: 432px;
-    min-height: 27rem; }
+    margin: 0 auto 20px auto;
+    margin: 0 auto 1.25rem auto; }
+    @media (min-width: 768px) {
+      .page-front #bottom-content .au-card-list > li, .page-front #bottom-content .au-card-list article {
+        height: 512px;
+        height: 32rem;
+        min-height: 512px;
+        min-height: 32rem; } }
+    @media (min-width: 1200px) {
+      .page-front #bottom-content .au-card-list > li, .page-front #bottom-content .au-card-list article {
+        margin-bottom: 36px;
+        margin-bottom: 2.25rem; } }
   .page-front #bottom-content .au-card {
     padding: 32px;
-    padding: 2rem; }
+    padding: 2rem;
+    box-sizing: border-box; }
     .page-front #bottom-content .au-card.au-cta-link {
       margin: 0; }
       .page-front #bottom-content .au-card.au-cta-link:after {
@@ -3671,11 +3684,22 @@ main[role="main"].page-content {
     main[role="main"].page-content .au-cards--blogs-news .au-card-list > li, main[role="main"].page-content .au-cards--blogs-news .au-card-list article {
       max-width: 376px;
       max-width: 23.5rem;
-      min-height: 432px;
-      min-height: 27rem; }
+      margin: 0 auto 20px auto;
+      margin: 0 auto 1.25rem auto; }
+      @media (min-width: 768px) {
+        main[role="main"].page-content .au-cards--blogs-news .au-card-list > li, main[role="main"].page-content .au-cards--blogs-news .au-card-list article {
+          height: 512px;
+          height: 32rem;
+          min-height: 512px;
+          min-height: 32rem; } }
+      @media (min-width: 1200px) {
+        main[role="main"].page-content .au-cards--blogs-news .au-card-list > li, main[role="main"].page-content .au-cards--blogs-news .au-card-list article {
+          margin-bottom: 36px;
+          margin-bottom: 2.25rem; } }
     main[role="main"].page-content .au-cards--blogs-news .au-card {
       padding: 32px;
-      padding: 2rem; }
+      padding: 2rem;
+      box-sizing: border-box; }
       main[role="main"].page-content .au-cards--blogs-news .au-card.au-cta-link {
         margin: 0; }
         main[role="main"].page-content .au-cards--blogs-news .au-card.au-cta-link:after {
