@@ -5,18 +5,21 @@
     * {
       font-weight: normal;
     }
-    > li {
-      @include AU-space( margin, 0 auto 2unit auto );
-      @include AU-space( padding, 0unit );
+    > li, article {
       @include AU-space( max-width, 23.5unit );
-      @include AU-space( min-height, 30.5unit );
+      @include AU-space( margin, 0 auto 1.25unit auto );
       @include AU-media( sm ) {
-        @include AU-space( padding, 0 0.75unit)
+        @include AU-space( height, 32unit );
+        @include AU-space( min-height, 32unit );
+      }
+      @include AU-media( lg ) {
+        @include AU-space( margin-bottom, 2.25unit );
       }
     }
   }
   .au-card {
     @include AU-space( padding, 2unit );
+    box-sizing: border-box;
     &.au-cta-link {
       @include AU-space( margin, 0 );
       &:after {
@@ -63,6 +66,7 @@
     }
     footer {
       @include AU-space( margin-top, auto);
+      @include AU-space( padding, 0 );
       .au-card--author_name,
       .au-card--content_type {
         @include AU-fontgrid( xs );

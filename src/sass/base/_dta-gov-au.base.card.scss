@@ -1,19 +1,17 @@
 .au-card {
 	@include AU-space( padding, 1.5unit );
-	width: 100%;
-	@include AU-media( sm ) {
-		width: auto;
-	}
 	@include AU-media( md ) {
 		@include AU-space( padding, 2unit );
 	}
+	width: 100%;
   font-weight: normal;
 	display:block;
-	max-width: $AU-maxwidth;
-	//width: 100%; //Removed to solve IE9/10 layout bug in cards.
+	box-sizing: border-box;
 	img,
 	svg {
 		display: block;
+		min-width: 100%;
+		height: auto;
 	}
 
 	// Typographic spacing
@@ -148,6 +146,9 @@ a.au-card {
 
 // Card listing match height
 .au-card-list {
+	// This makes the card lists behave like rows so negative margins are added to
+	// cancel out left and right padding.
+	@extend .row;
 	list-style: none;
 	padding: 0;
 	@include AU-card-cta-link($AU-color-foreground-text, $AU-color-foreground-text);
@@ -157,32 +158,11 @@ a.au-card {
 
 	li {
 		list-style: none;
-		@include AU-space( padding, 0);
-		@include AU-media( sm ) {
-			@include AU-space( padding, 0 2.5unit );
-		}
-		&.col-xs-12 {
-			@include AU-space( padding, 0 );
-		}
-
-		@include AU-media( sm ) {
-			// Remove right margin from stuff on the right.
-			&:nth-child(3n) {
-				@include AU-space( padding-right, 0);
-				@include AU-space( padding-left, 1.5unit);
-			}
-
-			// Remove left margin from stuff on the left.
-			&:nth-child(3n+1) {
-				@include AU-space( padding-left, 0);
-				@include AU-space( padding-right, 1.5unit);
-			}
-		}
 	}
 
 	.au-body & {
 		li {
-			@include AU-space( margin-top, 1.5unit );
+			@include AU-space( margin, 0.75unit 0 );
 		}
 	}
 
@@ -194,8 +174,10 @@ a.au-card {
 		}
 
 		li, article {
-			@include AU-space( margin-top, 0.5unit );
 			display: table-cell;
+			@include AU-media( sm ) {
+				min-height: 17rem;
+			}
 			@supports( display: flex ) {
 				display: flex;
 			}
