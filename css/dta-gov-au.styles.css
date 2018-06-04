@@ -3113,6 +3113,10 @@ blockquote {
       content: '\02191';
       background-image: none; }
 
+.js #recruiterbox .warning {
+  display: none;
+  visibility: hidden; }
+
 body {
   margin: 0; }
   body .layout-container {
