@@ -3117,12 +3117,12 @@ blockquote {
   display: none;
   visibility: hidden; }
 
-img.align-left {
+img.align-left, p.align-left {
   float: left;
   margin: 0 24px 16px 0;
   margin: 0 1.5rem 1rem 0; }
 
-img.align-right {
+img.align-right, p.align-right {
   float: right;
   margin: 0 0 16px 24px;
   margin: 0 0 1rem 1.5rem; }
