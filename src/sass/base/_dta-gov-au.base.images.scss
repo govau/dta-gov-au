@@ -1,6 +1,6 @@
-// Styles for images.
+// Styles for images and paragraphs to make them align left or right.
 
-img {
+img, p {
   &.align-left {
     float: left;
     @include AU-space( margin, 0 1.5unit 1unit 0 );
