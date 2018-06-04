@@ -3119,13 +3119,17 @@ blockquote {
 
 img.align-left, p.align-left {
   float: left;
-  margin: 0 24px 16px 0;
-  margin: 0 1.5rem 1rem 0; }
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  margin-right: 24px;
+  margin-right: 1.5rem; }
 
 img.align-right, p.align-right {
   float: right;
-  margin: 0 0 16px 24px;
-  margin: 0 0 1rem 1.5rem; }
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  margin-left: 24px;
+  margin-left: 1.5rem; }
 
 body {
   margin: 0; }
