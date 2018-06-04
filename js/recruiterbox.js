@@ -101,25 +101,25 @@
   Drupal.behaviors.dtagovauRecruiterbox = {
     attach: function(context, settings) {
 
-      var $root = $('#recruiterbox');
-
-      $($root, context).once('behaviors').addClass('processed', 'unloaded');
-
       // Original version from https://github.com/Recruiterbox/jsapi-client/blob/master/list_opening/list_opening.js.
 
       var list_opening_query_builder = new ListOpeningQueryBuilder('ausdta');
       var query_params = list_opening_query_builder.buildParams();
+      var $root = $('#recruiterbox');
 
-      $.ajax({
-        url: 'https:/jsapi.recruiterbox.com/v1/openings',
-        data: query_params,
-        success: function(response) {
-          $.each(response.objects, function( index, value ) {
-            $root.append(buildHTML( value ));
-          });
-          $root.removeClass('unloaded').addClass('loaded');
-        }
-      });
+      $($root, context).once('dtagovauRecruiterbox').addClass('processed', 'unloaded').each(function() {
+        $.ajax({
+          url: 'https:/jsapi.recruiterbox.com/v1/openings',
+          data: query_params,
+          success: function(response) {
+            console.log(response);
+            $.each(response.objects, function( index, value ) {
+              $root.append(buildHTML( value ));
+            });
+            $root.removeClass('unloaded').addClass('loaded');
+          }
+        });
+      })
     }
   }
 }(jQuery));
