@@ -109,14 +109,16 @@
 
       $($root, context).once('dtagovauRecruiterbox').addClass('processed', 'unloaded').each(function() {
         $.ajax({
-          url: 'https:/jsapi.recruiterbox.com/v1/openings',
+          url: 'https://jsapi.recruiterbox.com/v1/openings',
           data: query_params,
           success: function(response) {
-            console.log(response);
             $.each(response.objects, function( index, value ) {
               $root.append(buildHTML( value ));
             });
             $root.removeClass('unloaded').addClass('loaded');
+          },
+          error: function() {
+            $root.append('<div role="alert" class="au-page-alerts au-page-alerts--info"><p>There was an error retrieving the list of jobs. Please visit our <a href="https://ausdta.recruiterbox.com/">recruitment portal</a> for a full list.</p></div>');
           }
         });
       })
