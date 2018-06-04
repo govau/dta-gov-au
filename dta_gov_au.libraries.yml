@@ -10,3 +10,7 @@ global-styling:
     - core/drupal
     - core/jquery
     - core/jquery.once
+recruiterbox:
+  version: 1.x
+  js:
+    js/recruiterbox.js: {}

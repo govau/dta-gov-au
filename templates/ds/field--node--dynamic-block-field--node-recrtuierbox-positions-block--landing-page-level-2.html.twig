@@ -15,18 +15,17 @@
 
 {#
 /**
- * Block visibility settings don't hold for DS templates, so we have to do this
- * awful, awful thing here.
+ * This is just a block to create an empty div for a script to work on, which is
+ * called via attach_library().
  */
 #}
 
-{% if '/join-our-team' in path('<current>') %}
-  <div class="au-current-vacancies">
-    <h2>{{- label -}}</h2>
 
-    {% for item in items %}
-     {{- item.content -}}
-    {% endfor %}
+{% if '/join-our-team' in path('<current>') %}
+  {{ attach_library('dta_gov_au/recruiterbox') }}
+  <div id="recruiterbox" class="au-current-vacancies" aria-live="polite">
+    <h2>{{- label -}}</h2>
+    <p class="warning">This section requires JavaScript to function correctly. Please visit our <a href="https://ausdta.recruiterbox.com/">recruitment portal</a> to view all open jobs.</p>
   </div>
 
 
