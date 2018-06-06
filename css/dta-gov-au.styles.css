@@ -3794,6 +3794,7 @@ main[role="main"].page-content {
     margin-top: 2rem; }
     main[role="main"].page-content #contact-module h2,
     main[role="main"].page-content .au-media-contact h2 {
+      margin-top: 0;
       margin-bottom: 24px;
       margin-bottom: 1.5rem; }
   main[role="main"].page-content .au-media-contact {
