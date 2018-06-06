@@ -92,13 +92,6 @@ function dta_gov_au_form_search_api_page_block_form_alter(&$form, &$form_state, 
  *
  **/
 
-/* Adds the 'form_element__wrapped' suggestion to checkboxes. */
- function dta_gov_au_theme_suggestions_form_element_alter(&$suggestions, $variables) {
-   if($variables['element']['#type'] == 'checkbox') {
-     $suggestions[] = 'form_element__wrapped';
-   }
- }
-
  /* Adds 'item_list__' suggestion to list items in views. */
  function dta_gov_au_theme_suggestions_item_list_alter(&$suggestions, &$vars) {
    $request['view_id'] = \Drupal::routeMatch()->getRouteObject()->getDefault('view_id');
@@ -109,29 +102,6 @@ function dta_gov_au_form_search_api_page_block_form_alter(&$form, &$form_state, 
      $suggestions[] = 'item_list__' . $request['view_id'] . '__' . $request['display_id'];
    }
  }
-
- /**
-  *
-  * Implements hook_preprocess_HOOK()
-  *
-  * This fiddles about with some elements to make them compatible with UI Kit.
-  *
-  **/
-
-/* Turns the 'wrapped label' setting off for checkboxes. */
-function dta_gov_au_preprocess_input__checkbox(&$variables) {
-  $variables['element']['#wrapped_label'] = TRUE;
-}
-
-/* Updates the label wrapping behaviour for 'wrapped' form elements. */
-function dta_gov_au_preprocess_form_element__wrapped(&$variables) {
-  $variables['label']['#theme'] = 'form_element_label__open';
-  $variables['label_open'] = $variables['label'];
-  unset($variables['label']);
-  $variables['title'] = $variables['element']['#title'];
-}
-
-// Theme functions to add block IDs to menu blocks.
 
 /**
  * Implements hook_preprocess_block().
@@ -156,4 +126,16 @@ function dta_gov_au_theme_suggestions_menu_alter(array &$suggestions, array $var
     $suggestions[] = $variables['theme_hook_original'] . '__' . $hook;
     $suggestions[] = $variables['theme_hook_original'] . '__' . $region . '__' . $hook;
   }
+}
+
+function dta_gov_au_theme_suggestions_views_view_grouping_alter(array &$suggestions, array $variables) {
+  // Adds theme suggestions to the views grouping template.
+  $suggestions[] = $variables['theme_hook_original'] . '__' . $variables['view']->id();
+  $suggestions[] = $variables['theme_hook_original'] . '__grouping_level_' . $variables['grouping_level'];
+  $suggestions[] = $variables['theme_hook_original'] . '__' . $variables['view']->id() . '__grouping_level_' . $variables['grouping_level'];
+}
+
+function dta_gov_au_theme_suggestions_views_view_unformatted_alter(array &$suggestions, array $variables) {
+  // Add a theme suggestion to the views unformatted template.
+  $suggestions[] = $variables['theme_hook_original'] . '__' . $variables['view']->id();
 }
