@@ -50,6 +50,13 @@
   ]
 %}
 
+{% set back_to_top = [
+    '/help-and-advice',
+    '/our-projects',
+    '/news-blogs'
+  ]
+%}
+
 <div class="layout-container">
 
   {% include '@dta_gov_au/includes/ribbon.html.twig' %}
@@ -83,6 +90,17 @@
           </div>
         {% endif %}
       </div>
+      {% if path('<current>') in back_to_top %}
+        <div class-"row">
+          <div class="col-xs-12">
+            <div id="back-to-top">
+              <div class="container">
+                <a class="au-direction-link au-direction-link--up" href="#top">Back to top</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
     </div>
   {% endif %}
   </main>
