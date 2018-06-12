@@ -129,4 +129,43 @@
 
     }
   }
+  Drupal.behaviors.dtagovauTooltips = {
+    // Functionality for tooltips.
+    attach: function(context, settings) {
+      var $button = $('button.au-tooltip--button[aria-label]');
+      var $tooltip = $('.au-tooltip[role="tooltip"]');
+
+      if ($button && $tooltip) {
+        function showTooltip() {
+          $button.attr('aria-expanded', true);
+          $tooltip.removeClass('hidden');
+        }
+
+        function hideTooltip() {
+          $button.removeAttr('aria-expanded');
+          $tooltip.addClass('hidden')
+        }
+
+        $($button, context).once('dtagovauTooltips')
+          .click(function(event) {
+            event.preventDefault();
+            $button.attr('aria-expanded') ? hideTooltip() : showTooltip();
+          })
+          .hover(function(event) {
+            showTooltip();
+          }, function(event) {
+            hideTooltip();
+          })
+          .focus(function() {
+            showTooltip();
+          })
+          .blur(function() {
+            hideTooltip();
+          })
+          .keydown(function(event) {
+            event.keyCode == 27 ? hideTooltip() : null;
+          });
+      }
+    }
+  }
 }(jQuery));

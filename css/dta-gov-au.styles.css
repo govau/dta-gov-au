@@ -3131,6 +3131,28 @@ img.align-right, p.align-right {
   margin-left: 24px;
   margin-left: 1.5rem; }
 
+.au-legend--tooltip {
+  font-weight: bold;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.42857; }
+
+.au-tooltip--button {
+  width: 28px;
+  width: 1.75rem;
+  height: 28px;
+  height: 1.75rem;
+  padding: 0;
+  margin-top: -2px;
+  margin-top: -0.125rem;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.42857;
+  border-radius: 50%;
+  font-weight: bold; }
+  .au-tooltip--button:focus {
+    border-radius: 50%; }
+
 body {
   margin: 0; }
   body .layout-container {

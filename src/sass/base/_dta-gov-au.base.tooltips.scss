@@ -1,0 +1,26 @@
+// Style for tooltips and associated tooltip buttons.
+
+.au-legend--tooltip {
+  // This just enhances the legend for this particular kind only.
+  font-weight: bold;
+  @include AU-fontgrid( xs );
+}
+
+.au-tooltip--button {
+  // This sets the button (nominally a 'secondary' button) to be smaller and
+  // rounded so it fits in better.
+  @include AU-space( width, 1.75unit );
+  @include AU-space( height, 1.75unit );
+  @include AU-space( padding, 0 );
+  @include AU-space( margin-top, -0.125unit );
+  @include AU-fontgrid( xs );
+  border-radius: 50%;
+  font-weight: bold;
+  &:focus {
+    border-radius: 50%;
+  }
+}
+
+.au-tooltip {
+  
+}

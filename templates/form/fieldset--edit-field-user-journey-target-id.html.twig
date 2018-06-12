@@ -22,6 +22,8 @@
 
 /**
  * Moved the description from the bottom of the element to the top.
+ * Added a button to use as a tooltip, along with appropriate ARIA roles and
+ * attributes.
  */
 #}
 {%
@@ -32,20 +34,28 @@
     'form-wrapper',
   ]
 %}
+
 <fieldset{{ attributes.addClass(classes) }}>
   {%
     set legend_span_classes = [
       'fieldset-legend',
       required ? 'js-form-required',
       required ? 'form-required',
+      'au-legend--tooltip',
     ]
   %}
+
+  {%
+    set title_slug = legend.title|render|clean_class
+  %}
+
   {#  Always wrap fieldset legends in a SPAN for CSS positioning. #}
   <legend{{ legend.attributes }}>
     <span{{ legend_span.attributes.addClass(legend_span_classes) }}>{{ legend.title }}</span>
+    <button id="tooltip-button-{{ title_slug }}" class="au-btn au-btn--secondary au-tooltip--button" aria-label="About user journeys" aria-labelledby="tooltip-{{ title_slug }}"><span class="sr-only">About user journeys</span>?</button>
   </legend>
   {% if description.content %}
-    <div{{ description.attributes.addClass('description') }}>{{ description.content }}</div>
+    <div id="tooltip-{{ title_slug }}" class="au-tooltip hidden" role="tooltip">{{ description.content }}</div>
   {% endif %}
   <div class="fieldset-wrapper">
     {% if errors %}
