@@ -4,11 +4,20 @@ use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements HOOK_form_alter()
+ *
+ * This changes the performance of the views exposed form used to filter roadmap
+ * nodes. We do this here because we want the form to be controlled via
+ * JavaScript rather than OOTB functionality. We don't actually want to remove
+ * things from the view, just show and hide them, otherwise all the formatting
+ * gets lost because we need to maintain the grouping structure.
  */
 
  function dta_gov_au_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if($form_id == 'views_exposed_form') {
-
+  if($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-business-roadmap-page-taxonomy-page-1') {
+    // Add the JS library to the form.
+    $form['#attached']['library'][] = 'dta_gov_au/roadmap';
+    // Ditch the 'apply' button. This is also turned off via JS.
+    unset($form['actions']['submit']);
   }
  }
 
@@ -156,6 +165,5 @@ function dta_gov_au_theme_suggestions_views_view_unformatted_alter(array &$sugge
 
 function dta_gov_au_theme_suggestions_views_exposed_form_alter(array &$suggestions, array $variables) {
   // Add a theme suggestion to the views exposed form template.
-  kint($variables);
   $suggestions[] = $variables['theme_hook_original'] . '__' . str_replace('-','_', $variables['form']['#id']);
 }

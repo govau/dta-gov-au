@@ -14,3 +14,7 @@ recruiterbox:
   version: 1.x
   js:
     js/recruiterbox.js: {}
+roadmap:
+  version: 1.x
+  js:
+    js/roadmap.js: {}
