@@ -1,6 +1,5 @@
 (function($, Drupal) {
   'use strict';
-  console.log('Roadmap library running');
 
   var currentlyChecked = [];
 
@@ -81,13 +80,37 @@
           // and exit the loop - once a match is found we don't need to keep
           // looking.
           if($.inArray(term, currentlyChecked) !== -1) {
-            console.log('Found a card!');
             visible = true;
             return;
           }
         });
         return visible;
       }
+    }
+  }
+  Drupal.behaviors.dtagovauRoadmapRemoveAccordion = {
+    attach: function(context, settings) {
+      // This function removes accordion classes at a certain breakpoint.
+      var $form = $('form#views-exposed-form-business-roadmap-page-taxonomy-page-1'),
+          $accordion = $form.find('.au-accordion'),
+          $accordionTitle = $accordion.find('.au-accordion__title'),
+          $accordionBody = $accordion.find('.au-accordion__body'),
+          breakpoint = 710;
+
+      $(window, context)
+        .once('dtagovauRoadmapRemoveAccordion')
+        .on('load resize', function mobileViewUpdate() {
+          var viewportWidth = $(window).width();
+          if (viewportWidth > breakpoint) {
+            $accordion.hasClass('au-accordion') ? $accordion.removeClass('au-accordion') : null;
+            $accordionTitle.hasClass('au-accordion__title') ? $accordionTitle.removeClass('au-accordion__title') : null;
+            $accordionBody.hasClass('au-accordion--closed') ? $accordionBody.removeClass('au-accordion--closed') : null;
+          } else {
+            $accordion.hasClass('au-accordion') ? null : $accordion.addClass('au-accordion');
+            $accordionTitle.hasClass('au-accordion__title') ? null : $accordionTitle.addClass('au-accordion__title');
+            $accordionBody.hasClass('au-accordion--closed') ? null : $accordionBody.addClass('au-accordion--closed');
+          }
+      });
     }
   }
 })(jQuery, Drupal);

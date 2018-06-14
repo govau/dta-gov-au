@@ -143,7 +143,7 @@
 
         function hideTooltip() {
           $button.removeAttr('aria-expanded');
-          $tooltip.delay(3000).fadeOut(100).addClass('hidden')
+          $tooltip.fadeOut(100).addClass('hidden')
         }
 
         $($button, context).once('dtagovauTooltips')

@@ -58,18 +58,23 @@
   {% if description.content %}
     <div id="tooltip-{{ title_slug }}" class="au-tooltip hidden" role="tooltip">{{ description.content }}</div>
   {% endif %}
-  <div class="fieldset-wrapper">
-    {% if errors %}
-      <div>
-        {{ errors }}
+  <div class="fieldset-wrapper au-accordion">
+    <a aria-controls="accordion-closed-{{ nid }}" aria-expanded="false" aria-selected="false" class="au-accordion__title au-accordion--closed js-au-accordion" href="#accordion-closed" role="tab"><span class="sr-only">Show filters</span></a>
+    <div class="au-accordion__body au-accordion--closed" id="accordion-closed-{{ nid }}">
+      <div class="au-accordion__body-wrapper">
+        {% if errors %}
+          <div>
+            {{ errors }}
+          </div>
+        {% endif %}
+        {% if prefix %}
+          <span class="field-prefix">{{ prefix }}</span>
+        {% endif %}
+        {{ children }}
+        {% if suffix %}
+          <span class="field-suffix">{{ suffix }}</span>
+        {% endif %}
       </div>
-    {% endif %}
-    {% if prefix %}
-      <span class="field-prefix">{{ prefix }}</span>
-    {% endif %}
-    {{ children }}
-    {% if suffix %}
-      <span class="field-suffix">{{ suffix }}</span>
-    {% endif %}
+    </div>
   </div>
 </fieldset>

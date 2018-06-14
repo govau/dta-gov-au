@@ -3136,9 +3136,9 @@ img.align-right, p.align-right {
 
 .au-legend--tooltip {
   font-weight: bold;
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.42857; }
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5; }
 
 .au-tooltip--button {
   width: 28px;
@@ -3151,6 +3151,7 @@ img.align-right, p.align-right {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.42857;
+  background-color: #ffffff !important;
   border-radius: 50%;
   font-weight: bold; }
   .au-tooltip--button:focus {
@@ -3158,11 +3159,11 @@ img.align-right, p.align-right {
 
 .au-tooltip {
   position: absolute;
-  top: 43px;
-  top: 2.7rem;
+  top: 67px;
+  top: 4.2rem;
+  width: 80%;
   left: 0px;
   left: 0rem;
-  width: 50%;
   border-radius: 4px;
   border-radius: 0.25rem;
   padding: 32px;
@@ -3174,6 +3175,11 @@ img.align-right, p.align-right {
   border: 1px solid #7F7F7F;
   background-color: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3); }
+  @media (min-width: 768px) {
+    .au-tooltip {
+      top: 74px;
+      top: 4.6rem;
+      width: 50%; } }
   .au-tooltip:before, .au-tooltip:after {
     width: 0;
     height: 0;
@@ -3182,7 +3188,8 @@ img.align-right, p.align-right {
     border-bottom-width: 1rem;
     border-bottom-style: solid;
     content: ' ';
-    left: calc(50% - 1.7rem);
+    left: 253px;
+    left: 15.8rem;
     position: absolute; }
   .au-tooltip:before {
     top: -16px;
@@ -3190,6 +3197,82 @@ img.align-right, p.align-right {
   .au-tooltip:after {
     top: -15px;
     border-bottom-color: #ffffff; }
+
+#views-exposed-form-business-roadmap-page-taxonomy-page-1 {
+  display: none;
+  visibility: hidden; }
+
+.js #views-exposed-form-business-roadmap-page-taxonomy-page-1 {
+  display: block;
+  visibility: visible; }
+
+#views-exposed-form-business-roadmap-page-taxonomy-page-1 {
+  margin: 0 -32px;
+  margin: 0 -2rem;
+  padding: 0 32px;
+  padding: 0 2rem;
+  background-color: #f5f5f5;
+  box-shadow: inset 0 1px 0 0 #636363, inset 0 -1px 0 0 #636363; }
+  @media (min-width: 768px) {
+    #views-exposed-form-business-roadmap-page-taxonomy-page-1 {
+      margin: 0 -100%;
+      padding: 0 100%; } }
+  #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset legend,
+  #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper {
+    float: none; }
+  #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset legend {
+    padding: 24px 0;
+    padding: 1.5rem 0; }
+    @media (min-width: 768px) {
+      #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset legend {
+        padding: 32px 0;
+        padding: 2rem 0; } }
+    @media (min-width: 1200px) {
+      #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset legend {
+        float: left; } }
+  #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper {
+    margin-top: 0;
+    border: none; }
+    @media (min-width: 768px) {
+      #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper a[aria-controls] {
+        display: none;
+        visibility: hidden; } }
+    #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper .au-accordion__title {
+      position: inherit;
+      padding: 0;
+      border: none; }
+      #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper .au-accordion__title:focus {
+        outline: none;
+        outline-offset: 0; }
+      #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper .au-accordion__title:after {
+        top: 36px;
+        top: 2.25rem; }
+    #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper .au-accordion__body-wrapper {
+      padding: 0 0 8px 0;
+      padding: 0 0 0.5rem 0;
+      border: none;
+      columns: 2; }
+      @media (min-width: 768px) {
+        #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper .au-accordion__body-wrapper {
+          columns: 3; } }
+      @media (min-width: 1200px) {
+        #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper .au-accordion__body-wrapper {
+          columns: 1; } }
+    @media (min-width: 1200px) {
+      #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper .form-checkboxes#edit-field-user-journey-target-id {
+        padding-top: 28px;
+        padding-top: 1.75rem;
+        margin-left: 32px;
+        margin-left: 2rem; }
+        #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper .form-checkboxes#edit-field-user-journey-target-id .fieldgroup .form-item {
+          display: inline-block; } }
+    #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper input[type="checkbox"].au-control-input__input:focus + .au-control-input__text:before,
+    #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper .au-control-input__input:focus + .au-control-input__text:after {
+      outline: none;
+      box-shadow: inset 1px 1px 0 3px #9263DE, inset 0px 0px 0 3px #9263DE; }
+  #views-exposed-form-business-roadmap-page-taxonomy-page-1 .form-actions {
+    display: none;
+    visibility: hidden; }
 
 body {
   margin: 0; }
@@ -3922,12 +4005,6 @@ main[role="main"].page-content {
       display: block;
       margin-top: 0px;
       margin-top: 0rem; }
-  main[role="main"].page-content #views-exposed-form-business-roadmap-page-taxonomy-page-1 {
-    display: none;
-    visibility: hidden; }
-  main[role="main"].page-content .js #views-exposed-form-business-roadmap-page-taxonomy-page-1 {
-    display: block;
-    visibility: visible; }
 
 header .sf-accordion-toggle.sf-style-none #superfish-main-toggle {
   display: block;

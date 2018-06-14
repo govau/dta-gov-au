@@ -8,7 +8,7 @@
 .au-legend--tooltip {
   // This just enhances the legend for this particular kind only.
   font-weight: bold;
-  @include AU-fontgrid( xs );
+  @include AU-fontgrid( sm );
 }
 
 .au-tooltip--button {
@@ -19,6 +19,7 @@
   @include AU-space( padding, 0 );
   @include AU-space( margin-top, -0.125unit );
   @include AU-fontgrid( xs );
+  background-color: $AU-color-foreground-background !important;
   border-radius: 50%;
   font-weight: bold;
   &:focus {
@@ -28,12 +29,17 @@
 
 .au-tooltip {
   // This is the actual tooltip. It is styled to appear over content with a
-  // slight drop shadow and a triangular pointer.
+  // slight drop shadow and a triangular pointer. Note that the positioning of
+  // the pointer is specific to the application at the moment.
 
   position: absolute; // Make sure that the containing div has position set to relative.
-  @include AU-space( top, 2.7unit );
+  @include AU-space( top, 4.2unit );
+  @include AU-space( width, 80% );
+  @include AU-media( sm ) {
+    @include AU-space( top, 4.6unit );
+    @include AU-space( width, 50% );
+  }
   @include AU-space( left, 0unit );
-  @include AU-space( width, 50% );
   @include AU-space( border-radius, 0.25unit );
   @include AU-space( padding, 2unit );
   @include AU-fontgrid( xs );
@@ -50,7 +56,7 @@
     border-bottom-width: 1rem;
     border-bottom-style: solid;
     content: ' ';
-    left: calc(50% - 1.7rem);
+    @include AU-space( left, 15.8unit );
     position: absolute;
   }
   &:before {

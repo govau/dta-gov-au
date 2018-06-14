@@ -1,0 +1,99 @@
+// Style for the roadmap.
+
+// Hide the form if there is no js available.
+#views-exposed-form-business-roadmap-page-taxonomy-page-1 {
+  display: none;
+  visibility: hidden;
+}
+
+.js {
+  // If we have js, show the form.
+  #views-exposed-form-business-roadmap-page-taxonomy-page-1 {
+    display: block;
+    visibility: visible;
+  }
+}
+
+#views-exposed-form-business-roadmap-page-taxonomy-page-1 {
+  @include AU-space( margin, 0 -2unit );
+  @include AU-space( padding, 0 2unit );
+  @include AU-media( sm ) {
+    // This sets a 'bleed' for larger screens.
+    @include AU-space( margin, 0 -100% );
+    @include AU-space( padding, 0 100% );
+  }
+  background-color: $AU-color-background-shade-suggestion;
+  box-shadow: inset 0 1px 0 0 $AU-color-foreground-muted-suggestion, inset 0 -1px 0 0 $AU-color-foreground-muted-suggestion;
+  fieldset {
+    legend,
+    .fieldset-wrapper {
+      float: none;
+    }
+    legend {
+      @include AU-space( padding, 1.5unit 0 );
+      @include AU-media( sm ) {
+        @include AU-space( padding, 2unit 0 );
+      }
+      @include AU-media( lg ) {
+        float: left;
+      }
+    }
+    .fieldset-wrapper {
+      // A lot of this is overwriting default accordion layout.
+      @include AU-space( margin-top, 0 );
+      border: none;
+      @include AU-media( sm ) {
+        a[aria-controls] {
+          display: none;
+          visibility: hidden;
+        }
+      }
+
+      .au-accordion__title {
+        position: inherit; // Remove the default 'relative' so we can position the 'arrow' from the top of the container, not the accordion.
+        @include AU-space( padding, 0 );
+        border: none;
+        &:focus {
+          outline: none;
+          outline-offset: 0;
+        }
+        &:after {
+          @include AU-space( top, 2.25unit ); // Reposition the arrow at the top of the container.
+        }
+      }
+      .au-accordion__body-wrapper {
+        @include AU-space( padding, 0 0 0.5unit 0 );
+        border: none;
+        columns: 2;
+        @include AU-media( sm ) {
+          columns: 3;
+        }
+        @include AU-media( lg ) {
+          columns: 1;
+        }
+      }
+      .form-checkboxes#edit-field-user-journey-target-id {
+        @include AU-media( lg ) {
+          @include AU-space( padding-top, 1.75unit );
+          @include AU-space( margin-left, 2unit );
+          .fieldgroup .form-item {
+            display: inline-block;
+          }
+        }
+      }
+      input[type="checkbox"].au-control-input__input:focus + .au-control-input__text:before,
+      .au-control-input__input:focus + .au-control-input__text:after {
+        // These settings replace the purple focus outline with an internal
+        // 'border'. This is because the outlines stick out over the edge of the
+        // div.
+        outline: none;
+        box-shadow: inset 1px 1px 0 3px $AU-color-foreground-focus,
+                    inset 0px 0px 0 3px $AU-color-foreground-focus;
+      }
+    }
+  }
+  .form-actions {
+    display: none;
+    visibility: hidden;
+  }
+}
