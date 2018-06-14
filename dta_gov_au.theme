@@ -12,14 +12,29 @@ use Drupal\Core\Form\FormStateInterface;
  * gets lost because we need to maintain the grouping structure.
  */
 
- function dta_gov_au_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+// Helper function.
+function _removeElementWithValue($array, $value) {
+  foreach($array as $subKey => $subArray) {
+    if($subArray == $value){
+      unset($array[$subKey]);
+    }
+  }
+  return $array;
+}
+
+function dta_gov_au_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-business-roadmap-page-taxonomy-page-1') {
+
     // Add the JS library to the form.
     $form['#attached']['library'][] = 'dta_gov_au/roadmap';
-    // Ditch the 'apply' button. This is also turned off via JS.
+
+    // Ditch the 'apply' button. The option to submit is also turned off via JS.
     unset($form['actions']['submit']);
+
+    // Remove the 'Business' option, which is a grouping term.
+    $form['field_user_journey_target_id']['#options'] = _removeElementWithValue($form['field_user_journey_target_id']['#options'], 'Business');
   }
- }
+}
 
 
 /**

@@ -138,12 +138,12 @@
       if ($button && $tooltip) {
         function showTooltip() {
           $button.attr('aria-expanded', true);
-          $tooltip.removeClass('hidden');
+          $tooltip.fadeIn(100).removeClass('hidden');
         }
 
         function hideTooltip() {
           $button.removeAttr('aria-expanded');
-          $tooltip.addClass('hidden')
+          $tooltip.delay(3000).fadeOut(100).addClass('hidden')
         }
 
         $($button, context).once('dtagovauTooltips')

@@ -1,5 +1,10 @@
 // Style for tooltips and associated tooltip buttons.
 
+.au-tooltip--wrapper {
+  // This is the containing element for the tooltips.
+  position: relative;
+}
+
 .au-legend--tooltip {
   // This just enhances the legend for this particular kind only.
   font-weight: bold;
@@ -22,5 +27,38 @@
 }
 
 .au-tooltip {
-  
+  // This is the actual tooltip. It is styled to appear over content with a
+  // slight drop shadow and a triangular pointer.
+
+  position: absolute; // Make sure that the containing div has position set to relative.
+  @include AU-space( top, 2.7unit );
+  @include AU-space( left, 0unit );
+  @include AU-space( width, 50% );
+  @include AU-space( border-radius, 0.25unit );
+  @include AU-space( padding, 2unit );
+  @include AU-fontgrid( xs );
+  z-index: 500;
+  border: 1px solid $AU-color-foreground-border-suggestion;
+  background-color: $AU-color-foreground-background;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.3);
+  &:before,
+  &:after {
+    @include AU-space( width, 0 );
+    @include AU-space( height, 0 );
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-bottom-width: 1rem;
+    border-bottom-style: solid;
+    content: ' ';
+    left: calc(50% - 1.7rem);
+    position: absolute;
+  }
+  &:before {
+    top: -16px;
+    border-bottom-color: $AU-color-foreground-border-suggestion;
+  }
+  &:after {
+    top: -15px;
+    border-bottom-color: $AU-color-foreground-background;
+  }
 }

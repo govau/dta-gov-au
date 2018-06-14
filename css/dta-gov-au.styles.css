@@ -3131,6 +3131,9 @@ img.align-right, p.align-right {
   margin-left: 24px;
   margin-left: 1.5rem; }
 
+.au-tooltip--wrapper {
+  position: relative; }
+
 .au-legend--tooltip {
   font-weight: bold;
   font-size: 14px;
@@ -3152,6 +3155,41 @@ img.align-right, p.align-right {
   font-weight: bold; }
   .au-tooltip--button:focus {
     border-radius: 50%; }
+
+.au-tooltip {
+  position: absolute;
+  top: 43px;
+  top: 2.7rem;
+  left: 0px;
+  left: 0rem;
+  width: 50%;
+  border-radius: 4px;
+  border-radius: 0.25rem;
+  padding: 32px;
+  padding: 2rem;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.42857;
+  z-index: 500;
+  border: 1px solid #7F7F7F;
+  background-color: #ffffff;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3); }
+  .au-tooltip:before, .au-tooltip:after {
+    width: 0;
+    height: 0;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-bottom-width: 1rem;
+    border-bottom-style: solid;
+    content: ' ';
+    left: calc(50% - 1.7rem);
+    position: absolute; }
+  .au-tooltip:before {
+    top: -16px;
+    border-bottom-color: #7F7F7F; }
+  .au-tooltip:after {
+    top: -15px;
+    border-bottom-color: #ffffff; }
 
 body {
   margin: 0; }
@@ -3884,6 +3922,12 @@ main[role="main"].page-content {
       display: block;
       margin-top: 0px;
       margin-top: 0rem; }
+  main[role="main"].page-content #views-exposed-form-business-roadmap-page-taxonomy-page-1 {
+    display: none;
+    visibility: hidden; }
+  main[role="main"].page-content .js #views-exposed-form-business-roadmap-page-taxonomy-page-1 {
+    display: block;
+    visibility: visible; }
 
 header .sf-accordion-toggle.sf-style-none #superfish-main-toggle {
   display: block;
