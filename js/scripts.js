@@ -132,40 +132,43 @@
   Drupal.behaviors.dtagovauTooltips = {
     // Functionality for tooltips.
     attach: function(context, settings) {
-      var $button = $('button.au-tooltip--button[aria-label]');
-      var $tooltip = $('.au-tooltip[role="tooltip"]');
 
-      if ($button && $tooltip) {
-        function showTooltip() {
-          $button.attr('aria-expanded', true);
-          $tooltip.fadeIn(100).removeClass('hidden');
-        }
+      function showTooltip($tooltip) {
+        $button.attr('aria-expanded', true);
+        $tooltip.fadeIn(100).removeClass('hidden');
+      }
 
-        function hideTooltip() {
-          $button.removeAttr('aria-expanded');
-          $tooltip.fadeOut(100).addClass('hidden')
-        }
+      function hideTooltip($tooltip) {
+        $button.removeAttr('aria-expanded');
+        $tooltip.fadeOut(100).addClass('hidden')
+      }
 
-        $($button, context).once('dtagovauTooltips')
+      var $buttons = $('button.au-tooltip--button[aria-label]');
+
+      $($buttons, context).once('dtagovauTooltips').each(function(index, $button) {
+        console.log($button);
+        var $tooltip = $('#' + $button.attr('aria-labelledby'));
+        $button
           .click(function(event) {
             event.preventDefault();
-            $button.attr('aria-expanded') ? hideTooltip() : showTooltip();
+            $button.attr('aria-expanded') ? hideTooltip($tooltip) : showTooltip($tooltip);
           })
           .hover(function(event) {
-            showTooltip();
+            showTooltip($tooltip);
           }, function(event) {
-            hideTooltip();
+            hideTooltip($tooltip);
           })
           .focus(function() {
-            showTooltip();
+            showTooltip($tooltip);
           })
           .blur(function() {
-            hideTooltip();
+            hideTooltip($tooltip);
           })
           .keydown(function(event) {
-            event.keyCode == 27 ? hideTooltip() : null;
+            event.keyCode == 27 ? hideTooltip($tooltip) : null;
           });
-      }
+
+      });
     }
   }
 }(jQuery));
