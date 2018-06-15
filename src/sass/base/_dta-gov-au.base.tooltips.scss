@@ -33,7 +33,8 @@
 
   position: absolute;
   @include AU-space( top, 4.2unit );
-  @include AU-space( width, 80% );
+  @include AU-space( width, 100% );
+  @include AU-space( min-width, 30unit );
   @include AU-media( sm ) {
     @include AU-space( top, 4.6unit );
     @include AU-space( width, 50% );

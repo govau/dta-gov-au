@@ -96,8 +96,7 @@
     display: none;
     visibility: hidden;
   }
-
-  .au-tooltip {
+  #tooltip-filter-by-benefit-to-user-journey.au-tooltip {
     h3 {
       @include AU-fontgrid( md );
     }
@@ -128,6 +127,67 @@
         display: table-row;
         @include AU-space( height, 1unit);
       }
+    }
+  }
+}
+
+#roadmap-themes .au-callout {
+  > h3 {
+    @include AU-fontgrid( md );
+    display: inline-block;
+  }
+  > button {
+    display: inline-block;
+    @include AU-space( margin-top, -0.2unit );
+  }
+  > ul {
+    list-style: none;
+    position: relative;
+    li {
+      &.first:before {
+        background-color: $top-border-pink;
+      }
+      &.second:before {
+        background-color: $top-border-green;
+      }
+      &.third:before {
+        background-color: $top-border-orange;
+      }
+      &:before {
+        content: ' ';
+        display: block;
+        @include AU-space( width, 1.5unit );
+        @include AU-space( height, 1.5unit );
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+  .au-tooltip {
+    @include AU-space( padding-left, 3.5unit );
+    h3 {
+      @include AU-fontgrid( md );
+    }
+    .au-introduction {
+      @include AU-fontgrid ( sm );
+    }
+    h4 {
+      @include AU-fontgrid ( sm );
+      @include AU-space( margin-top, 1.5unit );
+    }
+    div {
+      @include AU-space( padding-left, 1unit );
+      @include AU-space( margin-left, -1.5unit );
+    }
+    .theme-1 {
+      border-left: 8px solid $top-border-pink;
+    }
+    .theme-2 {
+      border-left: 8px solid $top-border-green;
+    }
+    .theme-3 {
+      border-left: 8px solid $top-border-orange;
     }
   }
 }

@@ -133,15 +133,18 @@
     // Functionality for tooltips.
     attach: function(context, settings) {
 
-      var baseSize = parseInt($('body').css('fontSize'));
+      function getRems(number) {
+        var baseSize = parseInt($('body').css('fontSize'));
+        return number / baseSize + 'rem';
+      }
 
       function showTooltip($tooltip, $button, $wrapper, $pointer) {
         // These calculations get the position of the button and move the
         // tooltip around.
         var buttonBottom = Math.floor($button.position().top + $button.height())
         var buttonCenter = Math.floor($button.position().left + ($button.width() / 2));
-        var anchorTop = buttonBottom / baseSize + 'rem';
-        var anchorLeft = buttonCenter / baseSize + 'rem';
+        var anchorTop = getRems(buttonBottom);
+        var anchorLeft = getRems(buttonCenter);
 
         // Set ARIA attribute on the button.
         $button.attr('aria-expanded', true);
@@ -150,8 +153,16 @@
         $tooltip.removeClass('hidden');
         $wrapper.fadeIn(100).removeClass('hidden');
 
+        var wrapperLeft = getRems($wrapper.position().left);
+
+        if (($wrapper.offset().left + $wrapper.width()) > $(window).width()) {
+          var overflow = $wrapper.width() - ($(window).width() - $wrapper.offset().left);
+          wrapperLeft = getRems(-overflow);
+        }
+
         // Position the wrapper.
         $wrapper.css('top', anchorTop);
+        $tooltip.css('left', wrapperLeft);
 
         // Position the pointer.
         $pointer.css('left', anchorLeft);
