@@ -96,4 +96,38 @@
     display: none;
     visibility: hidden;
   }
+
+  .au-tooltip {
+    h3 {
+      @include AU-fontgrid( md );
+    }
+    .au-introduction {
+      @include AU-fontgrid( sm );
+    }
+    dl {
+      display: table;
+    }
+    dt, dd {
+
+    }
+    dt {
+      font-weight: normal;
+      white-space: nowrap;
+      border: 1px solid $AU-color-foreground-border-suggestion;
+      @include AU-space( border-radius, 0.25unit );
+      @include AU-space( padding, 0.2unit 0.5unit );
+      @include AU-space( min-width, 5.625unit );
+      text-align: center;
+      @include AU-fontgrid( sm );
+      display: table-cell;
+    }
+    dd {
+      border: none;
+      display: table-cell;
+      &.line-break {
+        display: table-row;
+        @include AU-space( height, 1unit);
+      }
+    }
+  }
 }
