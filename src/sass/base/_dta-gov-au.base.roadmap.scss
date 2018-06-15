@@ -39,37 +39,12 @@
       }
     }
     .fieldset-wrapper {
-      // A lot of this is overwriting default accordion layout.
       @include AU-space( margin-top, 0 );
       border: none;
       @include AU-media( sm ) {
         a[aria-controls] {
           display: none;
           visibility: hidden;
-        }
-      }
-
-      .au-accordion__title {
-        position: inherit; // Remove the default 'relative' so we can position the 'arrow' from the top of the container, not the accordion.
-        @include AU-space( padding, 0 );
-        border: none;
-        &:focus {
-          outline: none;
-          outline-offset: 0;
-        }
-        &:after {
-          @include AU-space( top, 2.25unit ); // Reposition the arrow at the top of the container.
-        }
-      }
-      .au-accordion__body-wrapper {
-        @include AU-space( padding, 0 0 0.5unit 0 );
-        border: none;
-        columns: 2;
-        @include AU-media( sm ) {
-          columns: 3;
-        }
-        @include AU-media( lg ) {
-          columns: 1;
         }
       }
       .form-checkboxes#edit-field-user-journey-target-id {
@@ -188,6 +163,111 @@
     }
     .theme-3 {
       border-left: 8px solid $top-border-orange;
+    }
+  }
+}
+
+.business-roadmap {
+
+  // We need to overwrite a lot of default accordion layout.
+
+  .au-accordion__title {
+    position: inherit; // Remove the default 'relative' so we can position the 'arrow' from the top of the container, not the accordion.
+    @include AU-space( padding, 0 );
+    border: none;
+    &:focus {
+      outline: none;
+      outline-offset: 0;
+    }
+    &:after {
+      @include AU-space( top, 2.25unit ); // Reposition the arrow at the top of the container.
+    }
+  }
+  .au-accordion__body-wrapper {
+    @include AU-space( padding, 0 0 0.5unit 0 );
+    border: none;
+    columns: 2;
+    @include AU-media( sm ) {
+      columns: 3;
+    }
+    @include AU-media( lg ) {
+      columns: 1;
+    }
+  }
+  .view-grouping {
+    h2 {
+      @include AU-fontgrid( xxl );
+    }
+    h3 {
+      @include AU-fontgrid( sm );
+    }
+    p, h4 {
+      @include AU-fontgrid( xs );
+      + p {
+        @include AU-space( margin-top, 0.25unit );
+      }
+    }
+    p + h4 {
+      @include AU-space( margin-top, 1unit );
+    }
+    ul {
+      list-style: none;
+      @include AU-space( padding, 0 );
+      @include AU-space( margin-top, 1unit );
+      li {
+        display: inline-block;
+        border: 1px solid $AU-color-foreground-border-suggestion;
+        @include AU-space( border-radius, 0.25unit );
+        @include AU-space( padding, 0.2unit 0.4unit );
+        + li {
+          @include AU-space( margin-left, 0.5unit );
+        }
+      }
+    }
+    .au-card--roadmap {
+      @include AU-space( margin-top, 1.5unit );
+      @include AU-space( margin-bottom, 1.5unit );
+      @include AU-fontgrid( xs );
+      @include AU-space( border-radius, 0.25unit );
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+      border: 1px solid $AU-color-foreground-border-suggestion;
+      @include AU-space( border-radius, 0.25unit );
+      .au-card--roadmap__text {
+        @include AU-space( padding, 1unit );
+        border-left: 8px solid;
+        border-bottom: 1px solid $AU-color-foreground-border-suggestion;
+        @include AU-space( border-bottom-left-radius, 0.25unit );
+        &.au-card--roadmap__personalised-information-and-advice {
+          border-left-color: $top-border-pink;
+        }
+        &.au-card--roadmap__simplified-streamlined-and-joined-up-services {
+          border-left-color: $top-border-green;
+        }
+        &.au-card--roadmap__simplified-identity-for-my-business-interactions-with-government {
+          border-left-color: $top-border-orange;
+        }
+      }
+      .au-accordion {
+        @include AU-media( sm ) {
+          border: none;
+        }
+        @include AU-space( margin-top, 0 );
+        @include AU-space( padding, 0unit );
+        border: 1px solid $AU-color-foreground-border-suggestion;
+        background-color: $AU-color-background-shade-suggestion;
+        .au-accordion__title:after {
+          position: absolute;
+          top: auto;
+          @include AU-space( margin-top, -2.25unit ); // Reposition the arrow at the top of the container.
+          @include AU-space( right, 2unit );
+        }
+        .au-accordion__body-wrapper {
+          columns: 1;
+        }
+        .au-accordion__body.au-accordion--open {
+          @include AU-space( padding, 1unit 1unit 1unit 1.5unit );
+        }
+      }
     }
   }
 }
