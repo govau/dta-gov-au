@@ -3157,13 +3157,23 @@ img.align-right, p.align-right {
   .au-tooltip--button:focus {
     border-radius: 50%; }
 
-.au-tooltip {
+.au-tooltip--inner {
   position: absolute;
   top: 67px;
   top: 4.2rem;
   width: 80%;
   left: 0px;
-  left: 0rem;
+  left: 0rem; }
+  @media (min-width: 768px) {
+    .au-tooltip--inner {
+      top: 74px;
+      top: 4.6rem;
+      width: 50%; } }
+  .au-tooltip--inner .au-tooltip {
+    position: relative; }
+
+.au-tooltip {
+  position: absolute;
   border-radius: 4px;
   border-radius: 0.25rem;
   padding: 32px;
@@ -3174,13 +3184,17 @@ img.align-right, p.align-right {
   z-index: 500;
   border: 1px solid #7F7F7F;
   background-color: #ffffff;
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3); }
-  @media (min-width: 768px) {
-    .au-tooltip {
-      top: 74px;
-      top: 4.6rem;
-      width: 50%; } }
-  .au-tooltip:before, .au-tooltip:after {
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  top: -1px; }
+
+.au-tooltip--pointer {
+  width: 32px;
+  width: 2rem;
+  height: 16px;
+  height: 1rem;
+  position: relative;
+  z-index: 600; }
+  .au-tooltip--pointer:before, .au-tooltip--pointer:after {
     width: 0;
     height: 0;
     border-left: 1rem solid transparent;
@@ -3188,14 +3202,13 @@ img.align-right, p.align-right {
     border-bottom-width: 1rem;
     border-bottom-style: solid;
     content: ' ';
-    left: 253px;
-    left: 15.8rem;
+    left: calc(50% - 2rem);
     position: absolute; }
-  .au-tooltip:before {
-    top: -16px;
+  .au-tooltip--pointer:before {
+    top: -1px;
     border-bottom-color: #7F7F7F; }
-  .au-tooltip:after {
-    top: -15px;
+  .au-tooltip--pointer:after {
+    top: 0px;
     border-bottom-color: #ffffff; }
 
 #views-exposed-form-business-roadmap-page-taxonomy-page-1 {

@@ -27,12 +27,11 @@
   }
 }
 
-.au-tooltip {
-  // This is the actual tooltip. It is styled to appear over content with a
-  // slight drop shadow and a triangular pointer. Note that the positioning of
-  // the pointer is specific to the application at the moment.
+.au-tooltip--inner {
+  // The inner wrapper is added dynamically with JavaScript and is used to
+  // position the tooltip and the pointer together.
 
-  position: absolute; // Make sure that the containing div has position set to relative.
+  position: absolute;
   @include AU-space( top, 4.2unit );
   @include AU-space( width, 80% );
   @include AU-media( sm ) {
@@ -40,6 +39,18 @@
     @include AU-space( width, 50% );
   }
   @include AU-space( left, 0unit );
+  .au-tooltip {
+    position: relative;
+  }
+}
+
+.au-tooltip {
+  // This is the actual tooltip. It is styled to appear over content with a
+  // slight drop shadow and a triangular pointer. Note that the positioning of
+  // the pointer is specific to the application at the moment.
+
+  position: absolute; // Make sure that the containing div has position set to relative.
+
   @include AU-space( border-radius, 0.25unit );
   @include AU-space( padding, 2unit );
   @include AU-fontgrid( xs );
@@ -47,6 +58,15 @@
   border: 1px solid $AU-color-foreground-border-suggestion;
   background-color: $AU-color-foreground-background;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.3);
+  top: -1px;
+}
+
+.au-tooltip--pointer {
+  // The pointer is added dynamically via JavaScript.
+  @include AU-space( width, 2unit );
+  @include AU-space( height, 1unit );
+  position: relative;
+  z-index: 600;
   &:before,
   &:after {
     @include AU-space( width, 0 );
@@ -56,15 +76,15 @@
     border-bottom-width: 1rem;
     border-bottom-style: solid;
     content: ' ';
-    @include AU-space( left, 15.8unit );
+    left: calc(50% - 2rem);
     position: absolute;
   }
   &:before {
-    top: -16px;
+    top: -1px;
     border-bottom-color: $AU-color-foreground-border-suggestion;
   }
   &:after {
-    top: -15px;
+    top: 0px;
     border-bottom-color: $AU-color-foreground-background;
   }
 }
