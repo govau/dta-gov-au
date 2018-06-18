@@ -3465,6 +3465,7 @@ img.align-right, p.align-right {
     .business-roadmap .view-grouping ul li {
       display: inline-block;
       border: 1px solid #7F7F7F;
+      transition: all 0.2s ease-in-out;
       border-radius: 4px;
       border-radius: 0.25rem;
       padding: 3px 6px;
@@ -3472,6 +3473,9 @@ img.align-right, p.align-right {
       .business-roadmap .view-grouping ul li + li {
         margin-left: 8px;
         margin-left: 0.5rem; }
+      .business-roadmap .view-grouping ul li.active {
+        background-color: #636363;
+        color: #ffffff; }
   .business-roadmap .view-grouping .au-card--roadmap {
     margin-top: 24px;
     margin-top: 1.5rem;

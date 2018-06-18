@@ -1,12 +1,12 @@
 (function($, Drupal) {
   'use strict';
 
-  var currentlyChecked = [];
-
   Drupal.behaviors.dtagovauRoadmap = {
     attach: function(context, settings) {
       var $form = $('form#views-exposed-form-business-roadmap-page-taxonomy-page-1'),
-          $root = $('div.views-element-container');
+          $root = $('div.views-element-container'),
+          currentlyCheckedIDs = [],
+          currentlyCheckedNames = [];
 
       $($form, context)
         .once('dtagovauRoadmap')
@@ -21,13 +21,16 @@
           // the term ID to the relevant function.
           var termID = event.currentTarget.id.replace(/[^0-9\.]/g,'');
 
-          event.currentTarget.checked ? boxChecked(termID) : boxUnchecked(termID);
+          //Get the termName from the input.
+          var termName = event.currentTarget.nextElementSibling.childNodes[0].data;
+
+          event.currentTarget.checked ? boxChecked(termID, termName) : boxUnchecked(termID, termName);
 
           // If after a change there are no checkboxes ticked (ie the
           // currentlyChecked array is empty), then show all the cards.
           // Otherwise, nothing to see here...
-          if (currentlyChecked.length == 0) {
-            $('.au-card--roadmap').fadeIn();
+          if (currentlyCheckedIDs.length == 0) {
+            $('.au-card--roadmap').fadeIn().find('li').removeClass('active');
           } else {
             // Now that the currentlyChecked array has been updated, we can run
             // through the elements and display them if they have one of the
@@ -40,32 +43,40 @@
               // Create a standalone array from the dataset.
               var dataset = $card.data('userJourneys').split('|');
 
+              // Find the tags in the card and set them to 'on' or 'off'.
+              var $tags = $card.find('li');
+              $tags.each(function(index, element) {
+                var $tag = $(this),
+                    text = $tag.text();
+
+                if($.inArray( text, currentlyCheckedNames ) !== -1) {
+                  $tag.addClass( 'active' );
+                } else {
+                  $tag.removeClass( 'active' );
+                }
+              });
+
               // If the checkVisibility function returns true, show the card.
               // Otherwise, hide it.
-
-              console.log(checkVisibility($card, dataset));
 
               checkVisibility($card, dataset) ? $card.fadeIn() : $card.fadeOut();
             });
           }
         });
 
-      function boxChecked(termID) {
-        console.log('Checked ' + termID);
-        // Find the currently checked item in the currentlyChecked array.
-
-        if ($.inArray(termID, currentlyChecked) === -1) {
-          currentlyChecked.push(termID);
+      function boxChecked(termID, termName) {
+        // Find the currently checked item in the currentlyChecked arrays.
+        if ($.inArray(termID, currentlyCheckedIDs) === -1) {
+          currentlyCheckedIDs.push(termID);
+          currentlyCheckedNames.push(termName);
         }
-        console.log(currentlyChecked);
       }
 
-      function boxUnchecked(termID) {
-        console.log('Unchecked ' + termID);
-        if ($.inArray(termID, currentlyChecked) !== -1) {
-          currentlyChecked.splice($.inArray(termID, currentlyChecked), 1);
+      function boxUnchecked(termID, termName) {
+        if ($.inArray(termID, currentlyCheckedIDs) !== -1) {
+          currentlyCheckedIDs.splice($.inArray(termID, currentlyCheckedIDs), 1);
+          currentlyCheckedNames.splice($.inArray(termName, currentlyCheckedNames), 1);
         }
-        console.log(currentlyChecked);
       }
 
       function checkVisibility($card, dataset) {
@@ -79,7 +90,7 @@
           // If the term is in the currentlyChecked array, set visible to true
           // and exit the loop - once a match is found we don't need to keep
           // looking.
-          if($.inArray(term, currentlyChecked) !== -1) {
+          if($.inArray(term, currentlyCheckedIDs) !== -1) {
             visible = true;
             return;
           }

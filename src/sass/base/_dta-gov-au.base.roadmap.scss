@@ -265,10 +265,15 @@
       li {
         display: inline-block;
         border: 1px solid $AU-color-foreground-border-suggestion;
+        transition: all 0.2s ease-in-out;
         @include AU-space( border-radius, 0.25unit );
         @include AU-space( padding, 0.2unit 0.4unit );
         + li {
           @include AU-space( margin-left, 0.5unit );
+        }
+        &.active {
+          background-color: $AU-color-foreground-muted-suggestion;
+          color: $AU-color-foreground-background;
         }
       }
     }
