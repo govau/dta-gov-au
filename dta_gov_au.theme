@@ -1,9 +1,47 @@
 <?php
+
+use Drupal\Core\Form\FormStateInterface;
+
 /**
-* Implements HOOK_preprocess_maintenance_page()
-*
-* Adds required variables to the maintenance page.
-**/
+ * Implements HOOK_form_alter()
+ *
+ * This changes the performance of the views exposed form used to filter roadmap
+ * nodes. We do this here because we want the form to be controlled via
+ * JavaScript rather than OOTB functionality. We don't actually want to remove
+ * things from the view, just show and hide them, otherwise all the formatting
+ * gets lost because we need to maintain the grouping structure.
+ */
+
+// Helper function.
+function _removeElementWithValue($array, $value) {
+  foreach($array as $subKey => $subArray) {
+    if($subArray == $value){
+      unset($array[$subKey]);
+    }
+  }
+  return $array;
+}
+
+function dta_gov_au_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-business-roadmap-page-taxonomy-page-1') {
+
+    // Add the JS library to the form.
+    $form['#attached']['library'][] = 'dta_gov_au/roadmap';
+
+    // Ditch the 'apply' button. The option to submit is also turned off via JS.
+    unset($form['actions']['submit']);
+
+    // Remove the 'Business' option, which is a grouping term.
+    $form['field_user_journey_target_id']['#options'] = _removeElementWithValue($form['field_user_journey_target_id']['#options'], 'Business');
+  }
+}
+
+
+/**
+ * Implements HOOK_preprocess_maintenance_page()
+ *
+ * Adds required variables to the maintenance page.
+ **/
 
 function dta_gov_au_preprocess_maintenance_page(&$variables) {
   $form = Drupal::formBuilder()->getForm(Drupal\user\Form\UserLoginForm::class) ;
@@ -20,12 +58,12 @@ function dta_gov_au_preprocess_html(&$variables) {
 }
 
 /**
-* Implements hook_preprocess_menu().
-*
-* Adds 'is_front' variable to html.html.twig.
-* Adds the 'active' class to the active <li>.
-*
-**/
+ * Implements hook_preprocess_menu().
+ *
+ * Adds 'is_front' variable to html.html.twig.
+ * Adds the 'active' class to the active <li>.
+ *
+ **/
 function dta_gov_au_preprocess_menu(&$variables, $hook) {
   try {
     $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
@@ -33,9 +71,9 @@ function dta_gov_au_preprocess_menu(&$variables, $hook) {
   catch (Exception $e) {
     $variables['is_front'] = FALSE;
   }
-  if ($hook == 'menu') {
-    dta_gov_au_menu_active_item($variables['items']);
-  }
+	if ($hook == 'menu') {
+		dta_gov_au_menu_active_item($variables['items']);
+	}
 }
 
 function dta_gov_au_menu_active_item(&$items) {
@@ -53,30 +91,30 @@ function dta_gov_au_menu_active_item(&$items) {
 }
 
 /**
-* Implements hook_theme_suggestions_block_alter().
-*
-* As per https://www.drupal.org/docs/8/theming-drupal-8/creating-a-drupal-8-sub-theme-or-sub-theme-of-sub-theme
-* to ensure that sub themes inherit block templates.
-*/
+ * Implements hook_theme_suggestions_block_alter().
+ *
+ * As per https://www.drupal.org/docs/8/theming-drupal-8/creating-a-drupal-8-sub-theme-or-sub-theme-of-sub-theme
+ * to ensure that sub themes inherit block templates.
+ */
 function dta_gov_au_theme_suggestions_block_alter(&$suggestions, $variables) {
-  /**
-  * Adds theme hook suggestions to blocks
-  */
-  if(isset($variables['elements']['#id'])) {
-    $block_id = $variables['elements']['#id'];
-    foreach ($suggestions as &$suggestion) {
-      $suggestion = str_replace('dta_uikit_base_', 'dta_gov_au_', $suggestion);
-    }
-  }
+/**
+ * Adds theme hook suggestions to blocks
+ */
+   if(isset($variables['elements']['#id'])) {
+     $block_id = $variables['elements']['#id'];
+     foreach ($suggestions as &$suggestion) {
+       $suggestion = str_replace('dta_uikit_base_', 'dta_gov_au_', $suggestion);
+     }
+   }
 }
 
 
 /**
-* Implements hook_form_FORM_ID_alter().
-*
-* Adds placeholder text to the search bar.
-*
-**/
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Adds placeholder text to the search bar.
+ *
+ **/
 
 function dta_gov_au_form_search_api_page_block_form_alter(&$form, &$form_state, $form_id) {
   $search_text = \Drupal::service('path.matcher')->isFrontPage() ? t('What are you looking for today?') : t('Search dta.gov.au');
@@ -85,29 +123,27 @@ function dta_gov_au_form_search_api_page_block_form_alter(&$form, &$form_state, 
 }
 
 /**
-*
-* Implements hook_theme_suggestions_HOOK_alter
-*
-* This adds theme hooks to various elements.
-*
-**/
+ *
+ * Implements hook_theme_suggestions_HOOK_alter
+ *
+ * This adds theme hooks to various elements.
+ *
+ **/
 
-/* Adds 'item_list__' suggestion to list items in views. */
-function dta_gov_au_theme_suggestions_item_list_alter(&$suggestions, &$vars) {
-  $request['view_id'] = \Drupal::routeMatch()->getRouteObject()->getDefault('view_id');
-  $request['display_id'] = \Drupal::routeMatch()->getRouteObject()->getDefault('display_id');
-  if(!empty($request)) {
-    $suggestions[] = 'item_list__' . $request['view_id'];
-    $suggestions[] = 'item_list__' . $request['display_id'];
-    $suggestions[] = 'item_list__' . $request['view_id'] . '__' . $request['display_id'];
-  }
-}
-
-// Theme functions to add block IDs to menu blocks.
+ /* Adds 'item_list__' suggestion to list items in views. */
+ function dta_gov_au_theme_suggestions_item_list_alter(&$suggestions, &$vars) {
+   $request['view_id'] = \Drupal::routeMatch()->getRouteObject()->getDefault('view_id');
+   $request['display_id'] = \Drupal::routeMatch()->getRouteObject()->getDefault('display_id');
+   if(!empty($request)) {
+     $suggestions[] = 'item_list__' . $request['view_id'];
+     $suggestions[] = 'item_list__' . $request['display_id'];
+     $suggestions[] = 'item_list__' . $request['view_id'] . '__' . $request['display_id'];
+   }
+ }
 
 /**
-* Implements hook_preprocess_block().
-*/
+ * Implements hook_preprocess_block().
+ */
 function dta_gov_au_preprocess_block(&$variables) {
   if(isset($variables['elements']['#id'])) {
     $variables['content']['#attributes']['block'] = $variables['elements']['#id'];
@@ -115,8 +151,8 @@ function dta_gov_au_preprocess_block(&$variables) {
 }
 
 /**
-* Implements hook_theme_suggestions_HOOK_alter().
-*/
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
 function dta_gov_au_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
   // Remove the block and replace dashes with underscores in the block ID to
   // use for the hook name.
@@ -128,4 +164,21 @@ function dta_gov_au_theme_suggestions_menu_alter(array &$suggestions, array $var
     $suggestions[] = $variables['theme_hook_original'] . '__' . $hook;
     $suggestions[] = $variables['theme_hook_original'] . '__' . $region . '__' . $hook;
   }
+}
+
+function dta_gov_au_theme_suggestions_views_view_grouping_alter(array &$suggestions, array $variables) {
+  // Adds theme suggestions to the views grouping template.
+  $suggestions[] = $variables['theme_hook_original'] . '__' . $variables['view']->id();
+  $suggestions[] = $variables['theme_hook_original'] . '__grouping_level_' . $variables['grouping_level'];
+  $suggestions[] = $variables['theme_hook_original'] . '__' . $variables['view']->id() . '__grouping_level_' . $variables['grouping_level'];
+}
+
+function dta_gov_au_theme_suggestions_views_view_unformatted_alter(array &$suggestions, array $variables) {
+  // Add a theme suggestion to the views unformatted template.
+  $suggestions[] = $variables['theme_hook_original'] . '__' . $variables['view']->id();
+}
+
+function dta_gov_au_theme_suggestions_views_exposed_form_alter(array &$suggestions, array $variables) {
+  // Add a theme suggestion to the views exposed form template.
+  $suggestions[] = $variables['theme_hook_original'] . '__' . str_replace('-','_', $variables['form']['#id']);
 }

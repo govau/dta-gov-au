@@ -129,4 +129,87 @@
 
     }
   }
+  Drupal.behaviors.dtagovauTooltips = {
+    // Functionality for tooltips.
+    attach: function(context, settings) {
+
+      function getRems(number) {
+        var baseSize = parseInt($('body').css('fontSize'));
+        return number / baseSize + 'rem';
+      }
+
+      function showTooltip($tooltip, $button, $wrapper, $pointer) {
+        // These calculations get the position of the button and move the
+        // tooltip around.
+        var buttonBottom = Math.floor($button.position().top + $button.height())
+        var buttonCenter = Math.floor($button.position().left + ($button.width() / 2));
+        var anchorTop = getRems(buttonBottom);
+        var anchorLeft = getRems(buttonCenter);
+
+        // Set ARIA attribute on the button.
+        $button.attr('aria-expanded', true);
+
+        // Turn on the wrapper (and everything inside it).
+        $tooltip.removeClass('hidden');
+        $wrapper.fadeIn(100).removeClass('hidden');
+
+        var wrapperLeft = getRems($wrapper.position().left);
+
+        if (($wrapper.offset().left + $wrapper.width()) > $(window).width()) {
+          var overflow = $wrapper.width() - ($(window).width() - $wrapper.offset().left);
+          wrapperLeft = getRems(-overflow);
+        }
+
+        // Position the wrapper.
+        $wrapper.css('top', anchorTop);
+        $tooltip.css('left', wrapperLeft);
+
+        // Position the pointer.
+        $pointer.css('left', anchorLeft);
+      }
+
+      function hideTooltip($tooltip, $button, $wrapper, $pointer) {
+        $button.removeAttr('aria-expanded');
+        $wrapper.fadeOut(100, function() {
+          $tooltip.addClass('hidden');
+        }).addClass('hidden');
+      }
+
+      var $buttons = $('button.au-tooltip--button[aria-label]');
+
+      $($buttons, context).once('dtagovauTooltips').each(function(index, element) {
+        var $button = $(this);
+        var $wrapperDiv = $('<div class="au-tooltip--inner hidden"></div>');
+        var $pointer = $('<div class="au-tooltip--pointer"></div>');
+        var $tooltip = $('#' + $(this).attr('aria-labelledby'));
+
+        $tooltip.wrap($wrapperDiv);
+
+        $('.au-tooltip--inner').once('pointerPrepend').prepend($pointer);
+
+        var $wrapper = $tooltip.parent('.au-tooltip--inner');
+
+        $button
+          .click(function(event) {
+            event.preventDefault();
+            $button.attr('aria-expanded') ? hideTooltip($tooltip, $button, $wrapper, $pointer) : showTooltip($tooltip, $button, $wrapper, $pointer);
+          })
+          .hover(function(event) {
+            showTooltip($tooltip, $button, $wrapper, $pointer);
+          }, function(event) {
+            hideTooltip($tooltip, $button, $wrapper, $pointer);
+          })
+          .focus(function() {
+            showTooltip($tooltip, $button, $wrapper, $pointer);
+          })
+          .blur(function() {
+            hideTooltip($tooltip, $button, $wrapper, $pointer);
+          })
+          .keydown(function(event) {
+            event.keyCode == 27 ? hideTooltip($tooltip, $button, $wrapper, $pointer) : null;
+          });
+
+      });
+    }
+  }
 }(jQuery));

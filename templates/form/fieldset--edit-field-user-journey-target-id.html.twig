@@ -1,0 +1,104 @@
+{#
+/**
+ * @file
+ * Theme override for a fieldset element and its children.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the fieldset element.
+ * - errors: (optional) Any errors for this fieldset element, may not be set.
+ * - required: Boolean indicating whether the fieldeset element is required.
+ * - legend: The legend element containing the following properties:
+ *   - title: Title of the fieldset, intended for use as the text of the legend.
+ *   - attributes: HTML attributes to apply to the legend.
+ * - description: The description element containing the following properties:
+ *   - content: The description content of the fieldset.
+ *   - attributes: HTML attributes to apply to the description container.
+ * - children: The rendered child elements of the fieldset.
+ * - prefix: The content to add before the fieldset children.
+ * - suffix: The content to add after the fieldset children.
+ *
+ * @see template_preprocess_fieldset()
+ */
+
+/**
+ * Moved the description from the bottom of the element to the top.
+ * Added a button to use as a tooltip, along with appropriate ARIA roles and
+ * attributes.
+ */
+#}
+{%
+  set classes = [
+    'js-form-item',
+    'form-item',
+    'js-form-wrapper',
+    'form-wrapper',
+    'au-tooltip--wrapper',
+  ]
+%}
+
+<fieldset{{ attributes.addClass(classes) }}>
+  {%
+    set legend_span_classes = [
+      'fieldset-legend',
+      required ? 'js-form-required',
+      required ? 'form-required',
+      'au-legend--tooltip',
+    ]
+  %}
+
+  {%
+    set title_slug = legend.title|render|clean_class
+  %}
+
+  {#  Always wrap fieldset legends in a SPAN for CSS positioning. #}
+  <legend{{ legend.attributes }}>
+    <span{{ legend_span.attributes.addClass(legend_span_classes) }}>{{ legend.title }}</span>
+    <button id="tooltip-button-{{ title_slug }}" class="au-btn au-btn--secondary au-tooltip--button" aria-label="About user journeys" aria-labelledby="tooltip-{{ title_slug }}"><span class="sr-only">About user journeys</span>?</button>
+  </legend>
+  {% if description.content %}
+    <div id="tooltip-{{ title_slug }}" class="au-tooltip hidden" role="tooltip">
+      <h3>Benefits to user journeys</h3>
+      <p class="au-introduction">All projects in the roadmap will have some impact on the experience of businesses using government services.</p>
+      <p>We have identified which experiences will be impacted through user journeys. Each project lists one or more of the following user journeys:</p>
+      <dl>
+        <dt>Starting</dt>
+        <dd>Starting my business</dd>
+        <dd class="line-break">
+        <dt>Running</dt>
+        <dd>Running my business</dd>
+        <dd class="line-break">
+        <dt>Growing</dt>
+        <dd>Growing my business</dd>
+        <dd class="line-break">
+        <dt>Employing</dt>
+        <dd>Employing my business</dd>
+        <dd class="line-break">
+        <dt>Exporting</dt>
+        <dd>Exporting my business</dd>
+        <dd class="line-break">
+        <dt>Closing</dt>
+        <dd>Closing my business</dd>
+        <dd class="line-break">
+      </dl>
+    </div>
+  {% endif %}
+  <div class="fieldset-wrapper au-accordion">
+    <a aria-controls="accordion-closed-{{ nid }}" aria-expanded="false" aria-selected="false" class="au-accordion__title au-accordion--closed js-au-accordion" href="#accordion-closed" role="tab"><span class="sr-only">Show filters</span></a>
+    <div class="au-accordion__body au-accordion--closed" id="accordion-closed-{{ nid }}">
+      <div class="au-accordion__body-wrapper">
+        {% if errors %}
+          <div>
+            {{ errors }}
+          </div>
+        {% endif %}
+        {% if prefix %}
+          <span class="field-prefix">{{ prefix }}</span>
+        {% endif %}
+        {{ children }}
+        {% if suffix %}
+          <span class="field-suffix">{{ suffix }}</span>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</fieldset>

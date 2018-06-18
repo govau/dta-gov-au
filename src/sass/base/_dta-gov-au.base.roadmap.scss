@@ -1,0 +1,326 @@
+// Style for the roadmap.
+
+// Hide the form if there is no js available.
+#views-exposed-form-business-roadmap-page-taxonomy-page-1 {
+  display: none;
+  visibility: hidden;
+}
+
+.js {
+  // If we have js, show the form.
+  #views-exposed-form-business-roadmap-page-taxonomy-page-1 {
+    display: block;
+    visibility: visible;
+  }
+}
+
+#views-exposed-form-business-roadmap-page-taxonomy-page-1 {
+  @include AU-space( margin, 0 -2unit );
+  @include AU-space( padding, 0 2unit );
+  @include AU-media( sm ) {
+    // This sets a 'bleed' for larger screens.
+    @include AU-space( margin, 0 -100% );
+    @include AU-space( padding, 0 100% );
+  }
+  background-color: $AU-color-background-shade-suggestion;
+  box-shadow: inset 0 1px 0 0 $AU-color-foreground-muted-suggestion, inset 0 -1px 0 0 $AU-color-foreground-muted-suggestion;
+  fieldset {
+    legend,
+    .fieldset-wrapper {
+      float: none;
+    }
+    legend {
+      @include AU-space( padding, 1.5unit 0 );
+      @include AU-media( sm ) {
+        @include AU-space( padding, 2unit 0 );
+      }
+      @include AU-media( lg ) {
+        float: left;
+      }
+    }
+    .fieldset-wrapper {
+      @include AU-space( margin-top, 0 );
+      border: none;
+      @include AU-media( sm ) {
+        a[aria-controls] {
+          display: none;
+          visibility: hidden;
+        }
+      }
+      .form-checkboxes#edit-field-user-journey-target-id {
+        @include AU-media( lg ) {
+          @include AU-space( padding-top, 1.75unit );
+          @include AU-space( margin-left, 2unit );
+          .fieldgroup .form-item {
+            display: inline-block;
+          }
+        }
+      }
+      input[type="checkbox"].au-control-input__input:focus + .au-control-input__text:before,
+      .au-control-input__input:focus + .au-control-input__text:after {
+        // These settings replace the purple focus outline with an internal
+        // 'border'. This is because the outlines stick out over the edge of the
+        // div.
+        outline: none;
+        box-shadow: inset 1px 1px 0 3px $AU-color-foreground-focus,
+                    inset 0px 0px 0 3px $AU-color-foreground-focus;
+      }
+    }
+  }
+  .form-actions {
+    display: none;
+    visibility: hidden;
+  }
+  #tooltip-filter-by-benefit-to-user-journey.au-tooltip {
+    h3 {
+      @include AU-fontgrid( md );
+    }
+    .au-introduction {
+      @include AU-fontgrid( sm );
+    }
+    dl {
+      display: table;
+    }
+    dt, dd {
+
+    }
+    dt {
+      font-weight: normal;
+      white-space: nowrap;
+      border: 1px solid $AU-color-foreground-border-suggestion;
+      @include AU-space( border-radius, 0.25unit );
+      @include AU-space( padding, 0.2unit 0.5unit );
+      @include AU-space( min-width, 5.625unit );
+      text-align: center;
+      @include AU-fontgrid( sm );
+      display: table-cell;
+    }
+    dd {
+      border: none;
+      display: table-cell;
+      &.line-break {
+        display: table-row;
+        @include AU-space( height, 1unit);
+      }
+    }
+  }
+}
+
+#roadmap-themes .au-callout {
+  > h3 {
+    @include AU-fontgrid( md );
+    display: inline-block;
+  }
+  > button {
+    display: inline-block;
+    @include AU-space( margin-top, -0.2unit );
+  }
+  > ul {
+    list-style: none;
+    position: relative;
+    li {
+      &.first:before {
+        background-color: $top-border-pink;
+      }
+      &.second:before {
+        background-color: $top-border-green;
+      }
+      &.third:before {
+        background-color: $top-border-orange;
+      }
+      &:before {
+        content: ' ';
+        display: block;
+        @include AU-space( width, 1.5unit );
+        @include AU-space( height, 1.5unit );
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+  .au-tooltip {
+    @include AU-space( padding-left, 3.5unit );
+    h3 {
+      @include AU-fontgrid( md );
+    }
+    .au-introduction {
+      @include AU-fontgrid ( sm );
+    }
+    h4 {
+      @include AU-fontgrid ( sm );
+      @include AU-space( margin-top, 1.5unit );
+    }
+    div {
+      @include AU-space( padding-left, 1unit );
+      @include AU-space( margin-left, -1.5unit );
+    }
+    .theme-1 {
+      border-left: 8px solid $top-border-pink;
+    }
+    .theme-2 {
+      border-left: 8px solid $top-border-green;
+    }
+    .theme-3 {
+      border-left: 8px solid $top-border-orange;
+    }
+  }
+}
+
+.business-roadmap {
+
+  // We need to overwrite a lot of default accordion layout.
+
+  .au-accordion__title {
+    position: inherit; // Remove the default 'relative' so we can position the 'arrow' from the top of the container, not the accordion.
+    @include AU-space( padding, 0 );
+    border: none;
+    &:focus {
+      outline: none;
+      outline-offset: 0;
+    }
+    &:after {
+      @include AU-space( top, 2.25unit ); // Reposition the arrow at the top of the container.
+    }
+  }
+  .au-accordion__body-wrapper {
+    @include AU-space( padding, 0 0 0.5unit 0 );
+    border: none;
+    columns: 2;
+    @include AU-media( sm ) {
+      columns: 3;
+    }
+    @include AU-media( lg ) {
+      columns: 1;
+    }
+  }
+  .view-grouping {
+    position: relative;
+    h2 {
+      @include AU-fontgrid( xxl );
+    }
+    .skip-link-wrapper {
+      display: block;
+      position: absolute;
+      @include AU-space( top, 1unit );
+      right: 0;
+      .au-direction-link {
+        display: inline-block;
+        @include AU-space( padding-top, 0.5unit );
+        @include AU-space( padding-bottom, 0.5unit );
+      }
+      .separator {
+        border-right: 1px solid $AU-color-background-alt-shade-suggestion;
+        @include AU-space( padding-right, 1unit );
+        @include AU-space( margin-right, 1unit );
+      }
+    }
+    h3 {
+      @include AU-fontgrid( sm );
+      @include AU-space( padding-top, 4unit );
+      overflow: hidden;
+      @include AU-media( sm ) {
+        overflow: visible;
+      }
+      position: relative;
+      // This creates the circle part of the keyline above each quarter.
+      &:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        @include AU-space( top, 0.5unit );
+        @include AU-space( left, 0unit );
+        @include AU-space( width, 2unit );
+        @include AU-space( height, 2unit );
+        border-radius: 50%;
+        border: 4px solid $AU-colordark-foreground-muted-suggestion;
+        background-color: $AU-color-foreground-background;
+        z-index: 2;
+      }
+      &:after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        @include AU-space( top, 1.6unit );
+        @include AU-space( left, 2unit );
+        @include AU-space( width, 100% );
+        @include AU-space( height, 0.25unit );
+        background-color: $AU-colordark-foreground-muted-suggestion;
+        z-index: 1;
+      }
+    }
+    p, h4 {
+      @include AU-fontgrid( xs );
+      + p {
+        @include AU-space( margin-top, 0.25unit );
+      }
+    }
+    p + h4 {
+      @include AU-space( margin-top, 1unit );
+    }
+    ul {
+      list-style: none;
+      @include AU-space( padding, 0 );
+      @include AU-space( margin-top, 1unit );
+      li {
+        display: inline-block;
+        border: 1px solid $AU-color-foreground-border-suggestion;
+        transition: all 0.2s ease-in-out;
+        @include AU-space( border-radius, 0.25unit );
+        @include AU-space( padding, 0.2unit 0.4unit );
+        + li {
+          @include AU-space( margin-left, 0.5unit );
+        }
+        &.active {
+          background-color: $AU-color-foreground-muted-suggestion;
+          color: $AU-color-foreground-background;
+        }
+      }
+    }
+    .au-card--roadmap {
+      @include AU-space( margin-top, 1.5unit );
+      @include AU-space( margin-bottom, 1.5unit );
+      @include AU-fontgrid( xs );
+      @include AU-space( border-radius, 0.25unit );
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+      border: 1px solid $AU-color-foreground-border-suggestion;
+      @include AU-space( border-radius, 0.25unit );
+      .au-card--roadmap__text {
+        @include AU-space( padding, 1unit );
+        border-left: 8px solid;
+        border-bottom: 1px solid $AU-color-foreground-border-suggestion;
+        @include AU-space( border-bottom-left-radius, 0.25unit );
+        &.au-card--roadmap__personalised-information-and-advice {
+          border-left-color: $top-border-pink;
+        }
+        &.au-card--roadmap__simplified-streamlined-and-joined-up-services {
+          border-left-color: $top-border-green;
+        }
+        &.au-card--roadmap__simplified-identity-for-my-business-interactions-with-government {
+          border-left-color: $top-border-orange;
+        }
+      }
+      .au-accordion {
+        @include AU-media( sm ) {
+          border: none;
+        }
+        @include AU-space( margin-top, 0 );
+        @include AU-space( padding, 0unit );
+        border: 1px solid $AU-color-foreground-border-suggestion;
+        background-color: $AU-color-background-shade-suggestion;
+        .au-accordion__title:after {
+          position: absolute;
+          top: auto;
+          @include AU-space( margin-top, -2.25unit ); // Reposition the arrow at the top of the container.
+          @include AU-space( right, 2unit );
+        }
+        .au-accordion__body-wrapper {
+          columns: 1;
+        }
+        .au-accordion__body.au-accordion--open {
+          @include AU-space( padding, 1unit 1unit 1unit 1.5unit );
+        }
+      }
+    }
+  }
+}

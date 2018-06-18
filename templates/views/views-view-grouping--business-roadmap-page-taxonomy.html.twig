@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Theme override to display a single views grouping.
+ *
+ * Available variables:
+ * - view: The view object.
+ * - grouping: The grouping instruction.
+ * - grouping_level: A number indicating the hierarchical level of the grouping.
+ * - title: The group heading.
+ * - content: The content to be grouped.
+ * - rows: The rows returned from the view.
+ *
+ * @see template_preprocess_views_view_grouping()
+ */
+#}
+
+<div class="view-grouping view-grouping-level-{{ grouping_level }}">
+  <h2>{{ title }}</h2>
+  <div class="row">
+    {{ content }}
+  </div>
+</div>

@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+/**
+ * Added in check for an empty value on the row_classes array.
+ *
+ * Updates the template to be used for the roadmap specifically.
+#}
+
+<div class="col-xs-12 col-md-3">
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+{% for row in rows %}
+  {%
+    set row_classes = [
+      default_row_class ? 'views-row',
+      'row',
+    ]
+  %}
+  {# Check whether the are any row classes set, or any row.attributes #}
+  {% if row_classes[0] != "" or row.attributes %}
+    <div{{ row.attributes.addClass(row_classes) }}>
+      {{ row.content }}
+    </div>
+  {% else %}
+    {{ row.content }}
+  {% endif %}
+{% endfor %}
+</div>
