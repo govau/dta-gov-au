@@ -113,4 +113,69 @@
       });
     }
   }
+  Drupal.behaviors.dtagovauRoadmapYearSkipLinks = {
+    // This function adds 'Skip to' links for each year.
+    attach: function( context, settings ) {
+
+      var $root = $('.business-roadmap'),
+          $groups = $root.find('.view-grouping h2');
+
+      function skipTo( $node, year ) {
+
+        var nextYear = parseInt( year ) + 1;
+
+        $node.next('.skip-link-wrapper').append( `<a class="au-direction-link au-direction-link--down" href="#year-${ nextYear }">Skip to ${ nextYear }</a>` );
+      }
+
+      function backTo( $node, year, separate ) {
+
+        var lastYear = parseInt( year ) - 1;
+
+        (separate) ? $node.next('.skip-link-wrapper').prepend(
+                      `<a class="au-direction-link au-direction-link--up separator" href="#year-${ lastYear }">Back to ${ lastYear }</a>`
+                    )
+                   : $node.next('.skip-link-wrapper').prepend(
+                      `<a class="au-direction-link au-direction-link--up" href="#year-${ lastYear }">Back to ${ lastYear }</a>`
+                   );
+
+      }
+
+      $( $groups, context )
+        .once( 'dtagovauRoadmapYearSkipLinks' )
+        .each(function( index, element ) {
+
+          var $node = $(this),
+              year = $.trim( $node.text() ),
+              separate = false,
+              $wrapper = '<div class="skip-link-wrapper"></div>';
+
+          // Each heading (node) needs an anchor link and a wrapper.
+          $node.prepend( `<a id="year-${ year }" name="year-${ year }"></a>` );
+          $node.after( $wrapper );
+
+          if ( index == 0 ) {
+            //This is the first one. We need a skip link to the next year only.
+
+            skipTo( $node, year );
+
+          }
+          if ( index > 0 && index < $groups.length ) {
+            // These are the 'middle' items and need both skip to and back to
+            // links, along with a separator.
+
+            var separate = true;
+
+            skipTo( $node, year );
+            backTo( $node, year, separate );
+
+          }
+          if ( index == $groups.length -1 ) {
+            // This is the last item. It needs a 'backTo' link only.
+
+            backTo( $node, year, separate );
+          }
+        });
+
+    }
+  }
 })(jQuery, Drupal);

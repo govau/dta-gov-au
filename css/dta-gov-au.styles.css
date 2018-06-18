@@ -3383,92 +3383,107 @@ img.align-right, p.align-right {
     .business-roadmap .au-accordion__body-wrapper {
       columns: 1; } }
 
-.business-roadmap .view-grouping h2 {
-  font-size: 40px;
-  font-size: 2.5rem;
-  line-height: 1.5; }
-
-.business-roadmap .view-grouping h3 {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.5; }
-
-.business-roadmap .view-grouping p, .business-roadmap .view-grouping h4 {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.42857; }
-  .business-roadmap .view-grouping p + p, .business-roadmap .view-grouping h4 + p {
-    margin-top: 4px;
-    margin-top: 0.25rem; }
-
-.business-roadmap .view-grouping p + h4 {
-  margin-top: 16px;
-  margin-top: 1rem; }
-
-.business-roadmap .view-grouping ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 16px;
-  margin-top: 1rem; }
-  .business-roadmap .view-grouping ul li {
-    display: inline-block;
-    border: 1px solid #7F7F7F;
+.business-roadmap .view-grouping {
+  position: relative; }
+  .business-roadmap .view-grouping h2 {
+    font-size: 40px;
+    font-size: 2.5rem;
+    line-height: 1.5; }
+  .business-roadmap .view-grouping .skip-link-wrapper {
+    display: block;
+    position: absolute;
+    top: 16px;
+    top: 1rem;
+    right: 0; }
+    .business-roadmap .view-grouping .skip-link-wrapper .au-direction-link {
+      display: inline-block;
+      padding-top: 8px;
+      padding-top: 0.5rem;
+      padding-bottom: 8px;
+      padding-bottom: 0.5rem; }
+    .business-roadmap .view-grouping .skip-link-wrapper .separator {
+      border-right: 1px solid #e0e0e0;
+      padding-right: 16px;
+      padding-right: 1rem;
+      margin-right: 16px;
+      margin-right: 1rem; }
+  .business-roadmap .view-grouping h3 {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5; }
+  .business-roadmap .view-grouping p, .business-roadmap .view-grouping h4 {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.42857; }
+    .business-roadmap .view-grouping p + p, .business-roadmap .view-grouping h4 + p {
+      margin-top: 4px;
+      margin-top: 0.25rem; }
+  .business-roadmap .view-grouping p + h4 {
+    margin-top: 16px;
+    margin-top: 1rem; }
+  .business-roadmap .view-grouping ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 16px;
+    margin-top: 1rem; }
+    .business-roadmap .view-grouping ul li {
+      display: inline-block;
+      border: 1px solid #7F7F7F;
+      border-radius: 4px;
+      border-radius: 0.25rem;
+      padding: 3px 6px;
+      padding: 0.2rem 0.4rem; }
+      .business-roadmap .view-grouping ul li + li {
+        margin-left: 8px;
+        margin-left: 0.5rem; }
+  .business-roadmap .view-grouping .au-card--roadmap {
+    margin-top: 24px;
+    margin-top: 1.5rem;
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.42857;
     border-radius: 4px;
     border-radius: 0.25rem;
-    padding: 3px 6px;
-    padding: 0.2rem 0.4rem; }
-    .business-roadmap .view-grouping ul li + li {
-      margin-left: 8px;
-      margin-left: 0.5rem; }
-
-.business-roadmap .view-grouping .au-card--roadmap {
-  margin-top: 24px;
-  margin-top: 1.5rem;
-  margin-bottom: 24px;
-  margin-bottom: 1.5rem;
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.42857;
-  border-radius: 4px;
-  border-radius: 0.25rem;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-  border: 1px solid #7F7F7F;
-  border-radius: 4px;
-  border-radius: 0.25rem; }
-  .business-roadmap .view-grouping .au-card--roadmap .au-card--roadmap__text {
-    padding: 16px;
-    padding: 1rem;
-    border-left: 8px solid;
-    border-bottom: 1px solid #7F7F7F;
-    border-bottom-left-radius: 4px;
-    border-bottom-left-radius: 0.25rem; }
-    .business-roadmap .view-grouping .au-card--roadmap .au-card--roadmap__text.au-card--roadmap__personalised-information-and-advice {
-      border-left-color: #C91978; }
-    .business-roadmap .view-grouping .au-card--roadmap .au-card--roadmap__text.au-card--roadmap__simplified-streamlined-and-joined-up-services {
-      border-left-color: #32A556; }
-    .business-roadmap .view-grouping .au-card--roadmap .au-card--roadmap__text.au-card--roadmap__simplified-identity-for-my-business-interactions-with-government {
-      border-left-color: #EE6523; }
-  .business-roadmap .view-grouping .au-card--roadmap .au-accordion {
-    margin-top: 0;
-    padding: 0px;
-    padding: 0rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     border: 1px solid #7F7F7F;
-    background-color: #f5f5f5; }
-    @media (min-width: 768px) {
-      .business-roadmap .view-grouping .au-card--roadmap .au-accordion {
-        border: none; } }
-    .business-roadmap .view-grouping .au-card--roadmap .au-accordion .au-accordion__title:after {
-      position: absolute;
-      top: auto;
-      margin-top: -36px;
-      margin-top: -2.25rem;
-      right: 32px;
-      right: 2rem; }
-    .business-roadmap .view-grouping .au-card--roadmap .au-accordion .au-accordion__body-wrapper {
-      columns: 1; }
-    .business-roadmap .view-grouping .au-card--roadmap .au-accordion .au-accordion__body.au-accordion--open {
-      padding: 16px 16px 16px 24px;
-      padding: 1rem 1rem 1rem 1.5rem; }
+    border-radius: 4px;
+    border-radius: 0.25rem; }
+    .business-roadmap .view-grouping .au-card--roadmap .au-card--roadmap__text {
+      padding: 16px;
+      padding: 1rem;
+      border-left: 8px solid;
+      border-bottom: 1px solid #7F7F7F;
+      border-bottom-left-radius: 4px;
+      border-bottom-left-radius: 0.25rem; }
+      .business-roadmap .view-grouping .au-card--roadmap .au-card--roadmap__text.au-card--roadmap__personalised-information-and-advice {
+        border-left-color: #C91978; }
+      .business-roadmap .view-grouping .au-card--roadmap .au-card--roadmap__text.au-card--roadmap__simplified-streamlined-and-joined-up-services {
+        border-left-color: #32A556; }
+      .business-roadmap .view-grouping .au-card--roadmap .au-card--roadmap__text.au-card--roadmap__simplified-identity-for-my-business-interactions-with-government {
+        border-left-color: #EE6523; }
+    .business-roadmap .view-grouping .au-card--roadmap .au-accordion {
+      margin-top: 0;
+      padding: 0px;
+      padding: 0rem;
+      border: 1px solid #7F7F7F;
+      background-color: #f5f5f5; }
+      @media (min-width: 768px) {
+        .business-roadmap .view-grouping .au-card--roadmap .au-accordion {
+          border: none; } }
+      .business-roadmap .view-grouping .au-card--roadmap .au-accordion .au-accordion__title:after {
+        position: absolute;
+        top: auto;
+        margin-top: -36px;
+        margin-top: -2.25rem;
+        right: 32px;
+        right: 2rem; }
+      .business-roadmap .view-grouping .au-card--roadmap .au-accordion .au-accordion__body-wrapper {
+        columns: 1; }
+      .business-roadmap .view-grouping .au-card--roadmap .au-accordion .au-accordion__body.au-accordion--open {
+        padding: 16px 16px 16px 24px;
+        padding: 1rem 1rem 1rem 1.5rem; }
 
 body {
   margin: 0; }
