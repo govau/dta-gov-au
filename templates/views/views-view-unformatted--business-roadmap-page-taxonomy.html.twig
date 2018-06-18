@@ -22,7 +22,7 @@
  * Updates the template to be used for the roadmap specifically.
 #}
 
-<div class="col-xs-12 col-sm-3">
+<div class="col-xs-12 col-md-3">
 {% if title %}
   <h3>{{ title }}</h3>
 {% endif %}
@@ -30,6 +30,7 @@
   {%
     set row_classes = [
       default_row_class ? 'views-row',
+      'row',
     ]
   %}
   {# Check whether the are any row classes set, or any row.attributes #}
