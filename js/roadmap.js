@@ -159,7 +159,7 @@
             skipTo( $node, year );
 
           }
-          if ( index > 0 && index < $groups.length ) {
+          if ( index > 0 && index < $groups.length - 1 ) {
             // These are the 'middle' items and need both skip to and back to
             // links, along with a separator.
 

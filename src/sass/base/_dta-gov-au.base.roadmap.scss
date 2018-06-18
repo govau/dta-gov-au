@@ -217,6 +217,37 @@
     }
     h3 {
       @include AU-fontgrid( sm );
+      @include AU-space( padding-top, 4unit );
+      overflow: hidden;
+      @include AU-media( sm ) {
+        overflow: visible;
+      }
+      position: relative;
+      // This creates the circle part of the keyline above each quarter.
+      &:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        @include AU-space( top, 0.5unit );
+        @include AU-space( left, 0unit );
+        @include AU-space( width, 2unit );
+        @include AU-space( height, 2unit );
+        border-radius: 50%;
+        border: 4px solid $AU-colordark-foreground-muted-suggestion;
+        background-color: $AU-color-foreground-background;
+        z-index: 2;
+      }
+      &:after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        @include AU-space( top, 1.6unit );
+        @include AU-space( left, 2unit );
+        @include AU-space( width, 100% );
+        @include AU-space( height, 0.25unit );
+        background-color: $AU-colordark-foreground-muted-suggestion;
+        z-index: 1;
+      }
     }
     p, h4 {
       @include AU-fontgrid( xs );
