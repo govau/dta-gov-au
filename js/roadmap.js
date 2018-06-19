@@ -133,20 +133,23 @@
 
       function skipTo( $node, year ) {
 
-        var nextYear = parseInt( year ) + 1;
+        var nextYear = parseInt( year ) + 1,
+            link = $('<a class="au-direction-link au-direction-link--down" href="#year-' + nextYear + '">Skip to ' + nextYear + '</a>')
 
-        $node.next('.skip-link-wrapper').append( `<a class="au-direction-link au-direction-link--down" href="#year-${ nextYear }">Skip to ${ nextYear }</a>` );
+        $node.next('.skip-link-wrapper').append(link);
       }
 
       function backTo( $node, year, separate ) {
 
-        var lastYear = parseInt( year ) - 1;
+        var lastYear = parseInt( year ) - 1,
+            $('<a class="au-direction-link au-direction-link--down" href="#year-' + nextYear + '">Skip to ' + nextYear + '</a>')
+
 
         (separate) ? $node.next('.skip-link-wrapper').prepend(
-                      `<a class="au-direction-link au-direction-link--up separator" href="#year-${ lastYear }">Back to ${ lastYear }</a>`
+                      '<a class="au-direction-link au-direction-link--up separator" href="#year-' + lastYear + '">Back to ' + lastYear + '</a>'
                     )
                    : $node.next('.skip-link-wrapper').prepend(
-                      `<a class="au-direction-link au-direction-link--up" href="#year-${ lastYear }">Back to ${ lastYear }</a>`
+                     '<a class="au-direction-link au-direction-link--up" href="#year-' + lastYear + '">Back to ' + lastYear + '</a>'
                    );
 
       }
@@ -161,7 +164,7 @@
               $wrapper = '<div class="skip-link-wrapper"></div>';
 
           // Each heading (node) needs an anchor link and a wrapper.
-          $node.prepend( `<a id="year-${ year }" name="year-${ year }"></a>` );
+          $node.prepend( '<a id="year-' + year + '" name="' + year + '"></a>' );
           $node.after( $wrapper );
 
           if ( index == 0 ) {
