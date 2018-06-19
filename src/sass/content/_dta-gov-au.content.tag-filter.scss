@@ -1,6 +1,12 @@
 // Styles for the tag filter.
 
 .block-facet--checkbox {
+  .au-accordion {
+    h2 {
+      @include AU-fontgrid( md );
+      @include AU-space( margin, 0 );
+    }
+  }
   .facets-widget-checkbox {
     .item-list__checkbox {
       column-count: 3;

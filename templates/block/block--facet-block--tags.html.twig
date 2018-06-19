@@ -34,14 +34,14 @@
   {{ title_prefix }}
   {% if label %}
     <section class="au-accordion">
-      <a aria-controls="accordion-closed" aria-expanded="false" aria-selected="false" class="au-accordion__title au-accordion--closed js-au-accordion" href="#accordion-closed" role="tab">
+      <a aria-controls="accordion-open" aria-expanded="false" aria-selected="false" class="au-accordion__title au-accordion--open js-au-accordion" href="#accordion-closed" role="tab">
         <h2{{ title_attributes }}>{{ label }}</h2>
       </a>
   {% endif %}
   {{ title_suffix }}
   {% block content %}
     {% if label %}
-      <div class="au-accordion__body au-accordion--closed" id="accordion-closed">
+      <div class="au-accordion__body au-accordion--open" id="accordion-open">
         <div class="au-accordion__body-wrapper">
           {{ content }}
         </div>
