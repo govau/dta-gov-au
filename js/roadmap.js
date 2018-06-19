@@ -141,9 +141,7 @@
 
       function backTo( $node, year, separate ) {
 
-        var lastYear = parseInt( year ) - 1,
-            $('<a class="au-direction-link au-direction-link--down" href="#year-' + nextYear + '">Skip to ' + nextYear + '</a>')
-
+        var lastYear = parseInt( year ) - 1;
 
         (separate) ? $node.next('.skip-link-wrapper').prepend(
                       '<a class="au-direction-link au-direction-link--up separator" href="#year-' + lastYear + '">Back to ' + lastYear + '</a>'
