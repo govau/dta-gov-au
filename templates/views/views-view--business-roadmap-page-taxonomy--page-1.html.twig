@@ -1,51 +1,98 @@
 {#
 /**
- * @file
- * Theme override for main view template.
- *
- * Available variables:
- * - attributes: Remaining HTML attributes for the element.
- * - css_name: A css-safe version of the view name.
- * - css_class: The user-specified classes names, if any.
- * - header: The optional header.
- * - footer: The optional footer.
- * - rows: The results of the view query, if any.
- * - empty: The content to display if there are no rows.
- * - pager: The optional pager next/prev links to display.
- * - exposed: Exposed widget form/info to display.
- * - feed_icons: Optional feed icons to display.
- * - more: An optional link to the next page of results.
- * - title: Title of the view, only used when displaying in the admin preview.
- * - title_prefix: Additional output populated by modules, intended to be
- *   displayed in front of the view title.
- * - title_suffix: Additional output populated by modules, intended to be
- *   displayed after the view title.
- * - attachment_before: An optional attachment view to be displayed before the
- *   view content.
- * - attachment_after: An optional attachment view to be displayed after the
- *   view content.
- * - dom_id: Unique id for every view being printed to give unique class for
- *   Javascript.
- *
- * @see template_preprocess_views_view()
- */
+* @file
+* Theme override for main view template.
+*
+* Available variables:
+* - attributes: Remaining HTML attributes for the element.
+* - css_name: A css-safe version of the view name.
+* - css_class: The user-specified classes names, if any.
+* - header: The optional header.
+* - footer: The optional footer.
+* - rows: The results of the view query, if any.
+* - empty: The content to display if there are no rows.
+* - pager: The optional pager next/prev links to display.
+* - exposed: Exposed widget form/info to display.
+* - feed_icons: Optional feed icons to display.
+* - more: An optional link to the next page of results.
+* - title: Title of the view, only used when displaying in the admin preview.
+* - title_prefix: Additional output populated by modules, intended to be
+*   displayed in front of the view title.
+* - title_suffix: Additional output populated by modules, intended to be
+*   displayed after the view title.
+* - attachment_before: An optional attachment view to be displayed before the
+*   view content.
+* - attachment_after: An optional attachment view to be displayed after the
+*   view content.
+* - dom_id: Unique id for every view being printed to give unique class for
+*   Javascript.
+*
+* @see template_preprocess_views_view()
+*/
 #}
 {%
-  set classes = [
-    dom_id ? 'js-view-dom-id-' ~ dom_id,
-    'business-roadmap',
-  ]
+set classes = [
+dom_id ? 'js-view-dom-id-' ~ dom_id,
+'business-roadmap',
+]
 %}
 
 <div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {{ title }}
-  {{ title_suffix }}
+{{ title_prefix }}
+{{ title }}
+{{ title_suffix }}
 
-  {% if header %}
-    <header>
-      {{ header }}
-    </header>
+{% if header %}
+<header>
+  <div class="row">
+    <div class="col-xs-12 col-md-7 ">
+      <h1>Roadmap of service improvements for businesses</h1>
+      <p class="au-introduction">This roadmap shows the Australian Government’s plans to improve services for business users. It is a collaboration between a range of agencies across the Australian Government to improve the experience of running a business in Australia. </p>
+    </div>
+    <div class="col-xs-12 col-md-4 col-md-offset-1" id="roadmap-themes">
+      <div class="au-callout">
+        <h3>Roadmap key</h3>
+        <button id="tooltip-button-themes" class="au-btn au-btn--secondary au-tooltip--button" aria-label="About themes" aria-labelledby="tooltip-themes"><span class="sr-only">About themes</span>?</button>
+        <div id="tooltip-themes" class="au-tooltip hidden" role="tooltip"><h3>Roadmap themes</h3>
+          <p class="au-introduction">We’ve grouped the services and projects in this roadmap into 3 themes. These themes come from the vision of the digital transformation agenda.</p>
+
+          <div class="theme-1">
+            <h4>Personalised information and advice</h4>
+            <p>Service developments in this group are delivering:</p>
+            <ul>
+              <li>personalisation of life events</li>
+              <li>access to preferred channels</li>
+              <li>push communications</li>
+            </ul>
+          </div>
+
+          <div class="theme-2"><h4>Simplified, streamlined and joined-up services</h4>
+            <p>This group is focussed on connecting and joining up services and exploring the use of 3rd party integrations to streamlines service experiences. </p>
+          </div>
+
+          <div class="theme-3">
+            <h4>Simplified identity for my business interactions with government</h4>
+
+            <p>Changes and improvements in this group are focussed around:</p>
+
+            <ul>
+              <li>robust, safe and secure services</li>
+              <li>streamlined and simple authentication</li>
+              <li>updating personal details with government once only</li>
+            </ul>
+          </div>
+        </div>
+        <p>Service improvements are grouped into the following 3 themes:</p>
+        <ul>
+          <li class="first">Personalised information and advice</li>
+          <li class="second">Simplified, streamlined & joined up services</li>
+          <li class="third">Simplified identity for my business interactions with government</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  </header>
   {% endif %}
 
   {{ exposed }}
@@ -59,9 +106,9 @@
   {{ more }}
 
   {% if footer %}
-    <footer>
-      {{ footer }}
-    </footer>
+  <footer>
+    {{ footer }}
+  </footer>
   {% endif %}
 
   {{ feed_icons }}

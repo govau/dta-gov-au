@@ -5,19 +5,13 @@
   position: relative;
 }
 
-.au-legend--tooltip {
-  // This just enhances the legend for this particular kind only.
-  font-weight: bold;
-  @include AU-fontgrid( sm );
-}
-
 .au-tooltip--button {
   // This sets the button (nominally a 'secondary' button) to be smaller and
   // rounded so it fits in better.
   @include AU-space( width, 1.75unit );
   @include AU-space( height, 1.75unit );
   @include AU-space( padding, 0 );
-  @include AU-space( margin-top, -0.125unit );
+  @include AU-space( margin-top, -0.5unit );
   @include AU-fontgrid( xs );
   background-color: $AU-color-foreground-background !important;
   border-radius: 50%;
