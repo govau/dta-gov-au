@@ -41,7 +41,7 @@
               var $card = $(this);
 
               // Create a standalone array from the dataset.
-              var dataset = $card.data('userJourneys').split('|');
+              var dataset = String($card.data('userJourneys')).split('|');
 
               // Find the tags in the card and set them to 'on' or 'off'.
               var $tags = $card.find('li');
@@ -134,7 +134,7 @@
       function skipTo( $node, year ) {
 
         var nextYear = parseInt( year ) + 1,
-            link = $('<a class="au-direction-link au-direction-link--down" href="#year-' + nextYear + '">Skip to ' + nextYear + '</a>')
+            link = $('<a class="au-direction-link au-direction-link--down" href="#year-' + nextYear + '">Skip to ' + nextYear + '</a>');
 
         $node.next('.skip-link-wrapper').append(link);
       }
@@ -186,6 +186,32 @@
 
             backTo( $node, year, separate );
           }
+
+          $( '.skip-link-wrapper a.au-direction-link' ).on('click', function(event) {
+            var speed = 500;
+            var href = $(this).attr("href").split('#')[1];
+            if (href) {
+
+              // Use the 'once' library for AJAX calls.
+              $(this, context).once('behaviours').addClass('processed');
+
+              var element = '#' + href;
+              var position = $(element).offset().top;
+
+              // Setting 'tabindex' to -1 takes an element out of normal
+              // tab flow but allows it to be focused via javascript
+              $(element).attr('tabindex', -1).on('blur focusout', function() {
+
+                // When focus leaves this element,
+                // remove the tabindex attribute
+                $(element).removeAttr('tabindex');
+              }).focus(); // Focus on the content container
+
+              // Scroll the viewport to the destination.
+              $('html, body').animate({ scrollTop: position }, speed, "swing");
+              event.preventDefault();
+            }
+          });
         });
 
     }

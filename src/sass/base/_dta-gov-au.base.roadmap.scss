@@ -218,6 +218,7 @@
     h3 {
       @include AU-fontgrid( sm );
       @include AU-space( padding-top, 4unit );
+      @include AU-space( margin-bottom, 0.25unit );
       overflow: hidden;
       @include AU-media( sm ) {
         overflow: visible;
@@ -248,6 +249,10 @@
         background-color: $AU-colordark-foreground-muted-suggestion;
         z-index: 1;
       }
+      + p {
+        @include AU-space( margin-top, 0 );
+        @include AU-space( margin-bottom, 1.25unit );
+      }
     }
     p, h4 {
       @include AU-fontgrid( xs );
@@ -262,15 +267,14 @@
       list-style: none;
       @include AU-space( padding, 0 );
       @include AU-space( margin-top, 1unit );
+      @include AU-space( width, 90% );
       li {
         display: inline-block;
         border: 1px solid $AU-color-foreground-border-suggestion;
         transition: all 0.2s ease-in-out;
         @include AU-space( border-radius, 0.25unit );
         @include AU-space( padding, 0.2unit 0.4unit );
-        + li {
-          @include AU-space( margin-left, 0.5unit );
-        }
+        @include AU-space( margin-right, 0.5unit );
         &.active {
           background-color: $AU-color-foreground-muted-suggestion;
           color: $AU-color-foreground-background;
@@ -278,8 +282,7 @@
       }
     }
     .au-card--roadmap {
-      @include AU-space( margin-top, 1.5unit );
-      @include AU-space( margin-bottom, 1.5unit );
+      @include AU-space( margin-bottom, 1unit );
       @include AU-fontgrid( xs );
       @include AU-space( border-radius, 0.25unit );
       box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
@@ -293,7 +296,7 @@
         &.au-card--roadmap__personalised-information-and-advice {
           border-left-color: $top-border-pink;
         }
-        &.au-card--roadmap__simplified-streamlined-and-joined-up-services {
+        &.au-card--roadmap__simplified-streamlined-amp-joined-up-services {
           border-left-color: $top-border-green;
         }
         &.au-card--roadmap__simplified-identity-for-my-business-interactions-with-government {
@@ -317,7 +320,7 @@
         .au-accordion__body-wrapper {
           columns: 1;
         }
-        .au-accordion__body.au-accordion--open {
+        .au-accordion__body {
           @include AU-space( padding, 1unit 1unit 1unit 1.5unit );
         }
       }
