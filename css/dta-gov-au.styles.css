@@ -3134,20 +3134,14 @@ img.align-right, p.align-right {
 .au-tooltip--wrapper {
   position: relative; }
 
-.au-legend--tooltip {
-  font-weight: bold;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.5; }
-
 .au-tooltip--button {
   width: 28px;
   width: 1.75rem;
   height: 28px;
   height: 1.75rem;
   padding: 0;
-  margin-top: -2px;
-  margin-top: -0.125rem;
+  margin-top: -8px;
+  margin-top: -0.5rem;
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.42857;
@@ -3240,26 +3234,72 @@ img.align-right, p.align-right {
     padding: 1.5rem 0; }
     @media (min-width: 768px) {
       #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset legend {
+        padding: 16px 0;
+        padding: 1rem 0; } }
+    @media (min-width: 992px) {
+      #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset legend {
         padding: 32px 0;
         padding: 2rem 0; } }
-    @media (min-width: 1200px) {
-      #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset legend {
-        float: left; } }
+    #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset legend .au-legend--tooltip {
+      font-weight: bold;
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 1.5; }
+      #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset legend .au-legend--tooltip h3, #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset legend .au-legend--tooltip button {
+        display: inline-block; }
+        #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset legend .au-legend--tooltip h3 + p, #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset legend .au-legend--tooltip button + p {
+          margin-top: 8px;
+          margin-top: 0.5rem;
+          font-weight: normal; }
+      #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset legend .au-legend--tooltip h3 {
+        font-size: 20px;
+        font-size: 1.25rem;
+        line-height: 1.6; }
   #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper {
     margin-top: 0;
     border: none; }
+    #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper a[aria-controls]:after {
+      top: -24px;
+      top: -1.5rem; }
     @media (min-width: 768px) {
       #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper a[aria-controls] {
         display: none;
         visibility: hidden; } }
-    @media (min-width: 1200px) {
-      #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper .form-checkboxes#edit-field-user-journey-target-id {
-        padding-top: 28px;
-        padding-top: 1.75rem;
-        margin-left: 32px;
-        margin-left: 2rem; }
-        #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper .form-checkboxes#edit-field-user-journey-target-id .fieldgroup .form-item {
-          display: inline-block; } }
+    #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper .form-checkboxes#edit-field-user-journey-target-id .form-checkboxes#edit-field-user-journey-target-id--wrapper {
+      padding-top: 12px;
+      padding-top: 0.75rem;
+      padding-bottom: 12px;
+      padding-bottom: 0.75rem;
+      columns: 3; }
+      @media (min-width: 992px) {
+        #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper .form-checkboxes#edit-field-user-journey-target-id .form-checkboxes#edit-field-user-journey-target-id--wrapper {
+          columns: 2; } }
+      @media (min-width: 1200px) {
+        #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper .form-checkboxes#edit-field-user-journey-target-id .form-checkboxes#edit-field-user-journey-target-id--wrapper {
+          columns: 3; } }
+    #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper .form-checkboxes#edit-field-user-journey-target-id .fieldgroup .form-item label {
+      margin-bottom: 8px;
+      margin-bottom: 0.5rem;
+      margin-top: 8px;
+      margin-top: 0.5rem; }
+      @media (min-width: 992px) {
+        #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper .form-checkboxes#edit-field-user-journey-target-id .fieldgroup .form-item label {
+          margin-bottom: 0px;
+          margin-bottom: 0rem;
+          margin-top: 18px;
+          margin-top: 1.125rem; } }
+      @media (min-width: 1200px) {
+        #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper .form-checkboxes#edit-field-user-journey-target-id .fieldgroup .form-item label {
+          margin-bottom: 18px;
+          margin-bottom: 1.125rem;
+          margin-top: 18px;
+          margin-top: 1.125rem; } }
+    #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper .form-checkboxes#edit-field-user-journey-target-id .fieldgroup .form-item .au-control-input__text {
+      font-size: 14px;
+      font-size: 0.875rem;
+      line-height: 1.42857;
+      margin-right: 4px;
+      margin-right: 0.25rem; }
     #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper input[type="checkbox"].au-control-input__input:focus + .au-control-input__text:before,
     #views-exposed-form-business-roadmap-page-taxonomy-page-1 fieldset .fieldset-wrapper .au-control-input__input:focus + .au-control-input__text:after {
       outline: none;
@@ -3306,12 +3346,9 @@ img.align-right, p.align-right {
   line-height: 1.6;
   display: inline-block; }
 
-#roadmap-themes .au-callout > button {
-  display: inline-block;
-  margin-top: -3px;
-  margin-top: -0.2rem; }
-
 #roadmap-themes .au-callout > ul {
+  padding-left: 32px;
+  padding-left: 2rem;
   list-style: none;
   position: relative; }
   #roadmap-themes .au-callout > ul li.first:before {
@@ -3323,11 +3360,10 @@ img.align-right, p.align-right {
   #roadmap-themes .au-callout > ul li:before {
     content: ' ';
     display: block;
-    width: 24px;
-    width: 1.5rem;
+    width: 8px;
+    width: 0.5rem;
     height: 24px;
     height: 1.5rem;
-    border-radius: 50%;
     position: absolute;
     left: 0; }
 
@@ -3374,14 +3410,7 @@ img.align-right, p.align-right {
 .business-roadmap .au-accordion__body-wrapper {
   padding: 0 0 8px 0;
   padding: 0 0 0.5rem 0;
-  border: none;
-  columns: 2; }
-  @media (min-width: 768px) {
-    .business-roadmap .au-accordion__body-wrapper {
-      columns: 3; } }
-  @media (min-width: 1200px) {
-    .business-roadmap .au-accordion__body-wrapper {
-      columns: 1; } }
+  border: none; }
 
 .business-roadmap .view-grouping {
   position: relative; }
@@ -3495,8 +3524,8 @@ img.align-right, p.align-right {
     border-radius: 4px;
     border-radius: 0.25rem; }
     .business-roadmap .view-grouping .au-card--roadmap .au-card--roadmap__text {
-      padding: 16px;
-      padding: 1rem;
+      padding: 16px 16px 24px 16px;
+      padding: 1rem 1rem 1.5rem 1rem;
       border-left: 8px solid;
       border-bottom: 1px solid #7F7F7F;
       border-bottom-left-radius: 4px;
@@ -3519,8 +3548,8 @@ img.align-right, p.align-right {
       .business-roadmap .view-grouping .au-card--roadmap .au-accordion .au-accordion__title:after {
         position: absolute;
         top: auto;
-        margin-top: -36px;
-        margin-top: -2.25rem;
+        margin-top: -24px;
+        margin-top: -1.5rem;
         right: 32px;
         right: 2rem; }
       .business-roadmap .view-grouping .au-card--roadmap .au-accordion .au-accordion__body-wrapper {

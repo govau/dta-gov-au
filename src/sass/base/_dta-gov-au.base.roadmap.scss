@@ -32,27 +32,68 @@
     legend {
       @include AU-space( padding, 1.5unit 0 );
       @include AU-media( sm ) {
+        @include AU-space( padding, 1unit 0 );
+      }
+      @include AU-media( md ) {
         @include AU-space( padding, 2unit 0 );
       }
-      @include AU-media( lg ) {
-        float: left;
+      .au-legend--tooltip {
+        // This just enhances the legend for this particular kind only.
+        font-weight: bold;
+        @include AU-fontgrid( sm );
+        h3, button {
+          display: inline-block;
+          + p {
+            @include AU-space( margin-top, 0.5unit );
+            font-weight: normal;
+          }
+        }
+        h3 {
+          @include AU-fontgrid ( md );
+        }
       }
+
     }
     .fieldset-wrapper {
       @include AU-space( margin-top, 0 );
       border: none;
-      @include AU-media( sm ) {
-        a[aria-controls] {
+      a[aria-controls] {
+        &:after {
+          @include AU-space( top, -1.5unit );
+        }
+        @include AU-media( sm ) {
           display: none;
           visibility: hidden;
         }
       }
       .form-checkboxes#edit-field-user-journey-target-id {
-        @include AU-media( lg ) {
-          @include AU-space( padding-top, 1.75unit );
-          @include AU-space( margin-left, 2unit );
-          .fieldgroup .form-item {
-            display: inline-block;
+        .form-checkboxes#edit-field-user-journey-target-id--wrapper {
+          @include AU-space( padding-top, 0.75unit );
+          @include AU-space( padding-bottom, 0.75unit );
+          columns: 3;
+          @include AU-media( md ) {
+            columns: 2;
+          }
+          @include AU-media( lg ) {
+            columns: 3;
+          }
+        }
+        .fieldgroup .form-item {
+          label {
+            @include AU-space( margin-bottom, 0.5unit );
+            @include AU-space( margin-top, 0.5unit );
+            @include AU-media( md ) {
+              @include AU-space( margin-bottom, 0unit );
+              @include AU-space( margin-top, 1.125unit );
+            }
+            @include AU-media( lg ) {
+              @include AU-space( margin-bottom, 1.125unit );
+              @include AU-space( margin-top, 1.125unit );
+            }
+          }
+          .au-control-input__text {
+            @include AU-fontgrid( xs );
+            @include AU-space( margin-right, 0.25unit );
           }
         }
       }
@@ -111,11 +152,8 @@
     @include AU-fontgrid( md );
     display: inline-block;
   }
-  > button {
-    display: inline-block;
-    @include AU-space( margin-top, -0.2unit );
-  }
   > ul {
+    @include AU-space( padding-left, 2unit );
     list-style: none;
     position: relative;
     li {
@@ -131,9 +169,8 @@
       &:before {
         content: ' ';
         display: block;
-        @include AU-space( width, 1.5unit );
+        @include AU-space( width, 0.5unit );
         @include AU-space( height, 1.5unit );
-        border-radius: 50%;
         position: absolute;
         left: 0;
       }
@@ -186,13 +223,6 @@
   .au-accordion__body-wrapper {
     @include AU-space( padding, 0 0 0.5unit 0 );
     border: none;
-    columns: 2;
-    @include AU-media( sm ) {
-      columns: 3;
-    }
-    @include AU-media( lg ) {
-      columns: 1;
-    }
   }
   .view-grouping {
     position: relative;
@@ -289,7 +319,7 @@
       border: 1px solid $AU-color-foreground-border-suggestion;
       @include AU-space( border-radius, 0.25unit );
       .au-card--roadmap__text {
-        @include AU-space( padding, 1unit );
+        @include AU-space( padding, 1unit 1unit 1.5unit 1unit );
         border-left: 8px solid;
         border-bottom: 1px solid $AU-color-foreground-border-suggestion;
         @include AU-space( border-bottom-left-radius, 0.25unit );
@@ -314,7 +344,7 @@
         .au-accordion__title:after {
           position: absolute;
           top: auto;
-          @include AU-space( margin-top, -2.25unit ); // Reposition the arrow at the top of the container.
+          @include AU-space( margin-top, -1.5unit ); // Reposition the arrow at the top of the container.
           @include AU-space( right, 2unit );
         }
         .au-accordion__body-wrapper {

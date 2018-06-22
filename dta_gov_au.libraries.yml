@@ -18,3 +18,4 @@ roadmap:
   version: 1.x
   js:
     js/roadmap.js: {}
+    js/masonry.pkgd.min.js: {}
