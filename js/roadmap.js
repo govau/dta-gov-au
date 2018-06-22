@@ -1,6 +1,23 @@
 (function($, Drupal) {
   'use strict';
 
+  // Drupal.behaviors.dtagovauRoadmapMasonry = {
+  //   attach: function( context, settings ) {
+  //
+  //     var $grid = $('.business-roadmap .masonry-wrapper');
+  // 
+  //     $($grid, context)
+  //       .addClass('processed')
+  //       .once('dtagovauRoadmapMasonry')
+  //       .masonry({
+  //         itemSelector: 'div.col-xs-12',
+  //       });
+  //       // .find('.js-au-accordion').click( function() {
+  //       //   $grid.masonry();
+  //       // });
+  //   }
+  // }
+
   Drupal.behaviors.dtagovauRoadmap = {
     attach: function(context, settings) {
       var $form = $('form#views-exposed-form-business-roadmap-page-taxonomy-page-1'),
