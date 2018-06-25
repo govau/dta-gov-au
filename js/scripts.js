@@ -10,30 +10,43 @@
   Drupal.behaviors.dtagovauSmoothScroll = {
     // This creates a smooth scroll effect for on page links. It also moves the
     // focus correctly for keyboard uses as per https://www.bignerdranch.com/blog/web-accessibility-skip-navigation-links/.
-    attach: function(context, settings) {
-      $('a:not(.js-au-accordion)', context).once('smoothScroll').click(function(event) {
-        var speed = 500;
-        var href = $(this).attr("href").split('#')[1];
-        if (href) {
+    attach: function( context, settings ) {
+      $( '.skip-link-wrapper a.au-direction-link', context )
+        .once('dtagovauSmoothScroll')
+        .on('click', function(event) {
 
-          // Use the 'once' library for AJAX calls.
-          $(this, context).once('behaviours').addClass('processed');
-
-          var element = '#' + href;
-          var position = $(element).offset().top;
-
-          // Setting 'tabindex' to -1 takes an element out of normal
-          // tab flow but allows it to be focused via javascript
-          $(element).attr('tabindex', -1).on('blur focusout', function() {
-
-            // When focus leaves this element,
-            // remove the tabindex attribute
-            $(element).removeAttr('tabindex');
-          }).focus(); // Focus on the content container
-
-          // Scroll the viewport to the destination.
-          $('html, body').animate({ scrollTop: position }, speed, "swing");
           event.preventDefault();
+
+          var speed = 500,
+              path = $(this).attr("href").split('#')[0],
+              $element = $('#' + $(this).attr("href").split('#')[1]);
+
+          // Get rid of http:// or https:// from the start of the string.
+          if ( path.indexOf( '://' ) > -1 ) {
+            path = path.substring( path.indexOf( '://' ) + 3 );
+          }
+
+          // Knock off the domain.
+          if ( path.indexOf( '/' ) > -1 ) {
+            path = path.substring( path.indexOf( '/' ) );
+          }
+
+          if ($element.length > 0 && (!path || path == window.location.pathname)) {
+            var position = $element.offset().top;
+
+            // Scroll the viewport to the destination.
+            $('html, body').animate({
+              scrollTop: position
+            }, speed, "swing", function() {
+              // Setting 'tabindex' to -1 takes an element out of normal tab
+              // flow but allows it to be focused via JavaScript. We only do
+              // this when the animation is complete.
+              $element.attr('tabindex', -1).on('blur focusout', function() {
+
+                // When focus leaves this element, remove the tabindex attribute.
+                $element.removeAttr('tabindex');
+              }).focus(); // Focus on the content container
+            });
         }
       });
     }

@@ -229,6 +229,9 @@
     h2 {
       @include AU-fontgrid( xxl );
     }
+    > div.row div.row > div {
+      @include AU-space( margin-left, -0.75unit );
+    }
     .skip-link-wrapper {
       display: block;
       position: absolute;
@@ -319,7 +322,7 @@
       border: 1px solid $AU-color-foreground-border-suggestion;
       @include AU-space( border-radius, 0.25unit );
       .au-card--roadmap__text {
-        @include AU-space( padding, 1unit 1unit 1.5unit 1unit );
+        @include AU-space( padding, 1unit 1unit 2.5unit 1unit );
         border-left: 8px solid;
         border-bottom: 1px solid $AU-color-foreground-border-suggestion;
         @include AU-space( border-bottom-left-radius, 0.25unit );
@@ -341,11 +344,27 @@
         @include AU-space( padding, 0unit );
         border: 1px solid $AU-color-foreground-border-suggestion;
         background-color: $AU-color-background-shade-suggestion;
-        .au-accordion__title:after {
-          position: absolute;
-          top: auto;
-          @include AU-space( margin-top, -1.5unit ); // Reposition the arrow at the top of the container.
-          @include AU-space( right, 2unit );
+        .au-accordion__title {
+          &:hover:after {
+            // We have to change the viewBox for the background images to increase the 'hitbox' for the accordion button.
+            background-image: AU-svguri(
+              "<svg xmlns='http://www.w3.org/2000/svg' viewBox='-36 -48 208 208'>" +
+                "<path fill='#{ $AU-color-foreground-text }' d='M64 0l64 64-16 16-64-64'/>" +
+                "<path fill='#{ $AU-color-foreground-text }' d='M64 0l16 16-64 64L0 64'/>" +
+              "</svg>");
+          }
+          &:after {
+            position: absolute;
+            top: auto;
+            @include AU-space( margin-top, -2.5unit ); // Reposition the arrow at the top of the container.
+            @include AU-space( right, 1.5unit );
+            @include AU-space( width, 2unit );
+            @include AU-space( height, 2unit );
+            background-image: AU-svguri(
+              "<svg xmlns='http://www.w3.org/2000/svg' viewBox='-36 -48 208 208'>" +
+                "<path fill='#{ $AU-color-foreground-action }' d='M64 0l64 64-16 16-64-64'/>" +
+                "<path fill='#{ $AU-color-foreground-action }' d='M64 0l16 16-64 64L0 64'/>" +
+              "</svg>");          }
         }
         .au-accordion__body-wrapper {
           columns: 1;
