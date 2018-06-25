@@ -27,7 +27,6 @@
   {% if title %}
       {{ title }}
     {% endif %}
-    <div class="masonry-wrapper">
     {% for row in rows %}
       {%
         set row_classes = [
@@ -36,6 +35,5 @@
       %}
         {{ row.content }}
     {% endfor %}
-    </div>
   </div>
 </div>
