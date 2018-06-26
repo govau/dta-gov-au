@@ -20,7 +20,7 @@
 
   Drupal.behaviors.dtagovauRoadmap = {
     attach: function(context, settings) {
-      var $form = $('form#views-exposed-form-business-roadmap-page-taxonomy-page-1'),
+      var $form = $('.au-roadmap form, form#views-exposed-form-business-roadmap-page-taxonomy-page-1'),
           $root = $('div.views-element-container'),
           currentlyCheckedIDs = [],
           currentlyCheckedNames = [];
@@ -119,7 +119,7 @@
   Drupal.behaviors.dtagovauRoadmapRemoveAccordion = {
     attach: function(context, settings) {
       // This function removes accordion classes at a certain breakpoint.
-      var $form = $('form#views-exposed-form-business-roadmap-page-taxonomy-page-1'),
+      var $form = $('.au-roadmap form, form#views-exposed-form-business-roadmap-page-taxonomy-page-1'),
           $accordion = $form.find('.au-accordion'),
           $accordionTitle = $accordion.find('.au-accordion__title'),
           $accordionBody = $accordion.find('.au-accordion__body'),
@@ -145,7 +145,7 @@
     // This function adds 'Skip to' links for each year.
     attach: function( context, settings ) {
 
-      var $root = $('.business-roadmap'),
+      var $root = $('.au-roadmap'),
           $groups = $root.find('.view-grouping h2');
 
       function skipTo( $node, year ) {

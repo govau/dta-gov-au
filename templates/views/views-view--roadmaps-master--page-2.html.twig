@@ -31,10 +31,9 @@
 */
 #}
 {%
-set classes = [
-dom_id ? 'js-view-dom-id-' ~ dom_id,
-'business-roadmap',
-]
+  set classes = [
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
 %}
 
 {{ attach_library('dta_gov_au/roadmap') }}
@@ -48,16 +47,15 @@ dom_id ? 'js-view-dom-id-' ~ dom_id,
 <header>
   <div class="row">
     <div class="col-xs-12 col-md-7 ">
-      <h1>Roadmap of service improvements for businesses</h1>
-      <p class="au-introduction">This roadmap shows the Australian Government’s plans to improve services for business users. It is a collaboration between a range of agencies across the Australian Government to improve the experience of running a business in Australia. </p>
+      <h1>Roadmap of service improvements for individuals</h1>
+      <p class="au-introduction">This roadmap shows the Australian Government’s plans to improve services for individuals. It highlights how a range of agencies across the Australian Government are working to improve the experience individuals have when accessing government services.</p>
     </div>
     <div class="col-xs-12 col-md-4 col-md-offset-1" id="roadmap-themes">
       <div class="au-callout">
         <h3>Roadmap key</h3>
         <button id="tooltip-button-themes" class="au-btn au-btn--secondary au-tooltip--button" aria-label="About themes" aria-labelledby="tooltip-themes"><span class="sr-only">About themes</span>?</button>
         <div id="tooltip-themes" class="au-tooltip hidden" role="tooltip"><h3>Roadmap themes</h3>
-          <p class="au-introduction">We’ve grouped the services and projects in this roadmap into 3 themes. These themes come from the vision of the digital transformation agenda.</p>
-
+          <p class="au-introduction">We’ve grouped the services and projects in this roadmap into 2 themes. These themes come from the vision of the Digital Transformation Agenda.</p>
           <div class="theme-1">
             <h4>Personalised information and advice</h4>
             <p>Service developments in this group are delivering:</p>
@@ -72,23 +70,11 @@ dom_id ? 'js-view-dom-id-' ~ dom_id,
             <p>This group is focussed on connecting and joining up services and exploring the use of 3rd party integrations to streamlines service experiences. </p>
           </div>
 
-          <div class="theme-3">
-            <h4>Simplified identity for my business interactions with government</h4>
-
-            <p>Changes and improvements in this group are focussed around:</p>
-
-            <ul>
-              <li>robust, safe and secure services</li>
-              <li>streamlined and simple authentication</li>
-              <li>updating personal details with government once only</li>
-            </ul>
-          </div>
         </div>
-        <p>Service improvements are grouped into the following 3 themes:</p>
+        <p>Service improvements are grouped into the following 2 themes:</p>
         <ul>
           <li class="first">Personalised information and advice</li>
           <li class="second">Simplified, streamlined & joined up services</li>
-          <li class="third">Simplified identity for my business interactions with government</li>
         </ul>
       </div>
     </div>
