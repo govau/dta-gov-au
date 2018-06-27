@@ -31,10 +31,9 @@
 */
 #}
 {%
-set classes = [
-dom_id ? 'js-view-dom-id-' ~ dom_id,
-'business-roadmap',
-]
+  set classes = [
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
 %}
 
 {{ attach_library('dta_gov_au/roadmap') }}
@@ -48,7 +47,7 @@ dom_id ? 'js-view-dom-id-' ~ dom_id,
 <header>
   <div class="row">
     <div class="col-xs-12 col-md-7 ">
-      <h1>Roadmap of service improvements for businesses</h1>
+      <h1>Roadmap of service improvements for business</h1>
       <p class="au-introduction">This roadmap shows the Australian Government’s plans to improve services for business users. It is a collaboration between a range of agencies across the Australian Government to improve the experience of running a business in Australia. All projects in this roadmap will have some impact on the experience of businesses using government services. We’ve identified which experiences will be impacted through user journeys.</p>
     </div>
     <div class="col-xs-12 col-md-4 col-md-offset-1" id="roadmap-themes">
