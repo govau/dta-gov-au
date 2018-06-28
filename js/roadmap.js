@@ -1,29 +1,14 @@
 (function($, Drupal) {
   'use strict';
 
-  // Drupal.behaviors.dtagovauRoadmapMasonry = {
-  //   attach: function( context, settings ) {
-  //
-  //     var $grid = $('.business-roadmap .masonry-wrapper');
-  //
-  //     $($grid, context)
-  //       .addClass('processed')
-  //       .once('dtagovauRoadmapMasonry')
-  //       .masonry({
-  //         itemSelector: 'div.col-xs-12',
-  //       });
-  //       // .find('.js-au-accordion').click( function() {
-  //       //   $grid.masonry();
-  //       // });
-  //   }
-  // }
-
   Drupal.behaviors.dtagovauRoadmap = {
     attach: function(context, settings) {
       var $form = $('.au-roadmap form, form#views-exposed-form-business-roadmap-page-taxonomy-page-1'),
           $root = $('div.views-element-container'),
-          currentlyCheckedIDs = [],
-          currentlyCheckedNames = [];
+          currentlyCheckedIDs = [];
+
+          // We've removed the functionality to show or hide tags.
+          //currentlyCheckedNames = [];
 
       $($form, context)
         .once('dtagovauRoadmap')
@@ -39,15 +24,15 @@
           var termID = event.currentTarget.id.replace(/[^0-9\.]/g,'');
 
           //Get the termName from the input.
-          var termName = event.currentTarget.nextElementSibling.childNodes[0].data;
+          // var termName = event.currentTarget.nextElementSibling.childNodes[0].data;
 
-          event.currentTarget.checked ? boxChecked(termID, termName) : boxUnchecked(termID, termName);
+          event.currentTarget.checked ? boxChecked(termID) : boxUnchecked(termID);
 
           // If after a change there are no checkboxes ticked (ie the
           // currentlyChecked array is empty), then show all the cards.
           // Otherwise, nothing to see here...
           if (currentlyCheckedIDs.length == 0) {
-            $('.au-card--roadmap').fadeIn().find('li').removeClass('active');
+            $('.au-card--roadmap').fadeIn();
           } else {
             // Now that the currentlyChecked array has been updated, we can run
             // through the elements and display them if they have one of the
@@ -61,17 +46,22 @@
               var dataset = String($card.data('userJourneys')).split('|');
 
               // Find the tags in the card and set them to 'on' or 'off'.
-              var $tags = $card.find('li');
-              $tags.each(function(index, element) {
-                var $tag = $(this),
-                    text = $tag.text();
+              //var $tags = $card.find('li');
 
-                if($.inArray( text, currentlyCheckedNames ) !== -1) {
-                  $tag.addClass( 'active' );
-                } else {
-                  $tag.removeClass( 'active' );
-                }
-              });
+              // If there are tags (or <li>s - could be a problem!), then run
+              // through and set to off or on.
+              // if ( $tags.length > 0 ) {
+              //   $tags.each(function(index, element) {
+              //     var $tag = $(this),
+              //         text = $tag.text();
+              //
+              //     if($.inArray( text, currentlyCheckedNames ) !== -1) {
+              //       $tag.addClass( 'active' );
+              //     } else {
+              //       $tag.removeClass( 'active' );
+              //     }
+              //   });
+              // }
 
               // If the checkVisibility function returns true, show the card.
               // Otherwise, hide it.
@@ -81,18 +71,16 @@
           }
         });
 
-      function boxChecked(termID, termName) {
+      function boxChecked(termID) {
         // Find the currently checked item in the currentlyChecked arrays.
         if ($.inArray(termID, currentlyCheckedIDs) === -1) {
           currentlyCheckedIDs.push(termID);
-          currentlyCheckedNames.push(termName);
         }
       }
 
-      function boxUnchecked(termID, termName) {
+      function boxUnchecked(termID) {
         if ($.inArray(termID, currentlyCheckedIDs) !== -1) {
           currentlyCheckedIDs.splice($.inArray(termID, currentlyCheckedIDs), 1);
-          currentlyCheckedNames.splice($.inArray(termName, currentlyCheckedNames), 1);
         }
       }
 
