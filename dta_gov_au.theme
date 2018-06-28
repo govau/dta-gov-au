@@ -23,16 +23,9 @@ function _removeElementWithValue($array, $value) {
 }
 
 function dta_gov_au_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-business-roadmap-page-taxonomy-page-1') {
-
-    // Add the JS library to the form.
-    //$form['#attached']['library'][] = 'dta_gov_au/roadmap';
-
+  if($form_id == 'views_exposed_form' && strpos($form['#id'], 'roadmap' !== false)) {
     // Ditch the 'apply' button. The option to submit is also turned off via JS.
     unset($form['actions']['submit']);
-
-    // Remove the 'Business' option, which is a grouping term.
-    $form['field_user_journey_target_id']['#options'] = _removeElementWithValue($form['field_user_journey_target_id']['#options'], 'Business');
   }
 }
 
