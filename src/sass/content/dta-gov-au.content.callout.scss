@@ -1,0 +1,5 @@
+.au-callout {
+  h2 {
+    @include AU-space( margin-top, 0 );
+  }
+}
