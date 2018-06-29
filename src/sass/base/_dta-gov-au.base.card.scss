@@ -180,7 +180,14 @@ a.au-card {
 			}
 			@supports( display: flex ) {
 				display: flex;
+				flex: 1 0 100%;
+				@include AU-media( sm ) {
+					flex: 1 0 33%;
+				}
+				@include AU-media( md ) {
+				}
 			}
+
 		}
 		.au-card {
 			@include AU-media( sm ) {
