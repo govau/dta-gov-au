@@ -16,6 +16,11 @@
   }
 }
 main[role="main"] {
+  .au-roadmap {
+    header {
+      @include AU-space( margin-bottom, 2unit );
+    }
+  }
   #views-exposed-form-business-roadmap-page-taxonomy-page-1,
   .au-roadmap form {
     @include AU-space( margin, 0 -2unit );

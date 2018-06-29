@@ -3221,6 +3221,10 @@ img.align-right, p.align-right {
   display: block;
   visibility: visible; }
 
+main[role="main"] .au-roadmap header {
+  margin-bottom: 32px;
+  margin-bottom: 2rem; }
+
 main[role="main"] #views-exposed-form-business-roadmap-page-taxonomy-page-1,
 main[role="main"] .au-roadmap form {
   margin: 0 -32px;
