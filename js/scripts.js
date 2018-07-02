@@ -13,7 +13,8 @@
     // This creates a smooth scroll effect for on page links. It also moves the
     // focus correctly for keyboard uses as per https://www.bignerdranch.com/blog/web-accessibility-skip-navigation-links/.
     attach: function( context, settings ) {
-$( '.au-skip-link a,  main[role="main"] a', context )
+      $( '.au-skip-link a,  main[role="main"] a', context )
+        .not('.au-accordion__title')
         .once( 'dtagovauSmoothScroll' )
         .on( 'click', function( event ) {
           var speed = 500,
