@@ -173,18 +173,29 @@ a.au-card {
 			flex-wrap: wrap;
 		}
 
-		li, article {
+		li {
 			display: table-cell;
 			@include AU-media( sm ) {
 				min-height: 17rem;
 			}
 			@supports( display: flex ) {
 				display: flex;
-				flex: 1 0 100%;
+			}
+			&.col-sm-4 {
 				@include AU-media( sm ) {
-					flex: 1 0 33%;
+					// Safari doesn't like the .33333% at the end.
+					width: 33%;
 				}
+			}
+			&.col-sm-6 {
+				@include AU-media( sm ) {
+					// Or 50%?
+					width: 49%;
+				}
+			}
+			&.col-md-4 {
 				@include AU-media( md ) {
+					width: 33%;
 				}
 			}
 
