@@ -3046,18 +3046,23 @@ a.au-card {
       .au-card-list.au-card-list--matchheight {
         display: flex;
         flex-wrap: wrap; } }
-    .au-card-list.au-card-list--matchheight li, .au-card-list.au-card-list--matchheight article {
+    .au-card-list.au-card-list--matchheight li {
       display: table-cell; }
       @media (min-width: 768px) {
-        .au-card-list.au-card-list--matchheight li, .au-card-list.au-card-list--matchheight article {
+        .au-card-list.au-card-list--matchheight li {
           min-height: 17rem; } }
       @supports (display: flex) {
-        .au-card-list.au-card-list--matchheight li, .au-card-list.au-card-list--matchheight article {
-          display: flex;
-          flex: 1 0 100%; }
-          @media (min-width: 768px) {
-            .au-card-list.au-card-list--matchheight li, .au-card-list.au-card-list--matchheight article {
-              flex: 1 0 33%; } } }
+        .au-card-list.au-card-list--matchheight li {
+          display: flex; } }
+      @media (min-width: 768px) {
+        .au-card-list.au-card-list--matchheight li.col-sm-4 {
+          width: 33%; } }
+      @media (min-width: 768px) {
+        .au-card-list.au-card-list--matchheight li.col-sm-6 {
+          width: 49%; } }
+      @media (min-width: 992px) {
+        .au-card-list.au-card-list--matchheight li.col-md-4 {
+          width: 33%; } }
     @media (min-width: 768px) {
       .au-card-list.au-card-list--matchheight .au-card {
         min-height: 272px;
