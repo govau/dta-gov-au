@@ -1,0 +1,144 @@
+// Style for annual reports.
+$phases: (
+  "discovery": $AU-color-discovery,
+  "alpha": $AU-color-alpha,
+  "beta": $AU-color-beta,
+  "live": $AU-color-live,
+);
+
+.annual-report {
+  &.executive {
+    // Executive section on '1. Agency overview'
+    div[class^="col-"] {
+      @include AU-space( margin-top, 1.5unit );
+    }
+  }
+  &.service-design {
+    position: relative;
+    p {
+      @include AU-space( margin-left, 1.45unit );
+      @include AU-space( padding-left, 2rem);
+      border-left: 0.25rem dashed;
+      margin-bottom: 0;
+    }
+    h4 {
+      @include AU-space( padding-left, 4rem);
+      @include AU-space( padding-left, 4rem);
+      line-height: 4rem;
+      margin: 0;
+      + p {
+        @include AU-space( margin-top, 0 );
+      }
+    }
+    @each $phase, $colour in $phases {
+      .#{$phase} {
+        h4 {
+          background: url('../images/circle-#{$phase}.png') no-repeat left center;
+        }
+        p {
+          border-left-color: $colour;
+        }
+      }
+    }
+    .live {
+      p:after {
+        content: '';
+        background-image: url('../images/arrow-head.png');
+        background-color: white;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        display: block;
+        width: 50px;
+        height: 10px;
+        position: absolute;
+        left: 0;
+        @include AU-media( xs ) {
+          left: 1px;
+        }
+        bottom: 0;
+      }
+    }
+  }
+  &.publications {
+    margin-left: 0;
+    padding-left: 0;
+    > li {
+      list-style: none;
+      margin-left: 0;
+      font-weight: bold;
+      li {
+        list-style: disc;
+        font-weight: normal;
+        li {
+          list-style: circle;
+        }
+      }
+    }
+  }
+}
+
+table.financial {
+  thead th {
+      font-weight: bold;
+    }
+    tbody th {
+      font-weight: normal;
+    }
+  th,
+  td {
+    text-align: right;
+    &:first-child {
+      text-align: initial;
+      background-color: transparent;
+    }
+  }
+  &.fy-2016-17 {
+    td, th {
+      vertical-align: top;
+      border: none;
+      text-align: inherit;
+      &:first-child {
+        text-align: inherit;
+      }
+    }
+    p {
+      margin-bottom: 0;
+      max-width: 100%;
+    }
+    li {
+      max-width: 100%;
+    }
+  }
+  .bold {
+    font-weight: bold;
+  }
+  .body {
+    font-weight: normal;
+  }
+  .italic {
+    font-style: italic;
+  }
+  .table-right-aligned {
+    text-align: right;
+  }
+  .table-left-indent {
+    padding-left: 1rem;
+  }
+  .table-border-top {
+    td, th {
+      border-top: 1px solid $AU-color-foreground-border-suggestion;
+    }
+  }
+  .table-border-bottom {
+    td, th {
+      border-bottom: 1px solid $AU-color-foreground-border-suggestion;
+    }
+  }
+  .table-all-caps {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  tfoot tr td  * {
+    font-size: 0.9rem;
+  }
+}
