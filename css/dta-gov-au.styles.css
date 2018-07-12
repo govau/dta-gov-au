@@ -3083,7 +3083,8 @@ figure {
   margin: 0; }
 
 table {
-  max-width: 100%;
+  border-top: 1px solid #7F7F7F;
+  min-width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
   margin: 32px 0;
@@ -3091,6 +3092,8 @@ table {
   table thead > tr {
     background-color: #e0e0e0;
     border-bottom: none; }
+    table thead > tr th {
+      background-color: #e0e0e0; }
   table tbody > tr {
     border-bottom: 1px solid #7F7F7F; }
     table tbody > tr:hover {
@@ -3103,8 +3106,7 @@ table {
     padding: 0.5rem;
     font-size: 16px;
     font-size: 1rem;
-    line-height: 1.5;
-    background-color: #e0e0e0; }
+    line-height: 1.5; }
   table td {
     vertical-align: top;
     text-align: left;
@@ -3119,21 +3121,22 @@ table {
     font-size: 1rem;
     line-height: 1.5;
     margin: 16px 0;
-    margin: 1rem 0; }
+    margin: 1rem 0;
+    font-weight: bold; }
 
 div.horizontal-scroll-table-container {
   width: 100%;
   overflow: auto; }
-  @media (min-width: 992px) {
+  @media (min-width: 1200px) {
     div.horizontal-scroll-table-container {
       overflow: initial; } }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     div.horizontal-scroll-table-container table th:first-child,
     div.horizontal-scroll-table-container table td:first-child {
       max-width: 20em; }
     div.horizontal-scroll-table-container table td:first-child[colspan] {
       max-width: initial; } }
-  @media (min-width: 992px) {
+  @media (min-width: 1200px) {
     div.horizontal-scroll-table-container table {
       max-width: 100%; } }
 
@@ -4430,6 +4433,108 @@ main[role="main"].page-content {
       margin-top: 0rem; }
   main[role="main"].page-content .au-callout h2 {
     margin-top: 0; }
+  main[role="main"].page-content .annual-report.executive div[class^="col-"] {
+    margin-top: 24px;
+    margin-top: 1.5rem; }
+  main[role="main"].page-content .annual-report.service-design {
+    position: relative; }
+    main[role="main"].page-content .annual-report.service-design p {
+      margin-left: 23px;
+      margin-left: 1.45rem;
+      padding-left: 2rem;
+      border-left: 0.25rem dashed;
+      margin-bottom: 0; }
+    main[role="main"].page-content .annual-report.service-design h4 {
+      padding-left: 4rem;
+      padding-left: 4rem;
+      line-height: 4rem;
+      margin: 0; }
+      main[role="main"].page-content .annual-report.service-design h4 + p {
+        margin-top: 0; }
+    main[role="main"].page-content .annual-report.service-design .discovery h4 {
+      background: url("../images/circle-discovery.png") no-repeat left center; }
+    main[role="main"].page-content .annual-report.service-design .discovery p {
+      border-left-color: #912b87; }
+    main[role="main"].page-content .annual-report.service-design .alpha h4 {
+      background: url("../images/circle-alpha.png") no-repeat left center; }
+    main[role="main"].page-content .annual-report.service-design .alpha p {
+      border-left-color: #c91978; }
+    main[role="main"].page-content .annual-report.service-design .beta h4 {
+      background: url("../images/circle-beta.png") no-repeat left center; }
+    main[role="main"].page-content .annual-report.service-design .beta p {
+      border-left-color: #EE6523; }
+    main[role="main"].page-content .annual-report.service-design .live h4 {
+      background: url("../images/circle-live.png") no-repeat left center; }
+    main[role="main"].page-content .annual-report.service-design .live p {
+      border-left-color: #32a556; }
+    main[role="main"].page-content .annual-report.service-design .live p:after {
+      content: '';
+      background-image: url("../images/arrow-head.png");
+      background-color: white;
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      display: block;
+      width: 50px;
+      height: 10px;
+      position: absolute;
+      left: 0;
+      bottom: 0; }
+      @media (min-width: 576px) {
+        main[role="main"].page-content .annual-report.service-design .live p:after {
+          left: 1px; } }
+  main[role="main"].page-content .annual-report.publications {
+    margin-left: 0;
+    padding-left: 0; }
+    main[role="main"].page-content .annual-report.publications > li {
+      list-style: none;
+      margin-left: 0;
+      font-weight: bold; }
+      main[role="main"].page-content .annual-report.publications > li li {
+        list-style: disc;
+        font-weight: normal; }
+        main[role="main"].page-content .annual-report.publications > li li li {
+          list-style: circle; }
+  main[role="main"].page-content table.financial thead th {
+    font-weight: bold; }
+  main[role="main"].page-content table.financial tbody th {
+    font-weight: normal; }
+  main[role="main"].page-content table.financial th,
+  main[role="main"].page-content table.financial td {
+    text-align: right; }
+    main[role="main"].page-content table.financial th:first-child,
+    main[role="main"].page-content table.financial td:first-child {
+      text-align: initial;
+      background-color: transparent; }
+  main[role="main"].page-content table.financial.fy-2016-17 td, main[role="main"].page-content table.financial.fy-2016-17 th {
+    vertical-align: top;
+    border: none;
+    text-align: inherit; }
+    main[role="main"].page-content table.financial.fy-2016-17 td:first-child, main[role="main"].page-content table.financial.fy-2016-17 th:first-child {
+      text-align: inherit; }
+  main[role="main"].page-content table.financial.fy-2016-17 p {
+    margin-bottom: 0;
+    max-width: 100%; }
+  main[role="main"].page-content table.financial.fy-2016-17 li {
+    max-width: 100%; }
+  main[role="main"].page-content table.financial .bold {
+    font-weight: bold; }
+  main[role="main"].page-content table.financial .body {
+    font-weight: normal; }
+  main[role="main"].page-content table.financial .italic {
+    font-style: italic; }
+  main[role="main"].page-content table.financial .table-right-aligned {
+    text-align: right; }
+  main[role="main"].page-content table.financial .table-left-indent {
+    padding-left: 1rem; }
+  main[role="main"].page-content table.financial .table-border-top td, main[role="main"].page-content table.financial .table-border-top th {
+    border-top: 1px solid #7F7F7F; }
+  main[role="main"].page-content table.financial .table-border-bottom td, main[role="main"].page-content table.financial .table-border-bottom th {
+    border-bottom: 1px solid #7F7F7F; }
+  main[role="main"].page-content table.financial .table-all-caps {
+    text-transform: uppercase;
+    font-weight: bold; }
+  main[role="main"].page-content table.financial tfoot tr td * {
+    font-size: 0.9rem; }
 
 header .sf-accordion-toggle.sf-style-none #superfish-main-toggle {
   display: block;
