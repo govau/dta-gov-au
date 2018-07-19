@@ -20,6 +20,9 @@ main[role="main"] {
     header {
       @include AU-space( margin-bottom, 2unit );
     }
+    legend {
+      max-width: 100%;
+    }
   }
   #views-exposed-form-business-roadmap-page-taxonomy-page-1,
   .au-roadmap form {
@@ -166,10 +169,10 @@ main[role="main"] {
       position: relative;
       li {
         &.first:before {
-          background-color: $top-border-pink;
+          background-color: $top-border-purple;
         }
         &.second:before {
-          background-color: $top-border-green;
+          background-color: $top-border-blue;
         }
         &.third:before {
           background-color: $top-border-orange;
@@ -201,10 +204,10 @@ main[role="main"] {
         @include AU-space( margin-left, -1.5unit );
       }
       .theme-1 {
-        border-left: 8px solid $top-border-pink;
+        border-left: 8px solid $top-border-purple;
       }
       .theme-2 {
-        border-left: 8px solid $top-border-green;
+        border-left: 8px solid $top-border-blue;
       }
       .theme-3 {
         border-left: 8px solid $top-border-orange;
@@ -335,10 +338,10 @@ main[role="main"] {
           border-bottom: 1px solid $AU-color-foreground-border-suggestion;
           @include AU-space( border-bottom-left-radius, 0.25unit );
           &.au-card--roadmap__personalised-information-and-advice {
-            border-left-color: $top-border-pink;
+            border-left-color: $top-border-purple;
           }
           &.au-card--roadmap__simplified-streamlined-amp-joined-up-services {
-            border-left-color: $top-border-green;
+            border-left-color: $top-border-blue;
           }
           &.au-card--roadmap__simplified-identity-for-my-business-interactions-with-government {
             border-left-color: $top-border-orange;
