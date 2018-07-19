@@ -3310,6 +3310,9 @@ main[role="main"] .au-roadmap header {
   margin-bottom: 32px;
   margin-bottom: 2rem; }
 
+main[role="main"] .au-roadmap legend {
+  max-width: 100%; }
+
 main[role="main"] #views-exposed-form-business-roadmap-page-taxonomy-page-1,
 main[role="main"] .au-roadmap form {
   margin: 0 -32px;
@@ -3479,9 +3482,9 @@ main[role="main"] #roadmap-themes .au-callout > ul {
   list-style: none;
   position: relative; }
   main[role="main"] #roadmap-themes .au-callout > ul li.first:before {
-    background-color: #C91978; }
+    background-color: #912B87; }
   main[role="main"] #roadmap-themes .au-callout > ul li.second:before {
-    background-color: #32A556; }
+    background-color: #45C2F0; }
   main[role="main"] #roadmap-themes .au-callout > ul li.third:before {
     background-color: #EE6523; }
   main[role="main"] #roadmap-themes .au-callout > ul li:before {
@@ -3517,9 +3520,9 @@ main[role="main"] #roadmap-themes .au-callout .au-tooltip {
     margin-left: -24px;
     margin-left: -1.5rem; }
   main[role="main"] #roadmap-themes .au-callout .au-tooltip .theme-1 {
-    border-left: 8px solid #C91978; }
+    border-left: 8px solid #912B87; }
   main[role="main"] #roadmap-themes .au-callout .au-tooltip .theme-2 {
-    border-left: 8px solid #32A556; }
+    border-left: 8px solid #45C2F0; }
   main[role="main"] #roadmap-themes .au-callout .au-tooltip .theme-3 {
     border-left: 8px solid #EE6523; }
 
@@ -3661,9 +3664,9 @@ main[role="main"] .au-roadmap .view-grouping {
       border-bottom-left-radius: 4px;
       border-bottom-left-radius: 0.25rem; }
       main[role="main"] .au-roadmap .view-grouping .au-card--roadmap .au-card--roadmap__text.au-card--roadmap__personalised-information-and-advice {
-        border-left-color: #C91978; }
+        border-left-color: #912B87; }
       main[role="main"] .au-roadmap .view-grouping .au-card--roadmap .au-card--roadmap__text.au-card--roadmap__simplified-streamlined-amp-joined-up-services {
-        border-left-color: #32A556; }
+        border-left-color: #45C2F0; }
       main[role="main"] .au-roadmap .view-grouping .au-card--roadmap .au-card--roadmap__text.au-card--roadmap__simplified-identity-for-my-business-interactions-with-government {
         border-left-color: #EE6523; }
     main[role="main"] .au-roadmap .view-grouping .au-card--roadmap .au-accordion {
