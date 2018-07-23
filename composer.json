@@ -13,7 +13,7 @@
     "government"
   ],
   "require": {
-    "govau/dta-design-system-base-theme": ">=1.0"
+    "govau/dta-uikit-base": ">=1.0"
   },
   "license": "MIT"
 }
