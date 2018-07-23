@@ -2,7 +2,7 @@
   "name": "govau/dta-gov-au-theme",
   "homepage": "https://github.com/govau/dta-gov-au",
   "description": "A Drupal 8 theme for dta.gov.au.",
-  "type": "drupal-theme",
+  "type": "drupal-custom-theme",
   "repository": {
     "type": "git",
     "url": "git://github.com/govau/dta-gov-au"
@@ -12,5 +12,8 @@
     "theme",
     "government"
   ],
+  "require": {
+    "govau/dta-design-system-base-theme": ">=1.0"
+  },
   "license": "MIT"
 }
