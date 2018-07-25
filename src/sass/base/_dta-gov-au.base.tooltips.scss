@@ -26,6 +26,7 @@
   // position the tooltip and the pointer together.
 
   position: absolute;
+  z-index: 200;
   @include AU-space( top, 4.2unit );
   @include AU-space( width, 100% );
   @include AU-space( min-width, 30unit );

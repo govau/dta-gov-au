@@ -3242,6 +3242,7 @@ img.align-right, p.align-right {
 
 .au-tooltip--inner {
   position: absolute;
+  z-index: 200;
   top: 67px;
   top: 4.2rem;
   width: 100%;
