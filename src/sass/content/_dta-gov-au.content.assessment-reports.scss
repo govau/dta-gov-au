@@ -1,0 +1,52 @@
+// Styles for the Assessment Reports.
+
+// Outer block wrapper.
+#block-views-block-assessment-reports-block-1 {
+
+  // Form
+  form#views-exposed-form-assessment-reports-block-1 {
+    fieldset {
+      .fieldset-legend {
+        font-weight: bold;
+      }
+      .form-item {
+        display: inline-block;
+      }
+    }
+    .form-wrapper {
+      @include AU-clearfix();
+    }
+  }
+
+  // List
+  .assessment-reports {
+    li {
+      @include AU-space( margin-left, 5unit );
+      @include AU-space( text-indent, -5unit );
+      > .au-badge {
+        // Cancel out the default margin on badges if they are there.
+        @include AU-space( margin-left, 0unit );
+        @include AU-space( text-indent, 0unit );
+      }
+    }
+    .au-page-alerts {
+      @include AU-space( margin-left, 0.5unit );
+    }
+  }
+}
+
+// Reports
+section.assessment-report-metadata {
+  @extend .au-callout;
+  .metadata-wrapper {
+    .metadata-label {
+      font-weight: bold;
+      @include AU-space( margin-right, 0.5unit );
+    }
+    &.metadata-other-reports {
+      @include AU-space( margin-top, 1.5unit );
+      @include AU-space( padding-top, 1.5unit );
+      border-top: 1px solid $AU-color-foreground-border-suggestion;
+    }
+  }
+}
