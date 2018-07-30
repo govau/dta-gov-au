@@ -1,0 +1,31 @@
+// Style for badges.
+
+.au-badge {
+  @include AU-space( border-radius, 0.7unit );
+  @include AU-space( padding, 0.1unit 0.5unit );
+  @include AU-space( margin, 0unit 0.5unit );
+  @include AU-space( width, 2.75unit );
+  @include AU-fontgrid( sm );
+  font-weight: normal;
+  text-transform: lowercase;
+  color: $AU-colordark-foreground-text;
+  display: inline-block;
+  text-align: center;
+  vertical-align: baseline;
+  .au-header--dark &,
+  .au-body.au-body--dark {
+    border: 1px solid $AU-colordark-foreground-text;
+  }
+  .au-header & {
+    vertical-align: super;
+  }
+  &.au-badge__alpha {
+    background-color: $AU-color-alpha;
+  }
+  &.au-badge__beta {
+    background-color: $AU-color-beta;
+  }
+  &.au-badge__live {
+    background-color: $AU-color-live;
+  }
+}

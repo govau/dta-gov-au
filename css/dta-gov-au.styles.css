@@ -934,7 +934,7 @@ a.au-text-input[value="Reset"] {
 
 /*! @gov.au/callout v2.0.5 */
 @media print {
-  .au-callout {
+  .au-callout, main[role="main"].page-content section.assessment-report-metadata {
     border-left-width: 16px !important;
     border-left-width: 1rem !important;
     border: 1px solid #000 !important;
@@ -944,7 +944,7 @@ a.au-text-input[value="Reset"] {
 /**
  * The generic callout.
  */
-.au-callout {
+.au-callout, main[role="main"].page-content section.assessment-report-metadata {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -958,16 +958,16 @@ a.au-text-input[value="Reset"] {
   color: #313131;
   background-color: #f5f5f5;
   word-wrap: break-word; }
-  * + .au-callout {
+  * + .au-callout, main[role="main"].page-content * + section.assessment-report-metadata {
     margin-top: 32px;
     margin-top: 2rem; }
-  .au-callout.au-callout--dark {
+  .au-callout.au-callout--dark, main[role="main"].page-content section.au-callout--dark.assessment-report-metadata {
     color: #ffffff;
     border-color: #8c8c8c;
     background-color: #323232; }
-  .au-callout.au-callout--alt {
+  .au-callout.au-callout--alt, main[role="main"].page-content section.au-callout--alt.assessment-report-metadata {
     background-color: #e0e0e0; }
-  .au-callout.au-callout--dark.au-callout--alt {
+  .au-callout.au-callout--dark.au-callout--alt, main[role="main"].page-content section.au-callout--dark.au-callout--alt.assessment-report-metadata {
     background-color: #1D1D1D; }
 
 /**
@@ -2864,6 +2864,12 @@ ul.ui-menu {
   padding-left: 1rem;
   z-index: 500; }
 
+fieldset,
+legend {
+  margin: 16px 0 16px 0;
+  margin: 1rem 0 1rem 0;
+  padding: 0; }
+
 .au-card {
   padding: 24px;
   padding: 1.5rem;
@@ -3471,24 +3477,24 @@ main[role="main"] .au-roadmap form {
       height: 16px;
       height: 1rem; }
 
-main[role="main"] #roadmap-themes .au-callout > h3 {
+main[role="main"] #roadmap-themes .au-callout > h3, main[role="main"].page-content #roadmap-themes section.assessment-report-metadata > h3 {
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.6;
   display: inline-block; }
 
-main[role="main"] #roadmap-themes .au-callout > ul {
+main[role="main"] #roadmap-themes .au-callout > ul, main[role="main"].page-content #roadmap-themes section.assessment-report-metadata > ul {
   padding-left: 32px;
   padding-left: 2rem;
   list-style: none;
   position: relative; }
-  main[role="main"] #roadmap-themes .au-callout > ul li.first:before {
+  main[role="main"] #roadmap-themes .au-callout > ul li.first:before, main[role="main"].page-content #roadmap-themes section.assessment-report-metadata > ul li.first:before {
     background-color: #912B87; }
-  main[role="main"] #roadmap-themes .au-callout > ul li.second:before {
+  main[role="main"] #roadmap-themes .au-callout > ul li.second:before, main[role="main"].page-content #roadmap-themes section.assessment-report-metadata > ul li.second:before {
     background-color: #45C2F0; }
-  main[role="main"] #roadmap-themes .au-callout > ul li.third:before {
+  main[role="main"] #roadmap-themes .au-callout > ul li.third:before, main[role="main"].page-content #roadmap-themes section.assessment-report-metadata > ul li.third:before {
     background-color: #EE6523; }
-  main[role="main"] #roadmap-themes .au-callout > ul li:before {
+  main[role="main"] #roadmap-themes .au-callout > ul li:before, main[role="main"].page-content #roadmap-themes section.assessment-report-metadata > ul li:before {
     content: ' ';
     display: block;
     width: 8px;
@@ -3498,33 +3504,33 @@ main[role="main"] #roadmap-themes .au-callout > ul {
     position: absolute;
     left: 0; }
 
-main[role="main"] #roadmap-themes .au-callout .au-tooltip {
+main[role="main"] #roadmap-themes .au-callout .au-tooltip, main[role="main"].page-content #roadmap-themes section.assessment-report-metadata .au-tooltip {
   padding-left: 56px;
   padding-left: 3.5rem; }
-  main[role="main"] #roadmap-themes .au-callout .au-tooltip h3 {
+  main[role="main"] #roadmap-themes .au-callout .au-tooltip h3, main[role="main"].page-content #roadmap-themes section.assessment-report-metadata .au-tooltip h3 {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.6; }
-  main[role="main"] #roadmap-themes .au-callout .au-tooltip .au-introduction {
+  main[role="main"] #roadmap-themes .au-callout .au-tooltip .au-introduction, main[role="main"].page-content #roadmap-themes section.assessment-report-metadata .au-tooltip .au-introduction {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5; }
-  main[role="main"] #roadmap-themes .au-callout .au-tooltip h4 {
+  main[role="main"] #roadmap-themes .au-callout .au-tooltip h4, main[role="main"].page-content #roadmap-themes section.assessment-report-metadata .au-tooltip h4 {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5;
     margin-top: 24px;
     margin-top: 1.5rem; }
-  main[role="main"] #roadmap-themes .au-callout .au-tooltip div {
+  main[role="main"] #roadmap-themes .au-callout .au-tooltip div, main[role="main"].page-content #roadmap-themes section.assessment-report-metadata .au-tooltip div {
     padding-left: 16px;
     padding-left: 1rem;
     margin-left: -24px;
     margin-left: -1.5rem; }
-  main[role="main"] #roadmap-themes .au-callout .au-tooltip .theme-1 {
+  main[role="main"] #roadmap-themes .au-callout .au-tooltip .theme-1, main[role="main"].page-content #roadmap-themes section.assessment-report-metadata .au-tooltip .theme-1 {
     border-left: 8px solid #912B87; }
-  main[role="main"] #roadmap-themes .au-callout .au-tooltip .theme-2 {
+  main[role="main"] #roadmap-themes .au-callout .au-tooltip .theme-2, main[role="main"].page-content #roadmap-themes section.assessment-report-metadata .au-tooltip .theme-2 {
     border-left: 8px solid #45C2F0; }
-  main[role="main"] #roadmap-themes .au-callout .au-tooltip .theme-3 {
+  main[role="main"] #roadmap-themes .au-callout .au-tooltip .theme-3, main[role="main"].page-content #roadmap-themes section.assessment-report-metadata .au-tooltip .theme-3 {
     border-left: 8px solid #EE6523; }
 
 main[role="main"] .au-roadmap .au-accordion__title {
@@ -3698,6 +3704,36 @@ main[role="main"] .au-roadmap .view-grouping {
       main[role="main"] .au-roadmap .view-grouping .au-card--roadmap .au-accordion .au-accordion__body {
         padding: 16px 16px 16px 24px;
         padding: 1rem 1rem 1rem 1.5rem; }
+
+.au-badge {
+  border-radius: 11px;
+  border-radius: 0.7rem;
+  padding: 2px 8px;
+  padding: 0.1rem 0.5rem;
+  margin: 0px 8px;
+  margin: 0rem 0.5rem;
+  width: 44px;
+  width: 2.75rem;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: normal;
+  text-transform: lowercase;
+  color: #ffffff;
+  display: inline-block;
+  text-align: center;
+  vertical-align: baseline; }
+  .au-header--dark .au-badge,
+  .au-badge .au-body.au-body--dark {
+    border: 1px solid #ffffff; }
+  .au-header .au-badge {
+    vertical-align: super; }
+  .au-badge.au-badge__alpha {
+    background-color: #c91978; }
+  .au-badge.au-badge__beta {
+    background-color: #EE6523; }
+  .au-badge.au-badge__live {
+    background-color: #32a556; }
 
 body {
   margin: 0; }
@@ -4145,20 +4181,6 @@ header[role="banner"] {
       @media (min-width: 768px) {
         header[role="banner"] h2 br {
           display: inline; } }
-  header[role="banner"] .au-badge {
-    border: 1px solid #ffffff;
-    border-radius: 11px;
-    border-radius: 0.7rem;
-    padding: 2px 8px;
-    padding: 0.1rem 0.5rem;
-    font-size: 14px;
-    font-size: 0.85rem;
-    margin-left: 8px;
-    margin-left: 0.5rem;
-    color: #ffffff;
-    font-weight: normal;
-    text-transform: lowercase;
-    vertical-align: super; }
   header[role="banner"] .au-body .au-link-list.au-link-list--inline > li, header[role="banner"] .au-body .chosen-container.chosen-container-multi.au-select .chosen-drop .au-link-list--inline.chosen-results > li, .chosen-container.chosen-container-multi.au-select .chosen-drop header[role="banner"] .au-body .au-link-list--inline.chosen-results > li {
     display: block; }
     @media (min-width: 992px) {
@@ -4435,7 +4457,7 @@ main[role="main"].page-content {
       display: block;
       margin-top: 0px;
       margin-top: 0rem; }
-  main[role="main"].page-content .au-callout h2 {
+  main[role="main"].page-content .au-callout h2, main[role="main"].page-content section.assessment-report-metadata h2 {
     margin-top: 0; }
   main[role="main"].page-content .annual-report.executive div[class^="col-"] {
     margin-top: 24px;
@@ -4539,6 +4561,38 @@ main[role="main"].page-content {
     font-weight: bold; }
   main[role="main"].page-content table.financial tfoot tr td * {
     font-size: 0.9rem; }
+  main[role="main"].page-content #block-views-block-assessment-reports-block-1 form#views-exposed-form-assessment-reports-block-1 fieldset .fieldset-legend {
+    font-weight: bold; }
+  main[role="main"].page-content #block-views-block-assessment-reports-block-1 form#views-exposed-form-assessment-reports-block-1 fieldset .form-item {
+    display: inline-block; }
+  main[role="main"].page-content #block-views-block-assessment-reports-block-1 form#views-exposed-form-assessment-reports-block-1 .form-wrapper:before, main[role="main"].page-content #block-views-block-assessment-reports-block-1 form#views-exposed-form-assessment-reports-block-1 .form-wrapper:after {
+    content: " ";
+    display: table; }
+  main[role="main"].page-content #block-views-block-assessment-reports-block-1 form#views-exposed-form-assessment-reports-block-1 .form-wrapper:after {
+    clear: both; }
+  main[role="main"].page-content #block-views-block-assessment-reports-block-1 .assessment-reports li {
+    margin-left: 80px;
+    margin-left: 5rem;
+    text-indent: -80px;
+    text-indent: -5rem; }
+    main[role="main"].page-content #block-views-block-assessment-reports-block-1 .assessment-reports li > .au-badge {
+      margin-left: 0px;
+      margin-left: 0rem;
+      text-indent: 0px;
+      text-indent: 0rem; }
+  main[role="main"].page-content #block-views-block-assessment-reports-block-1 .assessment-reports .au-page-alerts {
+    margin-left: 8px;
+    margin-left: 0.5rem; }
+  main[role="main"].page-content section.assessment-report-metadata .metadata-wrapper .metadata-label {
+    font-weight: bold;
+    margin-right: 8px;
+    margin-right: 0.5rem; }
+  main[role="main"].page-content section.assessment-report-metadata .metadata-wrapper.metadata-other-reports {
+    margin-top: 24px;
+    margin-top: 1.5rem;
+    padding-top: 24px;
+    padding-top: 1.5rem;
+    border-top: 1px solid #7F7F7F; }
 
 header .sf-accordion-toggle.sf-style-none #superfish-main-toggle {
   display: block;

@@ -28,7 +28,7 @@
     "autoprefixer": "^8.0.1",
     "node-sass": "^4.9.2",
     "npm": "^6.2.0",
-    "postcss-cli": "^5.0.1"
+    "postcss-cli": "^6.0.0"
   },
   "devDependencies": {
     "browser-sync": "^2.24.6",

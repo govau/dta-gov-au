@@ -75,3 +75,10 @@ ul.ui-menu {
   @include AU-space( padding-left, 1unit );
   z-index: 500; // To make sure it appears over the top menu.
 }
+
+// Reset some fieldset style.
+fieldset,
+legend {
+  @include AU-space( margin, 1unit 0 1unit 0 );
+  @include AU-space( padding, 0 );
+}
