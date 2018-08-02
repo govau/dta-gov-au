@@ -4445,18 +4445,21 @@ main[role="main"].page-content {
       font-size: 20px;
       font-size: 1.25rem;
       line-height: 1.6; }
-  main[role="main"].page-content .block-facet--checkbox .au-accordion h2 {
+  main[role="main"].page-content .block-facet--checkbox h2 {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.6;
-    margin: 0; }
-  main[role="main"].page-content .block-facet--checkbox .facets-widget-checkbox .item-list__checkbox {
-    column-count: 3;
-    column-width: 33%; }
-    main[role="main"].page-content .block-facet--checkbox .facets-widget-checkbox .item-list__checkbox li {
-      display: block;
-      margin-top: 0px;
-      margin-top: 0rem; }
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+    margin-top: 0px;
+    margin-top: 0rem; }
+  main[role="main"].page-content .block-facet--checkbox p {
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem; }
+  main[role="main"].page-content .block-facet--checkbox .facets-widget-checkbox .item-list__checkbox li {
+    display: block;
+    margin-top: 0px;
+    margin-top: 0rem; }
   main[role="main"].page-content .au-callout h2, main[role="main"].page-content section.assessment-report-metadata h2 {
     margin-top: 0; }
   main[role="main"].page-content .annual-report.executive div[class^="col-"] {
