@@ -1,0 +1,40 @@
+// Style for the filter wrapper (sidebar)
+
+.sidebar {
+  position: absolute;
+  @include AU-space( left, -28unit );
+  top: 0;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: visible;
+  transition: left 0.3s ease;
+  z-index: 999;
+  &:target,
+  &[aria-expanded="true"] {
+    @include AU-space( left, 0unit );
+    .menu-close {
+      z-index: 1001;
+    }
+    + .backdrop {
+      position: absolute;
+      display: block;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 998;
+      background-color: $AU-colordark-background;
+      background-color: rgba( $AU-colordark-background, .85 );
+      cursor: default;
+    }
+  }
+}
+
+@supports ( position: fixed ) {
+  .sidebar,
+  .sidebar:target + .backdrop,
+  .sidebar[aria-expanded="true"] + .backdrop {
+    position: fixed;
+  }
+}

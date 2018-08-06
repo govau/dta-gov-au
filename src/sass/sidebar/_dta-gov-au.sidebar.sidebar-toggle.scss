@@ -1,0 +1,7 @@
+// Styles for the sidebar toggle.
+
+.sidebar-toggle {
+  display: inline-block;
+  @include AU-space( margin, 1unit 0 );
+  @include AU-fontgrid( sm );
+}

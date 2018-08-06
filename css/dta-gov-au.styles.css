@@ -4839,6 +4839,52 @@ aside.layout-sidebar-first nav[role="navigation"] {
         padding-left: 80px;
         padding-left: 5rem; }
 
+aside.layout-sidebar-off-canvas {
+  position: relative; }
+  aside.layout-sidebar-off-canvas .sidebar-toggle {
+    display: inline-block;
+    margin: 16px 0;
+    margin: 1rem 0;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5; }
+  aside.layout-sidebar-off-canvas .sidebar {
+    position: absolute;
+    left: -448px;
+    left: -28rem;
+    top: 0;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: visible;
+    transition: left 0.3s ease;
+    z-index: 999; }
+    aside.layout-sidebar-off-canvas .sidebar:target, aside.layout-sidebar-off-canvas .sidebar[aria-expanded="true"] {
+      left: 0px;
+      left: 0rem; }
+      aside.layout-sidebar-off-canvas .sidebar:target .menu-close, aside.layout-sidebar-off-canvas .sidebar[aria-expanded="true"] .menu-close {
+        z-index: 1001; }
+      aside.layout-sidebar-off-canvas .sidebar:target + .backdrop, aside.layout-sidebar-off-canvas .sidebar[aria-expanded="true"] + .backdrop {
+        position: absolute;
+        display: block;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 998;
+        background-color: #313131;
+        background-color: rgba(49, 49, 49, 0.85);
+        cursor: default; }
+  @supports (position: fixed) {
+    aside.layout-sidebar-off-canvas .sidebar,
+    aside.layout-sidebar-off-canvas .sidebar:target + .backdrop,
+    aside.layout-sidebar-off-canvas .sidebar[aria-expanded="true"] + .backdrop {
+      position: fixed; } }
+  aside.layout-sidebar-off-canvas .sidebar-close {
+    position: absolute;
+    right: 0;
+    top: 0; }
+
 footer {
   padding-top: 80px;
   padding-top: 5rem; }
