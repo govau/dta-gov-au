@@ -16,6 +16,8 @@
     left: auto;
     top: auto;
     height: auto;
+    overflow: auto;
+    @include AU-space( padding, 0 );
   }
   &:target,
   &[aria-expanded="true"] {

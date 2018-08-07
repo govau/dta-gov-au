@@ -4879,7 +4879,9 @@ aside.layout-sidebar-off-canvas .sidebar {
       position: relative;
       left: auto;
       top: auto;
-      height: auto; } }
+      height: auto;
+      overflow: auto;
+      padding: 0; } }
   aside.layout-sidebar-off-canvas .sidebar:target, aside.layout-sidebar-off-canvas .sidebar[aria-expanded="true"] {
     outline: none;
     left: 0px;

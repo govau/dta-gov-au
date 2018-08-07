@@ -169,29 +169,35 @@
   Drupal.behaviors.dtaOffCanvas = {
     // Off canvas behaviour.
     attach: function( context, settings ) {
-      $('.layout-sidebar-off-canvas', context)
+      $( '.layout-sidebar-off-canvas', context )
         .once('dtaOffCanvas')
-        .addClass('processed').each(function( index ) {
-          $(this).find('a[aria-expanded]').on('click', function(e) {
-            evt.preventdefault();
-            var $buttons = $('.layout-sidebar-off-canvas a[aria-expanded]');
-
-            $buttons.attr('aria-expanded', $buttons.attr('aria-expanded')=="false");
-
-            $buttons.each(function( index ) {
-              var $target = $('#' + $(this).attr('aria-controls'));
-              if ($target.length > 0) {
-                $target.attr('aria-expanded', $target.attr('aria-expanded')=="false");
-              }
-            })
+        .addClass('processed')
+        .each(function( index ) {
+          $('#sidebar-toggle').on('click', function(e) {
+            e.preventDefault();
+            if ($(this).attr('aria-expanded') == true) {
+              $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', false);
+            } else {
+              $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', true);
+            }
           });
-          // Check if there is already a target set.
-          var hash = window.location.href.split( '#' )[1];
-          if ( hash == 'sidebar' ) {
-            // Because of the CSS, the sidebar will be open, so we need to se the
-            // aria attributes correctly.
-
-            $(this).find( '[aria-expanded]' ).attr( 'aria-expanded', true );
+          $('#sidebar-close').on('click', function(e) {
+            console.log('click');
+            e.preventDefault();
+            if ($(this).attr('aria-expanded') == false) {
+              $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', true);
+            } else {
+              $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', false);
+            }
+          });
+          $('.backdrop').on('click', function(e) {
+            e.preventDefault();
+            $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', false);
+          });
+          var currentTarget = window.location.href.split('#')[1];
+          if ( currentTarget.length > 0 && currentTarget == 'sidebar' ) {
+            console.log('Drawer already open');
+            $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', true);
           }
         });
     }
