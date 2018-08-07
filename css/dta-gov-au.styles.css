@@ -3095,6 +3095,9 @@ table {
   table-layout: fixed;
   margin: 32px 0;
   margin: 2rem 0; }
+  table#our-people td:first-child {
+    width: 100px;
+    width: 6.25rem; }
   table thead > tr {
     background-color: #e0e0e0;
     border-bottom: none; }
