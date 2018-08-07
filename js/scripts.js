@@ -174,29 +174,24 @@
         .addClass('processed')
         .each(function( index ) {
           $('#sidebar-toggle').on('click', function(e) {
-            e.preventDefault();
-            if ($(this).attr('aria-expanded') == true) {
+            if (!$(this).attr('aria-expanded')) {
               $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', false);
             } else {
               $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', true);
             }
           });
           $('#sidebar-close').on('click', function(e) {
-            console.log('click');
-            e.preventDefault();
-            if ($(this).attr('aria-expanded') == false) {
+            if (!$(this).attr('aria-expanded')) {
               $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', true);
             } else {
               $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', false);
             }
           });
           $('.backdrop').on('click', function(e) {
-            e.preventDefault();
             $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', false);
           });
           var currentTarget = window.location.href.split('#')[1];
           if ( currentTarget.length > 0 && currentTarget == 'sidebar' ) {
-            console.log('Drawer already open');
             $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', true);
           }
         });
