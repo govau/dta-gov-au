@@ -2,15 +2,24 @@
 
 .sidebar {
   position: absolute;
+  background-color: $AU-color-foreground-background;
   @include AU-space( left, -28unit );
+  @include AU-space( padding, 0.5unit 0 0 0.5unit );
   top: 0;
   height: 100%;
   overflow-y: scroll;
   overflow-x: visible;
   transition: left 0.3s ease;
   z-index: 999;
+  @include AU-media( md ) {
+    position: relative;
+    left: auto;
+    top: auto;
+    height: auto;
+  }
   &:target,
   &[aria-expanded="true"] {
+    outline: none;
     @include AU-space( left, 0unit );
     .menu-close {
       z-index: 1001;
@@ -36,5 +45,8 @@
   .sidebar:target + .backdrop,
   .sidebar[aria-expanded="true"] + .backdrop {
     position: fixed;
+    @include AU-media( md ) {
+      position: relative;
+    }
   }
 }

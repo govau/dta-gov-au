@@ -14,7 +14,7 @@
     // focus correctly for keyboard uses as per https://www.bignerdranch.com/blog/web-accessibility-skip-navigation-links/.
     attach: function( context, settings ) {
       $( '.au-skip-link a,  main[role="main"] a', context )
-        .not('.au-accordion__title')
+        .not('.au-accordion__title, .no-smooth-scroll')
         .once( 'dtagovauSmoothScroll' )
         .on( 'click', function( event ) {
           var speed = 500,
@@ -164,6 +164,36 @@
         } );
       } )
 
+    }
+  }
+  Drupal.behaviors.dtaOffCanvas = {
+    // Off canvas behaviour.
+    attach: function( context, settings ) {
+      $('.layout-sidebar-off-canvas', context)
+        .once('dtaOffCanvas')
+        .addClass('processed').each(function( index ) {
+          $(this).find('a[aria-expanded]').on('click', function(e) {
+            evt.preventdefault();
+            var $buttons = $('.layout-sidebar-off-canvas a[aria-expanded]');
+
+            $buttons.attr('aria-expanded', $buttons.attr('aria-expanded')=="false");
+
+            $buttons.each(function( index ) {
+              var $target = $('#' + $(this).attr('aria-controls'));
+              if ($target.length > 0) {
+                $target.attr('aria-expanded', $target.attr('aria-expanded')=="false");
+              }
+            })
+          });
+          // Check if there is already a target set.
+          var hash = window.location.href.split( '#' )[1];
+          if ( hash == 'sidebar' ) {
+            // Because of the CSS, the sidebar will be open, so we need to se the
+            // aria attributes correctly.
+
+            $(this).find( '[aria-expanded]' ).attr( 'aria-expanded', true );
+          }
+        });
     }
   }
 }( jQuery ) );

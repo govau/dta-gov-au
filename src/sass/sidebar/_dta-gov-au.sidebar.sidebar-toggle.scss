@@ -2,6 +2,52 @@
 
 .sidebar-toggle {
   display: inline-block;
+  visibility: visible;
+  @include AU-media( md ) {
+    display: none;
+    visibility: hidden;
+  }
   @include AU-space( margin, 1unit 0 );
   @include AU-fontgrid( sm );
+  @include AU-space( padding-left, 2.5unit );
+  background-image: AU-svguri(
+    '<svg viewBox="-3 -8 24 24" xmlns:svg="http://www.w3.org/2000/svg"
+       xmlns="http://www.w3.org/2000/svg">
+    <path
+       fill="#{$AU-colordark-foreground-text}"
+       d="m 0,0
+       l 6.3,5.4
+       v 5.6
+       c 0,0.2 0.1,0.3 0.2,0.4 0.1,0 0.2,0.1 0.3,0.1 0.1,0 0.1,0 0.2,-0.1
+       l 3.6,-1.8
+       c 0.2,-0.1 0.3,-0.3 0.3,-0.4
+       v -3.8 l 6.3,-5.4
+       c 0.1,-0.1 0.2,-0.2 0.2,-0.4
+       v -2.2
+       c 0,-0.3 -0.2,-0.5 -0.5,-0.5
+       h -16.6
+       c -0.3,0 -0.5,0.2 -0.5,0.5
+       v 2.2
+       c 0,0.2 0.1,0.3 0.2,0.4
+       z
+       m 0.8,-2.1
+       h 15.6
+       v 1.5
+       l -6.3,5.4
+       c -0.1,0.1 -0.2,0.2 -0.2,0.4
+       v 3.7
+       l -2.6,1.3
+       v -5
+       c 0,-0.1 -0.1,-0.3 -0.2,-0.4
+       l -6.3,-5.4
+       z" />
+    </svg>');
+    background-repeat: no-repeat;
+    background-position: center left;
+    &:target {
+      outline: none;
+    }
+    &:focus {
+      @include AU-outline();
+    }
 }
