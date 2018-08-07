@@ -191,7 +191,7 @@
             $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', false);
           });
           var currentTarget = window.location.href.split('#')[1];
-          if ( currentTarget.length > 0 && currentTarget == 'sidebar' ) {
+          if (currentTarget && currentTarget == 'sidebar') {
             $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', true);
           }
         });
