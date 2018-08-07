@@ -6,6 +6,9 @@ table {
   border-collapse: collapse;
   table-layout: fixed;
   @include AU-space( margin, 2unit 0 );
+  &#our-people td:first-child {
+    @include AU-space( width, 6.25unit );
+  }
   thead > tr {
     background-color: $AU-color-background-alt-shade-suggestion;
     border-bottom: none;
