@@ -17,7 +17,8 @@
     left: auto;
     top: auto;
     height: auto;
-    overflow: auto;
+    overflow-y: visible;
+    overflow-x: visible;
     @include AU-space( padding, 0 );
   }
   &:target,

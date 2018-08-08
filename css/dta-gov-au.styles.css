@@ -5021,7 +5021,8 @@ aside.layout-sidebar-off-canvas .sidebar {
       left: auto;
       top: auto;
       height: auto;
-      overflow: auto;
+      overflow-y: visible;
+      overflow-x: visible;
       padding: 0; } }
   aside.layout-sidebar-off-canvas .sidebar:target, aside.layout-sidebar-off-canvas .sidebar[aria-expanded="true"] {
     outline: none;
