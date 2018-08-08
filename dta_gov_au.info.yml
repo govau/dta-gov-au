@@ -15,6 +15,7 @@ regions:
   header: Header
   menu: Menu
   sidebar: Sidebar
+  sidebar_off_canvas: Sidebar (off canvas)
   content: Main Content
   footer: Footer
   disabled: Disabled

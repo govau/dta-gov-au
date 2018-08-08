@@ -14,7 +14,7 @@
     // focus correctly for keyboard uses as per https://www.bignerdranch.com/blog/web-accessibility-skip-navigation-links/.
     attach: function( context, settings ) {
       $( '.au-skip-link a,  main[role="main"] a', context )
-        .not('.au-accordion__title')
+        .not('.au-accordion__title, .no-smooth-scroll')
         .once( 'dtagovauSmoothScroll' )
         .on( 'click', function( event ) {
           var speed = 500,
@@ -164,6 +164,37 @@
         } );
       } )
 
+    }
+  }
+  Drupal.behaviors.dtaOffCanvas = {
+    // Off canvas behaviour.
+    attach: function( context, settings ) {
+      $( '.layout-sidebar-off-canvas', context )
+        .once('dtaOffCanvas')
+        .addClass('processed')
+        .each(function( index ) {
+          $('#sidebar-toggle').on('click', function(e) {
+            if (!$(this).attr('aria-expanded')) {
+              $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', false);
+            } else {
+              $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', true);
+            }
+          });
+          $('#sidebar-close').on('click', function(e) {
+            if (!$(this).attr('aria-expanded')) {
+              $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', true);
+            } else {
+              $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', false);
+            }
+          });
+          $('.backdrop').on('click', function(e) {
+            $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', false);
+          });
+          var currentTarget = window.location.href.split('#')[1];
+          if (currentTarget && currentTarget == 'sidebar') {
+            $('#sidebar-toggle, #sidebar, #sidebar-close').attr('aria-expanded', true);
+          }
+        });
     }
   }
 }( jQuery ) );

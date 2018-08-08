@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region div.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+
+{% if content %}
+  <a href="#sidebar" class="sidebar-toggle no-smooth-scroll au-btn" role="button" id="sidebar-toggle" aria-expanded="false" aria-controls="sidebar" aria-label="Open filters">
+    <span class="sidebar-open-text">Filter blogs</span>
+  </a>
+  <div id="sidebar" class="sidebar" aria-expanded="false" aria-label="Filters">
+    <a href="#sidebar-toggle" class="sidebar-close no-smooth-scroll au-btn" role="button" id="sidebar-close" aria-expanded="false" aria-controls="sidebar" aria-label="Close filters">
+      <span class="sidebar-close-text sr-only">Close filters</span>
+    </a>
+    {{ content }}
+  </div>
+  <a href="#sidebar-toggle" class="backdrop no-smooth-scroll" tabindex="-1" aria-hidden="true" hidden></a>
+{% endif %}

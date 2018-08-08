@@ -13,9 +13,6 @@
  */
 #}
 
-{% set classes = ['au-body'] %}
 {% if content %}
-  <div{{ attributes.addClass(classes) }}>
-    {{ content }}
-  </div>
+  {{ content }}
 {% endif %}
