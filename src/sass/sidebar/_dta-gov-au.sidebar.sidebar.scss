@@ -1,16 +1,17 @@
 // Style for the filter wrapper (sidebar)
 
 .sidebar {
-  position: absolute;
+  position: fixed;
   background-color: $AU-color-foreground-background;
   @include AU-space( left, -28unit );
   @include AU-space( padding, 0.5unit 0 0 0.5unit );
   top: 0px;
   height: auto;
+  max-height: 100vh;
   overflow-y: scroll;
   overflow-x: visible;
   transition: left 0.3s ease;
-  z-index: 999;
+  z-index: 400;
   @include AU-media( md ) {
     position: relative;
     left: auto;
@@ -24,7 +25,7 @@
     outline: none;
     @include AU-space( left, 0unit );
     .menu-close {
-      z-index: 1001;
+      z-index: 401;
     }
     + .backdrop {
       position: fixed;
@@ -35,7 +36,7 @@
       right: 0px;
       width: 100%;
       height: 100vh;
-      z-index: 998;
+      z-index: 399;
       overflow: visible;
       background-color: $AU-colordark-background;
       background-color: rgba( $AU-colordark-background, .85 );
@@ -44,11 +45,11 @@
   }
 }
 
-@supports ( position: fixed ) {
+@supports not ( position: fixed ) {
   .sidebar,
   .sidebar:target + .backdrop,
   .sidebar[aria-expanded="true"] + .backdrop {
-    position: fixed;
+    position: absolute;
     @include AU-media( md ) {
       position: relative;
     }

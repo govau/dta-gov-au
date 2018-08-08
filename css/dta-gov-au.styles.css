@@ -5001,7 +5001,7 @@ aside.layout-sidebar-off-canvas .sidebar-toggle {
     outline: 3px solid #9263DE; }
 
 aside.layout-sidebar-off-canvas .sidebar {
-  position: absolute;
+  position: fixed;
   background-color: #ffffff;
   left: -448px;
   left: -28rem;
@@ -5009,11 +5009,12 @@ aside.layout-sidebar-off-canvas .sidebar {
   padding: 0.5rem 0 0 0.5rem;
   top: 0px;
   height: auto;
+  max-height: 100vh;
   overflow-y: scroll;
   overflow-x: visible;
   -webkit-transition: left 0.3s ease;
   transition: left 0.3s ease;
-  z-index: 999; }
+  z-index: 400; }
   @media (min-width: 992px) {
     aside.layout-sidebar-off-canvas .sidebar {
       position: relative;
@@ -5027,7 +5028,7 @@ aside.layout-sidebar-off-canvas .sidebar {
     left: 0px;
     left: 0rem; }
     aside.layout-sidebar-off-canvas .sidebar:target .menu-close, aside.layout-sidebar-off-canvas .sidebar[aria-expanded="true"] .menu-close {
-      z-index: 1001; }
+      z-index: 401; }
     aside.layout-sidebar-off-canvas .sidebar:target + .backdrop, aside.layout-sidebar-off-canvas .sidebar[aria-expanded="true"] + .backdrop {
       position: fixed;
       display: block;
@@ -5037,17 +5038,17 @@ aside.layout-sidebar-off-canvas .sidebar {
       right: 0px;
       width: 100%;
       height: 100vh;
-      z-index: 998;
+      z-index: 399;
       overflow: visible;
       background-color: #313131;
       background-color: rgba(49, 49, 49, 0.85);
       cursor: default; }
 
-@supports (position: fixed) {
+@supports not (position: fixed) {
   aside.layout-sidebar-off-canvas .sidebar,
   aside.layout-sidebar-off-canvas .sidebar:target + .backdrop,
   aside.layout-sidebar-off-canvas .sidebar[aria-expanded="true"] + .backdrop {
-    position: fixed; }
+    position: absolute; }
     @media (min-width: 992px) {
       aside.layout-sidebar-off-canvas .sidebar,
       aside.layout-sidebar-off-canvas .sidebar:target + .backdrop,
