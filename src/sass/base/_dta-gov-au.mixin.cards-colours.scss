@@ -11,7 +11,7 @@
     &:nth-of-type(5n+1) {
       a.au-cta-link {
         border-top-color: $top-border-purple;
-        &:hover {
+        &:hover, &:focus {
           background-color: #EDDDEC;
         }
       }
@@ -20,7 +20,7 @@
     &:nth-of-type(5n+2) {
       a.au-cta-link {
         border-top-color: $top-border-green;
-        &:hover {
+        &:hover, &:focus {
           background-color: #DEF0E4;
         }
       }
@@ -29,7 +29,7 @@
     &:nth-of-type(5n+3) {
       a.au-cta-link {
         border-top-color: $top-border-dark-purple;
-        &:hover {
+        &:hover, &:focus {
           background-color: #E8E4F3;
         }
       }
@@ -38,7 +38,7 @@
     &:nth-of-type(5n+4) {
       a.au-cta-link {
         border-top-color: $top-border-orange;
-        &:hover {
+        &:hover, &:focus {
           background-color: #FCE6DC;
         }
       }
@@ -47,7 +47,7 @@
     &:nth-of-type(5n+5) {
       a.au-cta-link {
         border-top-color: $top-border-pink;
-        &:hover {
+        &:hover, &:focus {
           background-color: #F6DAE9;
         }
       }

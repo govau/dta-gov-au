@@ -13,6 +13,7 @@
   }
   .au-card-list {
     @include AU-card-cta-link($AU-color-foreground-text);
+    @include AU-card-colours;
   }
   .au-body {
     background-color: transparent;

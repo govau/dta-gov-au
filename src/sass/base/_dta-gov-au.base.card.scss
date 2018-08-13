@@ -152,7 +152,6 @@ a.au-card {
 	list-style: none;
 	padding: 0;
 	@include AU-card-cta-link($AU-color-foreground-text, $AU-color-foreground-text);
-  @include AU-card-colours;
 	@include AU-space( margin-top, 0 );
 	@include AU-space( margin-bottom, 0 );
 
