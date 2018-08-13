@@ -14,12 +14,4 @@
   */
 #}
 
-{%
-  set classes = ['au-card', 'au-card--shadow']
-%}
-
-
-<article{{ attributes.addClass( classes ) }}>
-  {{ ds_content }}
-  {{ title_suffix.contextual_links }}
-</article>
+{{ ds_content }}
