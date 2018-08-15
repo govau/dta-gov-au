@@ -25,6 +25,7 @@ function _removeElementWithValue($array, $value) {
 }
 
 function dta_gov_au_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
   if($form_id == 'views_exposed_form' && strpos($form['#id'], 'roadmap' !== false)) {
     // Ditch the 'apply' button. The option to submit is also turned off via JS.
     unset($form['actions']['submit']);
@@ -135,9 +136,23 @@ function dta_gov_au_form_search_api_page_block_form_alter(&$form, &$form_state, 
  **/
 
 function dta_gov_au_form_comment_form_alter(&$form, &$form_state, $form_id) {
+
+  $form['header'] = [
+    '#type' => 'html_tag',
+    '#tag' => 'h3',
+    '#value' => t('Add your comment'),
+    '#weight' => -99,
+  ];
+
   kint($form);
+
   $form['author']['homepage']['#access'] = FALSE;
   $form['actions']['submit']['#value'] = t('Comment');
+}
+
+function dta_gov_au_preprocess_form_element(&$variables) {
+  kint($variables);
+  
 }
 
 /**
