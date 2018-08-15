@@ -1,6 +1,8 @@
 <?php
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Component\Render\FormattableMarkup;
+
 
 /**
  * Implements HOOK_form_alter()
@@ -28,7 +30,6 @@ function dta_gov_au_form_alter(&$form, FormStateInterface $form_state, $form_id)
     unset($form['actions']['submit']);
   }
 }
-
 
 /**
  * Implements HOOK_preprocess_maintenance_page()
@@ -113,7 +114,6 @@ function dta_gov_au_theme_suggestions_input_alter(&$suggestions, $variables) {
   }
 }
 
-
 /**
  * Implements hook_form_FORM_ID_alter().
  *
@@ -125,6 +125,19 @@ function dta_gov_au_form_search_api_page_block_form_alter(&$form, &$form_state, 
   $search_text = \Drupal::service('path.matcher')->isFrontPage() ? t('What are you looking for today?') : t('Search dta.gov.au');
   $form['keys']['#attributes']['placeholder'] = $search_text;
   $form['keys']['#attributes']['required'] = TRUE;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Removes the 'homepage' field from comment forms.
+ *
+ **/
+
+function dta_gov_au_form_comment_form_alter(&$form, &$form_state, $form_id) {
+  kint($form);
+  $form['author']['homepage']['#access'] = FALSE;
+  $form['actions']['submit']['#value'] = t('Comment');
 }
 
 /**
@@ -186,4 +199,35 @@ function dta_gov_au_theme_suggestions_views_view_unformatted_alter(array &$sugge
 function dta_gov_au_theme_suggestions_views_exposed_form_alter(array &$suggestions, array $variables) {
   // Add a theme suggestion to the views exposed form template.
   $suggestions[] = $variables['theme_hook_original'] . '__' . str_replace('-','_', $variables['form']['#id']);
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter()
+ * Create theme suggestions for user profile templates
+**/
+function dta_gov_au_theme_suggestions_user_alter(&$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+  }
+  $viewmode = $variables['elements']['#view_mode'];
+  $suggestions[] = $variables['theme_hook_original'] . '__' . str_replace('-','_', $viewmode);
+  $suggestions[] = $variables['theme_hook_original'] . '__' . str_replace('-','_', $content_type);
+  $suggestions[] = $variables['theme_hook_original'] . '__' . str_replace('-','_', $content_type) . '__' . str_replace('-','_', $viewmode);
+}
+
+/**
+* Implements hook_preprocess_comment
+*/
+function dta_gov_au_preprocess_comment(&$variables) {
+
+  $date = $variables['comment']->getCreatedTime();
+  $variables['created'] = \Drupal::service('date.formatter')->formatInterval(REQUEST_TIME - $date);
+
+  $datetime = new FormattableMarkup(
+    '<span class="comments-ago">@datetime ago</span>', array(
+      '@datetime' => $variables['created']
+    )
+  );
+
+  $variables['submitted'] = t('@username commented @datetime', array('@username' => $variables['author'], '@datetime' => $datetime));
 }
