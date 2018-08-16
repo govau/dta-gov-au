@@ -1,0 +1,25 @@
+// Styles for comments.
+
+article.comment {
+  &.unpublished {
+    border: 1px solid $AU-color-foreground-border-suggestion;
+    @include AU-space( padding, 0 1unit 1unit 1unit );
+    @include AU-space( margin-top, 1unit );
+  }
+  footer {
+    @include AU-space( padding-top, 1unit );
+    .comment-metadata {
+      position: relative;
+      @include AU-space( padding-left, 1unit );
+    }
+    .permalink {
+      position: absolute;
+      top: 0;
+      left: 0;
+      &:before {
+        content: '#';
+      }
+      @include AU-space( margin, 0unit );
+    }
+  }
+}

@@ -46,7 +46,7 @@
     {%- for item in links -%}
       <li{{ item.attributes }}>
         {%- if item.link -%}
-          <a href="{{ item.link.href }}" class="au-btn au-btn--primary">{{ item.text }}</a>
+          <a href="{{ item.link['#url'] }}" class="au-btn au-btn--secondary">{{ item.text }}</a>
         {%- elseif item.text_attributes -%}
           <span{{ item.text_attributes }}>{{ item.text }}</span>
         {%- else -%}
