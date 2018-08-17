@@ -84,19 +84,13 @@
 
   <footer>
     <div class="comment-metadata">
-      <p>{{ submitted }}</p>
-      {{ kint(permalink) }}
-      <p class="permalink">{{ permalink }}</p>
+      <h4><span class="comment-permalink">{{ permalink}}</span>{{ author }}</h4>
+      {% if parent %}
+        <p class="comment-datetime">{{ parent }} {{ submitted }}</p>
+      {% else %}
+        <p class="comment-datetime">{{ submitted }}</p>
+      {% endif %}
     </div>
-
-    {#
-      Indicate the semantic relationship between parent and child comments for
-      accessibility. The list is difficult to navigate in a screen reader
-      without this information.
-    #}
-    {% if parent %}
-      <p class="visually-hidden">{{ parent }}</p>
-    {% endif %}
 
   </footer>
 

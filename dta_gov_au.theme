@@ -3,6 +3,7 @@
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Component\Render\FormattableMarkup;
 use Drupal\Core\Url;
+use Drupal\Core\Link;
 
 /**
  * Implements HOOK_form_alter()
@@ -160,7 +161,6 @@ function dta_gov_au_form_comment_form_alter(&$form, &$form_state, $form_id) {
   unset($form['author']['name']);
   unset($form['author']['mail']);
 
-  kint($form);
 }
 
 /**
@@ -243,14 +243,45 @@ function dta_gov_au_theme_suggestions_user_alter(&$suggestions, array $variables
 */
 function dta_gov_au_preprocess_comment(&$variables) {
 
+  $comment = $variables['elements']['#comment'];
+  $account = $comment->getOwner();
+
+  $username = [
+    '#theme' => 'username__unlinked',
+    '#account' => $account,
+  ];
+
+  $variables['author'] = \Drupal::service('renderer')->render($username);
+
+  $comment_title = $comment->getSubject();
+
   $date = $variables['comment']->getCreatedTime();
   $variables['created'] = \Drupal::service('date.formatter')->formatInterval(REQUEST_TIME - $date);
 
   $datetime = new FormattableMarkup(
-    '<span class="comments-ago">@datetime ago</span>', array(
-      '@datetime' => $variables['created']
-    )
+    '<span class="comments-ago">@datetime ago</span>', [
+      '@datetime' => $variables['created'],
+    ]
   );
 
-  $variables['submitted'] = t('@username commented @datetime', array('@username' => $variables['author'], '@datetime' => $datetime));
+  $permalink_text = new FormattableMarkup(
+    '<span class="sr-only"> Permalink to @comment_title</span>', [
+      '@comment_title' => $comment_title,
+    ]
+  );
+
+  $variables['submitted'] = t('Commented @datetime', array('@datetime' => $datetime));
+
+  $variables['permalink'] = Link::fromTextAndUrl(t('#@permalink_text', [
+    '@permalink_text' => $permalink_text,
+  ]), $comment->permalink());
+
+  if (!empty($variables['parent'])) {
+    $variables['parent'] = t('Replied @datetime to @parent_title by @parent_username', [
+      '@parent_username' => $variables['parent_author'],
+      '@parent_title' => $variables['parent_title'],
+      '@datetime' => $datetime
+    ]);
+    unset($variables['submitted']);
+  }
 }

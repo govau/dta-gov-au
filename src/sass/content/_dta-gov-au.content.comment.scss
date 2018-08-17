@@ -6,20 +6,26 @@ article.comment {
     @include AU-space( padding, 0 1unit 1unit 1unit );
     @include AU-space( margin-top, 1unit );
   }
+
+  .comment-list {
+    border-top: 1px solid $AU-color-foreground-border-suggestion;
+    @include AU-space( padding-top, 0.5unit );
+    @include AU-space( margin-top, 0.5unit );
+  }
   footer {
     @include AU-space( padding-top, 1unit );
     .comment-metadata {
-      position: relative;
-      @include AU-space( padding-left, 1unit );
     }
-    .permalink {
-      position: absolute;
-      top: 0;
-      left: 0;
-      &:before {
-        content: '#';
-      }
-      @include AU-space( margin, 0unit );
+    .comment-permalink {
+      vertical-align: super;
     }
+    .comment-datetime {
+      font-style: italic;
+      @include AU-space( margin-top, 0);
+      @include AU-space( margin-bottom, 0.5unit );
+    }
+  }
+  + div.indented {
+    @include AU-space( margin-left, 2.5unit );
   }
 }
