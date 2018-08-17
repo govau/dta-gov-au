@@ -1,0 +1,15 @@
+// Styles for the comment form.
+
+form.comment-form {
+  @include AU-space( margin-top, 1.5unit );
+  .form-item.form-item-name {
+    @include AU-space( margin-bottom, 1unit );
+  }
+  .form-wrapper {
+    @include AU-space( margin-bottom, 1unit );
+  }
+  .description {
+    font-style: italic;
+    @include AU-fontgrid( xs );
+  }
+}

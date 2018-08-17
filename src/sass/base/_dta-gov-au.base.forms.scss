@@ -82,3 +82,7 @@ legend {
   @include AU-space( margin, 1unit 0 1unit 0 );
   @include AU-space( padding, 0 );
 }
+
+form > p {
+  @include AU-space( padding-bottom, 1.5unit );
+}
