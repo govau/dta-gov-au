@@ -48,14 +48,14 @@
   <div class="container-fluid">
     <div class="container">
       <div class="row">
-        <div class="col-sm-2 col-md-2">
+        <div id="site-logo" class="col-sm-2 col-md-2">
           <div  class="au-site-logo_link">
             <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
               <img class="au-site-logo au-responsive-media-img" src="{{ base_path ~ directory }}/images/dta-wordmark-white.svg" data-fallback="{{ base_path ~ directory }}/images/dta-wordmark-white.png" alt="{{ 'Digital Transformation Agency'|t }}" />
             </a>
           </div>
         </div>
-        <div class="col-sm-7 col-md-8">
+        <div id="footer-middle" class="col-sm-7 col-md-8">
           <div class="row au-footer__navigation">
             {{ drupal_block('dta_gov_au_footer') }}
           </div>
