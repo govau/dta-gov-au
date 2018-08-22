@@ -1,0 +1,222 @@
+// Print styles for the site.
+
+@media print {
+  // Disappear things we don't need.
+
+  #ribbon,
+  #block-searchapipagesearchblockform,
+  #block-mainnavigation-4,
+  #back-to-top,
+  #social-media,
+  #block-dta-gov-au-footer,
+  #sidebar,
+  #comment-form,
+  main[role="main"].page-content .back-to-top {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  ul, img {
+    page-break-inside: avoid;
+  }
+
+
+  // Change colours to be grayscale.
+  .au-header--heading {
+    color: $AU-color-background-alt-shade-suggestion;
+  }
+  * {
+    color: $AU-color-foreground-text !important;
+    filter: grayscale(100%);
+  }
+
+  a[rel="home"] {
+    filter: invert(100%);
+    &:after {
+      display: none;
+    }
+  }
+
+  // Update padding and margins, especially on the home page.
+
+  body {
+    header[role="banner"].au-header.au-header--hero {
+      @include AU-space( padding, 1unit 0 0 0 );
+      @include AU-space( margin-bottom, 2unit );
+      border-bottom: 1px solid $AU-color-foreground-border-suggestion;
+      box-shadow: none;
+    }
+    #main-content {
+      @include AU-space( margin-left, 0 );
+      width: 100%;
+    }
+    .page-front {
+      #highlight,
+      #top-content,
+      #mid-top-content,
+      #mid-bottom-content,
+      #bottom-content {
+        @include AU-space( padding, 0 );
+        @include AU-space( margin, 1unit 0 0 0 );
+        h2 {
+          @include AU-space( margin-bottom, 1.5unit );
+          @include AU-space( margin-top, 0 );
+        }
+        .more-link {
+          @include AU-space( margin, 0 );
+          text-align: left;
+          &.au-cta-link a:after {
+            content: " (" attr(href) ")";
+            background-image: none;
+          }
+        }
+        .link-wrapper {
+          a {
+            @include AU-space( margin, 1unit );
+          }
+        }
+      }
+    }
+  }
+
+  // Update layout things which don't make sense when printed.
+  body {
+    .page-front #highlight {
+      .container {
+        display: block;
+      }
+      .highlight-block {
+        width: 100%;
+        display: block;
+        float: none;
+        @include AU-space( margin-bottom, 1.5unit );
+        @include AU-space( margin-left, 0unit );
+        @include AU-space( padding-left, 0unit );
+        border: none;
+      }
+    }
+  }
+
+  // Update buttons.
+  body {
+    .au-btn,
+    a.au-btn {
+      border: none !important;
+      @include AU-space( padding, 0 );
+      &:before {
+        content: ">";
+        @include AU-space( margin-right, 0.5unit );
+      }
+    }
+  }
+
+  // Update cards to make them lists.
+  body {
+    main[role="main"].page-content,
+    .page-front {
+      .au-cards--blogs-news,
+      .au-landing-page-level-2-cards ,
+      #top-content,
+      #mid-top-content,
+      #bottom-content,
+      .views-element-container {
+        .au-card-list {
+          .au-cta-link:after {
+            content: " (" attr(href) ")" !important;
+            display: block;
+            width: auto;
+            position: relative !important;
+            @include AU-space( margin, 0 );
+            background-image: none;
+            right: inherit;
+            left: 0;
+            @include AU-fontgrid( sm );
+            bottom: auto;
+            height: auto;
+          }
+          &.au-card-list--matchheight {
+            display: block;
+            .au-card {
+              display: block;
+              min-height: auto;
+              padding: 0 !important;
+              footer {
+                background-color: transparent !important;
+              }
+              .au-card__title {
+                margin-top: 0 !important;
+                background-color: transparent !important;
+              }
+              .au-card--content,
+              .au-card--date,
+              .au-card__text {
+                background-color: transparent !important;
+                @include AU-space( margin-bottom, 1unit );
+              }
+              &.au-card--shadow {
+                .au-card__fullwidth {
+                  @include AU-space( margin, 0 );
+                  &:first-child {
+                    margin: 0 1rem 1rem 0 !important;
+                  }
+                  &.au-card__image {
+                    float: left;
+                    @include AU-space( width, 14unit );
+                    height: auto;
+                    border: 1px solid $AU-color-foreground-border-suggestion;
+                    @include AU-space( margin, 0 1unit 1unit 0 );
+                  }
+                }
+              }
+            }
+            li {
+              width: auto !important;
+              min-height: auto !important;
+              display: block;
+              height: auto !important;
+              max-width: inherit !important;
+              float: none !important;
+              a.au-cta-link {
+                @include AU-space( padding, 0 );
+                border: none !important;
+                &:after {
+                  content: " (" attr(href) ")";
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Footer stuff.
+  body {
+    footer {
+      @include AU-space( padding-bottom, 1unit );
+      @include AU-space( padding-top, 1unit );
+      #site-logo {
+        display: none;
+      }
+      #footer-middle {
+        border-top: 1px solid $AU-color-foreground-border-suggestion;
+        width: 100%;
+        @include AU-space( padding-top, 1unit );
+      }
+      .au-footer__navigation,
+      .au-footer__end {
+        @include AU-space( margin, 0 );
+        p {
+          border: none;
+          @include AU-space( padding, 0 );
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

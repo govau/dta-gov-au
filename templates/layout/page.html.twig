@@ -76,7 +76,7 @@
       <div class="row">
         {# If there is a sidebar, put it into the grid and adjust the main content area accordingly. #}
         {% if (page.sidebar) or (page.sidebar_off_canvas) %}
-          <div class="col-xs-12 col-md-3">
+          <div  id="sidebar" class="col-xs-12 col-md-3">
             {% if page.sidebar %}
               <aside class="layout-sidebar-first au-body" role="complementary">
                 {{ page.sidebar }}
@@ -88,7 +88,7 @@
               </aside>
             {% endif %}
           </div>
-          <div class="col-xs-12 col-md-8 col-md-offset-1">
+          <div id="main-content" class="col-xs-12 col-md-8 col-md-offset-1">
             {{ page.content }}
           </div>
         {% else %}
