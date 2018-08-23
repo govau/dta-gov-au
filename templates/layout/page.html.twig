@@ -70,29 +70,71 @@
     {% include '@dta_gov_au/includes/home.html.twig' %}
   {% else %}
     <div class="container">
-      <div class="row col-xs-12">
-        {{ drupal_block('breadcrumbs_2') }}
+      <div class="row">
+        <div class="col-xs-12">
+          {{ drupal_block('breadcrumbs_2') }}
+        </div>
       </div>
       <div class="row">
-        {# If there is a sidebar, put it into the grid and adjust the main content area accordingly. #}
-        {% if (page.sidebar) or (page.sidebar_off_canvas) %}
-          <div  id="sidebar" class="col-xs-12 col-md-3">
-            {% if page.sidebar %}
+        {# If there are any sidebars... #}
+        {% if (page.sidebar_left) or (page.sidebar_off_canvas) or (page.sidebar_right) %}
+          {# Left sidebar and/or off canvas sidebar #}
+          {% if (page.sidebar_left) or (page.sidebar_off_canvas) %}
+            <div id="sidebar" class="col-xs-12 col-md-3">
+              {% if (page.sidebar_off_canvas) %}
+                <aside class="layout-sidebar-off-canvas au-body" role="complementary">
+                  {{ page.sidebar_off_canvas }}
+                </aside>
+              {% endif %}
+              {% if (page.sidebar_left) %}
+                <aside class="layout-sidebar-first au-body" role="complementary">
+                  {{ page.sidebar_left }}
+                </aside>
+              {% endif %}
+            </div>
+            <div id="main-content" class="col-xs-12 col-md-8 col-md-offset-1">
+              {{ page.content }}
+            </div>
+          {% endif %}
+
+          {# Both sidebars #}
+          {% if ((page.sidebar_left) or (page.sidebar_off_canvas)) and (page.sidebar_right) %}
+            <div id="sidebar" class="col-xs-12 col-md-3">
+              {% if (page.sidebar_off_canvas) %}
+                <aside class="layout-sidebar-off-canvas au-body" role="complementary">
+                  {{ page.sidebar_off_canvas }}
+                </aside>
+              {% endif %}
+              {% if (page.sidebar_left) %}
               <aside class="layout-sidebar-first au-body" role="complementary">
-                {{ page.sidebar }}
+                {{ page.sidebar_left }}
               </aside>
-            {% endif %}
-            {% if page.sidebar_off_canvas %}
-              <aside class="layout-sidebar-off-canvas au-body" role="complementary">
-                {{ page.sidebar_off_canvas }}
+              {% endif %}
+            </div>
+            <div id="main-content" class="col-xs-12 col-md-6">
+              {{ page.content }}
+            </div>
+            <div id="sidebar-right" class="col-xs-12 col-md-3">
+              <aside class="layout-sidebar-right au-body" role="complementary">
+                {{ page.sidebar_right }}
               </aside>
-            {% endif %}
-          </div>
-          <div id="main-content" class="col-xs-12 col-md-8 col-md-offset-1">
-            {{ page.content }}
-          </div>
+            </div>
+          {% endif %}
+
+          {# Only the right sidebar #}
+          {% if (page.sidebar_right) %}
+            <div id="main-content" class="col-xs-12 col-md-8">
+              {{ page.content }}
+            </div>
+            <div id="sidebar-right" class="col-xs-12 col-md-4">
+              <aside class="layout-sidebar-right au-body" role="complementary">
+                {{ page.sidebar_right }}
+              </aside>
+            </div>
+          {% endif %}
         {% else %}
-          <div class="col-xs-12">
+          {# Just the content #}
+          <div id="main-content" class="col-xs-12">
             {{ page.content }}
           </div>
         {% endif %}
