@@ -11,18 +11,39 @@
   #block-dta-gov-au-footer,
   #sidebar,
   #comment-form,
+  #sidebar-right,
   main[role="main"].page-content .back-to-top {
     display: none !important;
     visibility: hidden !important;
   }
 
-
+  // Update some typography.
   h2, h3 {
     page-break-after: avoid;
   }
 
   ul, img {
     page-break-inside: avoid;
+  }
+
+  h1 {
+    font-size: 20pt !important;
+  }
+
+  h2 {
+    font-size: 16pt !important;
+  }
+
+  h3 {
+    font-size: 14pt !important;
+  }
+
+  h4 {
+    font-size: 12pt !important;
+  }
+
+  p, li {
+    font-size: 12pt !important;
   }
 
 
