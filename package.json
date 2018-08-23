@@ -1,6 +1,6 @@
 {
   "name": "dta.gov.au",
-  "version": "0.0.1",
+  "version": "1.5.0",
   "description": "Drupal 8 sub theme for dta.gov.au. Requires the DTA UI Kit base theme to work.",
   "main": "",
   "dependencies": {
