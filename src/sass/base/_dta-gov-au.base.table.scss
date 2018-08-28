@@ -41,6 +41,40 @@ table {
     @include AU-space( margin, 1unit 0 );
     font-weight: bold;
   }
+  &.corporate-plan {
+    .risk-red {
+      background-color: #EB0000;
+      color: $AU-colordark-foreground-text;
+      font-weight: bold;
+    }
+    .risk-orange {
+      background-color: #FDBF2D;
+    }
+    .risk-yellow {
+      background-color: #FFFD38;
+    }
+    .risk-green {
+      background-color: #96CF59;
+    }
+  }
+  &#pbs-map {
+    thead {
+      > tr:first-child {
+        border-bottom: 1px solid $AU-color-foreground-border-suggestion;
+      }
+    }
+    tr {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    th, td {
+      border-right: 1px solid $AU-color-foreground-border-suggestion;
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
 }
 
 div.horizontal-scroll-table-container {
