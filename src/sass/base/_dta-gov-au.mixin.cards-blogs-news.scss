@@ -1,13 +1,18 @@
 // A basic mixin to supply the cards for blogs and news items.
 @mixin cards-blogs-news {
   .au-card-list {
+    justify-content: center;
+    @include AU-media( lg ) {
+      justify-content: flex-start;
+    }
     @include AU-card-cta-link($AU-color-foreground-text);
     * {
       font-weight: normal;
     }
     > li, article {
       @include AU-space( max-width, 23.5unit );
-      @include AU-space( margin, 0 auto 1.25unit auto );
+      @include AU-space( margin-top, 0unit );
+      @include AU-space( margin-bottom, 1.25unit auto );
       @include AU-media( sm ) {
         @include AU-space( height, 32unit );
         @include AU-space( min-height, 32unit );
