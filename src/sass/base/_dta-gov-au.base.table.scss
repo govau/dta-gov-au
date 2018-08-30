@@ -42,20 +42,23 @@ table {
     font-weight: bold;
   }
   &.corporate-plan {
-    .risk-red {
-      background-color: #EB0000;
-      color: $AU-colordark-foreground-text;
+    .risk {
       font-weight: bold;
+      &.risk__red {
+        background-color: #EB0000;
+        color: $AU-colordark-foreground-text;
+      }
+      &.risk__orange {
+        background-color: #FDBF2D;
+      }
+      &.risk__yellow {
+        background-color: #FFFD38;
+      }
+      &.risk__green {
+        background-color: #96CF59;
+      }
     }
-    .risk-orange {
-      background-color: #FDBF2D;
-    }
-    .risk-yellow {
-      background-color: #FFFD38;
-    }
-    .risk-green {
-      background-color: #96CF59;
-    }
+
   }
   &#pbs-map {
     thead {
