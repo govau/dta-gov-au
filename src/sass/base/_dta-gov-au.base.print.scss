@@ -1,6 +1,11 @@
 // Print styles for the site.
 
 @media print {
+
+  @page {
+    size: A4 portrait;
+    margin: 2cm;
+  }
   // Disappear things we don't need.
 
   #ribbon,
@@ -74,7 +79,19 @@
     }
     #main-content {
       @include AU-space( margin-left, 0 );
+      // Print to A4
       width: 100%;
+      .au-body p {
+        max-width: 100%;
+      }
+      table {
+        overflow: visible;
+        max-width: 100%;
+        width: 100%;
+        td, th {
+          font-size: 80%;
+        }
+      }
     }
     .page-front {
       #highlight,
