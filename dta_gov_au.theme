@@ -297,7 +297,3 @@ function dta_gov_au_preprocess_comment(&$variables) {
     unset($variables['submitted']);
   }
 }
-
-function dta_gov_au_preprocess_breadcrumb(&$variables) {
-  kint($variables);
-}
