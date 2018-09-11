@@ -50,6 +50,20 @@ function dta_gov_au_preprocess_html(&$variables) {
   } else {
     $variables['environment'] = 'local';
   }
+
+  // IE EDGE SUPPORT
+
+  $meta_ie_edge = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'http-equiv' => 'X-UA-Compatible',
+      'content' =>  'IE=edge,chrome=1',
+    ),
+    '#weight' => -999999,
+  );
+  // Add header meta tag for IE to head
+  $variables['page']['#attached']['html_head'][] = [$meta_ie_edge, 'meta_ie_edge'];
 }
 
 /**
