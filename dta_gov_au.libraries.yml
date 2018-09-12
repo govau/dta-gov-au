@@ -19,3 +19,13 @@ roadmap:
   js:
     js/roadmap.js: {}
     js/masonry.pkgd.min.js: {}
+respond-proxy:
+  header: true
+  remote: https://github.com/scottjehl/Respond
+  version: "1.4.2"
+  license:
+    name: MIT
+    url: https://github.com/scottjehl/Respond/blob/1.4.2/LICENSE-MIT
+    gpl-compatible: true
+  js:
+    js/respond.proxy.js: { weight: -21, browsers: { IE: 'lte IE 8', '!IE': false }, minified: false }
