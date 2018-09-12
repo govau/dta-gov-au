@@ -5,6 +5,7 @@ core: 8.x
 base theme: dta_uikit_base
 libraries:
   - dta_gov_au/global-styling
+  - dta_gov_au/respond-proxy
 libraries-override:
   dta_uikit_base/global-styling: dta_gov_au/global-styling
   facets/drupal.facets.checkbox-widget:
