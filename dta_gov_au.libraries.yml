@@ -28,4 +28,4 @@ respond-proxy:
     url: https://github.com/scottjehl/Respond/blob/1.4.2/LICENSE-MIT
     gpl-compatible: true
   js:
-    js/respond.proxy.js: { weight: -21, browsers: { IE: 'lte IE 8', '!IE': false }, minified: false }
+    js/respond.proxy.js: { weight: -21, minified: false }
