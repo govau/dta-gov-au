@@ -43,6 +43,16 @@
     <link rel="manifest" href="/themes/custom/dta-gov-au/images/favicons/site.webmanifest?v=jwLP3QWWqB">
     <link rel="mask-icon" href="/themes/custom/dta-gov-au/images/favicons/safari-pinned-tab.svg?v=jwLP3QWWqB" color="#4cc3ee">
     <link rel="shortcut icon" href="/themes/custom/dta-gov-au/images/favicons/favicon.ico?v=jwLP3QWWqB">
+    {% if environment == 'test' %}
+      <link href="https://dta-www-drupal-test-20180221050325640300000001.s3.ap-southeast-2.amazonaws.com/html/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
+    {% elseif environment == 'staging' %}
+      <link href="https://dta-www-drupal-staging-20180504063601229200000001.s3.ap-southeast-2.amazonaws.com/html/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
+    {% elseif environment == 'production' %}
+      <link href="https://dta-www-drupal-20180130215411153400000001.s3.ap-southeast-2.amazonaws.com/html/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
+    {% else %}
+        <!-- No environment variable set-->
+    {% endif %}
+    <link href="/themes/custom/dta-gov-au/images/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/themes/custom/dta-gov-au/images/favicons/mstile-144x144.png?v=jwLP3QWWqB">
     <meta name="msapplication-config" content="/themes/custom/dta-gov-au/images/favicons/browserconfig.xml?v=jwLP3QWWqB">
