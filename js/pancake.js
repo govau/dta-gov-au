@@ -325,9 +325,9 @@ if( typeof module !== 'undefined' ) {
 }
 
 
-/*! @gov.au/animate v1.0.4 */
+/*! @gov.au/animate v1.0.9 */
 
-/*! @gov.au/animate v1.0.4 */
+/*! @gov.au/animate v1.0.9 */
 /***************************************************************************************************************************************************************
  *
  * Animate function
@@ -574,8 +574,8 @@ var AU = AU || {};
 		var elements = options.element;
 		var property = options.property || 'height';
 		var speed = options.speed || 250;
-		var closeSize = options.closeSize || 0;
-		var openSize = options.openSize || 'auto'
+		var closeSize = options.closeSize === undefined ? 0 : options.closeSize;
+		var openSize = options.openSize === undefined ? 'auto' : options.openSize;
 
 		// making a single DOM element iteratable
 		if( elements.length === undefined ) {
