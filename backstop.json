@@ -154,7 +154,7 @@
     {
       "label": "Blog page",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "http://au.gov.cld.y.dta-website-rebuild-test:8888/blogs/vulpes",
+      "url": "http://au.gov.cld.y.dta-website-rebuild-test:8888/blogs/how-collaborate-smarter-government",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
@@ -172,7 +172,7 @@
     {
       "label": "News item",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "http://au.gov.cld.y.dta-website-rebuild-test:8888/news/abbas-dolor-haero-illum-imputo-tincidunt",
+      "url": "http://au.gov.cld.y.dta-website-rebuild-test:8888/news/digital-marketplace-celebrates-1000-opportunities-2-years",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
@@ -208,7 +208,7 @@
     {
       "label": "Roadmap",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "http://au.gov.cld.y.dta-website-rebuild-test:8888/our-projects/digital-investment-management-office/government-digital-transformation-roadmap-2016/business-roadmap",
+      "url": "http://au.gov.cld.y.dta-website-rebuild-test:8888/our-projects/digital-transformation-roadmaps/roadmap-for-business-users",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
