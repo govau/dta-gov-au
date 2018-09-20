@@ -20,18 +20,28 @@
 
   // List
   .assessment-reports {
-    li {
-      @include AU-space( margin-left, 5unit );
-      @include AU-space( text-indent, -5unit );
-      > .au-badge {
-        // Cancel out the default margin on badges if they are there.
-        @include AU-space( margin-left, 0unit );
-        @include AU-space( text-indent, 0unit );
+    table {
+      @include AU-space( margin-left, 0.75unit );
+      tbody > tr {
+        &.alpha td:first-child {
+          box-shadow: inset 8px 0px 0px 0px $AU-color-alpha;
+        }
+        &.beta td:first-child {
+          box-shadow: inset 8px 0px 0px 0px $AU-color-beta;
+        }
+        &.live td:first-child {
+          box-shadow: inset 8px 0px 0px 0px $AU-color-live;
+        }
+        td:first-child {
+          @include AU-space( padding-left, 1unit );
+          width: 15%;
+        }
       }
     }
-    .au-page-alerts {
-      @include AU-space( margin-left, 0.5unit );
-    }
+  }
+
+  .au-page-alerts {
+    @include AU-space( margin-left, 0.5unit );
   }
 }
 
