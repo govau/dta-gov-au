@@ -4,4 +4,5 @@
   @include AU-space( margin-bottom, 2unit );
   @include AU-fontgrid( lg );
   color: $AU-color-foreground-muted-suggestion;
+  @include AU-space( margin-top, 2.25unit );
 }

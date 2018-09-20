@@ -1,0 +1,11 @@
+// Styles for the author image on blog pages.
+
+.author-image {
+  float: left;
+  display: block;
+  height: auto;
+  @include AU-space( margin-right, 1unit );
+  img {
+    border-radius: 50%;
+  }
+}

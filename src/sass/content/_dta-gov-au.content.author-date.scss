@@ -2,4 +2,5 @@
 
 .au-author-date {
   @include AU-space( margin-bottom, 1unit );
+  @include AU-space( margin-left, 7.5unit );
 }
