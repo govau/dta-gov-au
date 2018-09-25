@@ -1,0 +1,84 @@
+// Styles for the search autocomplete.
+
+.ui-menu.search-api-autocomplete-search {
+  // The <ul> for the autocomplete drop down.
+
+  @include AU-space( padding-left, 0unit );
+  @include AU-space( padding-right, 0unit );
+
+  .ui-menu-item {
+    // The <li> for each item.
+    @include AU-space( padding-right, 0unit );
+
+    .ui-menu-item-wrapper {
+      // The <a> for each item.
+
+      @include AU-space( padding, 0.25unit 0unit 0.25unit 0unit );
+      display: block;
+      &.ui-state-active,
+      &:hover {
+        background-color: $AU-color-foreground-background;
+        color: $AU-color-foreground-action;
+        .search-api-autocomplete-suggestion {
+          // The suggestion <div>.
+          color: $AU-color-foreground-text;
+          background-color: $AU-color-foreground-background;
+          .autocomplete-suggestion-prefix-user-input-suffix-wrapper {
+            text-decoration: underline;
+          }
+          .autocomplete-suggestion-label {
+            // The label of the 'link'.
+            color: $AU-color-foreground-action;
+            text-decoration: none;
+          }
+        }
+      }
+      .search-api-autocomplete-suggestion {
+        // The suggestion <div>.
+
+        @include AU-space( padding, 0.25unit 1unit 0.25unit 1.5unit );
+        .autocomplete-suggestion-prefix-user-input-suffix-wrapper {
+          &:after {
+            content: ' ';
+            @include AU-space( width, 1unit );
+            @include AU-space( height, 1unit );
+            @include AU-space( margin, 0 .25unit 0 .2unit );
+            transition: margin 0.2s ease;
+            display: inline-block;
+            background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
+                '<path fill="#{ $AU-color-foreground-text }" d="M128 64l-64 64-16-16 64-64"/>' +
+                '<path fill="#{ $AU-color-foreground-text }" d="M128 64l-16 16-64-64L64 0"/>' +
+              '</svg>');
+            }
+          &:hover {
+            color: $AU-color-foreground-action;
+            &:after {
+              @include AU-space( margin-left, 0.4unit );
+              background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
+                  '<path fill="#{ $AU-color-foreground-action }" d="M128 64l-64 64-16-16 64-64"/>' +
+                  '<path fill="#{ $AU-color-foreground-action }" d="M128 64l-16 16-64-64L64 0"/>' +
+                '</svg>');
+            }
+          }
+        }
+
+        .autocomplete-suggestion-label {
+          // The label of the 'link'.
+          color: $AU-color-foreground-action;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+span.autocomplete-suggestion-instructions,
+li.autocomplete-instructions {
+  @include AU-fontgrid( xs );
+  font-style: italic;
+}
+
+li.autocomplete-instructions {
+  @include AU-space( padding, 0.25unit 1unit 0.25unit 1.5unit );
+  color: $AU-color-foreground-muted-suggestion;
+}

@@ -97,7 +97,7 @@
         $( 'header .ui-autocomplete-input' )
           .autocomplete( {
           open: function( ) {
-            $( 'ul.ui-menu' ).width( $( this )[0].offsetWidth - 17 );
+            $( 'ul.ui-menu' ).width( $( this )[0].outerWidth );
           },
           position: {
             my: 'left top',
@@ -110,7 +110,7 @@
         $( 'header.au-header--content .ui-autocomplete-input' )
           .autocomplete( {
           open: function( ) {
-            $( 'ul.ui-menu' ).width( $( this )[0].offsetWidth - 17 );
+            $( 'ul.ui-menu' ).width( $( this )[0].outerWidth );
           },
           position: {
             my: 'left top',
@@ -123,7 +123,7 @@
         $( 'main .ui-autocomplete-input' )
           .autocomplete( {
           open: function( ) {
-            $( 'ul.ui-menu' ).width( $( this )[0].offsetWidth - 17 );
+            $( 'ul.ui-menu' ).width( $( this )[0].outerWidth );
           },
           position: {
             my: 'left top-24',
