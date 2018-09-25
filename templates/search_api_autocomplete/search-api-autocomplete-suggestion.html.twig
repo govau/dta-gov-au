@@ -1,0 +1,29 @@
+  <div class="search-api-autocomplete-suggestion">
+    {% if prefix %}
+      <span class="autocomplete-suggestion-note">{{ prefix }}</span>
+    {% endif %}
+    {% if label %}
+      <span class="autocomplete-suggestion-label">{{ label }}</span><br />
+    {% endif %}
+    {% spaceless %}
+      {% if suggestion_prefix or user_input or suggestion_suffix %}
+        <div class="autocomplete-suggestion-prefix-user-input-suffix-wrapper">
+      {% endif %}
+        {% if suggestion_prefix %}
+          <span class="autocomplete-suggestion-suggestion-prefix">{{ suggestion_prefix }}</span>
+        {% endif %}
+        {% if user_input %}
+          <span class="autocomplete-suggestion-user-input">{{ user_input }}</span>
+        {% endif %}
+        {% if suggestion_suffix %}
+          <span class="autocomplete-suggestion-suggestion-suffix">{{ suggestion_suffix }}</span>
+        {% endif %}
+      {% if suggestion_prefix or user_input or suggestion_suffix %}
+        </div>
+        <span class="autocomplete-suggestion-instructions">Search for this term</span>
+      {% endif %}
+    {% endspaceless %}
+    {% if results_count %}
+      <span class="autocomplete-suggestion-results-count">{{ results_count }}</span>
+    {% endif %}
+  </div>
