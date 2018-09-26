@@ -11,14 +11,10 @@
     }
     > li, article {
       @include AU-space( max-width, 23.5unit );
-      @include AU-space( margin-top, 0unit );
-      @include AU-space( margin-bottom, 1.25unit auto );
+      @include AU-space( margin-bottom, 0.75unit);
       @include AU-media( sm ) {
-        @include AU-space( height, 32unit );
-        @include AU-space( min-height, 32unit );
-      }
-      @include AU-media( lg ) {
-        @include AU-space( margin-bottom, 2.25unit );
+        @include AU-space( height, 28unit );
+        @include AU-space( min-height, 28unit );
       }
     }
   }
@@ -33,7 +29,8 @@
     }
     .au-card__image {
       position: relative;
-      height: 100%;
+      height: auto;
+      @include AU-space( margin, -2unit -2unit 1.5unit -2unit );
       img {
         height: auto;
         @include AU-space( margin-top, 0unit );
@@ -54,10 +51,6 @@
         box-sizing: border-box;
         height: auto;
       }
-    }
-    .au-card__fullwidth:first-child {
-      @include AU-space( margin, -2unit -2unit 3unit -2unit );
-      height: auto;
     }
     .au-card__title {
       @include AU-fontgrid( lg );
