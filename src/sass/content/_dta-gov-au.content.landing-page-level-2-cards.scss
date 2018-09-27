@@ -6,7 +6,6 @@
 }
 .au-landing-page-level-2-cards {
   .au-card-list.au-card-list--matchheight {
-    @include AU-card-colours;
     .au-card {
       @include AU-space( min-height, 15unit );
     }
