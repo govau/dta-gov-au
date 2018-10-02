@@ -20,6 +20,9 @@
 
   // List
   .assessment-reports {
+    header {
+      @include AU-space( margin-top, 1.5unit );
+    }
     table {
       @include AU-space( margin-left, 0.75unit );
       tbody > tr {
