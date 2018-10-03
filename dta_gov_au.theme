@@ -255,13 +255,20 @@ function dta_gov_au_theme_suggestions_views_exposed_form_alter(array &$suggestio
  * Create theme suggestions for user profile templates
 **/
 function dta_gov_au_theme_suggestions_user_alter(&$suggestions, array $variables) {
-  if ($node = \Drupal::routeMatch()->getParameter('node')) {
-    $content_type = $node->bundle();
+  if(isset($variables['elements']['#view_mode'])) {
+    $viewmode = $variables['elements']['#view_mode'];
+    $suggestions[] = $variables['theme_hook_original'] . '__' . str_replace('-','_', $viewmode);
   }
-  $viewmode = $variables['elements']['#view_mode'];
-  $suggestions[] = $variables['theme_hook_original'] . '__' . str_replace('-','_', $viewmode);
-  $suggestions[] = $variables['theme_hook_original'] . '__' . str_replace('-','_', $content_type);
-  $suggestions[] = $variables['theme_hook_original'] . '__' . str_replace('-','_', $content_type) . '__' . str_replace('-','_', $viewmode);
+
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    if(null !== $node->bundle()) {
+      $content_type = $node->bundle();
+      $suggestions[] = $variables['theme_hook_original'] . '__' . str_replace('-','_', $content_type);
+      if(isset($viewmode)) {
+        $suggestions[] = $variables['theme_hook_original'] . '__' . str_replace('-','_', $content_type) . '__' . str_replace('-','_', $viewmode);
+      }
+    }
+  }
 }
 
 /**
