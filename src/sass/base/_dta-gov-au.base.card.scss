@@ -56,6 +56,12 @@
 			@include AU-fontgrid( md );
 			@include AU-space( margin-bottom, 2.5unit );
 		}
+		ul {
+			@include AU-space( padding-left, 1.25unit );
+		}
+		li {
+			list-style-type: disc;
+		}
 	}
 
 	hr {
@@ -155,12 +161,12 @@ a.au-card {
 	@include AU-space( margin-top, 0 );
 	@include AU-space( margin-bottom, 0 );
 
-	li {
+	> li {
 		list-style: none;
 	}
 
 	.au-body & {
-		li {
+		> li {
 			@include AU-space( margin, 0.75unit 0 );
 		}
 	}
@@ -172,7 +178,7 @@ a.au-card {
 			flex-wrap: wrap;
 		}
 
-		li {
+		> li {
 			display: table-cell;
 			@include AU-media( sm ) {
 				min-height: 17rem;
