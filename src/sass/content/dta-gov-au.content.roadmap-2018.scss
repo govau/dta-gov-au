@@ -15,6 +15,16 @@ $colour-fit: #f26400;
         p.description {
             margin-bottom: 1.5rem;
         }
+
+        .js-form-type-checkbox:nth-of-type(1) span:before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23cd0078' d='M0,0h32v32H0V0z'/%3E%3Cpath fill='%23ffffff' d='M2,2h28v28H2V2z'/%3E%3C/svg%3E");
+        }
+        .js-form-type-checkbox:nth-of-type(2) span:before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23f26400' d='M0,0h32v32H0V0z'/%3E%3Cpath fill='%23ffffff' d='M2,2h28v28H2V2z'/%3E%3C/svg%3E");
+        }
+        .js-form-type-checkbox:nth-of-type(3) span:before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%2320a94e' d='M0,0h32v32H0V0z'/%3E%3Cpath fill='%23ffffff' d='M2,2h28v28H2V2z'/%3E%3C/svg%3E");
+        }
     }
 
     .view-grouping {
