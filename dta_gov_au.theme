@@ -2,6 +2,7 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Component\Render\FormattableMarkup;
+Use Drupal\Component\Utility;
 use Drupal\Core\Url;
 use Drupal\Core\Link;
 use Drupal\taxonomy\Entity\Term;
@@ -231,6 +232,14 @@ function dta_gov_au_theme_suggestions_menu_alter(array &$suggestions, array $var
     $suggestions[] = $variables['theme_hook_original'] . '__' . $region;
     $suggestions[] = $variables['theme_hook_original'] . '__' . $hook;
     $suggestions[] = $variables['theme_hook_original'] . '__' . $region . '__' . $hook;
+  }
+}
+
+function dta_gov_au_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // Add some more theme suggestions to the page template.
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $title = \Drupal\Component\Utility\Html::cleanCssIdentifier($node->getTitle());
+    $suggestions[] = $variables['theme_hook_original'] . '__' . \Drupal\Component\Utility\Unicode::strtolower($title);
   }
 }
 
