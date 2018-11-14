@@ -44,9 +44,14 @@
  */
 #}
 
+{% if node.hasField('field_theme') == true %}
+  {% set term_id = 'theme_' ~ node.field_theme.entity.name.value|clean_class %}
+{% endif %}
+
 {% set main_classes = [
     'container-fluid',
     is_front ? 'page-front' : 'page-content',
+    term_id ? term_id : '',
   ]
 %}
 
