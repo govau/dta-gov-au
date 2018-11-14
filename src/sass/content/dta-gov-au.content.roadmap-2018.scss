@@ -117,7 +117,21 @@ nav.book-navigation {
     margin-top: 2rem;
     padding-top: 1rem;
 
+    ul.au-link-list.au-link-list--inline {
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        &.au-link-list > li {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
     li.col-md-6 {
         text-align: center;
+    }
+    .au-button--next {
+        float: right;
     }
 }
