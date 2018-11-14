@@ -39,17 +39,17 @@
   <nav class="book-navigation" id="book-navigation-{{ parent_title|clean_class }}" role="navigation" aria-labelledby="book-label-{{ book_id }}">
     {% if has_links %}
       <h2 class="visually-hidden">{{ 'Navigation links for'|t }} {{ book_title }}</h2>
-      <ul class="au-link-list au-link-list--inline">
+      <ul class="au-link-list au-link-list--inline row">
       {% if prev_url %}
-        <li>
+        <li class="col-md-3">
           <a class="au-btn au-btn--secondary au-button--prev" href="{{ prev_url }}" rel="prev" title="{{ prev_title }}">{{ prev_title }}</a>
         </li>
       {% endif %}
-        <li>
+        <li class="col-md-6">
           <a class="strategy-home-link" href="/strategy" title="2025 Digital Transformation Strategy">2025 Digital Transformation Strategy</a>
         </li>
       {% if next_url %}
-        <li>
+        <li class="col-md-3">
           <a class="au-btn au-btn--secondary au-button--next" href="{{ next_url }}" rel="next" title="{{ next_title }}">{{ next_title }}</a>
         </li>
       {% endif %}
