@@ -45,7 +45,9 @@
 #}
 
 {% if node.hasField('field_theme') == true %}
-  {% set term_id = 'theme_' ~ node.field_theme.entity.name.value|clean_class %}
+  {% if node.field_theme.entity.name.value %}
+    {% set term_id = 'theme_' ~ node.field_theme.entity.name.value|clean_class %}
+  {% endif %}
 {% endif %}
 
 {% set main_classes = [

@@ -239,7 +239,11 @@ function dta_gov_au_theme_suggestions_page_alter(array &$suggestions, array $var
   // Add some more theme suggestions to the page template.
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
     $title = \Drupal\Component\Utility\Html::cleanCssIdentifier($node->getTitle());
+    $type = $node->bundle();
     $suggestions[] = $variables['theme_hook_original'] . '__' . \Drupal\Component\Utility\Unicode::strtolower($title);
+    $suggestions[] = $variables['theme_hook_original'] . '__' . $type;
+    $suggestions[] = $variables['theme_hook_original'] . '__' . $type . '__' . \Drupal\Component\Utility\Unicode::strtolower($title);
+
   }
 }
 
