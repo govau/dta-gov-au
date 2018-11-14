@@ -42,7 +42,7 @@
       <ul class="au-link-list au-link-list--inline row">
       {% if prev_url %}
         <li class="col-md-3">
-          <a class="au-btn au-btn--secondary au-button--prev" href="{{ prev_url }}" rel="prev" title="{{ prev_title }}">{{ prev_title }}</a>
+          <a class="au-btn au-btn--secondary au-button--prev" href="{{ prev_url }}" rel="prev" title="{{ prev_title }}">{{ 'Previous'|t }}</a>
         </li>
       {% endif %}
         <li class="col-md-6">
@@ -50,7 +50,7 @@
         </li>
       {% if next_url %}
         <li class="col-md-3">
-          <a class="au-btn au-btn--secondary au-button--next" href="{{ next_url }}" rel="next" title="{{ next_title }}">{{ next_title }}</a>
+          <a class="au-btn au-btn--secondary au-button--next" href="{{ next_url }}" rel="next" title="{{ next_title }}">{{ 'Next'|t }}</a>
         </li>
       {% endif %}
     </ul>
