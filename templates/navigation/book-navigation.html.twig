@@ -1,0 +1,59 @@
+{#
+/**
+ * @file
+ * Theme override to navigate books.
+ *
+ * Presented under nodes that are a part of book outlines.
+ *
+ * Available variables:
+ * - tree: The immediate children of the current node rendered as an unordered
+ *   list.
+ * - current_depth: Depth of the current node within the book outline. Provided
+ *   for context.
+ * - prev_url: URL to the previous node.
+ * - prev_title: Title of the previous node.
+ * - parent_url: URL to the parent node.
+ * - parent_title: Title of the parent node. Not printed by default. Provided
+ *   as an option.
+ * - next_url: URL to the next node.
+ * - next_title: Title of the next node.
+ * - has_links: Flags TRUE whenever the previous, parent or next data has a
+ *   value.
+ * - book_id: The book ID of the current outline being viewed. Same as the node
+ *   ID containing the entire outline. Provided for context.
+ * - book_url: The book/node URL of the current outline being viewed. Provided
+ *   as an option. Not used by default.
+ * - book_title: The book/node title of the current outline being viewed.
+ *
+ * @see template_preprocess_book_navigation()
+ */
+#}
+{#
+  /**
+   * Removed the tree variable.
+   * Visually hid the H2 and changed the wording.
+   * Replaced the 'go to parent' link with 'go to the outline'.
+   * Updated previous/next links and removed extraneous characters.
+ #}
+{% if tree or has_links %}
+  <nav class="book-navigation" id="book-navigation-{{ parent_title|clean_class }}" role="navigation" aria-labelledby="book-label-{{ book_id }}">
+    {% if has_links %}
+      <h2 class="visually-hidden">{{ 'Navigation links for'|t }} {{ book_title }}</h2>
+      <ul class="au-link-list au-link-list--inline row">
+      {% if prev_url %}
+        <li class="col-md-3">
+          <a class="au-btn au-btn--secondary au-button--prev" href="{{ prev_url }}" rel="prev" title="{{ prev_title }}"> <b>{{ '&lsaquo;'|t }}</b> {{ 'Previous'|t }}</a>
+        </li>
+      {% endif %}
+        <li class="col-md-6">
+          <a class="strategy-home-link" href="/strategy" title="2025 Digital Transformation Strategy">2025 Digital Transformation Strategy</a>
+        </li>
+      {% if next_url %}
+        <li class="col-md-3">
+          <a class="au-btn au-btn--secondary au-button--next" href="{{ next_url }}" rel="next" title="{{ next_title }}">{{ 'Next'|t }} <b>{{ '&rsaquo;'|t }}</b></a>
+        </li>
+      {% endif %}
+    </ul>
+    {% endif %}
+  </nav>
+{% endif %}

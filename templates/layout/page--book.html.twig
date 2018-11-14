@@ -47,6 +47,7 @@
 {% if node.hasField('field_theme') == true %}
   {% if node.field_theme.entity.name.value %}
     {% set term_id = 'theme_' ~ node.field_theme.entity.name.value|clean_class %}
+    {% set hasTheme = true %}
   {% endif %}
 {% endif %}
 
@@ -54,6 +55,8 @@
     'container-fluid',
     is_front ? 'page-front' : 'page-content',
     term_id ? term_id : '',
+    hasTheme ? 'has-theme' :'',
+    'book-content',
   ]
 %}
 

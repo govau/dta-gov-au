@@ -1,7 +1,4 @@
-$colour-easy: #cd0078;
-$colour-informed: #20a94e;
-$colour-fit: #f26400;
-
+// roadmap 2018 timeline
 .au-roadmap-2018 {
     form.views-exposed-form {
         background: #f5f5f5;
@@ -17,13 +14,13 @@ $colour-fit: #f26400;
         }
 
         .js-form-type-checkbox:nth-of-type(1) span:before {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23cd0078' d='M0,0h32v32H0V0z'/%3E%3Cpath fill='%23ffffff' d='M2,2h28v28H2V2z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='" + $roadmap-2018-colour-easy + "' d='M0,0h32v32H0V0z'/><path fill='%23ffffff' d='M2,2h28v28H2V2z'/></svg>");
         }
         .js-form-type-checkbox:nth-of-type(2) span:before {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23f26400' d='M0,0h32v32H0V0z'/%3E%3Cpath fill='%23ffffff' d='M2,2h28v28H2V2z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='" + $roadmap-2018-colour-fit + "' d='M0,0h32v32H0V0z'/><path fill='%23ffffff' d='M2,2h28v28H2V2z'/></svg>");
         }
         .js-form-type-checkbox:nth-of-type(3) span:before {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%2320a94e' d='M0,0h32v32H0V0z'/%3E%3Cpath fill='%23ffffff' d='M2,2h28v28H2V2z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='" + $roadmap-2018-colour-informed + "' d='M0,0h32v32H0V0z'/><path fill='%23ffffff' d='M2,2h28v28H2V2z'/></svg>");
         }
     }
 
@@ -61,34 +58,80 @@ $colour-fit: #f26400;
             box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
             padding: 1rem;
             margin-bottom: 1rem;
+            position: relative;
 
             &.completed {
-                padding-bottom: 1rem;
+                padding-bottom: 1.5rem;
 
                 &:after {
                     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 24 24'><path fill='none' d='M0 0h24v24H0z'/><path fill=' %2351a754 ' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/></svg>");
                     background-repeat: no-repeat;
                     background-position: 0 center;
-                    color: #51a754;
-                    display: block;
-                    bottom: 1rem;
+                    bottom: 10px;
+                    right: 10px;
                     content: '';
                     width: 20px;
                     height: 20px;
-                    float: right;
-                    position: relative;    
+                    position: absolute;    
                 }
             }
 
             &.government-that039s-easy-to-deal-with {
-                border-left-color: $colour-easy;
+                border-left-color: $roadmap-2018-colour-easy;
             }
             &.government-that039s-informed-by-you {
-                border-left-color: $colour-informed;
+                border-left-color: $roadmap-2018-colour-informed;
             }
             &.government-that039s-fit-for-the-digital-age {
-                border-left-color: $colour-fit;
+                border-left-color: $roadmap-2018-colour-fit;
             }
         }
+    }
+}
+
+// strategy content
+&.theme_government-thats-easy-to-deal-with {
+    .strategic-priority {
+        color: $roadmap-2018-colour-easy;
+        border-bottom: solid 0.5rem $roadmap-2018-colour-easy;
+        font-weight: bold;
+    }
+}
+&.theme_government-thats-informed-by-you {
+    .strategic-priority {
+        color: $roadmap-2018-colour-informed;
+        border-bottom: solid 0.5rem $roadmap-2018-colour-informed;
+        font-weight: bold;
+    }
+}
+&.theme_government-thats-fit-for-the-digital-age {
+    .strategic-priority {
+        color: $roadmap-2018-colour-fit;
+        border-bottom: solid 0.5rem $roadmap-2018-colour-fit;
+        font-weight: bold;
+    }
+}
+
+nav.book-navigation {
+    border-top: 1px solid $AU-color-background-alt-shade-suggestion;
+    margin-top: 2rem;
+    padding-top: 1rem;
+
+    ul.au-link-list.au-link-list--inline {
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        &.au-link-list > li {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    li.col-md-6 {
+        text-align: center;
+    }
+    .au-button--next {
+        float: right;
     }
 }

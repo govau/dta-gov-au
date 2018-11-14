@@ -1,0 +1,42 @@
+// Images for the 2018 DTS Roadmap
+
+&.book-content.has-theme {
+  .au-hero {
+    @include AU-space( margin-bottom, 3unit );
+    @include AU-clearfix;
+    figcaption {
+      @include AU-space( padding, 2unit );
+      @include AU-fontgrid( md );
+      box-sizing: border-box;
+      color: $AU-color-foreground-background;
+      @include AU-media( lg ) {
+        float: left;
+        width: 50%;
+        @include AU-fontgrid( lg );
+      }
+      font-style: normal;
+    }
+    img {
+      @include AU-media( md ) {
+        float: right;
+        width: 50%;
+        @include AU-space( margin, 0 );
+      }
+    }
+  }
+  &.theme_government-thats-easy-to-deal-with {
+    .au-hero {
+      background-color: $roadmap-2018-colour-easy;
+    }
+  }
+  &.theme_government-thats-informed-by-you {
+    .au-hero {
+      background-color: $roadmap-2018-colour-informed;
+    }
+  }
+  &.theme_government-thats-fit-for-the-digital-age {
+    .au-hero {
+      background-color: $roadmap-2018-colour-fit;
+    }
+  }
+}
