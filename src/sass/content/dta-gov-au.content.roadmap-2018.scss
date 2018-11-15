@@ -116,64 +116,55 @@
   .au-callout.digital-transformation-strategy {
     border-color: $roadmap-2018-colour-easy;
   }
-    .au-callout {
-        border-left-color: $roadmap-2018-colour-easy;
+  dl dt {
+      color: $roadmap-2018-colour-easy;
+  }
+  .strategic-priority {
+      color: $roadmap-2018-colour-easy;
+      border-bottom: solid 0.5rem $roadmap-2018-colour-easy;
+      font-weight: bold;
+  }
+  ol.digital-transformation-strategy {
+    > li:before {
+      color: $roadmap-2018-colour-easy;
     }
-    dl dt {
-        color: $roadmap-2018-colour-easy;
-    }
-    .strategic-priority {
-        color: $roadmap-2018-colour-easy;
-        border-bottom: solid 0.5rem $roadmap-2018-colour-easy;
-        font-weight: bold;
-    }
-    ol.digital-transformation-strategy {
-      > li:before {
-        color: $roadmap-2018-colour-easy;
-      }
-    }
+  }
 }
 &.theme_government-thats-informed-by-you {
   .au-callout.digital-transformation-strategy {
     border-color: $roadmap-2018-colour-informed
   }
-    .au-callout {
-        border-left-color: $roadmap-2018-colour-informed;
+  dl dt {
+      color: $roadmap-2018-colour-informed;
+  }
+  .strategic-priority {
+      color: $roadmap-2018-colour-informed;
+      border-bottom: solid 0.5rem $roadmap-2018-colour-informed;
+      font-weight: bold;
+  }
+  ol.digital-transformation-strategy {
+    > li:before {
+      color: $roadmap-2018-colour-informed;
     }
-    dl dt {
-        color: $roadmap-2018-colour-informed;
-    }
-    .strategic-priority {
-        color: $roadmap-2018-colour-informed;
-        border-bottom: solid 0.5rem $roadmap-2018-colour-informed;
-        font-weight: bold;
-    }
-    ol.digital-transformation-strategy {
-      > li:before {
-        color: $roadmap-2018-colour-informed;
-      }
-    }
+  }
 }
 &.theme_government-thats-fit-for-the-digital-age {
   .au-callout.digital-transformation-strategy {
     border-color: $roadmap-2018-colour-fit;
   }
-    .au-callout {
-        border-left-color: $roadmap-2018-colour-fit;
+  dl dt {
+      color: $roadmap-2018-colour-fit;
+  }
+  .strategic-priority {
+      color: $roadmap-2018-colour-fit;
+      border-bottom: solid 0.5rem $roadmap-2018-colour-fit;
+      font-weight: bold;
+  }
+  ol.digital-transformation-strategy {
+    > li:before {
+      color: $roadmap-2018-colour-fit;
     }
-    dl dt {
-        color: $roadmap-2018-colour-fit;
-    }
-    .strategic-priority {
-        color: $roadmap-2018-colour-fit;
-        border-bottom: solid 0.5rem $roadmap-2018-colour-fit;
-        font-weight: bold;
-    }
-    ol.digital-transformation-strategy {
-      > li:before {
-        color: $roadmap-2018-colour-fit;
-      }
-    }
+  }
 }
 
 ol.digital-transformation-strategy {
