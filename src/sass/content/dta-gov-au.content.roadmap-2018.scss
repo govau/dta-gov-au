@@ -89,6 +89,8 @@
     }
 }
 
+// strategy content
+
 &.book-content {
     dl {
         padding-bottom: 1rem;
@@ -110,10 +112,12 @@
     }
 }
 
-// strategy content
 &.theme_government-thats-easy-to-deal-with {
     .au-callout {
         border-left-color: $roadmap-2018-colour-easy;
+    }
+    dl dt {
+        color: $roadmap-2018-colour-easy;
     }
     .strategic-priority {
         color: $roadmap-2018-colour-easy;
@@ -125,10 +129,8 @@
     .au-callout {
         border-left-color: $roadmap-2018-colour-informed;
     }
-    dl {
-        dt {
-            color: $roadmap-2018-colour-informed;
-        }
+    dl dt {
+        color: $roadmap-2018-colour-informed;
     }
     .strategic-priority {
         color: $roadmap-2018-colour-informed;
@@ -139,6 +141,9 @@
 &.theme_government-thats-fit-for-the-digital-age {
     .au-callout {
         border-left-color: $roadmap-2018-colour-fit;
+    }
+    dl dt {
+        color: $roadmap-2018-colour-fit;
     }
     .strategic-priority {
         color: $roadmap-2018-colour-fit;
