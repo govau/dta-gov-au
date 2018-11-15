@@ -1,0 +1,37 @@
+// Landing page for the DTS.
+
+&.book-content {
+  #card-content {
+    @include AU-space( padding-bottom, 5unit );
+    @include AU-space( margin-top, 0unit );
+    h2 {
+      font-weight: normal;
+      @include AU-space( margin-bottom, 1unit );
+      @include AU-space( margin-top, 4unit );
+    }
+  }
+  .au-card {
+    border-top: 4px solid $AU-colordark-foreground-action;
+    &.au-card--item-1 {
+      border-color: $roadmap-2018-colour-easy;
+      .au-card__title {
+        color: $roadmap-2018-colour-easy;
+      }
+    }
+    &.au-card--item-2 {
+      border-color: $roadmap-2018-colour-informed;
+      .au-card__title {
+        color: $roadmap-2018-colour-informed;
+      }
+    }
+    &.au-card--item-3 {
+      border-color: $roadmap-2018-colour-fit;
+      .au-card__title {
+        color: $roadmap-2018-colour-fit;
+      }
+    }
+    .au-card__image {
+      @include AU-space( margin-bottom, 1unit );
+    }
+  }
+}

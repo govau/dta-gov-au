@@ -2,6 +2,9 @@
 
 main[role="main"].page-content {
   @include AU-space( padding-bottom, 5unit );
+  &.dts-landing-page {
+    @include AU-space( padding-bottom, 0unit );
+  }
   .au-body {
     @include AU-fontgrid( sm );
     @include AU-space( margin-top, 2unit );
@@ -31,4 +34,6 @@ main[role="main"].page-content {
   @import "dta-gov-au.content.mailchimp";
   @import "dta-gov-au.content.roadmap-2018";
   @import "dta-gov-au.content.roadmap-2018.images";
+  @import "dta-gov-au.content.roadmap-2018.highlight";
+  @import "dta-gov-au.content.roadmap-2018.landing-page";
 }

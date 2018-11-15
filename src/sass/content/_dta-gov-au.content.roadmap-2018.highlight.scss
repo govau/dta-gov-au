@@ -1,0 +1,26 @@
+// Highlight element for the DTS landing page.
+
+#highlight {
+  h1 {
+    font-weight: normal;
+  }
+  @include AU-media( sm ) {
+    background-image: url('../images/hero-digital-transformation-strategy.jpg');
+  }
+  background-position: center top;
+  background-size: cover;
+  @include AU-space( margin-top, 0unit );
+  @include AU-space( padding, 3unit 0 5unit 0 );
+
+  position: relative;
+  z-index: 1;
+  .au-introduction {
+    color: $AU-colordark-foreground-text;
+  }
+  .buttons {
+    @include AU-space( margin-top, 3unit );
+    a {
+      @include AU-space( margin-right, 2unit );
+    }
+  }
+}
