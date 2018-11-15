@@ -1,26 +1,34 @@
 // Images for the 2018 DTS Roadmap
 
 &.book-content.has-theme {
+  h1 + .au-hero {
+    @include AU-space( margin-top, 2unit );
+  }
   .au-hero {
     @include AU-space( margin-bottom, 3unit );
     @include AU-clearfix;
     figcaption {
-      @include AU-space( padding, 2unit );
-      @include AU-fontgrid( md );
+      @include AU-space( padding, 1unit );
+      @include AU-space( margin, 0 );
+      @include AU-fontgrid( sm );
       box-sizing: border-box;
       color: $AU-color-foreground-background;
-      @include AU-media( lg ) {
+      @include AU-media( md ) {
+        @include AU-space( padding, 2unit );
         float: left;
         width: 50%;
-        @include AU-fontgrid( lg );
+        @include AU-fontgrid( sm );
+      }
+      @include AU-media( lg ) {
+        @include AU-fontgrid( md );
       }
       font-style: normal;
     }
     img {
+      @include AU-space( margin, 0 );
       @include AU-media( md ) {
         float: right;
         width: 50%;
-        @include AU-space( margin, 0 );
       }
     }
   }
