@@ -91,6 +91,9 @@
 
 // strategy content
 &.theme_government-thats-easy-to-deal-with {
+    .au-callout {
+        border-left-color: $roadmap-2018-colour-easy
+    }
     .strategic-priority {
         color: $roadmap-2018-colour-easy;
         border-bottom: solid 0.5rem $roadmap-2018-colour-easy;
@@ -98,6 +101,9 @@
     }
 }
 &.theme_government-thats-informed-by-you {
+    .au-callout {
+        border-left-color: $roadmap-2018-colour-informed
+    }
     .strategic-priority {
         color: $roadmap-2018-colour-informed;
         border-bottom: solid 0.5rem $roadmap-2018-colour-informed;
@@ -105,6 +111,9 @@
     }
 }
 &.theme_government-thats-fit-for-the-digital-age {
+    .au-callout {
+        border-left-color: $roadmap-2018-colour-fit
+    }
     .strategic-priority {
         color: $roadmap-2018-colour-fit;
         border-bottom: solid 0.5rem $roadmap-2018-colour-fit;
