@@ -5286,9 +5286,9 @@ main[role="main"].page-content {
       border: 0.5em solid #adadad;
       background-color: #ffffff;
       z-index: 2; }
-    main[role="main"].page-content .au-roadmap-2018 .view-grouping .people, main[role="main"].page-content .au-roadmap-2018 .view-grouping .business {
+    main[role="main"].page-content .au-roadmap-2018 .view-grouping .people, main[role="main"].page-content .au-roadmap-2018 .view-grouping .business, main[role="main"].page-content .au-roadmap-2018 .view-grouping .people-and-business {
       margin-top: 1.5rem; }
-      main[role="main"].page-content .au-roadmap-2018 .view-grouping .people h3, main[role="main"].page-content .au-roadmap-2018 .view-grouping .business h3 {
+      main[role="main"].page-content .au-roadmap-2018 .view-grouping .people h3, main[role="main"].page-content .au-roadmap-2018 .view-grouping .business h3, main[role="main"].page-content .au-roadmap-2018 .view-grouping .people-and-business h3 {
         margin-bottom: 1rem; }
     main[role="main"].page-content .au-roadmap-2018 .view-grouping .roadmap-card {
       border-left-width: 0.5em;
