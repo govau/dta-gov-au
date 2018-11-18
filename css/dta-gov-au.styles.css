@@ -5267,9 +5267,9 @@ main[role="main"].page-content {
     main[role="main"].page-content .au-roadmap-2018 form.views-exposed-form .js-form-type-checkbox:nth-of-type(1) span:before {
       background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='#cd0078' d='M0,0h32v32H0V0z'/><path fill='%23ffffff' d='M2,2h28v28H2V2z'/></svg>"); }
     main[role="main"].page-content .au-roadmap-2018 form.views-exposed-form .js-form-type-checkbox:nth-of-type(2) span:before {
-      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='#f26400' d='M0,0h32v32H0V0z'/><path fill='%23ffffff' d='M2,2h28v28H2V2z'/></svg>"); }
-    main[role="main"].page-content .au-roadmap-2018 form.views-exposed-form .js-form-type-checkbox:nth-of-type(3) span:before {
       background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='#20a94e' d='M0,0h32v32H0V0z'/><path fill='%23ffffff' d='M2,2h28v28H2V2z'/></svg>"); }
+    main[role="main"].page-content .au-roadmap-2018 form.views-exposed-form .js-form-type-checkbox:nth-of-type(3) span:before {
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='#f26400' d='M0,0h32v32H0V0z'/><path fill='%23ffffff' d='M2,2h28v28H2V2z'/></svg>"); }
   main[role="main"].page-content .au-roadmap-2018 .view-grouping {
     padding-left: 2rem;
     border-left: 0.5em solid #adadad;
@@ -5314,9 +5314,9 @@ main[role="main"].page-content {
       main[role="main"].page-content .au-roadmap-2018 .view-grouping .roadmap-card.government-that039s-easy-to-deal-with {
         border-left-color: #cd0078; }
       main[role="main"].page-content .au-roadmap-2018 .view-grouping .roadmap-card.government-that039s-informed-by-you {
-        border-left-color: #20a94e; }
-      main[role="main"].page-content .au-roadmap-2018 .view-grouping .roadmap-card.government-that039s-fit-for-the-digital-age {
         border-left-color: #f26400; }
+      main[role="main"].page-content .au-roadmap-2018 .view-grouping .roadmap-card.government-that039s-fit-for-the-digital-age {
+        border-left-color: #20a94e; }
   main[role="main"].page-content.book-content dl {
     padding-bottom: 1rem; }
     main[role="main"].page-content.book-content dl dt {
@@ -5342,25 +5342,25 @@ main[role="main"].page-content {
   main[role="main"].page-content.theme_government-thats-easy-to-deal-with ol.digital-transformation-strategy > li:before {
     color: #cd0078; }
   main[role="main"].page-content.theme_government-thats-informed-by-you .au-callout.digital-transformation-strategy, main[role="main"].page-content.theme_government-thats-informed-by-you section.digital-transformation-strategy.assessment-report-metadata {
-    border-color: #20a94e; }
-  main[role="main"].page-content.theme_government-thats-informed-by-you dl dt {
-    color: #20a94e; }
-  main[role="main"].page-content.theme_government-thats-informed-by-you .strategic-priority {
-    color: #20a94e;
-    border-bottom: solid 0.5rem #20a94e;
-    font-weight: bold; }
-  main[role="main"].page-content.theme_government-thats-informed-by-you ol.digital-transformation-strategy > li:before {
-    color: #20a94e; }
-  main[role="main"].page-content.theme_government-thats-fit-for-the-digital-age .au-callout.digital-transformation-strategy, main[role="main"].page-content.theme_government-thats-fit-for-the-digital-age section.digital-transformation-strategy.assessment-report-metadata {
     border-color: #f26400; }
-  main[role="main"].page-content.theme_government-thats-fit-for-the-digital-age dl dt {
+  main[role="main"].page-content.theme_government-thats-informed-by-you dl dt {
     color: #f26400; }
-  main[role="main"].page-content.theme_government-thats-fit-for-the-digital-age .strategic-priority {
+  main[role="main"].page-content.theme_government-thats-informed-by-you .strategic-priority {
     color: #f26400;
     border-bottom: solid 0.5rem #f26400;
     font-weight: bold; }
-  main[role="main"].page-content.theme_government-thats-fit-for-the-digital-age ol.digital-transformation-strategy > li:before {
+  main[role="main"].page-content.theme_government-thats-informed-by-you ol.digital-transformation-strategy > li:before {
     color: #f26400; }
+  main[role="main"].page-content.theme_government-thats-fit-for-the-digital-age .au-callout.digital-transformation-strategy, main[role="main"].page-content.theme_government-thats-fit-for-the-digital-age section.digital-transformation-strategy.assessment-report-metadata {
+    border-color: #20a94e; }
+  main[role="main"].page-content.theme_government-thats-fit-for-the-digital-age dl dt {
+    color: #20a94e; }
+  main[role="main"].page-content.theme_government-thats-fit-for-the-digital-age .strategic-priority {
+    color: #20a94e;
+    border-bottom: solid 0.5rem #20a94e;
+    font-weight: bold; }
+  main[role="main"].page-content.theme_government-thats-fit-for-the-digital-age ol.digital-transformation-strategy > li:before {
+    color: #20a94e; }
   main[role="main"].page-content ol.digital-transformation-strategy {
     list-style-type: none;
     margin-left: 0;
@@ -5396,7 +5396,7 @@ main[role="main"].page-content {
         margin-right: 1.5rem;
         width: 48px;
         width: 3rem;
-        color: #f26400;
+        color: #20a94e;
         font-size: 40px;
         font-size: 2.5rem;
         line-height: 1.5;
@@ -5463,9 +5463,9 @@ main[role="main"].page-content {
   main[role="main"].page-content.book-content.has-theme.theme_government-thats-easy-to-deal-with .au-hero {
     background-color: #cd0078; }
   main[role="main"].page-content.book-content.has-theme.theme_government-thats-informed-by-you .au-hero {
-    background-color: #20a94e; }
-  main[role="main"].page-content.book-content.has-theme.theme_government-thats-fit-for-the-digital-age .au-hero {
     background-color: #f26400; }
+  main[role="main"].page-content.book-content.has-theme.theme_government-thats-fit-for-the-digital-age .au-hero {
+    background-color: #20a94e; }
   main[role="main"].page-content #highlight {
     background-position: center top;
     background-size: cover;
@@ -5506,13 +5506,13 @@ main[role="main"].page-content {
       main[role="main"].page-content.book-content .au-card.au-card--item-1 .au-card__title {
         color: #cd0078; }
     main[role="main"].page-content.book-content .au-card.au-card--item-2 {
-      border-color: #20a94e; }
-      main[role="main"].page-content.book-content .au-card.au-card--item-2 .au-card__title {
-        color: #20a94e; }
-    main[role="main"].page-content.book-content .au-card.au-card--item-3 {
       border-color: #f26400; }
-      main[role="main"].page-content.book-content .au-card.au-card--item-3 .au-card__title {
+      main[role="main"].page-content.book-content .au-card.au-card--item-2 .au-card__title {
         color: #f26400; }
+    main[role="main"].page-content.book-content .au-card.au-card--item-3 {
+      border-color: #20a94e; }
+      main[role="main"].page-content.book-content .au-card.au-card--item-3 .au-card__title {
+        color: #20a94e; }
     main[role="main"].page-content.book-content .au-card .au-card__image {
       margin-bottom: 16px;
       margin-bottom: 1rem; }
