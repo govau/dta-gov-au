@@ -18,9 +18,15 @@
     color: $AU-colordark-foreground-text;
   }
   .buttons {
+    max-width: none;
     @include AU-space( margin-top, 3unit );
     a {
-      @include AU-space( margin-right, 2unit );
+      @include AU-space( margin-right, 1.5unit );
+      @include AU-space( margin-bottom, 1.5unit );
     }
+  }
+  #block-booknavigation-2 {
+    display: none;
+    visibility: hidden;
   }
 }
