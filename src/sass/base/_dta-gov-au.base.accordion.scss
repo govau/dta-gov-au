@@ -4,4 +4,9 @@
   p {
     max-width: none;
   }
+  a.au-accordion__title + p {
+    // Sometimes there's an extra empty <p> tag after the title.
+    display: none;
+    visibility: hidden;
+  }
 }
