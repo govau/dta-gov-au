@@ -17,10 +17,10 @@
             background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='" + $roadmap-2018-colour-easy + "' d='M0,0h32v32H0V0z'/><path fill='%23ffffff' d='M2,2h28v28H2V2z'/></svg>");
         }
         .js-form-type-checkbox:nth-of-type(2) span:before {
-            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='" + $roadmap-2018-colour-fit + "' d='M0,0h32v32H0V0z'/><path fill='%23ffffff' d='M2,2h28v28H2V2z'/></svg>");
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='" + $roadmap-2018-colour-informed + "' d='M0,0h32v32H0V0z'/><path fill='%23ffffff' d='M2,2h28v28H2V2z'/></svg>");
         }
         .js-form-type-checkbox:nth-of-type(3) span:before {
-            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='" + $roadmap-2018-colour-informed + "' d='M0,0h32v32H0V0z'/><path fill='%23ffffff' d='M2,2h28v28H2V2z'/></svg>");
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='" + $roadmap-2018-colour-fit + "' d='M0,0h32v32H0V0z'/><path fill='%23ffffff' d='M2,2h28v28H2V2z'/></svg>");
         }
     }
 
@@ -203,6 +203,7 @@ nav.book-navigation {
     border-top: 1px solid $AU-color-background-alt-shade-suggestion;
     margin-top: 2rem;
     padding-top: 1rem;
+    padding-bottom: 2rem;
 
     ul.au-link-list.au-link-list--inline {
         display: block;
