@@ -43,7 +43,7 @@
             z-index: 2;
         }
 
-        .people, .business, .people-and-business {
+        .people, .businesses, .people-and-businesses {
             margin-top: 1.5rem;
 
             h3 {
@@ -72,6 +72,22 @@
                     content: '';
                     width: 20px;
                     height: 20px;
+                    position: absolute;
+                }
+            }
+            &.accelerated {
+                padding-bottom: 1.5rem;
+
+                &:before {
+                    background-image: url('../images/rocket.png');
+                    background-repeat: no-repeat;
+                    background-position: 0 center;
+                    background-size: cover;
+                    top: 8px;
+                    right: 8px;
+                    content: '';
+                    width: 30px;
+                    height: 30px;
                     position: absolute;
                 }
             }
