@@ -225,17 +225,31 @@ nav.book-navigation {
         display: block;
         margin: 0;
         padding: 0;
+      }
 
-        &.au-link-list > li {
-            margin: 0;
-            padding: 0;
+    li {
+      text-align: center;
+      @include AU-space( margin-bottom, 1unit );
+    }
+    @include AU-media( sm ) {
+      li {
+        text-align: left;
+        &.strategy-home-link {
+          text-align: center;
         }
-    }
+        &.next-link {
+          text-align: right;
+        }
+      }
+      .au-button--next {
+          float: right;
+      }
+      ul.au-link-list.au-link-list--inline {
 
-    li.col-md-6 {
-        text-align: center;
-    }
-    .au-button--next {
-        float: right;
+          &.au-link-list > li {
+              margin: 0;
+              padding: 0;
+          }
+      }
     }
 }
