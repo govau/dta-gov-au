@@ -42,29 +42,25 @@
         <h2 class="visually-hidden">{{ 'Navigation links for'|t }} {{ book_title }}</h2>
         <ul class="au-link-list au-link-list--inline row">
         {% if prev_url %}
-          {% if "principles" in book_title|render %}
-            <li class="col-md-3">
+          <li class="prev-link col-xs-12 col-sm-3">
+            {% if "principles" in book_title|render %}
               <a class="au-btn au-btn--secondary au-button--prev" href="/digital-transformation-strategy/roadmap-page" rel="prev" title="Roadmap"> <b>{{ '&lsaquo;'|t }}</b> {{ 'Previous'|t }}</a>
-            </li>
-          {% else %}
-            <li class="col-md-3">
+            {% else %}
               <a class="au-btn au-btn--secondary au-button--prev" href="{{ prev_url }}" rel="prev" title="{{ prev_title }}"> <b>{{ '&lsaquo;'|t }}</b> {{ 'Previous'|t }}</a>
-            </li>
-          {% endif %}
+            {% endif %}
+          </li>
         {% endif %}
-          <li class="col-md-6">
-            <a class="strategy-home-link" href="/strategy" title="2025 Digital Transformation Strategy">2025 Digital Transformation Strategy</a>
-          </li>
+        <li class="strategy-home-link col-xs-12 col-sm-6">
+          <a href="/strategy" title="2025 Digital Transformation Strategy">2025 Digital Transformation Strategy</a>
+        </li>
         {% if next_url %}
-         {% if "principles" in next_title|render %}
-          <li class="col-md-3">
-            <a class="au-btn au-btn--secondary au-button--next" href="/digital-transformation-strategy/roadmap-page" rel="next" title="Roadmap">{{ 'Next'|t }} <b>{{ '&rsaquo;'|t }}</b></a>
+          <li class="next-link col-xs-12 col-sm-3">
+            {% if "principles" in next_title|render %}
+              <a class="au-btn au-btn--secondary au-button--next" href="/digital-transformation-strategy/roadmap-page" rel="next" title="Roadmap">{{ 'Next'|t }} <b>{{ '&rsaquo;'|t }}</b></a>
+            {% else %}
+              <a class="au-btn au-btn--secondary au-button--next" href="{{ next_url }}" rel="next" title="{{ next_title }}">{{ 'Next'|t }} <b>{{ '&rsaquo;'|t }}</b></a>
+            {% endif %}
           </li>
-          {% else %}
-          <li class="col-md-3">
-            <a class="au-btn au-btn--secondary au-button--next" href="{{ next_url }}" rel="next" title="{{ next_title }}">{{ 'Next'|t }} <b>{{ '&rsaquo;'|t }}</b></a>
-          </li>
-          {% endif %}
         {% endif %}
       </ul>
       {% endif %}
