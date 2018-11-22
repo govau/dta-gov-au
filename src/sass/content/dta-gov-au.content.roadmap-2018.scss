@@ -1,9 +1,10 @@
 // roadmap 2018 timeline
 .au-roadmap-2018 {
     form.views-exposed-form {
-        background: #f5f5f5;
-        border-left: 0.5em solid #c5c5c5;
+        background: $AU-color-background-shade-suggestion;
+        border-left: 0.5em solid $AU-colordark-foreground-border-suggestion;
         padding: 1.5em 1.5em 1em 1.5em;
+        @include AU-space( margin-bottom, 2unit );
 
         legend:first-of-type {
             margin: 0;
@@ -26,8 +27,12 @@
 
     .view-grouping {
         padding-left: 2rem;
-        border-left: 0.5em solid #adadad;
+        border-left: 0.5em solid $AU-colordark-foreground-border-suggestion;
         position: relative;
+        @include AU-space( padding-bottom, 2unit );
+        h2 {
+          @include AU-space( margin, 0 );
+        }
 
         &:before {
             content: ' ';
@@ -38,8 +43,8 @@
             height: 2rem;
             top: -1px;
             border-radius: 50%;
-            border: 0.5em solid #adadad;
-            background-color: #ffffff;
+            border: 0.5em solid $AU-colordark-foreground-border-suggestion;
+            background-color: $AU-color-foreground-background;
             z-index: 2;
         }
 
