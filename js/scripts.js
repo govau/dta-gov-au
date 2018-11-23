@@ -197,4 +197,22 @@
         });
     }
   }
+  Drupal.behaviors.dtaEventTracking = {
+    // Track behaviours in Google Analytics
+    attach: function( context, settings ) {
+      var extensionList = ['.pdf','.doc','.docx','.xls','.xslx','.rtf','.mp4','.srt','.ppt','.pptx'];
+      $.each(extensionList, function(index, extension) {
+        $('a[href$="' + extension + '"]', context )
+        .once('dtaEventTracking')
+        .addClass('event-tracking')
+        .click(function(e) {
+          var pathName = e.currentTarget.pathname;
+          var eventLabel = '';
+          var eventCategory = pathName.substr(pathName.lastIndexOf('.') +1).toUpperCase();
+          e.currentTarget.title ? eventLabel = e.currentTarget.title : eventLabel = decodeURI(pathName.substr(pathName.lastIndexOf('/') +1));
+          ga('send', 'event', eventCategory, 'Download', eventLabel);
+        });
+      });
+    }
+  }
 }( jQuery ) );
