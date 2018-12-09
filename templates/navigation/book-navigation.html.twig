@@ -24,6 +24,8 @@
  * - book_url: The book/node URL of the current outline being viewed. Provided
  *   as an option. Not used by default.
  * - book_title: The book/node title of the current outline being viewed.
+ * - book_root_url: The URL of the book root (ie the top level item).
+ * - book_root_title: The title of the book root (ie the top level item).
  *
  * @see template_preprocess_book_navigation()
  */
@@ -51,7 +53,7 @@
           </li>
         {% endif %}
         <li class="strategy-home-link col-xs-12 col-sm-6">
-          <a href="/strategy" title="2025 Digital Transformation Strategy">2025 Digital Transformation Strategy</a>
+          <a href="{{ book_root_url }}" title="{{ book_root_title }}">{{ book_root_title }}</a>
         </li>
         {% if next_url %}
           <li class="next-link col-xs-12 col-sm-3">

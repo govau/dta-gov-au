@@ -342,3 +342,25 @@ function dta_gov_au_preprocess_comment(&$variables) {
     unset($variables['submitted']);
   }
 }
+
+/**
+* Implements hook_preprocess_book_navigation()
+*
+* Add some useful variables to the book navigation template.
+*/
+
+function dta_gov_au_preprocess_book_navigation(&$variables) {
+
+  $book_id = $variables['book_id'];
+
+  // Get the book ID and turn it into a URL.
+  $book_root_url = \Drupal::url('entity.node.canonical', [
+    'node' => $book_id,
+  ]);
+
+  // Get the book title from the book ID.
+  $book_root_title = \Drupal\node\Entity\Node::load($book_id)->getTitle();
+
+  $variables['book_root_url'] = $book_root_url;
+  $variables['book_root_title'] = $book_root_title;
+}
