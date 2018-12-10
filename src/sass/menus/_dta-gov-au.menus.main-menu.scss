@@ -52,6 +52,11 @@
         &:first-child {
           border-top: none;
         }
+        &.active-trail {
+          a {
+            border-bottom: 8px solid $AU-colordark-foreground-text;
+          }
+        }
         @include AU-fontgrid( sm, nospace );
         @include AU-space( margin, 0 1unit 0 0 );
         @include AU-media( md ) {
@@ -70,9 +75,7 @@
             margin-bottom: -0.5rem\9;
             margin-bottom: -8px\9;
           }
-          &:hover {
-            border-bottom: 8px solid $AU-colordark-foreground-text;
-          }
+          &:hover,
           &:active,
           &.is-active {
             border-bottom: 8px solid $AU-colordark-foreground-text;
