@@ -22,8 +22,8 @@
       "height": 3000
     }
   ],
-  "onBeforeScript": "puppet/onBefore.js",
-  "onReadyScript": "puppet/onReady.js",
+  "onBeforeScript": "",
+  "onReadyScript": "",
   "scenarios": [
     {
       "label": "Homepage",
