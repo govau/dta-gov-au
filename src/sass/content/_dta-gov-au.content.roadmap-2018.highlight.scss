@@ -25,6 +25,11 @@
       @include AU-space( margin-bottom, 1.5unit );
     }
   }
+  .links.inline {
+    .book-printer {
+      display: none;
+    }
+  }
   #block-booknavigation-2 {
     display: none;
     visibility: hidden;
