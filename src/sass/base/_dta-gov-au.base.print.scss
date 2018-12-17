@@ -17,9 +17,17 @@
   #sidebar,
   #comment-form,
   #sidebar-right,
-  main[role="main"].page-content .back-to-top {
+  .video-embed-field-responsive-video,
+  .au-accordion,
+  .buttons,
+  main[role="main"].page-content .back-to-top,
+  span.ext {
     display: none !important;
     visibility: hidden !important;
+  }
+
+  body.book-export article > article > h1 {
+    page-break-before: always;
   }
 
   // Update some typography.
@@ -46,11 +54,20 @@
   h4 {
     font-size: 12pt !important;
   }
+  ul, ol, figure, figcaption {
+  }
 
   p, li {
     font-size: 12pt !important;
   }
-
+  .au-introduction {
+    font-size: 14pt !important;
+    max-width: 42rem !important;
+  }
+  .au-callout {
+    border: 1px solid $AU-color-foreground-border-suggestion !important;
+    border-left-width: 6px !important;
+  }
 
   // Change colours to be grayscale.
   .au-header--heading {
@@ -61,33 +78,42 @@
     filter: grayscale(100%);
   }
 
-  a[rel="home"] {
-    filter: invert(100%);
-    &:after {
-      display: none;
+  body,
+  body.book-export {
+    a[rel="home"] {
+      background-color: $AU-color-foreground-background;
+      img {
+        filter: invert(100%);
+        background-color: transparent !important;
+      }
+      &:after {
+        display: none !important;
+      }
     }
   }
 
   // Update padding and margins, especially on the home page.
 
-  body {
+  body,
+  body.book-export {
     header[role="banner"].au-header.au-header--hero {
       @include AU-space( padding, 1unit 0 0 0 );
       @include AU-space( margin-bottom, 2unit );
       border-bottom: 1px solid $AU-color-foreground-border-suggestion;
       box-shadow: none;
     }
-    #main-content {
+    #main-content,
+    main {
       @include AU-space( margin-left, 0 );
       // Print to A4
       width: 100%;
-      .au-body p {
-        max-width: 100%;
+      p {
+        max-width: 100% !important;
       }
       table {
-        overflow: visible;
-        max-width: 100%;
-        width: 100%;
+        font-size: 10pt !important;
+        max-width: 100% !important;
+        width: 100% !important;
         td, th {
           font-size: 80%;
         }
@@ -120,10 +146,29 @@
         }
       }
     }
+    &.book-export {
+      article {
+        @include AU-space (margin-top, 2unit );
+      }
+      div > p {
+        @include AU-space (margin-top, 1unit);
+      }
+    }
   }
 
   // Update layout things which don't make sense when printed.
   body {
+    &.book-export.au-body {
+      a[href]{
+        text-decoration: none;
+        &:after {
+    			display: none !important;
+    		}
+        &:focus {
+          outline: none !important;
+        }
+      }
+    }
     .page-front #highlight {
       .container {
         display: block;
@@ -156,13 +201,15 @@
   // Update cards to make them lists.
   body {
     main[role="main"].page-content,
-    .page-front {
+    .page-front,
+    &.book-export {
       .au-cards--blogs-news,
       .au-landing-page-level-2-cards ,
       #top-content,
       #mid-top-content,
       #bottom-content,
-      .views-element-container {
+      .views-element-container,
+      .embedded-entity {
         .au-card-list {
           .au-cta-link:after {
             content: " (" attr(href) ")" !important;
@@ -212,13 +259,14 @@
                 }
               }
             }
-            li {
+            > li {
               width: auto !important;
               min-height: auto !important;
-              display: block;
+              display: block !important;
               height: auto !important;
               max-width: inherit !important;
               float: none !important;
+              max-width: 42em;
               a.au-cta-link {
                 @include AU-space( padding, 0 );
                 border: none !important;
