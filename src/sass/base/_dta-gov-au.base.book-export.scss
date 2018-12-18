@@ -12,6 +12,24 @@ body.book-export {
     }
   }
 
+  .video-embed-field-responsive-video,
+  .au-accordion {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  &.au-body {
+    a[href]{
+      text-decoration: none;
+      &:after {
+        display: none !important;
+      }
+      &:focus {
+        outline: none !important;
+      }
+    }
+  }
+
   article {
     @include AU-space( margin-top, 2unit );
   }
@@ -24,6 +42,10 @@ body.book-export {
   main {
     p {
       max-width: 100% !important;
+      &.buttons {
+        display: none;
+        visibility: hidden;
+      }
     }
     table {
       @include AU-fontgrid( xs );
@@ -36,6 +58,81 @@ body.book-export {
     a {
       text-decoration: none;
       color: inherit;
+    }
+    .views-element-container,
+    .embedded-entity {
+      .au-card-list {
+        .au-cta-link:after {
+          content: " (" attr(href) ")" !important;
+          display: block;
+          width: auto;
+          position: relative !important;
+          @include AU-space( margin, 0 );
+          background-image: none;
+          right: inherit;
+          left: 0;
+          @include AU-fontgrid( sm );
+          bottom: auto;
+          height: auto;
+        }
+        &.au-card-list--matchheight {
+          display: block;
+          .au-card {
+            display: block;
+            min-height: auto;
+            padding: 0 !important;
+            footer {
+              background-color: transparent !important;
+            }
+            .au-card__title {
+              margin-top: 0 !important;
+              background-color: transparent !important;
+              text-decoration: none;
+              @include AU-fontgrid( lg );
+              font-weight: bold;
+            }
+            .au-card--content,
+            .au-card--date,
+            .au-card__text {
+              background-color: transparent !important;
+              @include AU-space( margin-bottom, 1unit );
+            }
+            &.au-card--shadow {
+              border-radius: 0px;
+              box-shadow: none;
+              .au-card__fullwidth {
+                @include AU-space( margin, 0 );
+                &:first-child {
+                  margin: 0 1rem 1rem 0 !important;
+                }
+                &.au-card__image {
+                  float: left;
+                  @include AU-space( width, 14unit );
+                  height: auto;
+                  border: 1px solid $AU-color-foreground-border-suggestion;
+                  @include AU-space( margin, 0 1unit 1unit 0 );
+                }
+              }
+            }
+          }
+          > li {
+            width: auto !important;
+            min-height: auto !important;
+            display: block !important;
+            height: auto !important;
+            max-width: inherit !important;
+            float: none !important;
+            max-width: 42em;
+            a.au-cta-link {
+              @include AU-space( padding, 0 );
+              border: none !important;
+              &:after {
+                content: " (" attr(href) ")";
+              }
+            }
+          }
+        }
+      }
     }
   }
   footer {
