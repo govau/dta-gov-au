@@ -10,4 +10,7 @@ a[rel="home"] {
 img.site-logo {
   @include AU-space( max-width, 18.75unit );
   border: none;
+  .book-export & {
+    filter: invert(100%);
+  }
 }

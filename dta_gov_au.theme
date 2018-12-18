@@ -6,6 +6,8 @@ Use Drupal\Component\Utility;
 use Drupal\Core\Url;
 use Drupal\Core\Link;
 use Drupal\taxonomy\Entity\Term;
+use Drupal\node\Entity\Node;
+use Drupal\book\BookManager;
 
 /**
  * Implements HOOK_form_alter()
@@ -85,6 +87,16 @@ function dta_gov_au_preprocess_menu(&$variables, $hook) {
 	if ($hook == 'menu') {
 		dta_gov_au_menu_active_item($variables['items']);
 	}
+}
+
+function dta_gov_au_preprocess_links__node(&$variables) {
+  if(isset($variables['links']['book_printer'])) {
+    $params = $variables['links']['book_printer']['link']['#url']->getRouteParameters();
+    $nid = $params['node'];
+    $node = Node::load($nid);
+    $bid = $node->book['bid'];
+    $variables['links']['book_printer']['link']['#url']->setRouteParameter('node', $bid);
+  }
 }
 
 function dta_gov_au_menu_active_item(&$items) {

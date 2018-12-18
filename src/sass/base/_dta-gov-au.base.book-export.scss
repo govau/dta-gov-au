@@ -1,0 +1,46 @@
+// Styles for book export pages.
+
+body.book-export {
+  header {
+    &:before {
+      content: 'This is a preview only and provides a general idea of how the document will look like when printed. Please note colours and font sizes may change. This notice will not print.';
+      text-align: center;
+      font-style: italic;
+      display: block;
+      @include AU-space( margin-bottom, 2unit );
+
+    }
+  }
+
+  article {
+    @include AU-space( margin-top, 2unit );
+  }
+  figure {
+    @include AU-space( margin, 2unit 0 );
+    figcaption {
+      @include AU-space( margin-top, 1unit );
+    }
+  }
+  main {
+    p {
+      max-width: 100% !important;
+    }
+    table {
+      @include AU-fontgrid( xs );
+      max-width: 100% !important;
+      width: 100% !important;
+      td, th {
+        font-size: 80%;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  footer {
+    p {
+      max-width: 100%;
+    }
+  }
+}

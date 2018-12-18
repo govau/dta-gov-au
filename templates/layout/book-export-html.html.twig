@@ -27,8 +27,21 @@
   </head>
   <body class="au-body book-export au-grid">
     <div class="layout-container">
-
-      {% include '@dta_gov_au/includes/header.html.twig' %}
+      <header role="banner" class="au-header au-header--hero">
+        <div class="container-fluid">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+                  <img class="au-responsive-media-img site-logo" src="{{ base_path ~ directory }}/logo.svg" alt="{{ 'Home'|t }}" data-fallback="{{ base_path ~ directory }}/logo.png" />
+                </a>
+                <h1 class="au-header--heading">Digital Transformation Agency</h1>
+                <h2>Simple, clear and fast public services</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
         {#
           The given node is embedded to its absolute depth in a top level section.
           For example, a child node with depth 2 in the hierarchy is contained in
@@ -52,7 +65,19 @@
           </div>
         </div>
       </main>
-      {% include '@dta_gov_au/includes/footer.html.twig' %}
+      <footer role="contentinfo" class="au-body au-footer">
+        <div class="container-fluid">
+          <div class="container">
+            <div class="row">
+              <div id="footer-middle" class="col-xs-12">
+                <div class="row au-footer__end">
+                  <p>&copy; Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the CC BY 4.0 license.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

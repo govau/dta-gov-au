@@ -31,11 +31,11 @@
   }
 
   // Update some typography.
-  h2, h3 {
+  h2, h3, h4 {
     page-break-after: avoid;
   }
 
-  ul, img {
+  ul, img, .au-callout {
     page-break-inside: avoid;
   }
 
@@ -54,7 +54,8 @@
   h4 {
     font-size: 12pt !important;
   }
-  ul, ol, figure, figcaption {
+  ul, ol {
+    page-break-before: avoid;
   }
 
   p, li {
@@ -69,22 +70,14 @@
     border-left-width: 6px !important;
   }
 
-  // Change colours to be grayscale.
-  .au-header--heading {
-    color: $AU-color-background-alt-shade-suggestion;
-  }
-  * {
-    color: $AU-color-foreground-text !important;
-    filter: grayscale(100%);
-  }
-
   body,
   body.book-export {
-    a[rel="home"] {
+    header a[rel="home"] {
       background-color: $AU-color-foreground-background;
       img {
         filter: invert(100%);
         background-color: transparent !important;
+        max-width: 15em !important;
       }
       &:after {
         display: none !important;
@@ -99,8 +92,9 @@
     header[role="banner"].au-header.au-header--hero {
       @include AU-space( padding, 1unit 0 0 0 );
       @include AU-space( margin-bottom, 2unit );
-      border-bottom: 1px solid $AU-color-foreground-border-suggestion;
-      box-shadow: none;
+      &:before {
+        display: none;
+      }
     }
     #main-content,
     main {
@@ -286,13 +280,13 @@
     footer {
       @include AU-space( padding-bottom, 1unit );
       @include AU-space( padding-top, 1unit );
-      #site-logo {
-        display: none;
-      }
       #footer-middle {
         border-top: 1px solid $AU-color-foreground-border-suggestion;
         width: 100%;
         @include AU-space( padding-top, 1unit );
+      }
+      #site-logo {
+        display: none;
       }
       .au-footer__navigation,
       .au-footer__end {
