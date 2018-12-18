@@ -86,3 +86,19 @@ legend {
 form > p {
   @include AU-space( padding-bottom, 1.5unit );
 }
+
+// Styles for the Mailchimp form.
+
+.mailchimp-signup-subscribe-form {
+  h2 {
+    @include AU-space( margin-bottom, 1.5unit );
+  }
+  .mailchimp-newsletter-mergefields {
+    .form-item {
+      @include AU-space( margin-bottom, 1unit );
+    }
+  }
+  .form-actions {
+    @include AU-space( margin-top, 1.5unit );
+  }
+}
