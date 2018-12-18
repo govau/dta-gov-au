@@ -112,33 +112,9 @@
 
 // strategy content
 
-&.book-content {
-    dl {
-        padding-bottom: 1rem;
-
-        dt {
-            margin-top: 2rem;
-            width: 15%;
-            display: inline-block;
-            vertical-align: top;
-            font-size: 2.5rem;
-            line-height: 1em;
-        }
-        dd {
-            margin-top: 2rem;
-            width: 80%;
-            display: inline-block;
-            border-left: none;
-        }
-    }
-}
-
 &.theme_government-thats-easy-to-deal-with {
   .au-callout.digital-transformation-strategy {
     border-color: $roadmap-2018-colour-easy;
-  }
-  dl dt {
-      color: $roadmap-2018-colour-easy;
   }
   .strategic-priority {
       color: $roadmap-2018-colour-easy;
@@ -155,9 +131,6 @@
   .au-callout.digital-transformation-strategy {
     border-color: $roadmap-2018-colour-informed
   }
-  dl dt {
-      color: $roadmap-2018-colour-informed;
-  }
   .strategic-priority {
       color: $roadmap-2018-colour-informed;
       border-bottom: solid 0.5rem $roadmap-2018-colour-informed;
@@ -172,9 +145,6 @@
 &.theme_government-thats-fit-for-the-digital-age {
   .au-callout.digital-transformation-strategy {
     border-color: $roadmap-2018-colour-fit;
-  }
-  dl dt {
-      color: $roadmap-2018-colour-fit;
   }
   .strategic-priority {
       color: $roadmap-2018-colour-fit;
