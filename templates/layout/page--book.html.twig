@@ -42,6 +42,11 @@
  * @see template_preprocess_page()
  * @see html.html.twig
  */
+
+/**
+ * - book_title: title of the root book.
+ * - book_link: link to the book root.
+ * - bid: ID of the book.
 #}
 
 {% if node.hasField('field_theme') == true %}
@@ -101,6 +106,16 @@
               {% endif %}
             </div>
             <div id="main-content" class="col-xs-12 col-md-8 col-md-offset-1">
+              <header id="book-header" class="au-body">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-8">
+                      <h1>{{ book_link }}</h1>
+                  </div>
+                  <div class="col-xs-12 col-sm-4">
+                    <a class="au-btn au-btn--secondary" href="/book/export/html/{{ bid }}">Print version</a>
+                  </div>
+                </div>
+              </header>
               {{ page.content }}
             </div>
           {% endif %}
@@ -120,6 +135,16 @@
               {% endif %}
             </div>
             <div id="main-content" class="col-xs-12 col-md-6">
+              <header id="book-header" class="au-body">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-8">
+                      <h1>{{ book_link }}</h1>
+                  </div>
+                  <div class="col-xs-12 col-sm-4">
+                    <a class="au-btn au-btn--secondary" href="/book/export/html/">Print version</a>
+                  </div>
+                </div>
+              </header>
               {{ page.content }}
             </div>
             <div id="sidebar-right" class="col-xs-12 col-md-3">
@@ -132,6 +157,16 @@
           {# Only the right sidebar #}
           {% if (page.sidebar_right) %}
             <div id="main-content" class="col-xs-12 col-md-8">
+              <header id="book-header" class="au-body">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-8">
+                      <h1>{{ book_link }}</h1>
+                  </div>
+                  <div class="col-xs-12 col-sm-4">
+                    <a class="au-btn au-btn--secondary" href="/book/export/html/">Print version</a>
+                  </div>
+                </div>
+              </header>
               {{ page.content }}
             </div>
             <div id="sidebar-right" class="col-xs-12 col-md-4">
@@ -143,6 +178,16 @@
         {% else %}
           {# Just the content #}
           <div id="main-content" class="col-xs-12">
+            <header id="book-header" class="au-body">
+              <div class="row">
+                <div class="col-xs-12 col-sm-8">
+                    <h1>{{ book_link }}</h1>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                  <a class="au-btn au-btn--secondary" href="/book/export/html/">Print version</a>
+                </div>
+              </div>
+            </header>
             {{ page.content }}
           </div>
         {% endif %}

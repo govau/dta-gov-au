@@ -1,0 +1,12 @@
+// Style for the book headers.
+
+#book-header {
+  border-bottom: 1px solid $AU-color-foreground-border-suggestion;
+  @include AU-space( padding-bottom, 2unit );
+  h1 {
+    @include AU-fontgrid( md );
+    @include AU-space( padding-top, 0.5unit );
+    font-weight: normal;
+    @include AU-space( margin-bottom, 1unit );
+  }
+}
