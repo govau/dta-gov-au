@@ -1,0 +1,12 @@
+// Additional styles for buttons.
+
+.au-btn {
+  &.au-btn--icon {
+    @include AU-space( padding-left, 3unit );
+    background-position: left center;
+    background-repeat: no-repeat;
+    &.au-btn--icon_print {
+      // TODO: add image here.
+    }
+  }
+}
