@@ -106,18 +106,22 @@
               {% endif %}
             </div>
             <div id="main-content" class="col-xs-12 col-md-8 col-md-offset-1">
-              <header id="book-header" class="au-body">
-                <div class="row">
-                  <div class="col-xs-12 col-sm-8">
+              <article>
+                <header id="book-header" class="au-body">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-8">
                       <h1>{{ book_link }}</h1>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                      <div class="button-wrapper">
+                        <a class="au-btn au-btn--secondary print-book" href="/book/export/html/{{ bid }}">Print version</a>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-xs-12 col-sm-4">
-                    <a class="au-btn au-btn--secondary" href="/book/export/html/{{ bid }}">Print version</a>
-                  </div>
-                </div>
-              </header>
-              {{ page.content }}
-            </div>
+                </header>
+                {{ page.content }}
+              </div>
+            </article>
           {% endif %}
 
           {# Both sidebars #}
