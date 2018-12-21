@@ -231,6 +231,7 @@ function dta_gov_au_form_mailchimp_signup_subscribe_block_sign_up_for_updates_fo
   $form['mergevars']['EMAIL']['#attributes']['class'] = ['au-text-input--block'];
   $form['mergevars']['FNAME']['#attributes']['class'] = ['au-text-input--block'];
   $form['mergevars']['LNAME']['#attributes']['class'] = ['au-text-input--block'];
+  $form['mergevars']['EMAIL']['#title'] = t('Email address');
 }
 
 /**

@@ -90,6 +90,7 @@ form > p {
 // Styles for the Mailchimp form.
 
 .mailchimp-signup-subscribe-form {
+  @include AU-space( margin-top, 2unit );
   h2 {
     @include AU-space( margin-bottom, 1.5unit );
   }
