@@ -1,12 +1,6 @@
 // Styles for the breadcrumbs.
 
 .au-breadcrumbs {
-  display: none;
-  visibility: hidden;
-  @include AU-media( sm ) {
-    display: block;
-    visibility: visible;
-  }
   ol {
     @include AU-space( padding-left, 0 );
   }
