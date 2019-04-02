@@ -1,0 +1,8 @@
+// Style overrides for the accordion.
+
+svg.ext {
+  padding-right: 0;
+  @include AU-space( margin-right, -0.3unit );
+  @include AU-space( height, 1unit );
+  @include AU-space( width, 1unit );
+}
