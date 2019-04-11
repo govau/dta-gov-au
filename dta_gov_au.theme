@@ -34,6 +34,16 @@ function dta_gov_au_form_alter(&$form, FormStateInterface $form_state, $form_id)
     // Ditch the 'apply' button. The option to submit is also turned off via JS.
     unset($form['actions']['submit']);
   }
+  if($form_id == 'mailchimp_signup_subscribe_block_sign_up_for_updates_form') {
+    // Add a class to remove the unhelpful defaulkt 'error'.
+    $form['mergevars']['EMAIL'] = array(
+      '#attributes' => array(
+        'class' => array(
+          'empty-required'
+        ),
+      ),
+    );
+  }
 }
 
 /**
