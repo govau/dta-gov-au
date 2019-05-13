@@ -13,6 +13,7 @@
     var allows_remote = '';
     var position_type = '';
     var team = '';
+    var id = '';
 
     return {
       withClientName: function(pclient_name) {
@@ -55,6 +56,10 @@
         team = pteam;
         return this;
       },
+      withUrl: function(pid) {
+        id = pid;
+        return this;
+      },
       buildParams: function() {
         return {
           client_name : client_name,
@@ -66,7 +71,8 @@
           description : description,
           allows_remote : allows_remote,
           position_type : position_type,
-          team : team
+          team : team,
+          id : id
         };
       }
     }
@@ -88,7 +94,7 @@
   function buildHTML( object ) {
     var $wrapper = $('<div class="au-current-vacancies__item"></div>');
     var $heading = $('<h3>' + object.title + '</h3>');
-    var $link = $('<a href="' + object.hosted_url + '"></a>');
+    var $link = $('<a href="https://ausdta.recruiterbox.com/jobs/' + object.id + '"></a>');
     var $location = $('<p>Location: ' + object.location.city + '</p>');
     var $position = (object.position_type) ? $('<li>' + sentenceCase(object.position_type) + '</li>') : "";
     var $remote = (object.allows_remote) ? $('<li>Allows remote</li>') : "";
