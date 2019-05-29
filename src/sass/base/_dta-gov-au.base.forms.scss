@@ -102,4 +102,9 @@ form > p {
   .form-actions {
     @include AU-space( margin-top, 1.5unit );
   }
+  .empty-required {
+    border-color: $AU-color-foreground-border-suggestion;
+    background-color: $AU-color-foreground-background;
+    transition: border-color 0.8s ease;
+  }
 }
