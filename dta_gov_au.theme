@@ -228,7 +228,7 @@ function dta_gov_au_form_comment_form_alter(&$form, &$form_state, $form_id) {
  **/
 
 function dta_gov_au_form_mailchimp_signup_subscribe_block_sign_up_for_updates_form_alter(&$form, &$form_state, $form_id) {
-  $form['mergevars']['EMAIL']['#attributes']['class'] = ['au-text-input--block'];
+  $form['mergevars']['EMAIL']['#attributes']['class'] = ['au-text-input--block', 'empty-required'];
   $form['mergevars']['FNAME']['#attributes']['class'] = ['au-text-input--block'];
   $form['mergevars']['LNAME']['#attributes']['class'] = ['au-text-input--block'];
   $form['mergevars']['EMAIL']['#title'] = t('Email address');
