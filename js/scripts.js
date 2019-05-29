@@ -222,8 +222,11 @@
       $( 'form#mailchimp-signup-subscribe-block-sign-up-for-updates-form .empty-required', context )
         .once( 'dtaFormFix' )
         .addClass( 'processed' )
-        .on( 'blur focus', function() {
-          $(this).toggleClass( 'empty-required' );
+        .on( 'blur', function() {
+          $(this).removeClass( 'empty-required' );
+        })
+        .on( 'focus', function() {
+          $(this).addClass( 'empty-required' );
         });
     }
   }
