@@ -19,5 +19,11 @@
       @include AU-fontgrid( sm );
       @include AU-space( margin-bottom, 0unit );
     }
+    .au-card__image {
+      img {
+        @include AU-space ( margin-top, 0unit );
+        @include AU-space (margin-bottom, 1.5unit );
+      }
+    }
   }
 }
