@@ -5,6 +5,15 @@
   @include AU-media( sm ) {
     @include AU-space( padding, 5unit 0 );
   }
+  .au-card-list {
+    &.au-card-list--matchheight {
+  		.au-card {
+  			@include AU-media( sm ) {
+  				@include AU-space( min-height, 29unit );
+  			}
+  		}
+    }
+  }
   h2 {
     font-weight: normal;
     @include AU-space( margin-bottom, 2.5unit );

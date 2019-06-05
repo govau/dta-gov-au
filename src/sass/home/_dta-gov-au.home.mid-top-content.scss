@@ -14,6 +14,13 @@
   .au-card-list {
     @include AU-card-cta-link($AU-color-foreground-text);
     @include AU-card-colours;
+    &.au-card-list--matchheight {
+  		.au-card {
+  			@include AU-media( sm ) {
+  				@include AU-space( min-height, 37unit );
+  			}
+  		}
+    }
   }
   .au-body {
     background-color: transparent;
