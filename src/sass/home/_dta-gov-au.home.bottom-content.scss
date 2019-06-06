@@ -5,6 +5,20 @@
   @include AU-media( sm ) {
     @include AU-space( padding, 5unit 0 );
   }
+  .au-cards--blogs-news {
+    .au-card-list {
+      > li {
+        @include AU-space( margin-bottom, 3unit );
+      }
+      &.au-card-list--matchheight {
+        .au-card {
+          @include AU-media( sm ) {
+            @include AU-space( min-height, 30unit );
+          }
+        }
+      }
+    }
+  }
   .au-card-list {
     > li {
       @include AU-space( margin-bottom, 3unit );
