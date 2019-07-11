@@ -108,3 +108,21 @@ form > p {
     transition: border-color 0.8s ease;
   }
 }
+
+// Styles for Webform forms
+
+.webform-submission-form {
+  .form-item {
+    @include AU-space( margin-bottom, 2unit );
+    label, legend {
+      font-weight: bold;
+      &.au-control-input {
+        font-weight: normal;
+      }
+    }
+  }
+  .au-control-input__input:focus + .au-control-input__text:before,
+  .au-control-input__input:focus + .au-control-input__text:after {
+    outline-offset: -9px;
+  }
+}
