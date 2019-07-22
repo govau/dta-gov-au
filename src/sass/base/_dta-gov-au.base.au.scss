@@ -21,6 +21,8 @@ span.ext {
   .au-card & {
     @include AU-sronly;
   }
+}
 
-
+.au-bold {
+  font-weight: bold;
 }
