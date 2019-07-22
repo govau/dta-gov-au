@@ -125,4 +125,9 @@ form > p {
   .au-control-input__input:focus + .au-control-input__text:after {
     outline-offset: -9px;
   }
+  input.form-radio {
+    .au-control-input__text {
+      font-weight: bold;
+    }
+  }
 }
