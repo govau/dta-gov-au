@@ -14,14 +14,31 @@
             margin-bottom: 1.5rem;
         }
 
-        .js-form-type-checkbox:nth-of-type(1) span:before {
-            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='" + $roadmap-2018-colour-easy + "' d='M0,0h32v32H0V0z'/><path fill='%23ffffff' d='M2,2h28v28H2V2z'/></svg>");
-        }
-        .js-form-type-checkbox:nth-of-type(2) span:before {
-            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='" + $roadmap-2018-colour-informed + "' d='M0,0h32v32H0V0z'/><path fill='%23ffffff' d='M2,2h28v28H2V2z'/></svg>");
-        }
-        .js-form-type-checkbox:nth-of-type(3) span:before {
-            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='" + $roadmap-2018-colour-fit + "' d='M0,0h32v32H0V0z'/><path fill='%23ffffff' d='M2,2h28v28H2V2z'/></svg>");
+        .form-checkboxes {
+          .js-form-type-checkbox:nth-of-type(1) .au-control-input__text:before {
+            background-image: AU-svguri(
+              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">' +
+                '<path fill="' + $roadmap-2018-colour-easy + '" d="M0,0h32v32H0V0z"/>' +
+                '<path fill="white" d="M2,2h28v28H2V2z"/>' +
+              '</svg>'
+            );
+          }
+          .js-form-type-checkbox:nth-of-type(2) .au-control-input__text:before {
+            background-image: AU-svguri(
+              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">' +
+                '<path fill="' + $roadmap-2018-colour-informed + '" d="M0,0h32v32H0V0z"/>' +
+                '<path fill="white" d="M2,2h28v28H2V2z"/>' +
+              '</svg>'
+            );
+          }
+          .js-form-type-checkbox:nth-of-type(3) .au-control-input__text:before {
+            background-image: AU-svguri(
+              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">' +
+                '<path fill="' + $roadmap-2018-colour-fit + '" d="M0,0h32v32H0V0z"/>' +
+                '<path fill="white" d="M2,2h28v28H2V2z"/>' +
+              '</svg>'
+            );
+          }
         }
     }
 
