@@ -70,7 +70,12 @@
  *   in different view modes.
  */
 #}
-<a href="{{ url('entity.node.canonical', {'node': node.id}) }}" class="au-card au-card--shadow au-cta-link" hreflang="en">
+
+{% if node.id %}
+  <a href="{{ url('entity.node.canonical', {'node': node.id}) }}" class="au-card au-card--shadow au-cta-link" hreflang="en">
+{% else %}
+  <a href="{{ url('<front>') }}" class="au-card au-card--shadow au-cta-link" hreflang="en">
+{% endif %}
   <div class="au-card__image au-card__fullwidth">
     <img src="{{ node.field_media_release_image.entity.field_image.entity.uri.value | image_style('index_image_small') }}" />
   </div>
