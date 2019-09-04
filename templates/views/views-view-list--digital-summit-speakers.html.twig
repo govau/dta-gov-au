@@ -20,13 +20,14 @@
 {#
  /**
   * Updated heading level for grouping.
+  * Added ID to titles for later linking.
   */
 #}
 {% if attributes -%}
   <div{{ attributes }}>
 {% endif %}
   {% if title %}
-    <h2>{{ title }}</h2>
+    <h2 id="{{ title|render|striptags|clean_id }}">{{ title }}</h2>
   {% endif %}
 
   <{{ list.type }}{{ list.attributes }}>
