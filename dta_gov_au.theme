@@ -331,6 +331,16 @@ function dta_gov_au_theme_suggestions_region_alter(array &$suggestions, array $v
   }
 }
 
+function dta_gov_au_theme_suggestions_views_view_list_alter(array &$suggestions, array $variables) {
+  // Adds theme suggestions to the views list template.
+  $id = $variables['view']->id();
+  $display = $variables['view']->current_display;
+
+  $suggestions[] = $variables['theme_hook_original'] . '__' . (string) $id;
+  $suggestions[] = $variables['theme_hook_original'] . '__' . (string) $display;
+  $suggestions[] = $variables['theme_hook_original'] . '__' . (string) $id . '__' . (string) $display;
+}
+
 function dta_gov_au_theme_suggestions_views_view_grouping_alter(array &$suggestions, array $variables) {
   // Adds theme suggestions to the views grouping template.
   $suggestions[] = $variables['theme_hook_original'] . '__' . $variables['view']->id();
