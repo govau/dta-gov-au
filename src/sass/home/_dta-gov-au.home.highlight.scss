@@ -4,7 +4,7 @@
   @include AU-media( sm ) {
     background-image: url('../images/highlight-summit.png');
   }
-  background-position: center top;
+  background-position: center center;
   background-size: cover;
   @include AU-space( margin-top, -1.5unit );
   position: relative;
