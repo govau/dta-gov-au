@@ -1,0 +1,17 @@
+// Styles for cards on level 2 landing pages for sessions.
+.au-landing-page-level-2-cards {
+  .au-card {
+    @include AU-space( padding, 1unit );
+    .au-card__title {
+      @include AU-fontgrid( lg );
+      @include AU-space( margin-bottom, 0.5unit );
+    }
+    .au-card__text {
+      @include AU-fontgrid( sm );
+      @include AU-space( margin-bottom, 0unit );
+      .presentation-type {
+        @include AU-space( margin-bottom, 0.5unit );
+      }
+    }
+  }
+}

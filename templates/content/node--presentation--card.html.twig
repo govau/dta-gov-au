@@ -71,17 +71,25 @@
  */
 #}
 
+{% set type = content.field_presentation_type|render|striptags|trim %}
+
 {% if node.id %}
   <a href="{{ url('entity.node.canonical', {'node': node.id}) }}" class="au-card au-card--shadow au-cta-link" hreflang="en">
 {% else %}
   <a href="{{ url('<front>') }}" class="au-card au-card--shadow au-cta-link" hreflang="en">
 {% endif %}
   <div class="au-card__image au-card__fullwidth">
-    <img src="{{ node.field_presentation_type.entity.field_index_image.entity.uri.value | image_style('index_image_small') }}" />
+    <figure>
+      {% if type == 'Keynote' %}
+        <img src="{{ node.field_speaker.entity.field_index_image.entity.uri.value | image_style('index_image_small') }}" />
+      {% else %}
+        <img src="{{ node.field_presentation_type.entity.field_index_image.entity.uri.value | image_style('index_image_small') }}" />
+      {% endif %}
+    </figure>
   </div>
   <h3 class="au-card__title">{{ label }}</h3>
   <div class="au-card__text">
-    <p><em>{{ content.field_presentation_type|render|striptags }}</em></p>
+    <p class="presentation-type"><em>{{ content.field_presentation_type|render|striptags }}</em></p>
     {{ content.field_summary }}
   </div>
 </a>
