@@ -9,6 +9,10 @@ main[role="main"].page-content {
     @include AU-fontgrid( sm );
     @include AU-space( margin-top, 2unit );
   }
+  .speaker-bio-left-column,
+  .presentation-right-column {
+    @include AU-space( margin-top, 2unit );
+  }
   @import "dta-gov-au.content.breadcrumbs";
   @import "dta-gov-au.content.heading";
   @import "dta-gov-au.content.inpage-nav";
@@ -24,6 +28,7 @@ main[role="main"].page-content {
   @import "dta-gov-au.content.media-contact";
   @import "dta-gov-au.content.recruiterbox";
   @import "dta-gov-au.content.landing-page-level-2-cards";
+  @import "dta-gov-au.content.landing-page-level-2-cards.sessions";
   @import "dta-gov-au.content.sign-up";
   @import "dta-gov-au.content.tag-filter";
   @import "dta-gov-au.content.callout";
