@@ -77,7 +77,7 @@
   <a href="{{ url('<front>') }}" class="au-card au-card--shadow au-cta-link" hreflang="en">
 {% endif %}
   <div class="au-card__image au-card__fullwidth">
-    <img src="{{ content.field_index_image['#items'].entity.uri.value | image_style('index_image_small') }}" />
+    <img alt="{{ content.field_index_image['#items'].alt }}" src="{{ content.field_index_image['#items'].entity.uri.value | image_style('index_image_small') }}" />
   </div>
   <h3 class="au-card__title">{{ label }}</h3>
   <div class="au-card__text">
