@@ -81,9 +81,9 @@
   <div class="au-card__image au-card__fullwidth">
     <figure>
       {% if type == 'Keynote' %}
-        <img src="{{ node.field_speaker.entity.field_index_image.entity.uri.value | image_style('index_image_small') }}" />
+        <img alt="{{ node.field_speaker.entity.field_index_image.alt }}" src="{{ node.field_speaker.entity.field_index_image.entity.uri.value | image_style('index_image_small') }}" />
       {% else %}
-        <img src="{{ node.field_presentation_type.entity.field_index_image.entity.uri.value | image_style('index_image_small') }}" />
+        <img alt="{{ node.field_presentation_type.entity.field_index_image.alt }}" src="{{ node.field_presentation_type.entity.field_index_image.entity.uri.value | image_style('index_image_small') }}" />
       {% endif %}
     </figure>
   </div>
