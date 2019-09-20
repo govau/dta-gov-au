@@ -118,6 +118,7 @@
           url: 'https://jsapi.recruiterbox.com/v1/openings',
           data: query_params,
           success: function(response) {
+            $root.append('<h2>Current vacancies</h2>');
             $.each(response.objects, function( index, value ) {
               $root.append(buildHTML( value ));
             });
