@@ -4,7 +4,7 @@
 
   @page {
     size: A4 portrait;
-    margin: 2cm;
+    margin: 1.5cm;
   }
   // Disappear things we don't need.
 
@@ -18,6 +18,7 @@
   #comment-form,
   #sidebar-right,
   #book-header,
+  #related-links-block,
   .video-embed-field-responsive-video,
   .au-accordion,
   .buttons,
@@ -34,18 +35,25 @@
   // Update some typography.
   h2, h3, h4 {
     page-break-after: avoid;
+    ~ p,
+    ~ ul,
+    ~ ol {
+      page-break-before: avoid;
+    }
   }
 
   ul, img, .au-callout {
     page-break-inside: avoid;
+    page-break-before: avoid;
   }
 
   h1 {
-    font-size: 20pt !important;
+    font-size: 24pt !important;
   }
 
   h2 {
     font-size: 16pt !important;
+    page-break-before: always;
   }
 
   h3 {
@@ -73,19 +81,95 @@
 
   body,
   body.book-export {
-    header a[rel="home"] {
-      background-color: $AU-color-foreground-background;
-      img {
-        filter: invert(100%);
-        background-color: transparent !important;
-        max-width: 15em !important;
+    header[role="banner"] {
+      h1 {
+        position: relative !important;
+        overflow: auto;
+        clip: auto;
+        width: auto;
+        height: auto;
       }
-      &:after {
-        display: none !important;
+      h2 {
+        color: $AU-color-foreground-text;
+      }
+      box-shadow: none;
+      border-color: $AU-color-foreground-border-suggestion;
+      a[rel="home"] {
+        background-color: $AU-color-foreground-background;
+        img {
+          filter: invert(100%);
+          background-color: transparent !important;
+          max-width: 15em !important;
+        }
+        &:after {
+          display: none !important;
+        }
       }
     }
   }
 
+  // Body resets
+  body main[role="main"].page-content .au-body {
+    @include AU-space( margin-top, 0 );
+  }
+
+  // Links in contents
+
+  body main[role="main"].page-content .au-body {
+    a[href^='#'] {
+      text-decoration: none;
+    }
+  }
+
+  // Body tables
+
+  body main[role="main"].page-content .au-body {
+    table {
+      font-size: 10pt !important;
+      max-width: 100% !important;
+      width: 100% !important;
+      page-break-inside: avoid;
+      page-break-before: always;
+      tr {
+        td, th {
+          font-size: 10pt;
+          page-break-inside: avoid;
+          border-right: none !important;
+          border-left: none !important;
+          &.risk {
+            font-weight: normal;
+          }
+          p {
+            font-size: 10pt !important;
+            ~ p {
+              @include AU-space( margin-top, 0.5unit );
+            }
+            ~ ul {
+              @include AU-space( margin-top, 0.5unit );
+            }
+          }
+          ul, ol {
+            @include AU-space( padding-left, 1unit );
+            //@include AU-space( margin-top, 0.5unit );
+            li {
+              font-size: 10pt !important;
+              @include AU-space( margin-top, 0.2unit );
+              &:first-child {
+                @include AU-space( margin-top, 0 );
+              }
+            }
+          }
+        }
+      }
+
+      caption {
+        font-size: 11pt;
+      }
+      tfoot {
+        display: table-row-group;
+      }
+    }
+  }
   // Update padding and margins, especially on the home page.
 
   body,
@@ -93,8 +177,14 @@
     header[role="banner"].au-header.au-header--hero {
       @include AU-space( padding, 1unit 0 0 0 );
       @include AU-space( margin-bottom, 2unit );
+      h1 {
+        font-size: 20pt !important;
+      }
       &:before {
         display: none;
+      }
+      .col-xs-12.col-sm-6.col-md-4 {
+        width: 100%;
       }
     }
     #main-content,
@@ -102,16 +192,11 @@
       @include AU-space( margin-left, 0 );
       // Print to A4
       width: 100%;
+      .page-content .au-body {
+        @include AU-space( margin-top, 0unit );
+      }
       p {
         max-width: 100% !important;
-      }
-      table {
-        font-size: 10pt !important;
-        max-width: 100% !important;
-        width: 100% !important;
-        td, th {
-          font-size: 80%;
-        }
       }
     }
     .page-front {
@@ -176,6 +261,51 @@
         @include AU-space( margin-left, 0unit );
         @include AU-space( padding-left, 0unit );
         border: none;
+      }
+    }
+  }
+
+  // Breadcrumbs
+  body {
+    nav.au-breadcrumbs {
+      ol:before {
+        content: 'This document can be found at';
+      }
+      li {
+        font-weight: bold;
+        &:after {
+          font-weight: normal;
+        }
+        a {
+          text-decoration: none;
+          color: $AU-color-foreground-text !important;
+        }
+      }
+    }
+  }
+
+  // Table of contents
+  body {
+    nav.toc {
+      border: none;
+      border-top: 1px solid $AU-color-foreground-border-suggestion;
+      border-bottom: 1px solid $AU-color-foreground-border-suggestion;
+      @include AU-space( padding-left, 0 );
+      @include AU-space( padding-bottom, 1unit );
+      h2 {
+        display: none;
+        visibility: hidden;
+      }
+      ol.none {
+        border: none;
+        &:before {
+          content: 'In this document:';
+          font-size: 16pt;
+          font-weight: bold;
+        }
+        > li a {
+          text-decoration: none;
+        }
       }
     }
   }
@@ -270,6 +400,38 @@
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+
+  // Contact module
+  body #contact-module {
+    h2 {
+      display: none;
+    }
+    .contact-module {
+      &:before {
+        content: 'Further information about this document';
+        font-size: 16pt;
+        font-weight: bold;
+      }
+      > div {
+        @include AU-space( margin-top, 1.5unit );
+        a[href] {
+          text-decoration: none;
+          &:after {
+            display: none !important;
+          }
+        }
+        a[href^='mailto:'] {
+          &:before {
+            content:"'";
+          }
+          &:after {
+            display: inline !important;
+            content: "'" !important;
           }
         }
       }
