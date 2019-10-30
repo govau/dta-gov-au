@@ -1,0 +1,58 @@
+// Extra styles for dashboards
+
+// Cards
+
+#block-views-block-dashboard-block-1 {
+  .au-card {
+    border-top: 8px solid;
+    &.government-that039s-easy-to-deal-with {
+      border-top-color: $roadmap-2018-colour-easy;
+    }
+    &.government-that039s-informed-by-you {
+      border-top-color: $roadmap-2018-colour-informed;
+    }
+    &.government-that039s-fit-for-the-digital-age {
+      border-top-color: $roadmap-2018-colour-fit;
+    }
+  }
+}
+&.theme_government-thats-easy-to-deal-with {
+  .dashboard-metric {
+    border-left: 8px solid $roadmap-2018-colour-easy;
+  }
+  .theme {
+    border-bottom: 2px solid $roadmap-2018-colour-easy;
+  }
+}
+&.theme_government-thats-informed-by-you {
+  .dashboard-metric {
+    border-left: 8px solid $roadmap-2018-colour-informed;
+  }
+  .theme {
+    border-bottom: 2px solid $roadmap-2018-colour-informed;
+  }
+}
+&.theme_government-thats-fit-for-the-digital-age {
+  .dashboard-metric {
+    border-left: 8px solid $roadmap-2018-colour-fit;
+  }
+  .theme {
+    border-bottom: 2px solid $roadmap-2018-colour-fit;
+  }
+}
+.dashboard-metric {
+  border: 1px solid $AU-color-foreground-border-suggestion;
+  @include AU-space( padding, 1unit );
+  @include AU-fontgrid( md );
+  max-width: 100%;
+  float: none;
+  @include AU-media( md ) {
+    @include AU-fontgrid( lg );
+    max-width: 50%;
+    float: right;
+    @include AU-space( margin-left, 2unit );
+  }
+  @include AU-space( margin-bottom, 2unit );
+  background-color: $AU-color-background-shade-suggestion;
+
+}
