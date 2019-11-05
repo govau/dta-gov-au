@@ -235,6 +235,21 @@ function dta_gov_au_form_mailchimp_signup_subscribe_block_sign_up_for_updates_fo
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Updates classes on form items in the Style Manual mailchimp signup form.
+ *
+ **/
+
+function dta_gov_au_form_mailchimp_signup_subscribe_block_sign_up_for_style_manual_updates_form_1_alter(&$form, &$form_state, $form_id) {
+  $form['mergevars']['EMAIL']['#attributes']['class'] = ['au-text-input--block', 'empty-required'];
+  $form['mergevars']['FNAME']['#attributes']['class'] = ['au-text-input--block', 'empty-required'];
+  $form['mergevars']['ORG']['#attributes']['class'] = ['au-text-input--block'];
+  $form['mergevars']['LNAME']['#attributes']['class'] = ['au-text-input--block'];
+  $form['mergevars']['EMAIL']['#title'] = t('Email address');
+}
+
+/**
  *
  * Implements hook_theme_suggestions_HOOK_alter
  *
