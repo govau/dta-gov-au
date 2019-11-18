@@ -16,43 +16,81 @@
     }
   }
 }
-&.theme_government-thats-easy-to-deal-with {
-  .dashboard-metric {
-    border-left: 8px solid $roadmap-2018-colour-easy;
-  }
-  .theme {
-    border-bottom: 2px solid $roadmap-2018-colour-easy;
-  }
-}
-&.theme_government-thats-informed-by-you {
-  .dashboard-metric {
-    border-left: 8px solid $roadmap-2018-colour-informed;
-  }
-  .theme {
-    border-bottom: 2px solid $roadmap-2018-colour-informed;
-  }
-}
-&.theme_government-thats-fit-for-the-digital-age {
-  .dashboard-metric {
-    border-left: 8px solid $roadmap-2018-colour-fit;
-  }
-  .theme {
-    border-bottom: 2px solid $roadmap-2018-colour-fit;
-  }
-}
-.dashboard-metric {
-  border: 1px solid $AU-color-foreground-border-suggestion;
-  @include AU-space( padding, 1unit );
-  @include AU-fontgrid( md );
-  max-width: 100%;
-  float: none;
-  @include AU-media( md ) {
-    @include AU-fontgrid( lg );
-    max-width: 50%;
-    float: right;
-    @include AU-space( margin-left, 2unit );
-  }
-  @include AU-space( margin-bottom, 2unit );
-  background-color: $AU-color-background-shade-suggestion;
 
+// Theme element at the top
+
+.dashboard-theme-wrapper {
+  width: 100%;
+  display: table;
+  .dashboard-theme-name {
+    display: table-cell;
+    width: 70%;
+    @include AU-space( padding-top, 1unit );
+    @include AU-space( padding-bottom, 1unit );
+    @include AU-space( padding-left, 1.5unit );
+    background-color: $AU-color-foreground-action;
+    color: $AU-color-foreground-background;
+    font-weight: bold;
+    @include AU-fontgrid( sm );
+    @include AU-media( sm ) {
+      @include AU-fontgrid( md );
+    }
+    .dashboard-theme-name-text {
+      width: 50%;
+      display: block;
+    }
+  }
+  .dashboard-item-progress {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    background-color: $AU-colordark-background-alt-suggestion;
+    color: $AU-colordark-foreground-text;
+    font-weight: bold;
+    line-height: 100%;
+    @include AU-space( padding-top, 1.5unit );
+    @include AU-space( padding-bottom, 1.5unit );
+  }
+}
+
+
+// Metrics
+
+.dashboard-metric-row {
+  @include AU-space( margin-bottom, 1unit );
+  @include AU-space( margin-left, 0unit );
+  @include AU-space( margin-right, 0unit );
+  background-color: $AU-color-background-alt-shade-suggestion;
+  display: table;
+  position: relative;
+  width: 100%;
+  .dashboard-metric-headline {
+    @include AU-media( sm ) {
+      @include AU-space( width, 7unit);
+    }
+    @include AU-space( width, 6unit);
+    display: table-cell;
+    vertical-align: middle;
+    @include AU-space( padding, 1unit );
+    background-color: $AU-color-foreground-action;
+    color: $AU-colordark-foreground-text;
+    text-align: left;
+    .headline-figure {
+      display: block;
+      font-weight: bold;
+      @include AU-fontgrid( sm );
+      @include AU-media ( sm ) {
+        @include AU-fontgrid( lg );
+      }
+    }
+    .headline-text {
+      @include AU-fontgrid( xs );
+      @include AU-media ( sm ) {
+        @include AU-fontgrid( sm );
+      }
+    }
+  }
+  .dashboard-metric-text {
+    @include AU-space( padding, 0.5unit 1unit );
+  }
 }
