@@ -55,42 +55,46 @@
 
 
 // Metrics
-
-.dashboard-metric-row {
-  @include AU-space( margin-bottom, 1unit );
-  @include AU-space( margin-left, 0unit );
-  @include AU-space( margin-right, 0unit );
-  background-color: $AU-color-background-alt-shade-suggestion;
-  display: table;
-  position: relative;
-  width: 100%;
-  .dashboard-metric-headline {
-    @include AU-media( sm ) {
-      @include AU-space( width, 7unit);
-    }
-    @include AU-space( width, 6unit);
-    display: table-cell;
-    vertical-align: middle;
-    @include AU-space( padding, 1unit );
-    background-color: $AU-color-foreground-action;
-    color: $AU-colordark-foreground-text;
-    text-align: left;
-    .headline-figure {
-      display: block;
-      font-weight: bold;
-      @include AU-fontgrid( sm );
-      @include AU-media ( sm ) {
-        @include AU-fontgrid( lg );
-      }
-    }
-    .headline-text {
-      @include AU-fontgrid( xs );
-      @include AU-media ( sm ) {
-        @include AU-fontgrid( sm );
-      }
-    }
+.metric-container {
+  .dashboard-metric-introduction {
+    @include AU-space( margin-bottom, 1unit );
   }
-  .dashboard-metric-text {
-    @include AU-space( padding, 0.5unit 1unit );
+  .dashboard-metric-row {
+    @include AU-space( margin-bottom, 1unit );
+    @include AU-space( margin-left, 0unit );
+    @include AU-space( margin-right, 0unit );
+    background-color: $AU-color-background-alt-shade-suggestion;
+    display: table;
+    position: relative;
+    width: 100%;
+    .dashboard-metric-headline {
+      @include AU-media( sm ) {
+        @include AU-space( width, 7unit);
+      }
+      @include AU-space( width, 6unit);
+      display: table-cell;
+      vertical-align: middle;
+      @include AU-space( padding, 1unit );
+      background-color: $AU-color-foreground-action;
+      color: $AU-colordark-foreground-text;
+      text-align: left;
+      .headline-figure {
+        display: block;
+        font-weight: bold;
+        @include AU-fontgrid( sm );
+        @include AU-media ( sm ) {
+          @include AU-fontgrid( xl );
+        }
+      }
+      .headline-text {
+        @include AU-fontgrid( xs );
+        @include AU-media ( sm ) {
+          @include AU-fontgrid( sm );
+        }
+      }
+    }
+    .dashboard-metric-text {
+      @include AU-space( padding, 0.5unit 1unit );
+    }
   }
 }
