@@ -27,6 +27,22 @@
     width: 70%;
     @include AU-space( padding-top, 1unit );
     @include AU-space( padding-bottom, 1unit );
+    color: $AU-color-foreground-muted-suggestion;
+    border-bottom: 8px solid $AU-color-foreground-action;
+    font-weight: bold;
+    @include AU-fontgrid( sm );
+
+    .dashboard-theme-name-text {
+      width: 35%;
+      display: block;
+    }
+  }
+  .dashboard-item-progress-label {
+    display: table-cell;
+    width: 70%;
+    vertical-align: middle;
+    @include AU-space( padding-top, 1unit );
+    @include AU-space( padding-bottom, 1unit );
     @include AU-space( padding-left, 1.5unit );
     background-color: $AU-color-foreground-action;
     color: $AU-color-foreground-background;
@@ -35,21 +51,29 @@
     @include AU-media( sm ) {
       @include AU-fontgrid( md );
     }
-    .dashboard-theme-name-text {
-      width: 50%;
-      display: block;
-    }
   }
   .dashboard-item-progress {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    background-color: $AU-colordark-background-alt-suggestion;
-    color: $AU-colordark-foreground-text;
+    background-color: $AU-color-background-alt-suggestion;
+    color: $AU-color-foreground-text;
     font-weight: bold;
     line-height: 100%;
     @include AU-space( padding-top, 1.5unit );
     @include AU-space( padding-bottom, 1.5unit );
+    &:after {
+      @include AU-space( margin-left, 0.3unit );
+      display: inline-table;
+      vertical-align: middle;
+      @include AU-space( width, 1unit );
+      @include AU-space( height, 1unit );
+      content:'';
+      border-radius: 50%;
+    }
+    &.id-389:after {
+      background-color: $AU-color-live;
+    }
   }
 }
 
@@ -69,9 +93,9 @@
     width: 100%;
     .dashboard-metric-headline {
       @include AU-media( sm ) {
-        @include AU-space( width, 7unit);
+        @include AU-space( width, 8.5unit);
       }
-      @include AU-space( width, 6unit);
+      @include AU-space( width, 7.5unit);
       display: table-cell;
       vertical-align: middle;
       @include AU-space( padding, 1unit );
