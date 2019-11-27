@@ -2,7 +2,8 @@
 
 // Cards
 
-#block-views-block-dashboard-block-1 {
+#block-views-block-dashboard-block-1,
+.dashboard-theme-page {
   h2 {
     color: $AU-colordark-foreground-text;
     @include AU-space( padding, 1unit );
@@ -35,7 +36,6 @@
 .dashboard-theme-wrapper {
   width: 100%;
   display: table;
-  @include AU-space( padding, 1unit );
   &.government-thats-informed-by-you {
     background-color: $roadmap-2018-colour-informed;
   }
@@ -46,6 +46,7 @@
     background-color: $roadmap-2018-colour-fit;
   }
   .dashboard-theme-name {
+    @include AU-space( padding, 1unit );
     display: table-cell;
     color: $AU-colordark-foreground-text;
     font-weight: bold;
