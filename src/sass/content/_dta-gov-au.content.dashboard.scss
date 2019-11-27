@@ -3,6 +3,19 @@
 // Cards
 
 #block-views-block-dashboard-block-1 {
+  h2 {
+    color: $AU-colordark-foreground-text;
+    @include AU-space( padding, 1unit );
+    &.government-that039s-informed-by-you {
+      background-color: $roadmap-2018-colour-informed;
+    }
+    &.government-that039s-easy-to-deal-with {
+      background-color: $roadmap-2018-colour-easy;
+    }
+    &.government-that039s-fit-for-the-digital-age {
+      background-color: $roadmap-2018-colour-fit;
+    }
+  }
   .au-card {
     border-top: 8px solid;
     &.government-that039s-easy-to-deal-with {
@@ -22,20 +35,22 @@
 .dashboard-theme-wrapper {
   width: 100%;
   display: table;
+  @include AU-space( padding, 1unit );
+  &.government-thats-informed-by-you {
+    background-color: $roadmap-2018-colour-informed;
+  }
+  &.government-thats-easy-to-deal-with {
+    background-color: $roadmap-2018-colour-easy;
+  }
+  &.government-thats-fit-for-the-digital-age {
+    background-color: $roadmap-2018-colour-fit;
+  }
   .dashboard-theme-name {
     display: table-cell;
-    width: 70%;
-    @include AU-space( padding-top, 1unit );
-    @include AU-space( padding-bottom, 1unit );
-    color: $AU-color-foreground-muted-suggestion;
-    border-bottom: 8px solid $AU-color-foreground-action;
+    color: $AU-colordark-foreground-text;
     font-weight: bold;
-    @include AU-fontgrid( sm );
+    @include AU-fontgrid( md );
 
-    .dashboard-theme-name-text {
-      width: 35%;
-      display: block;
-    }
   }
   .dashboard-item-progress-label {
     display: table-cell;
