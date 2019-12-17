@@ -27,7 +27,7 @@
     "@gov.au/text-inputs": "^2.0.9",
     "autoprefixer": "^8.6.5",
     "node-sass": "^4.9.3",
-    "npm": "^6.5.0",
+    "npm": "^6.13.4",
     "postcss-cli": "^6.0.0"
   },
   "devDependencies": {
