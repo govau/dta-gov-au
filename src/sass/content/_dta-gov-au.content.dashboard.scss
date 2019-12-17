@@ -4,17 +4,19 @@
 
 #block-views-block-dashboard-block-1,
 .dashboard-theme-page {
-  h2 {
-    color: $AU-colordark-foreground-text;
-    @include AU-space( padding, 1unit );
-    &.government-that039s-informed-by-you {
-      background-color: $roadmap-2018-colour-informed;
-    }
-    &.government-that039s-easy-to-deal-with {
-      background-color: $roadmap-2018-colour-easy;
-    }
-    &.government-that039s-fit-for-the-digital-age {
-      background-color: $roadmap-2018-colour-fit;
+  .au-landing-page-level-2-cards {
+    h2 {
+      color: $AU-colordark-foreground-text;
+      @include AU-space( padding, 1unit );
+      &.government-that039s-informed-by-you {
+        background-color: $roadmap-2018-colour-informed;
+      }
+      &.government-that039s-easy-to-deal-with {
+        background-color: $roadmap-2018-colour-easy;
+      }
+      &.government-that039s-fit-for-the-digital-age {
+        background-color: $roadmap-2018-colour-fit;
+      }
     }
   }
   .au-card {
