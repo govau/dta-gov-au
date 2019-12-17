@@ -30,6 +30,13 @@
       display: none;
     }
   }
+  #main-content {
+    .au-body {
+      background-color: transparent;
+      color: $AU-colordark-foreground-text;
+    }
+  }
+
   #block-booknavigation-2 {
     display: none;
     visibility: hidden;

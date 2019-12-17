@@ -24,7 +24,7 @@
 #}
   <div class="au-body">
   {% if title %}
-    <h2 class="{{ title | render | striptags | clean_class }}">{{ title }}</h2>
+    {{ title }}
   {% endif %}
 
   <{{ list.type }}{{ list.attributes }}>
