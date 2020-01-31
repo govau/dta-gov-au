@@ -1208,7 +1208,9 @@ a.au-text-input[value="Reset"] {
   margin-right: 1rem;
   display: block;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  color: #313131; }
+  color: #313131;
+  position: relative;
+  }
   .au-control-input__text:before, .au-control-input__text:after {
     width: 38px;
     width: 2.375rem;
@@ -5680,7 +5682,9 @@ main[role="main"].page-content {
   main[role="main"].page-content #block-views-block-assessment-reports-block-1 form#views-exposed-form-assessment-reports-block-1 fieldset .fieldset-legend {
     font-weight: bold; }
   main[role="main"].page-content #block-views-block-assessment-reports-block-1 form#views-exposed-form-assessment-reports-block-1 fieldset .form-item {
-    display: inline-block; }
+    display: inline-block;
+    position: relative;
+    }
   main[role="main"].page-content #block-views-block-assessment-reports-block-1 form#views-exposed-form-assessment-reports-block-1 .form-wrapper:before, main[role="main"].page-content #block-views-block-assessment-reports-block-1 form#views-exposed-form-assessment-reports-block-1 .form-wrapper:after {
     content: " ";
     display: table; }
