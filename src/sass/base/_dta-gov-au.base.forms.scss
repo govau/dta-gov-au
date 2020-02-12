@@ -127,6 +127,9 @@ form > p {
   legend {
     font-weight: bold;
   }
+  fieldset.form-wrapper {
+    @include AU-space( margin-bottom, 2unit );
+  }
   .form-item {
     @include AU-space( margin-bottom, 2unit );
     .form-item--error-message {
