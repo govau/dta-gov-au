@@ -112,13 +112,36 @@ form > p {
 // Styles for Webform forms
 
 .webform-submission-form {
+  fieldset,
+  label:not(.au-control-input__text),
+  legend {
+    @include AU-space( margin, 0unit );
+    @include AU-space( padding-top, 0unit );
+    @include AU-space( padding-bottom, 0unit );
+  }
+  label:not(.au-control-input__text),
+  legend {
+    @include AU-space( padding-bottom, 0.5unit );
+  }
+  label,
+  legend {
+    font-weight: bold;
+  }
+  fieldset.form-wrapper {
+    @include AU-space( margin-bottom, 2unit );
+  }
   .form-item {
     @include AU-space( margin-bottom, 2unit );
-    label, legend {
-      font-weight: bold;
-      &.au-control-input {
-        font-weight: normal;
-      }
+    .form-item--error-message {
+      font-style: italic;
+      @include AU-space( margin-top, 0.5unit );
+    }
+    .form-item {
+      @include AU-space ( margin-bottom, 0unit )
+    }
+    .fieldset-wrapper > div {
+      font-style: italic;
+      @include AU-space( margin-bottom, 0.5unit );
     }
   }
   .au-control-input__input:focus + .au-control-input__text:before,
@@ -128,6 +151,14 @@ form > p {
   input.form-radio {
     .au-control-input__text {
       font-weight: bold;
+    }
+  }
+  &.webform-submission-mygov-beta-screener-form {
+    .form-checkboxes {
+      @include AU-space( margin-top, 2unit );
+      .au-control-input {
+        display: block;
+      }
     }
   }
 }
