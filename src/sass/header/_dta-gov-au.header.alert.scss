@@ -1,0 +1,5 @@
+// Minor styles for alerts in the header.
+
+.alert-wrapper {
+  @include AU-space( margin-bottom, 2unit );
+}
