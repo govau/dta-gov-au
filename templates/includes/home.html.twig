@@ -64,6 +64,14 @@
   </div>
 </div>
 <div class="row">
+  <div id="bottom-content" class="au-body">
+    <div class="container">
+      <h2>News, blogs and media releases</h2>
+      {{ drupal_view('news_and_blogs_facets', 'block_1') }}
+    </div>
+  </div>
+</div>
+<div class="row">
   <div id="mid-top-content" class="au-body">
     <div class="container">
       <h2>Our projects</h2>
@@ -77,14 +85,6 @@
       <div class="row col-xs-12 col-md-6">
         {{ drupal_block('homepagebottom') }}
       </div>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div id="bottom-content" class="au-body">
-    <div class="container">
-      <h2>Our latest updates</h2>
-      {{ drupal_view('news_and_blogs_facets', 'block_1') }}
     </div>
   </div>
 </div>
