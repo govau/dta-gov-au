@@ -71,12 +71,18 @@
  */
 #}
 
-{% set start_date = content.field_date_range['0'].start_date['#text'] %}
-{% set end_date = content.field_date_range['0'].end_date['#text'] %}
-{% if start_date == end_date %}
-  {% set _date = start_date %}
+{% set _start_month = node.field_date_range['0'].start_date|date('m') %}
+{% set _end_month = node.field_date_range['0'].end_date|date('m') %}
+{% set _start_day = node.field_date_range['0'].start_date|date('j') %}
+{% set _end_day = node.field_date_range['0'].end_date|date('j') %}
+{% if _start_month == _end_month %}
+  {% if _start_day == _end_day %}
+    {% set _date = node.field_date_range['0'].start_date|date('j F Y') %}
+  {% else %}
+    {% set _date = _start_day ~ ' to ' ~ node.field_date_range['0'].end_date|date('j F Y') %}
+  {% endif %}
 {% else %}
-  {% set _date = start_date ~ " to " ~ end_date %}
+  {% set _date = node.field_date_range['0'].start_date|date('j F') ~ ' to ' ~ node.field_date_range['0'].end_date|date('j F Y') %}
 {% endif %}
 
 {% set _alt = content.field_index_image['#items'].alt %}
@@ -90,6 +96,8 @@
 {% else %}
   <a href="{{ url('<front>') }}" class="au-card au-card--shadow au-cta-link" hreflang="en">
 {% endif %}
+
+
   <div class="au-card__image au-card__fullwidth">
     <img alt={{ _alt }} {{ _role }} src="{{ content.field_index_image['#items'].entity.uri.value | image_style('index_image_small') }}" />
   </div>
