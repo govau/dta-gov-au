@@ -2,6 +2,7 @@
 
 #back-to-top {
   @include AU-space( margin, 2unit 0unit 1unit 0unit );
+  @include AU-space( padding-top, 5unit );
   text-align: center;
   a {
     @include AU-fontgrid( sm );
