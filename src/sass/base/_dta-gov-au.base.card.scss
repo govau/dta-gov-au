@@ -39,11 +39,11 @@
 		}
 	}
 
-
+	&.au-cta-link:hover {
 		.au-card__title {
 			text-decoration-color: transparent;
 		}
-
+	}
 
 	.au-card__text {
 		@include AU-space( margin-bottom, 1unit );
@@ -68,7 +68,7 @@
 		margin-bottom: 0;
 	}
 
-
+	.au-card__cta,
 	.au-card__image {
 		display: block;
 	}
