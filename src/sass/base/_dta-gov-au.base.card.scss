@@ -22,10 +22,10 @@
 		@include AU-space( margin-top, 0unit );
 		font-weight: normal;
 	}
-	.au-card__title {
+	.au-card__title a{
 		@include AU-fontgrid( lg );
 		@include AU-space( margin-bottom, 1unit );
-		text-decoration: underline;
+		color: $AU-colordark-background;
 		text-decoration-color: currentColor;
 		transition: text-decoration-color 0.3s ease-in-out;
 		font-weight: normal;
