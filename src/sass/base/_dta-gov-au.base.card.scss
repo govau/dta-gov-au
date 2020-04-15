@@ -25,7 +25,6 @@
 	.au-card__title a{
 		@include AU-fontgrid( lg );
 		@include AU-space( margin-bottom, 1unit );
-		color: $AU-colordark-background;
 		text-decoration-color: currentColor;
 		transition: text-decoration-color 0.3s ease-in-out;
 		font-weight: normal;
@@ -57,13 +56,14 @@
 			@include AU-space( margin-bottom, 2.5unit );
 		}
 		ul {
+
 			@include AU-space( padding-left, 1.25unit );
 		}
-		li {
-			list-style-type: disc;
+	li {
+
+			list-style-type: disc !important;
 		}
 	}
-
 	hr {
 		margin-bottom: 0;
 	}
@@ -138,7 +138,7 @@ a.au-card {
 	}
 
 	.au-card__link,
-	.au-card__cta {
+	 {
 		color: $AU-color-foreground-action;
 		text-decoration: underline;
 		text-decoration-skip: ink;
