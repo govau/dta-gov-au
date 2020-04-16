@@ -153,8 +153,10 @@ form > p {
       font-weight: bold;
     }
   }
-  &.webform-submission-mygov-beta-screener-form {
-    .form-checkboxes {
+  &.webform-submission-mygov-beta-screener-form,
+  &.webform-submission-mygov-integration-beta-survey-form {
+    .form-checkboxes,
+    .webform-options-display-one-column {
       @include AU-space( margin-top, 2unit );
       .au-control-input {
         display: block;
