@@ -60,8 +60,8 @@
 			@include AU-space( padding-left, 1.25unit );
 		}
 	li {
-
-			list-style-type: disc !important;
+			display: list-item;
+			list-style-type: disc;
 		}
 	}
 	hr {
