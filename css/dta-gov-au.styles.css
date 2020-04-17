@@ -3157,10 +3157,14 @@ form > p {
 .webform-submission-form input.form-radio .au-control-input__text {
   font-weight: bold; }
 
-.webform-submission-form.webform-submission-mygov-beta-screener-form .form-checkboxes {
+.webform-submission-form.webform-submission-mygov-beta-screener-form .form-checkboxes,
+.webform-submission-form.webform-submission-mygov-beta-screener-form .webform-options-display-one-column, .webform-submission-form.webform-submission-mygov-integration-beta-survey-form .form-checkboxes,
+.webform-submission-form.webform-submission-mygov-integration-beta-survey-form .webform-options-display-one-column {
   margin-top: 32px;
   margin-top: 2rem; }
-  .webform-submission-form.webform-submission-mygov-beta-screener-form .form-checkboxes .au-control-input {
+  .webform-submission-form.webform-submission-mygov-beta-screener-form .form-checkboxes .au-control-input,
+  .webform-submission-form.webform-submission-mygov-beta-screener-form .webform-options-display-one-column .au-control-input, .webform-submission-form.webform-submission-mygov-integration-beta-survey-form .form-checkboxes .au-control-input,
+  .webform-submission-form.webform-submission-mygov-integration-beta-survey-form .webform-options-display-one-column .au-control-input {
     display: block; }
 
 .au-card {
@@ -3193,6 +3197,7 @@ form > p {
     line-height: 1.5;
     margin-bottom: 16px;
     margin-bottom: 1rem;
+    color: #313131;
     -webkit-text-decoration-color: currentColor;
             text-decoration-color: currentColor;
     -webkit-transition: -webkit-text-decoration-color 0.3s ease-in-out;
@@ -3293,7 +3298,8 @@ a.au-card {
   a.au-card.au-card--shadow:hover {
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
             box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
-  a.au-card .au-card__link {
+  a.au-card .au-card__link,
+  a.au-card .au-card__cta {
     color: #007099;
     text-decoration: underline;
     -webkit-text-decoration-skip: ink;
