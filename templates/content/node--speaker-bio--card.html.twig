@@ -70,18 +70,23 @@
  *   in different view modes.
  */
 #}
-
-{% if node.id %}
-  <a href="{{ url('entity.node.canonical', {'node': node.id}) }}" class="au-card au-card--shadow au-cta-link" hreflang="en">
-{% else %}
-  <a href="{{ url('<front>') }}" class="au-card au-card--shadow au-cta-link" hreflang="en">
-{% endif %}
+<div class="au-card au-body au-card--shadow au-card--clickable">
   <div class="au-card__image au-card__fullwidth">
     <img alt="{{ content.field_index_image['#items'].alt }}" src="{{ content.field_index_image['#items'].entity.uri.value | image_style('index_image_small') }}" />
   </div>
-  <h3 class="au-card__title">{{ label }}</h3>
+   <div class="au-card__inner">
+  	<h3 class="au-card__title">
+   	{% if node.id %}
+  	   <a href="{{ url('entity.node.canonical', {'node': node.id}) }}" class="au-card--clickable__link" hreflang="en">
+	{% else %}
+ 	  <a href="{{ url('<front>') }}" class="au-card--clickable__link" hreflang="en">
+	{% endif %}
+ 	 {{ label }}
+	</a>
+ 	</h3>
   <div class="au-card__text">
     <p>{{ content.field_position }}</p>
     <p>{{ content.field_orgnaisation }}</p>
   </div>
-</a>
+</div>
+</div>
