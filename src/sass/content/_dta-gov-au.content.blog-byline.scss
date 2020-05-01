@@ -1,12 +1,13 @@
-// Styles author bylines in blog posts.
-
-.au-blog-post-byline {
+.au-blog-post-byline:before{
+  content: "";
+  display: block;
+  width: 40%;
   margin-top: 1.5rem;
   border-top: dashed 1px;
-  font-style: italic;
+
 }
 
 .byline {
 margin-top: 1rem;
-
+font-style: italic;
 }
