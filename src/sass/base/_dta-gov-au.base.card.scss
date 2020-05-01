@@ -25,7 +25,6 @@
 	.au-card__title a{
 		@include AU-fontgrid( lg );
 		@include AU-space( margin-bottom, 1unit );
-		color: $AU-colordark-background;
 		text-decoration-color: currentColor;
 		transition: text-decoration-color 0.3s ease-in-out;
 		font-weight: normal;
@@ -60,6 +59,7 @@
 			@include AU-space( padding-left, 1.25unit );
 		}
 		li {
+			display: list-item;
 			list-style-type: disc;
 		}
 	}
