@@ -14,6 +14,7 @@
     var position_type = '';
     var team = '';
     var id = '';
+    var limit = 250;
 
     return {
       withClientName: function(pclient_name) {
