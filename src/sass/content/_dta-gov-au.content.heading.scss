@@ -3,6 +3,7 @@
 h1 {
   @include AU-fontgrid( xxl );
   line-height: 1.25;
+  word-break: break-word;
   + div,
   + h2 {
     @include AU-space( margin-top, 1.5unit );
