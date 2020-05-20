@@ -250,6 +250,19 @@ function dta_gov_au_form_mailchimp_signup_subscribe_block_sign_up_for_style_manu
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Updates classes on form in the preview mode.
+ *
+ **/
+
+function dta_gov_au_form_node_preview_form_select_alter(&$form, &$form_state, $form_id) {
+  $form['#attributes']['class'][] = 'au-page-alerts';
+  $form['#attributes']['class'][] = 'au-page-alerts--warning';
+  $form['#field_prefix'] = t('<h2>Preview mode</h2>');
+}
+
+/**
  *
  * Implements hook_theme_suggestions_HOOK_alter
  *
