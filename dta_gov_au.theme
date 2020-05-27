@@ -164,6 +164,24 @@ function dta_gov_au_theme_suggestions_block_alter(&$suggestions, $variables) {
 /**
  * Implements hook_theme_suggestions_HOOK_alter
  *
+ * Adds suggestions to forms using the form ID.
+ */
+
+function dta_gov_au_theme_suggestions_form_alter(&$suggestions, $variables) {
+  if(isset($variables['element']['#form_id'])) {
+    $suggestions[] = $variables['theme_hook_original'] . '__' . str_replace('-', '_', $variables['element']['#form_id']);
+  }
+}
+
+function dta_gov_au_theme_suggestions_container_alter(&$suggestions, $variables) {
+  if(isset($variables['element']['#form_id'])) {
+    $suggestions[] = $variables['theme_hook_original'] . '__' . str_replace('-', '_', $variables['element']['#form_id']);
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter
+ *
  * Adds suggestions to text inputs based on the ID of the element.
  */
 
@@ -247,19 +265,6 @@ function dta_gov_au_form_mailchimp_signup_subscribe_block_sign_up_for_style_manu
   $form['mergevars']['ORG']['#attributes']['class'] = ['au-text-input--block'];
   $form['mergevars']['LNAME']['#attributes']['class'] = ['au-text-input--block'];
   $form['mergevars']['EMAIL']['#title'] = t('Email address');
-}
-
-/**
- * Implements hook_form_FORM_ID_alter().
- *
- * Updates classes on form in the preview mode.
- *
- **/
-
-function dta_gov_au_form_node_preview_form_select_alter(&$form, &$form_state, $form_id) {
-  $form['#attributes']['class'][] = 'au-page-alerts';
-  $form['#attributes']['class'][] = 'au-page-alerts--warning';
-  $form['#field_prefix'] = t('<h2>Preview mode</h2>');
 }
 
 /**
