@@ -164,6 +164,24 @@ function dta_gov_au_theme_suggestions_block_alter(&$suggestions, $variables) {
 /**
  * Implements hook_theme_suggestions_HOOK_alter
  *
+ * Adds suggestions to forms using the form ID.
+ */
+
+function dta_gov_au_theme_suggestions_form_alter(&$suggestions, $variables) {
+  if(isset($variables['element']['#form_id'])) {
+    $suggestions[] = $variables['theme_hook_original'] . '__' . str_replace('-', '_', $variables['element']['#form_id']);
+  }
+}
+
+function dta_gov_au_theme_suggestions_container_alter(&$suggestions, $variables) {
+  if(isset($variables['element']['#form_id'])) {
+    $suggestions[] = $variables['theme_hook_original'] . '__' . str_replace('-', '_', $variables['element']['#form_id']);
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter
+ *
  * Adds suggestions to text inputs based on the ID of the element.
  */
 

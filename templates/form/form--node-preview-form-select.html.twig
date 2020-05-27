@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 au-page-alerts au-page-alerts--warning au-body au-body--dark ">
+        <h2>Preview mode</h2>
+        <p>You're viewing this page in <strong>preview mode</strong>.</p>
+        <ul>
+          <li>Select 'Back to content editing' to return to the editing form.</li>
+          <li>use the 'View mode' drop-down to check how this content will look in different contexts.</li>
+        </ul>
+        <form{{ attributes }}>
+          {{ children }}
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
