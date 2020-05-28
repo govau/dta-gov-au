@@ -1,42 +1,42 @@
 // Styles for the preview mode
-
-// Preview advice container.
-.node-preview-container {
-  @extend .au-body;
-  @extend .au-body--dark;
-  position: relative;
-  div {
-    display: block;
-  }
-  form {
-    @include AU-space( margin-top, 1unit );
-    .form-item-view-mode {
+.preview-mode {
+  // Preview advice container.
+  .node-preview-container {
+    @extend .au-body;
+    @extend .au-body--dark;
+    position: relative;
+    div {
+      display: block;
+    }
+    form {
       @include AU-space( margin-top, 1unit );
-      label {
-        font-weight: bold;
+      .form-item-view-mode {
+        @include AU-space( margin-top, 1unit );
+        label {
+          font-weight: bold;
+        }
       }
     }
   }
-}
 
-// Card preview
-
-#main-content .au-card {
-  &:before {
-    @include AU-space( margin-bottom, 2unit );
-    font-style: italic;
-    display: block;
-  }
-  @include AU-media( xs ) {
-    width: 100%;
+  // Card preview
+  #main-content .au-card {
     &:before {
-      content:'Extra small (mobile), 1 column';
+      @include AU-space( margin-bottom, 2unit );
+      font-style: italic;
+      display: block;
     }
-  }
-  @include AU-media( md ) {
-    width: 50%;
-    &:before {
-      content:'Medium (tablet) and larger, 2 columns. Also the size on the home page.';
+    @include AU-media( xs ) {
+      width: 100%;
+      &:before {
+        content:'Extra small (mobile), 1 column';
+      }
+    }
+    @include AU-media( md ) {
+      width: 50%;
+      &:before {
+        content:'Medium (tablet) and larger, 2 columns. Also the size on the home page.';
+      }
     }
   }
 }
