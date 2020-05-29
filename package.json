@@ -27,8 +27,8 @@
     "@gov.au/tags": "^3.1.4",
     "@gov.au/text-inputs": "^2.0.9",
     "autoprefixer": "^8.6.5",
-    "node-sass": "^4.13.1",
-    "npm": "^6.13.4",
+    "node-sass": "^4.14.1",
+    "npm": "^6.14.5",
     "postcss-cli": "^6.0.0"
   },
   "devDependencies": {
@@ -55,7 +55,7 @@
     "watch:twig": "onchange \"../dta-uikit-base/templates/**/*.twig\" \"./templates/**/*.twig\" -- npm run browser-refresh",
     "watch:theme": "onchange \"*.theme\" -- npm run browser-refresh",
     "serve": "browser-sync start --proxy 'au.gov.cld.y.dta-website-rebuild-test:8888/' --files=\"css/*.css\" \"js/*.js\" \"../dta-ui-kit-base/templates/**/*.twig\" \"templates/**/*.twig\"",
-    "watch": "npm-run-all --parallel copy-js serve watch:*",
+    "watch": "npm-run-all --parallel copy-js serve build watch:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
