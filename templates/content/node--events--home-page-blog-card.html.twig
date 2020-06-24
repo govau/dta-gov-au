@@ -99,7 +99,7 @@
 
 
   <div class="au-card__image au-card__fullwidth">
-    <img alt={{ _alt }} {{ _role }} src="{{ content.field_index_image['#items'].entity.uri.value | image_style('index_image_small') }}" />
+    <img alt="{{ content.field_index_image['#items'].alt }}" {{ _role }} src="{{ content.field_index_image['#items'].entity.uri.value | image_style('index_image_small') }}" />
   </div>
   <h3 class="au-card__title">{{ label }}</h3>
   <p>{{ content.field_location }}</p>

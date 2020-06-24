@@ -30,3 +30,7 @@ span.ext {
 .fontgrid-lg {
   @include AU-fontgrid( lg );
 }
+
+p + section {
+  @include AU-space( margin-top, 2unit );
+}
