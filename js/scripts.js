@@ -9,6 +9,18 @@
     }
   }
 
+  Drupal.behaviors.table = {
+    attach: function( context, settings ) {
+      $( 'table', context ).addClass( 'au-table' );
+      $( 'caption', context ).addClass( 'au-table__caption' );
+      $( 'thead', context ).addClass( 'au-table__head' );
+      $( 'thead tr th', context ).addClass( 'au-table__header' );
+      $( 'tbody', context ).addClass( 'au-table__body' );
+      $( 'tbody tr td', context ).addClass( 'au-table__cell' );
+      $( 'tr', context ).addClass( 'au-table__row' );
+    }
+  }
+
   Drupal.behaviors.dtagovauSmoothScroll = {
     // This creates a smooth scroll effect for on page links. It also moves the
     // focus correctly for keyboard uses as per https://www.bignerdranch.com/blog/web-accessibility-skip-navigation-links/.
