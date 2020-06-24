@@ -8,7 +8,6 @@ table {
     @include AU-space( width, 6.25unit );
   }
   thead > tr {
-    background-color: $AU-color-background-alt-shade-suggestion;
     border-bottom: none;
     th {
       background-color: $AU-color-background-alt-shade-suggestion;
