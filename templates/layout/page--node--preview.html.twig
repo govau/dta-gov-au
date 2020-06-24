@@ -43,48 +43,71 @@
  * @see html.html.twig
  */
 #}
-<div class="row">
-  <div id="highlight" class="au-body au-body--alt au-body--dark">
+
+{% if node.hasField('field_theme') == true %}
+  {% if node.field_theme.entity.name.value %}
+    {% set term_id = 'theme_' ~ node.field_theme.entity.name.value|clean_class %}
+  {% endif %}
+{% endif %}
+
+{% set main_classes = [
+    'container-fluid',
+    is_front ? 'page-front' : 'page-content',
+    term_id ? term_id : '',
+  ]
+%}
+
+{% set back_to_top = [
+    '/help-and-advice',
+    '/our-projects',
+    '/news-blogs'
+  ]
+%}
+
+<div class="layout-container">
+
+  {% include '@dta_gov_au/includes/header.html.twig' %}
+
+  <main{{ attributes.addClass(main_classes) }} role="main">
+  <a id="top" tabindex="-1"></a>{# link is in html.html.twig #}
+
+  {% if is_front %}
+    {% include '@dta_gov_au/includes/home.html.twig' %}
+  {% else %}
     <div class="container">
-      <div class="col-xs-12 col-sm-6 col-md-5 highlight-block">
-        {{ drupal_block('homepageleft') }}
+      <div class="row">
+        <div class="col-xs-12">
+          {{ drupal_block('breadcrumbs_2') }}
+        </div>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1 highlight-block">
-        {{ drupal_block('homepageright') }}
+      <div class="row">
+        <div id="sidebar" class="col-xs-12 col-md-3">
+          <aside class="layout-sidebar-first au-body" role="complementary">
+            <h3>Left menu</h3>
+            <p>The left menu will appear here on published pages that are in the menu.</p>
+            <p>Note that for blogs and news items, this column appears on the right hand side.</p>
+          </aside>
+        </div>
+        <div id="main-content" class="col-xs-12 col-md-8 col-md-offset-1 au-body">
+          <h1>Preview of "{{ page['#title'] }}"</h1>
+          {{ page.content }}
+        </div>
       </div>
+      {% if path('<current>') in back_to_top %}
+        <div class-"row">
+          <div class="col-xs-12">
+            <div id="back-to-top">
+              <div class="container">
+                <a class="au-direction-link au-direction-link--up" href="#top">Back to top</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
     </div>
-  </div>
-</div>
-<div class="row">
-  <div id="top-content" class="au-body">
-    <div class="container">
-      <h2>Get help and advice</h2>
-      {{ drupal_view('help_and_advice', 'block_1') }}
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div id="bottom-content" class="au-body">
-    <div class="container">
-      <h2>News, blogs and media releases</h2>
-      {{ drupal_view('news_and_blogs_facets', 'block_1') }}
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div id="mid-top-content" class="au-body">
-    <div class="container">
-      <h2>Our projects</h2>
-      {{ drupal_view('programs_and_platforms', 'block_1') }}
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div id="mid-bottom-content" class="au-body au-body--alt au-body--dark">
-    <div class="container">
-      <div class="row col-xs-12 col-md-6">
-        {{ drupal_block('homepagebottom') }}
-      </div>
-    </div>
-  </div>
-</div>
+  {% endif %}
+  </main>
+
+  {% include '@dta_gov_au/includes/footer.html.twig' %}
+
+</div>{# /.layout-container #}

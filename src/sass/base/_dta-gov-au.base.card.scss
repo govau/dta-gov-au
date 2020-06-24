@@ -22,10 +22,9 @@
 		@include AU-space( margin-top, 0unit );
 		font-weight: normal;
 	}
-	.au-card__title {
+	.au-card__title a{
 		@include AU-fontgrid( lg );
 		@include AU-space( margin-bottom, 1unit );
-		text-decoration: underline;
 		text-decoration-color: currentColor;
 		transition: text-decoration-color 0.3s ease-in-out;
 		font-weight: normal;
@@ -39,11 +38,11 @@
 		}
 	}
 
-	&.au-cta-link:hover {
+
 		.au-card__title {
 			text-decoration-color: transparent;
 		}
-	}
+
 
 	.au-card__text {
 		@include AU-space( margin-bottom, 1unit );
@@ -60,6 +59,7 @@
 			@include AU-space( padding-left, 1.25unit );
 		}
 		li {
+			display: list-item;
 			list-style-type: disc;
 		}
 	}
@@ -68,7 +68,7 @@
 		margin-bottom: 0;
 	}
 
-	.au-card__cta,
+
 	.au-card__image {
 		display: block;
 	}

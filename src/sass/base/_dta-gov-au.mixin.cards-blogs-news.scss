@@ -55,7 +55,6 @@
     .au-card__title {
       @include AU-fontgrid( lg );
       a {
-        color: $AU-color-foreground-action;
         text-decoration: underline;
         &:hover {
           text-decoration: none;

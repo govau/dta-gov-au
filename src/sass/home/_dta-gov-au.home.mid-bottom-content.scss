@@ -1,6 +1,7 @@
 // Styles for the mid-bottom block on the home page.
 #mid-bottom-content {
   background-image: none;
+  border-bottom: 8px solid $AU-colordark-foreground-action;
   @include AU-media ( md ) {
     background-image: url('../images/mid-bottom-bg.png');
     background-repeat: no-repeat;

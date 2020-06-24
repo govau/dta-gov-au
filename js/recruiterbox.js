@@ -2,7 +2,7 @@
   'use strict';
 
   // Original version from https://github.com/Recruiterbox/jsapi-client/blob/master/list_opening/list_opening_query_builder.js.
-  var ListOpeningQueryBuilder = function(client) {
+  var ListOpeningQueryBuilder = function(client, lim) {
     var client_name = client;
     var tags = '';
     var city = '';
@@ -14,6 +14,7 @@
     var position_type = '';
     var team = '';
     var id = '';
+    var limit = lim;
 
     return {
       withClientName: function(pclient_name) {
@@ -60,6 +61,10 @@
         id = pid;
         return this;
       },
+      withLimit: function(plimit) {
+        limit = plimit;
+        return this;
+      },
       buildParams: function() {
         return {
           client_name : client_name,
@@ -72,7 +77,8 @@
           allows_remote : allows_remote,
           position_type : position_type,
           team : team,
-          id : id
+          id : id,
+          limit : limit
         };
       }
     }
@@ -109,7 +115,7 @@
 
       // Original version from https://github.com/Recruiterbox/jsapi-client/blob/master/list_opening/list_opening.js.
 
-      var list_opening_query_builder = new ListOpeningQueryBuilder('ausdta');
+      var list_opening_query_builder = new ListOpeningQueryBuilder('ausdta', 250);
       var query_params = list_opening_query_builder.buildParams();
       var $root = $('#recruiterbox');
 

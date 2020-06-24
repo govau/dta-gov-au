@@ -10,6 +10,7 @@
     "@gov.au/breadcrumbs": "^2.1.1",
     "@gov.au/buttons": "^3.0.4",
     "@gov.au/callout": "^2.0.8",
+    "@gov.au/card": "^0.3.2",
     "@gov.au/control-input": "^2.1.6",
     "@gov.au/core": "^3.4.2",
     "@gov.au/cta-link": "^2.1.4",
@@ -23,11 +24,12 @@
     "@gov.au/responsive-media": "^2.0.11",
     "@gov.au/select": "^2.0.8",
     "@gov.au/skip-link": "^2.0.10",
+    "@gov.au/table": "^0.2.0",
     "@gov.au/tags": "^3.1.4",
     "@gov.au/text-inputs": "^2.0.9",
     "autoprefixer": "^8.6.5",
-    "node-sass": "^4.13.1",
-    "npm": "^6.13.4",
+    "node-sass": "^4.14.1",
+    "npm": "^6.14.5",
     "postcss-cli": "^6.0.0"
   },
   "devDependencies": {
@@ -54,7 +56,7 @@
     "watch:twig": "onchange \"../dta-uikit-base/templates/**/*.twig\" \"./templates/**/*.twig\" -- npm run browser-refresh",
     "watch:theme": "onchange \"*.theme\" -- npm run browser-refresh",
     "serve": "browser-sync start --proxy 'au.gov.cld.y.dta-website-rebuild-test:8888/' --files=\"css/*.css\" \"js/*.js\" \"../dta-ui-kit-base/templates/**/*.twig\" \"templates/**/*.twig\"",
-    "watch": "npm-run-all --parallel copy-js serve watch:*",
+    "watch": "npm-run-all --parallel copy-js serve build watch:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

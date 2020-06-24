@@ -1,16 +1,13 @@
 // Styles for tables. These are basic until GOLD releases a component.
 
 table {
-  border-top: 1px solid $AU-color-foreground-border-suggestion;
   min-width: 100%;
   border-collapse: collapse;
-  table-layout: fixed;
   @include AU-space( margin, 2unit 0 );
   &#our-people td:first-child {
     @include AU-space( width, 6.25unit );
   }
   thead > tr {
-    background-color: $AU-color-background-alt-shade-suggestion;
     border-bottom: none;
     th {
       background-color: $AU-color-background-alt-shade-suggestion;
