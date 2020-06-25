@@ -9,7 +9,7 @@ table {
   }
   thead > tr {
     border-bottom: none;
-  
+
   }
   tbody > tr {
     border-bottom: 1px solid $AU-color-foreground-border-suggestion;
@@ -31,10 +31,7 @@ table {
     @include AU-fontgrid( sm );
   }
   caption {
-    text-align: left;
-    @include AU-fontgrid( sm );
-    @include AU-space( margin, 1unit 0 );
-    font-weight: bold;
+    font-size: 16px !important;
   }
   &.corporate-plan {
     .risk {
