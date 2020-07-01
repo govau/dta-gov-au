@@ -13,6 +13,16 @@ main[role="main"].page-content {
   .presentation-right-column {
     @include AU-space( margin-top, 2unit );
   }
+  ul, p {
+    + figure {
+      @include AU-space( margin-top, 2unit );
+    }
+  }
+  figure {
+    + ul, p {
+      @include AU-space( margin-top, 2unit );
+    }
+  }
   @import "dta-gov-au.content.breadcrumbs";
   @import "dta-gov-au.content.heading";
   @import "dta-gov-au.content.inpage-nav";
