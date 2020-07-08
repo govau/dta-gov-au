@@ -232,7 +232,6 @@
     // Add the red border when people tab out of the Mailchimp 'email' field.
     attach: function( context, settings ) {
       $( 'form#mailchimp-signup-subscribe-block-sign-up-for-updates-form .empty-required', context )
-        .once( 'dtaFormFix' )
         .addClass( 'processed' )
         .on( 'blur', function() {
           $(this).removeClass( 'empty-required' );

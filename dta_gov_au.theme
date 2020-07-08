@@ -255,6 +255,20 @@ function dta_gov_au_form_mailchimp_signup_subscribe_block_sign_up_for_updates_fo
 /**
  * Implements hook_form_FORM_ID_alter().
  *
+ * Updates classes on form items in the mailchimp signup form in prod - Form Id is different.
+ *
+ **/
+
+function dta_gov_au_form_mailchimp_signup_subscribe_block_sign_up_for_updates_form_2_alter(&$form, &$form_state, $form_id) {
+  $form['mergevars']['EMAIL']['#attributes']['class'] = ['au-text-input--block', 'empty-required'];
+  $form['mergevars']['FNAME']['#attributes']['class'] = ['au-text-input--block'];
+  $form['mergevars']['LNAME']['#attributes']['class'] = ['au-text-input--block'];
+  $form['mergevars']['EMAIL']['#title'] = t('Email address');
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
  * Updates classes on form items in the Style Manual mailchimp signup form.
  *
  **/
@@ -265,6 +279,56 @@ function dta_gov_au_form_mailchimp_signup_subscribe_block_sign_up_for_style_manu
   $form['mergevars']['ORG']['#attributes']['class'] = ['au-text-input--block'];
   $form['mergevars']['LNAME']['#attributes']['class'] = ['au-text-input--block'];
   $form['mergevars']['EMAIL']['#title'] = t('Email address');
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Updates classes on form items in the Style Manual mailchimp signup form in prod - Form Id is different.
+ *
+ **/
+
+function dta_gov_au_form_mailchimp_signup_subscribe_block_sign_up_for_style_manual_updates_form_1_alter(&$form, &$form_state, $form_id) {
+  $form['mergevars']['EMAIL']['#attributes']['class'] = ['au-text-input--block', 'empty-required'];
+  $form['mergevars']['FNAME']['#attributes']['class'] = ['au-text-input--block', 'empty-required'];
+  $form['mergevars']['ORG']['#attributes']['class'] = ['au-text-input--block'];
+  $form['mergevars']['LNAME']['#attributes']['class'] = ['au-text-input--block'];
+  $form['mergevars']['EMAIL']['#title'] = t('Email address');
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Updates classes on form items in the Digital Profession Stream mailchimp signup form.
+ *
+ **/
+
+function dta_gov_au_form_mailchimp_signup_subscribe_block_digital_professional_stream_form_alter(&$form, &$form_state, $form_id) {
+  $form['mergevars']['EMAIL']['#attributes']['class'] = ['empty-required'];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Updates classes on form items in the Observatory mailchimp signup form.
+ *
+ **/
+
+function dta_gov_au_form_mailchimp_signup_subscribe_block_signup_for_observatory_updates_form_1_alter(&$form, &$form_state, $form_id) {
+  $form['mergevars']['EMAIL']['#attributes']['class'] = ['empty-required'];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Updates classes on form items in the Digital summit mailchimp signup form.
+ *
+ **/
+
+function dta_gov_au_form_mailchimp_signup_subscribe_block_digital_summit_signup_form_alter(&$form, &$form_state, $form_id) {
+  $form['mergevars']['EMAIL']['#attributes']['class'] = ['empty-required'];
+  $form['mergevars']['FNAME']['#attributes']['class'] = ['empty-required'];
+  $form['mergevars']['LNAME']['#attributes']['class'] = ['empty-required'];
 }
 
 /**
