@@ -231,10 +231,16 @@
   Drupal.behaviors.dtaFormFix = {
     // Add the red border when people tab out of the Mailchimp 'email' field.
     attach: function( context, settings ) {
-      $( 'form#mailchimp-signup-subscribe-block-sign-up-for-updates-form .empty-required', context )
+
+      $( 'input .empty-required', context )
         .addClass( 'processed' )
-        .on( 'blur', function() {
+        .on( 'submit', function() {
+          if($("#edit-mergevars-email--2").val() == "" || $("#edit-mergevars-email--3").val() == "" || $("#edit-mergevars-email").val() == "" ){
+          $(this).addClass( 'empty-required' );
+        }
+        else{
           $(this).removeClass( 'empty-required' );
+        }
         })
         .on( 'focus', function() {
           $(this).addClass( 'empty-required' );
