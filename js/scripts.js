@@ -232,7 +232,8 @@
     // Add the red border when people tab out of the Mailchimp 'email' field.
     attach: function( context, settings ) {
 
-      $( 'input .empty-required', context )
+      $( '.empty-required', context )
+        .once('dtaFormFix')
         .addClass( 'processed' )
         .on( 'submit', function() {
           if($("#edit-mergevars-email--2").val() == "" || $("#edit-mergevars-email--3").val() == "" || $("#edit-mergevars-email").val() == "" ){
