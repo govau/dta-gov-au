@@ -13,6 +13,16 @@ main[role="main"].page-content {
   .presentation-right-column {
     @include AU-space( margin-top, 2unit );
   }
+  ul, p {
+    + figure {
+      @include AU-space( margin-top, 2unit );
+    }
+  }
+  figure {
+    + ul, p {
+      @include AU-space( margin-top, 2unit );
+    }
+  }
   @import "dta-gov-au.content.breadcrumbs";
   @import "dta-gov-au.content.heading";
   @import "dta-gov-au.content.inpage-nav";
@@ -42,5 +52,6 @@ main[role="main"].page-content {
   @import "dta-gov-au.content.roadmap-2018.landing-page";
   @import "dta-gov-au.content.book-header";
   @import "dta-gov-au.content.dashboard";
+  @import "dta-gov-au.content.map";
   @import "dta-gov-au.content.blog-byline";
 }

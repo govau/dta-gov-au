@@ -1,0 +1,6 @@
+// Styling for maps
+
+.map-wrapper {
+  @include AU-space( margin-top, 1unit );
+  @include AU-space( height, 20unit );
+}

@@ -26,3 +26,11 @@ span.ext {
 .au-bold {
   font-weight: bold;
 }
+
+.fontgrid-lg {
+  @include AU-fontgrid( lg );
+}
+
+p + section {
+  @include AU-space( margin-top, 2unit );
+}

@@ -545,3 +545,13 @@ function dta_gov_au_preprocess_book_navigation(&$variables) {
   $variables['book_root_url'] = $book_root_url;
   $variables['book_root_title'] = $book_root_title;
 }
+
+/**
+* Implements hook_preprocess_HOOK()
+*
+* Adds a class to the media embed field to create responsive video.
+*/
+
+function dta_gov_au_preprocess_field__media__remote_video(&$variables) {
+  $variables['items'][0]['content']['#attributes']['class'][] = 'au-responsive-media-vid__item';
+}
