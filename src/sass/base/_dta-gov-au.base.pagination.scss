@@ -4,5 +4,71 @@
   text-align: center;
   .pager__item.is-active {
     font-weight: bold;
+    a{
+      display: flex;
+          height: 44px;
+          min-width: 44px;
+          padding: 0;
+          align-items: center;
+          justify-content: center;
+          //border: 3px solid $AU-color-foreground-action;
+        }
+    }
+
+    .pager__item {
+
+      a{
+            display: flex;
+            height: 44px;
+            min-width: 44px;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            //border: 3px solid $AU-color-foreground-action;
+      }
+  }
+  .pager__item--first{
+    a{
+          display: flex;
+          height: 44px;
+          min-width: 44px;
+          padding: 0;
+          align-items: center;
+          justify-content: center;
+          //border: none;
+    }
+  }
+  .pager__item--next{
+    a{
+          display: flex;
+          height: 44px;
+          min-width: 44px;
+          padding: 0;
+          align-items: center;
+          justify-content: center;
+          //border: none;
+    }
+  }
+  .pager__item--previous{
+    a{
+          display: flex;
+          height: 44px;
+          min-width: 44px;
+          padding: 0;
+          align-items: center;
+          justify-content: center;
+          //border: none;
+    }
+  }
+  .pager__item--last{
+    a{
+          display: flex;
+          height: 44px;
+          min-width: 44px;
+          padding: 0;
+          align-items: center;
+          justify-content: center;
+          //border: none;
+    }
   }
 }
