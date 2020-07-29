@@ -1,0 +1,52 @@
+// Styles for the modal
+
+.modal-wrapper.js {
+  .modal-controls__close {
+    float: right;
+    @include AU-space( margin-top, 2unit );
+  }
+  .modal-box {
+    opacity: 0;
+    background-color: $AU-color-foreground-background;
+    @include AU-space( padding, 2unit );
+    border: 1px solid $AU-color-foreground-border-suggestion;
+    @include AU-space( border-radius, 0.25unit );
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    width: 400px;
+    max-width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500;
+    * {
+      max-width: 100%;
+    }
+  }
+  .modal-body {
+    .button.form-submit {
+      float: left;
+      @include AU-space( margin-top, 2unit );
+    }
+  }
+  .modal-overlay {
+    opacity: 0;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 400;
+    background-color: rgba(0,0,0,0.8);
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+  }
+}
+.modal-wrapper.no-js {
+  .modal-controls {
+    .modal-controls__open,
+    .modal-controls__close {
+      display: none;
+    }
+  }
+}
