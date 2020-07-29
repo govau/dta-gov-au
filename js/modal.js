@@ -34,7 +34,6 @@
           $( 'body' ).attr( 'aria-hidden', true) ;
         }
         function closeModal() {
-          console.log ('Close modal' );
           // Hide the modal
           $( '.modal-box, .modal-overlay' ).animate( { opacity: 0 }, SPEED, function() {
             $(this).css( 'display', 'none' );

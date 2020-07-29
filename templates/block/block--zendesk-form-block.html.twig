@@ -27,7 +27,10 @@
 #}
 
 {{ attach_library('dta_gov_au/modal') }}
-<div class="modal modal-wrapper no-js">
+
+<div class="modal modal-wrapper no-js au-callout">
+  <h2>Do you need help?</h2>
+  <p>If you need help with something on this website, please use our form.</p>
   <div class="modal modal-controls modal-controls__open">
     <button class="au-btn">Ask for help</button>
   </div>
@@ -40,7 +43,7 @@
 
     <div{{ attributes.addClass('modal', 'modal-body' ) }}>
       {{ title_prefix }}
-      <h2 id="ask-for-help"{{ title_attributes }}>Ask for help</h2>
+      <h3 id="ask-for-help"{{ title_attributes }}>Ask for help</h3>
       {{ title_suffix }}
       {% block content %}
         {{ content }}
