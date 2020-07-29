@@ -6,6 +6,7 @@ global-styling:
   js:
     js/pancake.js: {}
     js/scripts.js: {}
+    js/modal.js: {}
   dependencies:
     - core/drupal
     - core/jquery

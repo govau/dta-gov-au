@@ -1,0 +1,71 @@
+// Styles for the modal
+
+.modal-wrapper.js {
+  .modal-controls__close {
+    position: absolute;
+    @include AU-space( margin-top, 2unit );
+    @include AU-space( bottom, 2unit );
+    @include AU-space( right, 2unit );
+  }
+  .modal-controls__open {
+    @include AU-space( margin-top, 2unit );
+  }
+  .modal-box {
+    opacity: 0;
+    background-color: $AU-color-foreground-background;
+    @include AU-space( padding, 2unit );
+    border: 1px solid $AU-color-foreground-border-suggestion;
+    @include AU-space( border-radius, 0.25unit );
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    width: 400px;
+    max-width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    * {
+      max-width: 100%;
+    }
+    transform: perspective(1px) translateX(-50%) translateY(-50%) translateZ(0);
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    z-index: 500;
+  }
+  .modal-body {
+    .button.form-submit {
+      float: left;
+      @include AU-space( margin-top, 2unit );
+    }
+    .form-item {
+      @include AU-space( margin-bottom, 1unit );
+    }
+  }
+  .modal-overlay {
+    opacity: 0;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 400;
+    background-color: rgba(0,0,0,0.8);
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+  }
+}
+.modal-wrapper.no-js {
+  .modal-controls {
+    display: none;
+  }
+  .modal-body {
+    h3 {
+      @include AU-space( margin-top, 2unit );
+    }
+    * {
+      max-width: 100%;
+      width: 100%;
+    }
+    .form-item {
+      @include AU-space( margin-bottom, 1unit );
+    }
+  }
+}
