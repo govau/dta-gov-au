@@ -1,1 +1,7 @@
 // Styles for events.
+
+
+div.paragraph {
+  @include AU-space( margin-top, 2unit );
+  @include AU-space( margin-bottom, 2unit );
+}
