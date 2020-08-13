@@ -7,14 +7,11 @@ global-styling:
     js/pancake.js: {}
     js/scripts.js: {}
     js/modal.js: {}
+    js/recruiterbox.js: {}
   dependencies:
     - core/drupal
     - core/jquery
     - core/jquery.once
-recruiterbox:
-  version: 1.x
-  js:
-    js/recruiterbox.js: {}
 roadmap:
   version: 1.x
   js:
