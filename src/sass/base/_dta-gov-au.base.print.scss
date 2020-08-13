@@ -4,8 +4,10 @@
 
   @page {
     size: A4 portrait;
-    margin: 1.5cm;
+    margin: 1cm  !important;
+
   }
+
   // Disappear things we don't need.
 
   #ribbon,
@@ -34,17 +36,15 @@
 
   // Update some typography.
   h2, h3, h4 {
-    page-break-after: avoid;
+
     ~ p,
     ~ ul,
     ~ ol {
-      page-break-before: avoid;
     }
   }
 
   ul, img, .au-callout {
-    page-break-inside: avoid;
-    page-break-before: avoid;
+
   }
 
   h1 {
@@ -55,7 +55,10 @@
     font-size: 16pt !important;
     page-break-before: always;
   }
-
+  header h2 {
+    font-size: 16pt !important;
+    page-break-before: avoid !important;
+  }
   h3 {
     font-size: 14pt !important;
   }
@@ -64,7 +67,7 @@
     font-size: 12pt !important;
   }
   ul, ol {
-    page-break-before: avoid;
+
   }
 
   p, li {
@@ -124,51 +127,65 @@
   // Body tables
 
   body main[role="main"].page-content .au-body {
+
+    #pbs-map{
+      page-break-before: avoid !important;
+    }
+
     table {
+      table-layout: fixed;
       font-size: 10pt !important;
-      max-width: 100% !important;
-      width: 100% !important;
-      page-break-inside: avoid;
+      page-break-inside: auto;
+      page-break-after: always;
       page-break-before: always;
+
+      thead { display:table-header-group }
       tr {
+
+    page-break-inside: avoid;
+    -webkit-region-break-inside: avoid;
         td, th {
           font-size: 10pt;
-          page-break-inside: avoid;
           border-right: none !important;
           border-left: none !important;
+
           &.risk {
             font-weight: normal;
           }
           p {
             font-size: 10pt !important;
             ~ p {
-              @include AU-space( margin-top, 0.5unit );
+              @include AU-space( margin-top, 0.1unit );
             }
             ~ ul {
-              @include AU-space( margin-top, 0.5unit );
+              @include AU-space( margin-top, 0.1unit );
+
             }
           }
           ul, ol {
-            @include AU-space( padding-left, 1unit );
-            //@include AU-space( margin-top, 0.5unit );
+            @include AU-space( padding-left, 0.5unit );
             li {
+
               font-size: 10pt !important;
-              @include AU-space( margin-top, 0.2unit );
+              @include AU-space( margin-top, 0.1unit );
               &:first-child {
-                @include AU-space( margin-top, 0 );
+
+                @include AU-space( margin-top, 0.1unit );
               }
             }
           }
         }
       }
 
+
       caption {
-        font-size: 11pt;
+        font-size: 10pt;
       }
       tfoot {
         display: table-row-group;
       }
     }
+
   }
   // Update padding and margins, especially on the home page.
 
@@ -462,4 +479,15 @@
       }
     }
   }
+
+  .alert-wrapper{
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+.modal-wrapper{
+    display: none !important;
+    visibility: hidden !important;
+  }
+
 }
