@@ -113,7 +113,32 @@ function dta_gov_au_preprocess_menu(&$variables, $hook) {
   }
 	if ($hook == 'menu') {
 		dta_gov_au_menu_active_item($variables['items']);
+    $current_path = \Drupal::request()->getRequestUri();
+    foreach ($variables['items'] as &$item) {
+      if ($item['in_active_trail']) {
+        if ($item['url']->toString() == $current_path) {
+          $item['is_active'] = TRUE;
+        } elseif (count($item['below'])) {
+          _dta_gov_au_menu_process_submenu($item['below'], $current_path);
+        }
+      }
+    }
 	}
+}
+
+/**
+ * Set active and active-trail class for sub-menus recursively.
+ */
+function _dta_gov_au_menu_process_submenu(&$submenu, $current_path) {
+  foreach ($submenu as &$item) {
+    if ($item['in_active_trail']) {
+      if ($item['url']->toString() == $current_path) {
+        $item['is_active'] = TRUE;
+      } elseif (count($item['below'])) {
+        _dta_gov_au_menu_process_submenu($item['below'], $current_path);
+      }
+    }
+  }
 }
 
 function dta_gov_au_preprocess_links__node(&$variables) {
