@@ -44,7 +44,14 @@
         ]
       %}
       <li{{ item.attributes.addClass(classes) }}>
-        {{ link(item.title, item.url) }}
+      {% if item.is_active %}
+        {%
+          set link_aria_attributes = item.attributes.setAttribute('aria-current', 'page')
+        %}
+          {{ link(item.title, item.url, link_aria_attributes) }}
+      {% else %}
+          {{ link(item.title, item.url)  }}
+      {% endif %}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
