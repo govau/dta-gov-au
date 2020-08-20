@@ -72,6 +72,24 @@ table {
   }
 }
 
+#performance-measures {
+  border: #FFFFFF !important;
+  tbody > tr {
+    border-bottom: 1px solid #c0c0c0 !important;
+  }
+  table{
+    border: #FFFFFF !important;
+
+    tbody{
+      border: #FFFFFF;
+    }
+    th{
+      border-bottom: #c0c0c0 !important;
+    }
+  }
+
+}
+
 div.horizontal-scroll-table-container {
   width: 100%;
   overflow: auto;
