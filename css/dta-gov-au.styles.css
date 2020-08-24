@@ -5669,8 +5669,8 @@ body {
           min-height: 448px;
           min-height: 28rem; } }
   .page-front #bottom-content .au-card {
-    padding: 32px;
-    padding: 2rem;
+    padding: 16px;
+    padding: 1rem;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
     .page-front #bottom-content .au-card.au-cta-link {
@@ -5939,8 +5939,8 @@ main[role="main"].page-content {
             min-height: 448px;
             min-height: 28rem; } }
     main[role="main"].page-content .au-cards--blogs-news .au-card {
-      padding: 32px;
-      padding: 2rem;
+      padding: 16px;
+      padding: 1rem;
       -webkit-box-sizing: border-box;
               box-sizing: border-box; }
       main[role="main"].page-content .au-cards--blogs-news .au-card.au-cta-link {
