@@ -357,6 +357,26 @@ function dta_gov_au_form_mailchimp_signup_subscribe_block_digital_summit_signup_
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Updates classes on form items in the Coaching women in digital mailchimp signup form.
+ *
+ **/
+
+function dta_gov_au_form_mailchimp_signup_subscribe_page_coaching_women_in_digital_form_alter(&$form, &$form_state, $form_id) {
+  $form['mergevars']['EMAIL']['#attributes']['class'] = ['empty-required'];
+  $form['mergevars']['LNAME']['#attributes']['class'] = ['empty-required'];
+  $form['mergevars']['FNAME']['#attributes']['class'] = ['empty-required'];
+  $form['mergevars']['ROLETITLE']['#attributes']['class'] = ['empty-required'];
+  $form['mergevars']['LEVEL']['#attributes']['class'] = ['empty-required'];
+  $form['mergevars']['AGENCY']['#attributes']['class'] = ['empty-required'];
+  $form['mergevars']['MANAGER']['#attributes']['class'] = ['empty-required'];
+  $form['mergevars']['GOAL']['#attributes']['class'] = ['empty-required'];
+
+
+}
+
+/**
  *
  * Implements hook_theme_suggestions_HOOK_alter
  *
