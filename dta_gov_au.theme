@@ -363,7 +363,7 @@ function dta_gov_au_form_mailchimp_signup_subscribe_block_digital_summit_signup_
  *
  **/
 
-function dta_gov_au_form_mailchimp_signup_subscribe_page_coaching_women_in_digital_form_alter(&$form, &$form_state, $form_id) {
+function dta_gov_au_form_mailchimp_signup_subscribe_block__women_in_digital_eoi_form_alter(&$form, &$form_state, $form_id) {
   $form['mergevars']['EMAIL']['#attributes']['class'] = ['empty-required'];
   $form['mergevars']['LNAME']['#attributes']['class'] = ['empty-required'];
   $form['mergevars']['FNAME']['#attributes']['class'] = ['empty-required'];
