@@ -172,11 +172,9 @@ a.au-card {
 	}
 
 	&.au-card-list--matchheight {
-		display: table;
-		@supports( display: flex ) {
 			display: flex;
 			flex-wrap: wrap;
-		}
+
 
 		> li {
 			display: table-cell;
