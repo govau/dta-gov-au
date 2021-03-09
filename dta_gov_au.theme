@@ -34,6 +34,17 @@ function dta_gov_au_form_alter(&$form, FormStateInterface $form_state, $form_id)
     // Ditch the 'apply' button. The option to submit is also turned off via JS.
     unset($form['actions']['submit']);
   }
+  if ($form_id == 'user_login_form') {
+       // on submit execute the YourThemeName_user_login_submit function
+      $form['#submit'][] = 'dta_gov_au_user_login_submit';
+   }
+}
+
+function dta_gov_au_user_login_submit($form, &$form_state) {
+    // redirect use to the homepage (front) on login
+$url='<front>';
+$form_state->setRedirect($url);
+
 }
 
 /**
