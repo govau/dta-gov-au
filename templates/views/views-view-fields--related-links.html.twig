@@ -31,13 +31,17 @@
  * @ingroup themeable
  */
 #}
-
+{% set content_variable = fields.type.content|striptags %}
 <div class="au-card au-card--shadow au-card--clickable">
 <div class="au-card__image au-card__fullwidth">
      {{ fields.field_index_image.content }}
  </div>
  <div class="au-card__inner">
-    <h3 class="au-card__title"><a class="au-card--clickable__link" href="{{ fields.view_node.content |striptags|trim }}" >{{ fields.title.content  }}</a></h3>
+ {% if 'External link' in content_variable %}
+    <h3 class="au-card__title"><a class="au-card--clickable__link" href="{{ fields.field_external_link.content |striptags|trim }}" >{{ fields.title.content  }}</a></h3>
+ {% else %}
+ <h3 class="au-card__title"><a class="au-card--clickable__link" href="{{ fields.view_node.content |striptags|trim }}" >{{ fields.title.content  }}</a></h3>
+ {% endif %}
    <div class="au-card__text"> {{ fields.field_summary.content  }}</div>
  </div>
 <footer role="contentinfo">
