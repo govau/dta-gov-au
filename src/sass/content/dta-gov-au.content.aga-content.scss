@@ -1,0 +1,26 @@
+// Style for AGA content.
+.aga-content{
+  display:flex;
+  margin-top:1.5rem;
+
+  ul.aga-bcm-list--boder{
+    list-style-type: none;
+    margin-left: -2.5rem;
+      li.aga-bcm-list--item{
+        border: 2px solid #22A0CB;
+        padding: 0.5rem;
+        background: #D5E2E9;  
+
+    }
+
+}
+
+.bcm--divider{
+  margin-top: 2.5rem;
+  border-top: 2px solid #00bfe9;
+
+}
+
+
+
+}
