@@ -1,26 +1,83 @@
 // Style for AGA content.
-.aga-content{
+div.aga-content-deliver-operate{
   display:flex;
-  margin-top:1.5rem;
+  margin-top:1rem;
 
-  ul.aga-bcm-list--boder{
+  ul.aga-bcm-list--border{
     list-style-type: none;
     margin-left: -2.5rem;
       li.aga-bcm-list--item{
         border: 2px solid #22A0CB;
         padding: 0.5rem;
-        background: #D5E2E9;  
+        background: #D5E2E9;
+        margin-bottom: 0.5rem;
 
     }
 
 }
 
-.bcm--divider{
-  margin-top: 2.5rem;
-  border-top: 2px solid #00bfe9;
+ul.no-list-style{
+  list-style-type: none;
+  li.aga-bcm-list--item{
+    border: 2px solid #22A0CB;
+    padding: 0.5rem;
+    background: #D5E2E9;
+    margin-bottom: 0.5rem;
+
+}
+}
+
+}
+
+div.aga-content-foster-engage{
+  margin-top:2rem;
+
+  ul.aga-bcm-list--border{
+    list-style-type: none;
+    margin-left: -2.5rem;
+      li.aga-bcm-list--item{
+        border: 2px solid #22A0CB;
+        padding: 0.5rem;
+        background: #D5E2E9;
+        margin-bottom: 0.5rem;
+
+    }
 
 }
 
 
+}
+
+div.aga-content-protect{
+  display:flex;
+  margin-top:1.5rem;
+
+  ul.aga-bcm-list--border{
+    list-style-type: none;
+    margin-left: -2.5rem;
+      li.aga-bcm-list--item{
+        border: 2px solid #22A0CB;
+        padding: 0.5rem;
+        background: #D5E2E9;
+        margin-bottom: 0.5rem;
+    }
+
+}
+
+ul.no-list-style{
+  list-style-type: none;
+  li.aga-bcm-list--item{
+    border: 2px solid #22A0CB;
+    padding: 0.5rem;
+    background: #D5E2E9;
+    margin-bottom: 0.5rem;
+
+}
+}
+}
+
+.bcm--divider{
+  margin-top: 2.5rem;
+  border-top: 2px solid #00bfe9;
 
 }
