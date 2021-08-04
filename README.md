@@ -10,7 +10,7 @@ In order to develop this theme, you will need:
 
 1. A local copy of the [site code](https://github.com/govau/dta-website-rebuild). Note the site doesn't need to be running to develop the theme, however if you wish to test changes locally then you'll need a running site.
 2. [Composer](https://getcomposer.org/).
-3. [NPM](https://www.npmjs.com/) and [NodeJS](https://nodejs.org/en/).
+3. [NPM](https://www.npmjs.com/) and [NodeJS](https://nodejs.org/en/) version 14.
 
 If you have followed the instructions on installing the site, then you should have the latest version of this theme in your site code already. If you don't, make sure you clone a copy into `docroot/themes/custom/dta-gov-au`.
 
